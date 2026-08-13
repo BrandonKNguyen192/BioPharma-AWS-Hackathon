@@ -101,10 +101,25 @@ async function fetchStudies(url) {
       if (!res.ok) {
         console.warn(`  Bright Data returned ${res.status}; using direct fetch.`);
       } else if (!body.trim()) {
-        console.warn(
-          `  Bright Data returned an empty body — check that zone "${zone}" exists ` +
-            `on your account (set BRIGHTDATA_ZONE). Using direct fetch.`,
-        );
+        // A 200 with an empty body is what a suspended account looks like —
+        // the zone can be perfectly valid. Ask the API which it is rather than
+        // sending the operator off to rename a zone that already exists.
+        let why = "";
+        try {
+          const s = await (
+            await fetch("https://api.brightdata.com/status", {
+              headers: { Authorization: `Bearer ${key}` },
+            })
+          ).json();
+          if (s?.can_make_requests === false) {
+            why = ` account status "${s.status}" cannot make requests${
+              s.auth_fail_reason ? ` (${s.auth_fail_reason})` : ""
+            } — resolve with Bright Data, not in config.`;
+          }
+        } catch {
+          why = ` could not read account status; check zone "${zone}".`;
+        }
+        console.warn(`  Bright Data returned an empty body.${why} Using direct fetch.`);
       } else {
         try {
           return JSON.parse(body);
