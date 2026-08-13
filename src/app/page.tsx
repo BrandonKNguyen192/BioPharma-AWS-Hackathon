@@ -1,9 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, LoaderCircle, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUp,
+  Database,
+  FileHeart,
+  LoaderCircle,
+  LockKeyhole,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
+import { AppShell } from "./components/AppShell";
 import { ExtractionPanel } from "./components/ExtractionPanel";
-import { ThemeToggle } from "./components/ThemeToggle";
 import { TrialCard } from "./components/TrialCard";
 import { TRIALS_META } from "@/lib/trials";
 import type { MatchResponse } from "@/lib/types";
@@ -43,155 +53,154 @@ export default function PatientPortal() {
   }
 
   const matches = data?.results.filter((r) => r.verdict !== "excluded") ?? [];
-  // Near misses come from the API as their own list, computed before the
-  // results page limit, so this explanation can never be cut off.
   const nearMisses = data?.nearMisses ?? [];
 
   return (
-    <main className="min-h-screen bg-[var(--ct-bg)] px-6 py-10 text-[var(--ct-text)] transition-colors">
-      <div className="mx-auto max-w-3xl space-y-8">
-        <header className="flex items-start justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="h-5 w-1 rounded-full bg-[var(--ct-accent)]" />
-              <h1 className="text-2xl font-semibold tracking-tight text-[var(--ct-text)]">
-                ClearTrial
-              </h1>
+    <AppShell
+      active="patient"
+      title="Patient matching"
+      description={`${TRIAL_COUNT} recruiting studies`}
+      actions={
+        <Link href="/dashboard" className="inline-flex h-10 items-center gap-2 rounded-full bg-[var(--ct-surface-strong)] px-4 text-xs font-medium text-[var(--ct-text-muted)] shadow-sm hover:text-[var(--ct-text)]">
+          <span className="hidden sm:inline">Researcher view</span>
+          <ArrowRight className="h-3.5 w-3.5" />
+        </Link>
+      }
+    >
+      <section className="ct-intake-hero">
+        <div className="ct-intake-main">
+          <div className="flex items-center gap-4">
+            <div className="ct-assistant-avatar">
+              <FileHeart className="h-7 w-7" />
             </div>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-[var(--ct-text-muted)]">
-              Tell us about your cancer in your own words — no medical terms
-              needed. We will show you which studies you may qualify for, and
-              explain exactly why.
-            </p>
-            <p className="mt-2 text-xs text-[var(--ct-text-soft)]">
-              Searching {TRIAL_COUNT} active oncology trials from
-              ClinicalTrials.gov
-            </p>
-          </div>
-          <div className="flex shrink-0 items-center gap-3">
-            <ThemeToggle />
-            <a
-              href="/dashboard"
-              className="text-sm text-[var(--ct-text-soft)] transition-colors hover:text-[var(--ct-text)]"
-            >
-              Researcher view →
-            </a>
-          </div>
-        </header>
-
-        <section className="space-y-3">
-          <textarea
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            rows={7}
-            placeholder="For example: I was diagnosed with… I've already tried… My recent results showed…"
-            className="ct-input w-full resize-none rounded-xl p-4 text-sm leading-relaxed"
-          />
-          <div className="flex flex-wrap items-center gap-3">
-            <button
-              onClick={submit}
-              disabled={loading}
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--ct-accent)] px-4 py-2 text-sm font-medium text-[var(--ct-accent-ink)] transition-colors hover:bg-[var(--ct-accent-hover)] disabled:opacity-50"
-            >
-              {loading ? (
-                <>
-                  <LoaderCircle className="h-4 w-4 animate-spin" />
-                  Reading your history…
-                </>
-              ) : (
-                <>
-                  Find trials
-                  <ArrowRight className="h-4 w-4" />
-                </>
-              )}
-            </button>
-            <button
-              onClick={() => setText(DEMO_STORY)}
-              className="text-xs text-[var(--ct-text-soft)] transition-colors hover:text-[var(--ct-text)]"
-            >
-              Use the example story
-            </button>
-          </div>
-          {error && <p className="text-sm text-[var(--ct-rose-text)]">{error}</p>}
-        </section>
-
-        {loading && (
-          <div className="ct-card rounded-xl p-6">
-            <div className="space-y-3">
-              {["Reading your description", "Identifying clinical concepts", "Checking eligibility criteria"].map(
-                (s, i) => (
-                  <div
-                    key={s}
-                    className="flex items-center gap-3 text-sm text-[var(--ct-text-muted)]"
-                    style={{ animation: `ct-fade 400ms ease-out ${i * 260}ms both` }}
-                  >
-                    <LoaderCircle className="h-3.5 w-3.5 animate-spin text-[var(--ct-accent)]" />
-                    {s}…
-                  </div>
-                ),
-              )}
-            </div>
-          </div>
-        )}
-
-        {data && (
-          <>
-            <section className="ct-card rounded-xl p-5">
-              <div className="mb-3 flex items-center justify-between">
-                <h2 className="text-sm font-medium text-[var(--ct-text)]">
-                  What we understood
-                </h2>
-                <span className="text-[11px] text-[var(--ct-text-soft)]">
-                  {data.usedFallback
-                    ? "offline mode"
-                    : `${data.model} · ${(data.elapsedMs / 1000).toFixed(1)}s`}
-                </span>
-              </div>
-              <ExtractionPanel profile={data.profile} />
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-sm font-medium text-[var(--ct-text)]">
-                {matches.length > 0
-                  ? `${Math.min(matches.length, 5)} trial${Math.min(matches.length, 5) === 1 ? "" : "s"} worth asking about`
-                  : "No clear matches yet"}
+            <div>
+              <p className="text-sm text-[var(--ct-text-muted)]">Hi, I&apos;m ClearTrial.</p>
+              <h2 className="mt-0.5 text-2xl font-semibold leading-tight text-[var(--ct-text)] sm:text-3xl">
+                Which trials could fit?
               </h2>
-              {matches.slice(0, 5).map((r) => (
-                <TrialCard key={r.trial.nctId} result={r} />
-              ))}
+            </div>
+          </div>
+
+          <div className="ct-composer">
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              rows={6}
+              aria-label="Describe your diagnosis and treatment history"
+              placeholder="Describe your diagnosis, treatment history, recent results, and anything your care team has told you. Everyday language is fine."
+              className="ct-input min-h-40 w-full resize-none p-5 text-sm leading-7 sm:text-[15px]"
+            />
+            <div className="ct-composer-footer">
+              <button
+                type="button"
+                onClick={() => setText(DEMO_STORY)}
+                className="inline-flex items-center gap-2 text-xs font-medium text-[var(--ct-text-soft)] hover:text-[var(--ct-text)]"
+              >
+                <Sparkles className="h-3.5 w-3.5" />
+                Use example
+              </button>
+              <button
+                type="button"
+                onClick={submit}
+                disabled={loading}
+                className="ct-icon-submit"
+                aria-label={loading ? "Finding trials" : "Find trials"}
+                title={loading ? "Finding trials" : "Find trials"}
+              >
+                {loading ? <LoaderCircle className="h-5 w-5 animate-spin" /> : <ArrowUp className="h-5 w-5" />}
+              </button>
+            </div>
+          </div>
+
+          {error && <p className="mt-3 text-sm text-[var(--ct-rose-text)]">{error}</p>}
+        </div>
+
+        <aside className="ct-intake-aside">
+          <div>
+            <div className="mb-6 flex items-center justify-between">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--ct-surface)]">
+                <Database className="h-5 w-5" />
+              </span>
+              <span className="rounded-full bg-[var(--ct-surface)] px-3 py-1.5 text-[11px] font-medium text-[var(--ct-text-muted)]">
+                Live evidence
+              </span>
+            </div>
+            <p className="text-4xl font-semibold tabular-nums text-[var(--ct-text)]">{TRIAL_COUNT}</p>
+            <p className="mt-1 text-sm leading-6 text-[var(--ct-text-muted)]">
+              Recruiting studies sourced from ClinicalTrials.gov and checked criterion by criterion.
+            </p>
+          </div>
+          <div className="mt-8 flex items-center gap-2 text-xs text-[var(--ct-text-muted)]">
+            <LockKeyhole className="h-3.5 w-3.5" />
+            Your story is not stored
+          </div>
+        </aside>
+      </section>
+
+      {loading && (
+        <section className="ct-soft-panel mt-5 p-6" aria-live="polite">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {["Reading your description", "Finding clinical concepts", "Checking trial criteria"].map((step, i) => (
+              <div
+                key={step}
+                className="flex items-center gap-3 text-sm text-[var(--ct-text-muted)]"
+                style={{ animation: `ct-fade 400ms ease-out ${i * 220}ms both` }}
+              >
+                <LoaderCircle className="h-4 w-4 shrink-0 animate-spin text-[var(--ct-violet-text)]" />
+                {step}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {data && (
+        <div className="ct-results-layout">
+          <div className="min-w-0 space-y-5">
+            <section>
+              <div className="mb-3 flex items-end justify-between gap-4">
+                <div>
+                  <p className="ct-section-label">Recommended studies</p>
+                  <h2 className="mt-1 text-xl font-semibold text-[var(--ct-text)]">
+                    {matches.length > 0
+                      ? `${Math.min(matches.length, 5)} worth asking about`
+                      : "No clear matches yet"}
+                  </h2>
+                </div>
+                <span className="text-xs text-[var(--ct-text-soft)]">Ranked by fit and evidence</span>
+              </div>
+
+              <div className="space-y-3">
+                {matches.slice(0, 5).map((result) => (
+                  <TrialCard key={result.trial.nctId} result={result} />
+                ))}
+              </div>
+
               {matches.length === 0 && (
-                <p className="text-sm text-[var(--ct-text-soft)]">
-                  Nothing matched cleanly. The studies below explain what ruled
-                  you out — that reason is sent, anonymously, to the teams who
-                  design these trials.
-                </p>
+                <div className="ct-soft-panel p-6 text-sm leading-6 text-[var(--ct-text-muted)]">
+                  Nothing matched cleanly. The studies below show which published requirement ruled you out so you can discuss it with your care team.
+                </div>
               )}
             </section>
 
             {nearMisses.length > 0 && (
-              <section className="space-y-3">
+              <section className="space-y-3 pt-3">
                 <div>
-                  <h2 className="text-sm font-medium text-[var(--ct-text-muted)]">
-                    How close you came to {nearMisses.length} other stud
-                    {nearMisses.length === 1 ? "y" : "ies"}
+                  <p className="ct-section-label">Near matches</p>
+                  <h2 className="mt-1 text-lg font-semibold text-[var(--ct-text)]">
+                    One criterion away from {nearMisses.length} other {nearMisses.length === 1 ? "study" : "studies"}
                   </h2>
-                  <p className="mt-1 text-xs text-[var(--ct-text-soft)]">
-                    These ruled you out on one requirement. That reason is sent
-                    — anonymously, with no text from your story — to the teams
-                    who design these studies.
+                  <p className="mt-1 text-xs leading-5 text-[var(--ct-text-soft)]">
+                    Only anonymous aggregate exclusion reasons are shared with trial designers.
                   </p>
                 </div>
-                {nearMisses.map((r) => (
-                  <div key={r.trial.nctId} className="space-y-2">
-                    <TrialCard result={r} />
-                    {r.blockers[0] && (
-                      <div className="ml-4 border-l-2 border-[color:var(--ct-rose-border)] pl-3">
-                        <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
-                          The exact sentence that ruled you out
-                        </p>
-                        <p className="mt-0.5 text-xs italic text-[var(--ct-text-muted)]">
-                          “{r.blockers[0].source}”
-                        </p>
+                {nearMisses.map((result) => (
+                  <div key={result.trial.nctId} className="space-y-2">
+                    <TrialCard result={result} />
+                    {result.blockers[0] && (
+                      <div className="rounded-2xl bg-[var(--ct-rose-bg)] px-4 py-3">
+                        <p className="text-[11px] font-semibold text-[var(--ct-rose-text)]">Exact exclusion language</p>
+                        <p className="mt-1 text-xs italic leading-5 text-[var(--ct-text-muted)]">“{result.blockers[0].source}”</p>
                       </div>
                     )}
                   </div>
@@ -199,23 +208,28 @@ export default function PatientPortal() {
               </section>
             )}
 
-            <section className="ct-card rounded-xl p-4">
-              <div className="flex gap-3">
-                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ct-text-soft)]" />
-                <p className="text-xs leading-relaxed text-[var(--ct-text-soft)]">
-                  ClearTrial is an eligibility pre-screen, not medical advice and
-                  not a diagnosis. Eligibility is decided by code against
-                  published protocol criteria — the language model only reads
-                  your description and explains the result. A study team makes
-                  the final determination. Your text is not stored; only
-                  anonymous, aggregate reasons for exclusion are shared with
-                  trial designers.
-                </p>
-              </div>
+            <section className="flex gap-3 rounded-2xl bg-[var(--ct-surface-soft)] p-4">
+              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ct-text-soft)]" />
+              <p className="text-xs leading-5 text-[var(--ct-text-soft)]">
+                ClearTrial is an eligibility pre-screen, not medical advice or a diagnosis. Published protocol rules determine these results; the study team makes the final eligibility decision.
+              </p>
             </section>
-          </>
-        )}
-      </div>
-    </main>
+          </div>
+
+          <aside className="ct-results-sidebar ct-soft-panel p-5">
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <p className="ct-section-label">Your profile</p>
+                <h2 className="mt-1 text-base font-semibold text-[var(--ct-text)]">What we understood</h2>
+              </div>
+              <span className="rounded-full bg-[var(--ct-surface-soft)] px-2.5 py-1 text-[10px] text-[var(--ct-text-soft)]">
+                {data.usedFallback ? "offline" : `${(data.elapsedMs / 1000).toFixed(1)}s`}
+              </span>
+            </div>
+            <ExtractionPanel profile={data.profile} />
+          </aside>
+        </div>
+      )}
+    </AppShell>
   );
 }

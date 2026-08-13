@@ -1,166 +1,233 @@
-import { TriangleAlert } from "lucide-react";
+import Link from "next/link";
+import type { CSSProperties } from "react";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  Database,
+  FlaskConical,
+  SearchCheck,
+  TriangleAlert,
+} from "lucide-react";
 import { getDashboardData } from "@/lib/signal-store";
 import { TRIALS_META } from "@/lib/trials";
+import { AppShell } from "@/app/components/AppShell";
 import { ConvokeExport } from "@/app/components/ConvokeExport";
 import { ProtocolBrief } from "@/app/components/ProtocolBrief";
-import { ThemeToggle } from "@/app/components/ThemeToggle";
+import {
+  ProgramChip,
+  ProgramContextBlock,
+} from "@/app/components/ProgramContext";
+import {
+  PROGRAMS_META,
+  exportContextForTrials,
+  portfolioProgramSummary,
+} from "@/lib/programs";
 
 export const dynamic = "force-dynamic";
 
 export default function DashboardPage() {
   const data = getDashboardData();
+  const ringValue = Math.max(0, Math.min(100, data.topBlockerPct));
+  const programs = portfolioProgramSummary();
+  const exportContext = exportContextForTrials(
+    data.rows.map((r) => r.exampleTrial),
+  );
+  const convokeProps = {
+    rows: data.rows,
+    totalSearches: data.totalSearches,
+    trialCount: TRIALS_META.count,
+    // Resolved server-side; keeps trials.json and programs.json out of the
+    // client bundle while still annotating the exported artifact.
+    programContext: exportContext,
+  };
 
   return (
-    <main className="min-h-screen bg-[var(--ct-bg)] px-6 py-10 text-[var(--ct-text)] transition-colors">
-      <div className="mx-auto max-w-5xl space-y-6">
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-2xl font-semibold text-[var(--ct-text)]">
-              Protocol Intelligence
-            </h1>
-            <p className="text-sm text-[var(--ct-text-muted)]">
-              Oncology Trial Portfolio
-            </p>
-            {/*
-              The trials and criteria below are real. Patient demand is not:
-              the cohort is seeded so the dashboard has a story before any
-              searches have run. Say so on the page rather than letting a
-              viewer assume 47 real people were screened.
-            */}
-            <p className="ct-card mt-2 inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-[11px] text-[var(--ct-text-muted)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--ct-amber-text)]/70" />
-              Simulated pilot cohort · real trial criteria · live searches
-              append to these counts
-            </p>
+    <AppShell
+      active="dashboard"
+      title="Protocol intelligence"
+      description="Sponsor portfolio signals"
+      actions={
+        <>
+          <div className="hidden sm:block [&_button]:!h-10 [&_button]:!rounded-full [&_button]:!bg-[var(--ct-surface-strong)] [&_button]:!px-4 [&_button]:!font-medium [&_button]:shadow-sm">
+            <ConvokeExport {...convokeProps} />
           </div>
-          <div className="flex items-center gap-3">
-            <ThemeToggle />
-            <ConvokeExport
-              rows={data.rows}
-              totalSearches={data.totalSearches}
-              trialCount={TRIALS_META.count}
-            />
-            <a
-              href="/"
-              className="text-sm text-[var(--ct-text-muted)] transition-colors hover:text-[var(--ct-text)]"
-            >
-              ← Patient view
-            </a>
-          </div>
+          <Link href="/" className="inline-flex h-10 items-center gap-2 rounded-full bg-[var(--ct-surface-strong)] px-4 text-xs font-medium text-[var(--ct-text-muted)] shadow-sm hover:text-[var(--ct-text)]">
+            <ArrowLeft className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Patient view</span>
+          </Link>
+        </>
+      }
+    >
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="ct-section-label">Portfolio overview</p>
+          <h2 className="mt-1 text-2xl font-semibold text-[var(--ct-text)] sm:text-3xl">Where eligibility loses patients</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--ct-text-muted)]">
+            Real published trial criteria paired with a simulated patient-demand cohort and live de-identified searches.
+          </p>
         </div>
+        <span className="inline-flex items-center gap-2 rounded-full bg-[var(--ct-amber-bg)] px-3 py-2 text-[11px] font-medium text-[var(--ct-amber-text)]">
+          <span className="h-2 w-2 rounded-full bg-[var(--ct-amber-text)]" />
+          Simulated pilot cohort
+        </span>
+      </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <div className="ct-card rounded-xl p-5">
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
-              Patient Searches
-            </p>
-            <p className="text-3xl font-semibold text-[var(--ct-text)]">
-              {data.totalSearches}
-            </p>
-            <p className="text-xs text-[var(--ct-text-soft)]">pre-screens run</p>
-          </div>
-          <div className="ct-card rounded-xl p-5">
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
-              Trials Monitored
-            </p>
-            <p className="text-3xl font-semibold text-[var(--ct-text)]">
-              {TRIALS_META.count}
-            </p>
-            <p className="text-xs text-[var(--ct-text-soft)]">active oncology</p>
-          </div>
-          <div className="ct-card rounded-xl p-5">
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
-              Top Exclusion
-            </p>
-            <p className="text-3xl font-semibold text-[var(--ct-amber-text)]">
-              {data.topBlockerPct}%
-            </p>
-            <p className="text-xs text-[var(--ct-text-soft)]">of searches blocked</p>
-          </div>
-          <div className="ct-card rounded-xl p-5">
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
-              Leading Indication
-            </p>
-            <p className="text-3xl font-semibold text-[var(--ct-text)]">
-              {data.topCancer ? data.topCancer.count : 0}
-            </p>
-            <p className="truncate text-xs text-[var(--ct-text-soft)]">
-              {data.topCancer ? data.topCancer.name : "—"}
-            </p>
-          </div>
-        </div>
-
-        {data.rows.length > 0 && (
-          <div className="rounded-xl border border-[color:var(--ct-amber-border)] bg-[var(--ct-amber-bg)] p-6">
-            <div className="flex items-center gap-2">
-              <TriangleAlert className="h-5 w-5 text-[var(--ct-amber-text)]" />
-              <h2 className="font-semibold text-[var(--ct-amber-text)]">
-                Protocol Optimization Alert
-              </h2>
-            </div>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--ct-text-muted)]">
-              {data.topBlockerPct}% of interested patients were ruled out by
-              “{data.rows[0].label}”. This single criterion blocked{" "}
-              {data.rows[0].patientsBlocked} searches across the portfolio.
-              Relaxing or stratifying it could materially expand the eligible
-              pool.
-            </p>
-            <div className="mt-3 border-l-2 border-[color:var(--ct-amber-border)] pl-3">
-              <p className="font-mono text-[11px] text-[var(--ct-amber-text)]/80">
-                {data.rows[0].exampleTrial}
+      <section className="ct-dashboard-grid">
+        <article className="ct-metric-large">
+          <div className="flex h-full flex-col justify-between gap-5 sm:flex-row sm:items-center">
+            <div>
+              <p className="text-base font-medium text-[var(--ct-text)]">Recruitment pressure</p>
+              <p className="mt-5 text-6xl font-medium tabular-nums text-[var(--ct-text)] sm:text-7xl">
+                {data.topBlockerPct}<span className="text-3xl">%</span>
               </p>
-              <p className="text-xs italic text-[var(--ct-text-muted)]">
-                {data.rows[0].exampleCriterion}
+              <p className="mt-4 max-w-[250px] text-sm leading-6 text-[var(--ct-text-muted)]">
+                of searches were blocked by the portfolio&apos;s leading exclusion criterion.
               </p>
             </div>
-          </div>
-        )}
-
-        <ProtocolBrief />
-
-        <h3 className="mb-3 mt-8 text-sm font-medium text-[var(--ct-text-muted)]">
-          Exclusion frequency
-        </h3>
-
-        <div className="space-y-5">
-          {data.rows.map((row, index) => {
-            const pct = Math.round(
-              (row.patientsBlocked / data.rows[0].patientsBlocked) * 100,
-            );
-            return (
-              <div key={row.kind}>
-                <div className="flex items-baseline justify-between">
-                  <p className="text-sm text-[var(--ct-text)]">{row.label}</p>
-                  <p className="text-sm tabular-nums text-[var(--ct-text-muted)]">
-                    {row.patientsBlocked}
-                  </p>
-                </div>
-                <div className="mt-1.5 h-2 w-full rounded-full bg-[var(--ct-surface-strong)]">
-                  <div
-                    style={{ width: pct + "%" }}
-                    className={
-                      index === 0
-                        ? "h-2 rounded-full bg-gradient-to-r from-[var(--ct-amber-text)] to-[var(--ct-accent-hover)]"
-                        : "h-2 rounded-full bg-[var(--ct-border-strong)]"
-                    }
-                  />
-                </div>
-                <p className="mt-1 truncate text-[11px] text-[var(--ct-text-soft)]">
-                  {row.exampleCriterion}
-                </p>
+            <div>
+              <div className="ct-bar-cluster" aria-label="Relative exclusion pressure chart">
+                {[28, 52, 82, 70, 46, 34, 25, 18].map((height, index) => (
+                  <span key={height} className={index < 4 ? "is-filled" : ""} style={{ height }} />
+                ))}
               </div>
+              <div className="mt-5 flex items-center gap-5 text-xs text-[var(--ct-text-muted)]">
+                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-mint-strong)]" />Blocked</span>
+                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-surface-soft)]" />Other</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article className="ct-metric-large">
+          <div className="flex h-full flex-col justify-between gap-5 sm:flex-row sm:items-center">
+            <div>
+              <p className="text-base font-medium text-[var(--ct-text)]">Evidence coverage</p>
+              <p className="mt-5 text-6xl font-medium tabular-nums text-[var(--ct-text)] sm:text-7xl">{TRIALS_META.count}</p>
+              <p className="mt-4 max-w-[250px] text-sm leading-6 text-[var(--ct-text-muted)]">
+                active oncology studies monitored from ClinicalTrials.gov.
+              </p>
+            </div>
+            <div className="ct-ring" style={{ "--ring-value": `${ringValue}%` } as CSSProperties} aria-label={`${ringValue}% top exclusion share`}>
+              <span className="absolute inset-0 z-10 flex items-center justify-center text-sm font-semibold text-[var(--ct-text)]">{ringValue}%</span>
+            </div>
+          </div>
+        </article>
+
+        <article className="ct-metric-small">
+          <SearchCheck className="h-5 w-5 text-[var(--ct-text-soft)]" />
+          <p className="mt-6 text-4xl font-semibold tabular-nums text-[var(--ct-text)]">{data.totalSearches}</p>
+          <p className="mt-1 text-sm text-[var(--ct-text-muted)]">Patient pre-screens</p>
+        </article>
+
+        <article className="ct-metric-small bg-[var(--ct-lilac)]">
+          <FlaskConical className="h-5 w-5 text-[var(--ct-violet-text)]" />
+          <p className="mt-6 text-4xl font-semibold tabular-nums text-[var(--ct-text)]">{data.rows.length}</p>
+          <p className="mt-1 text-sm text-[var(--ct-text-muted)]">Exclusion signals</p>
+        </article>
+
+        <article className="ct-metric-small bg-[var(--ct-mint)]">
+          <Database className="h-5 w-5 text-[var(--ct-teal-text)]" />
+          <p className="mt-6 truncate text-2xl font-semibold text-[var(--ct-text)]">{data.topCancer ? data.topCancer.count : 0}</p>
+          <p className="mt-1 truncate text-sm text-[var(--ct-text-muted)]">{data.topCancer ? data.topCancer.name : "No leading indication"}</p>
+        </article>
+
+        <article className="ct-metric-small">
+          <ArrowUpRight className="h-5 w-5 text-[var(--ct-text-soft)]" />
+          <p className="mt-6 text-2xl font-semibold text-[var(--ct-text)]">Live</p>
+          <p className="mt-1 text-sm text-[var(--ct-text-muted)]">New searches append automatically</p>
+        </article>
+      </section>
+
+      {data.rows.length > 0 && (
+        <section className="ct-insight-panel mt-5">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-2 text-[var(--ct-teal-text)]">
+                <TriangleAlert className="h-5 w-5" />
+                <p className="text-sm font-semibold">Protocol optimization alert</p>
+              </div>
+              <h2 className="mt-4 text-2xl font-semibold leading-tight text-[var(--ct-text)]">
+                “{data.rows[0].label}” is the clearest opportunity to widen access.
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-[var(--ct-text-muted)]">
+                This criterion blocked {data.rows[0].patientsBlocked} searches across the portfolio. Relaxing it, adding a stratified cohort, or clarifying the requirement could materially expand the eligible pool.
+              </p>
+            </div>
+            <div className="min-w-0 rounded-2xl bg-[var(--ct-surface)] p-4 md:max-w-sm">
+              <p className="font-mono text-[11px] text-[var(--ct-teal-text)]">{data.rows[0].exampleTrial}</p>
+              <p className="mt-2 text-xs italic leading-5 text-[var(--ct-text-muted)]">“{data.rows[0].exampleCriterion}”</p>
+              {/*
+                Convoke turns "a criterion blocked 28 searches" into "a
+                criterion is gating a Phase 3 program with a readout this
+                year". Researcher side only — never the patient portal.
+              */}
+              <ProgramContextBlock nctId={data.rows[0].exampleTrial} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="ct-soft-panel mt-5 p-5">
+        <p className="ct-section-label">Pipeline exposure</p>
+        <p className="mt-2 text-sm leading-6 text-[var(--ct-text-muted)]">
+          <span className="font-semibold text-[var(--ct-text)]">
+            {programs.trialsLateStage}
+          </span>{" "}
+          of the {programs.trialsWithContext} monitored trials with a tracked
+          development program are Phase 3 or later, and{" "}
+          <span className="font-semibold text-[var(--ct-text)]">
+            {programs.trialsWithCatalyst}
+          </span>{" "}
+          have a known upcoming catalyst. Recruitment friction on those is
+          schedule risk, not just a funnel metric.
+        </p>
+        <p className="mt-2 text-[11px] leading-5 text-[var(--ct-text-soft)]">
+          {programs.trialsTotal - programs.trialsWithContext} of{" "}
+          {programs.trialsTotal} trials have no tracked program — their arms are
+          chemotherapy backbones, or the asset is not in the knowledge graph.
+          Shown as absent, never as zero.
+        </p>
+      </section>
+
+      <div className="mt-5">
+        <ProtocolBrief />
+      </div>
+
+      <section className="mt-8">
+        <div className="mb-4 flex items-end justify-between gap-4">
+          <div>
+            <p className="ct-section-label">Eligibility friction</p>
+            <h2 className="mt-1 text-xl font-semibold text-[var(--ct-text)]">Exclusion frequency</h2>
+          </div>
+          <span className="text-xs text-[var(--ct-text-soft)]">Ranked by patients blocked</span>
+        </div>
+
+        <div className="space-y-2">
+          {data.rows.map((row, index) => {
+            const pct = Math.round((row.patientsBlocked / data.rows[0].patientsBlocked) * 100);
+            return (
+              <article key={row.kind} className="ct-soft-panel grid gap-4 p-4 sm:grid-cols-[34px_minmax(0,1fr)_180px_44px] sm:items-center">
+                <span className="text-sm font-semibold tabular-nums text-[var(--ct-text-soft)]">{String(index + 1).padStart(2, "0")}</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-[var(--ct-text)]">{row.label}</p>
+                  <p className="mt-1 truncate text-[11px] text-[var(--ct-text-soft)]">{row.exampleCriterion}</p>
+                  <div className="mt-1.5">
+                    <ProgramChip nctId={row.exampleTrial} />
+                  </div>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-[var(--ct-surface-soft)]">
+                  <div className="h-full rounded-full bg-[var(--ct-lilac-strong)]" style={{ width: `${pct}%` }} />
+                </div>
+                <p className="text-right text-sm font-semibold tabular-nums text-[var(--ct-text)]">{row.patientsBlocked}</p>
+              </article>
             );
           })}
         </div>
+      </section>
 
-        <p className="text-[11px] text-[var(--ct-text-soft)]">
-          Trials and eligibility criteria: {TRIALS_META.source} —{" "}
-          {TRIALS_META.count} active {TRIALS_META.sponsor} studies, quoted
-          verbatim. Patient demand is a simulated pilot cohort seeded for this
-          demo; searches run in this session are aggregated de-identified and
-          added to it. No patient-identifiable data is stored.
-        </p>
-      </div>
-    </main>
+      <p className="mt-6 text-[11px] leading-5 text-[var(--ct-text-soft)]">
+        Trials and eligibility criteria: {TRIALS_META.source}. Patient demand is a simulated pilot cohort seeded for this demo; de-identified searches in this session are added to it. No patient-identifiable data is stored. Development stage and catalyst dates: {PROGRAMS_META.source}, retrieved {PROGRAMS_META.retrievedAt} at build time and committed — never queried per request, and shown at the granularity the source stated.
+      </p>
+    </AppShell>
   );
 }

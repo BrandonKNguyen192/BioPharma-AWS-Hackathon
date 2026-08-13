@@ -50,7 +50,6 @@ export function ExtractionPanel({ profile }: { profile: PatientProfile }) {
   const [shown, setShown] = useState(0);
 
   useEffect(() => {
-    setShown(0);
     if (chips.length === 0) return;
     const id = setInterval(() => {
       setShown((n) => {
@@ -80,7 +79,7 @@ export function ExtractionPanel({ profile }: { profile: PatientProfile }) {
         {chips.slice(0, shown).map((c, i) => (
           <span
             key={`${c.label}-${c.value}-${i}`}
-            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs ${TONE[c.tone]}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-xs ${TONE[c.tone]}`}
             style={{ animation: "ct-pop 240ms ease-out both" }}
           >
             <span className="opacity-60">{c.label}</span>
@@ -90,8 +89,8 @@ export function ExtractionPanel({ profile }: { profile: PatientProfile }) {
       </div>
 
       {profile.quotes.length > 0 && shown >= chips.length && (
-        <div className="space-y-1 border-l-2 border-[color:var(--ct-border-strong)] pl-3">
-          <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
+        <div className="space-y-1.5 rounded-2xl bg-[var(--ct-surface-soft)] p-3.5">
+          <p className="text-[11px] font-semibold uppercase text-[var(--ct-text-soft)]">
             Read directly from your words
           </p>
           {profile.quotes.slice(0, 3).map((q, i) => (

@@ -1,0 +1,8865 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "Convoke Knowledge Graph via mcp.convoke.bio (MCP)",
+  "tools": [
+    "query_program_tracker",
+    "query_catalyst_calendar"
+  ],
+  "retrievedAt": "2026-08-13",
+  "note": "Build-time enrichment. Committed so the app never calls Convoke at request time. reportedDate is the granularity the source stated; sortDate is an approximation for ordering and must not be displayed.",
+  "stageOrder": [
+    "Unspecified",
+    "Preclinical",
+    "Phase 1",
+    "Phase 1/2",
+    "Phase 2",
+    "Phase 2/3",
+    "Phase 3",
+    "Regulatory Approval",
+    "Market"
+  ],
+  "assetLabels": {
+    "Abemaciclib": "Abemaciclib",
+    "Adagrasib": "Adagrasib",
+    "Alnuctamab": "Alnuctamab",
+    "Arlocabtagene autoleucel": "BMS-986393",
+    "Atezolizumab": "Atezolizumab",
+    "Axitinib": "Axitinib",
+    "Belantamab mafodotin": "Belantamab Mafodotin",
+    "Bevacizumab": "Bevacizumab",
+    "BMS-936558-01": "BMS-936558-01",
+    "Relatlimab": "Relatlimab",
+    "Relatlimab-Nivolumab Fixed-Dose Combination": "BMS-986213",
+    "ADAKITUG": "BMS-986253",
+    "Imzokitug": "Imzokitug",
+    "BMS-986453": "BMS-986453",
+    "BMS-986458": "BMS-986458",
+    "WEE1 CELMoD": "BMS-986463",
+    "BMS-986488": "BMS-986488",
+    "BMS-986489": "BMS-986489",
+    "BMS-986490": "BMS-986490",
+    "BMS-986497": "BMS-986497",
+    "MRTX1719": "BMS-986504",
+    "BMS-986506": "BMS-986506",
+    "BL-B01D1": "Iza-bren",
+    "BMS-986515": "BMS-986515",
+    "BMS-986523": "BMS-986523",
+    "BMS-986525": "BMS-986525",
+    "Bortezomib": "Bortezomib",
+    "Bosutinib": "Bosutinib",
+    "Cabozantinib": "Cabozantinib",
+    "Carfilzomib": "Carfilzomib",
+    "Cetuximab": "Cetuximab",
+    "Cobimetinib": "Cobimetinib",
+    "Crizotinib": "Crizotinib",
+    "Dabrafenib": "Dabrafenib",
+    "Daratumumab": "Daratumumab",
+    "RMC-6236": "Daraxonrasib",
+    "Dasatinib": "Dasatinib",
+    "DISP-10": "DISP-10",
+    "Durvalumab": "Durvalumab",
+    "Elotuzumab": "Elotuzumab",
+    "Elranatamab": "Elranatamab",
+    "Enasidenib": "Enasidenib",
+    "Epcoritamab": "Epcoritamab",
+    "Erlotinib": "Erlotinib",
+    "Trastuzumab deruxtecan": "Fam-Trastuzumab Deruxtecan-Nxki",
+    "Futibatinib": "Futibatinib",
+    "glofitamab": "Glofitamab",
+    "golcadomide": "Golcadomide",
+    "CC-220": "Iberdomide",
+    "Ipilimumab": "Ipilimumab",
+    "Isatuximab": "Isatuximab",
+    "Ixazomib": "Ixazomib",
+    "KTX-1001": "KTX-1001",
+    "Lenalidomide": "Lenalidomide",
+    "Lisocabtagene maraleucel": "Liso-cel",
+    "CC-92480": "Mezigdomide",
+    "Mosunetuzumab": "Mosunetuzumab",
+    "Nivolumab": "Nivolumab",
+    "Obinutuzumab": "Obinutuzumab",
+    "Olaparib": "Olaparib",
+    "Osimertinib": "Osimertinib",
+    "Palbociclib": "Palbociclib",
+    "Pembrolizumab": "Pembrolizumab",
+    "Pertuzumab": "Pertuzumab",
+    "Pomalidomide": "Pomalidomide",
+    "Pumitamig": "Pumitamig",
+    "Regorafenib": "Regorafenib",
+    "Rituximab": "Rituximab",
+    "Ruxolitinib": "Ruxolitinib",
+    "Selinexor": "Selinexor",
+    "Sunitinib": "Sunitinib",
+    "Talazoparib": "Talazoparib",
+    "Temsirolimus": "Temsirolimus",
+    "Trametinib": "Trametinib",
+    "Trastuzumab": "Trastuzumab",
+    "Tucatinib": "Tucatinib",
+    "Vemurafenib": "Vemurafenib",
+    "Venetoclax": "Venetoclax",
+    "Vismodegib": "Vismodegib"
+  },
+  "byIntervention": {
+    "Pumitamig": {
+      "assets": [
+        "Pumitamig"
+      ],
+      "reason": null
+    },
+    "Pembrolizumab": {
+      "assets": [
+        "Pembrolizumab"
+      ],
+      "reason": null
+    },
+    "Carboplatin": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Pemetrexed": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Paclitaxel": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Folfox": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Capox": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Nivolumab": {
+      "assets": [
+        "Nivolumab"
+      ],
+      "reason": null
+    },
+    "BMS-986506": {
+      "assets": [
+        "BMS-986506"
+      ],
+      "reason": null
+    },
+    "Ipilimumab": {
+      "assets": [
+        "Ipilimumab"
+      ],
+      "reason": null
+    },
+    "BMS-986504": {
+      "assets": [
+        "MRTX1719"
+      ],
+      "reason": null
+    },
+    "Placebo": {
+      "assets": [],
+      "reason": "not_an_asset"
+    },
+    "Cisplatin": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Nab-paclitaxel": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Durvalumab": {
+      "assets": [
+        "Durvalumab"
+      ],
+      "reason": null
+    },
+    "Enasidenib": {
+      "assets": [
+        "Enasidenib"
+      ],
+      "reason": null
+    },
+    "Rituximab": {
+      "assets": [
+        "Rituximab"
+      ],
+      "reason": null
+    },
+    "Neoantigen Dendritic Cell Vaccine": {
+      "assets": [],
+      "reason": "not_an_asset"
+    },
+    "Cabozantinib": {
+      "assets": [
+        "Cabozantinib"
+      ],
+      "reason": null
+    },
+    "Daraxonrasib": {
+      "assets": [
+        "RMC-6236"
+      ],
+      "reason": null
+    },
+    "Nivolumab + Relatlimab FDC": {
+      "assets": [
+        "Nivolumab",
+        "Relatlimab"
+      ],
+      "reason": null
+    },
+    "Temozolomide": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Gemcitabine": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Iza-bren": {
+      "assets": [
+        "BL-B01D1"
+      ],
+      "reason": null
+    },
+    "BMS-986488": {
+      "assets": [
+        "BMS-986488"
+      ],
+      "reason": null
+    },
+    "Adagrasib": {
+      "assets": [
+        "Adagrasib"
+      ],
+      "reason": null
+    },
+    "Cetuximab": {
+      "assets": [
+        "Cetuximab"
+      ],
+      "reason": null
+    },
+    "Methotrexate": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Procarbazine": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Liso-cel": {
+      "assets": [
+        "Lisocabtagene maraleucel"
+      ],
+      "reason": null
+    },
+    "Fludarabine": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Cyclophosphamide": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Calcium folinate": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Relatlimab plus Nivolumab": {
+      "assets": [
+        "Relatlimab",
+        "Nivolumab"
+      ],
+      "reason": null
+    },
+    "Imzokitug": {
+      "assets": [
+        "Imzokitug"
+      ],
+      "reason": null
+    },
+    "Atezolizumab": {
+      "assets": [
+        "Atezolizumab"
+      ],
+      "reason": null
+    },
+    "Etoposide": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Carboplatin (or cisplatin if carboplatin is not tolerated)": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "BMS-986393": {
+      "assets": [
+        "Arlocabtagene autoleucel"
+      ],
+      "reason": null
+    },
+    "Daratumumab": {
+      "assets": [
+        "Daratumumab"
+      ],
+      "reason": null
+    },
+    "Pomalidomide": {
+      "assets": [
+        "Pomalidomide"
+      ],
+      "reason": null
+    },
+    "Dexamethasone": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Carfilzomib": {
+      "assets": [
+        "Carfilzomib"
+      ],
+      "reason": null
+    },
+    "BMS-986507": {
+      "assets": [
+        "BL-B01D1"
+      ],
+      "reason": null
+    },
+    "Osimertinib": {
+      "assets": [
+        "Osimertinib"
+      ],
+      "reason": null
+    },
+    "FOLFOX": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "FOLFIRI": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Bevacizumab": {
+      "assets": [
+        "Bevacizumab"
+      ],
+      "reason": null
+    },
+    "CAPOX": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "BMS-986463": {
+      "assets": [
+        "WEE1 CELMoD"
+      ],
+      "reason": null
+    },
+    "BMS-986489 (BMS-986012+Nivolumab)": {
+      "assets": [
+        "BMS-986489"
+      ],
+      "reason": null
+    },
+    "Relatlimab": {
+      "assets": [
+        "Relatlimab"
+      ],
+      "reason": null
+    },
+    "BMS-986525": {
+      "assets": [
+        "BMS-986525"
+      ],
+      "reason": null
+    },
+    "Alnuctamab": {
+      "assets": [
+        "Alnuctamab"
+      ],
+      "reason": null
+    },
+    "Mezigdomide": {
+      "assets": [
+        "CC-92480"
+      ],
+      "reason": null
+    },
+    "Iberdomide": {
+      "assets": [
+        "CC-220"
+      ],
+      "reason": null
+    },
+    "Elranatamab": {
+      "assets": [
+        "Elranatamab"
+      ],
+      "reason": null
+    },
+    "Selinexor": {
+      "assets": [
+        "Selinexor"
+      ],
+      "reason": null
+    },
+    "Lenalidomide": {
+      "assets": [
+        "Lenalidomide"
+      ],
+      "reason": null
+    },
+    "Bortezomib": {
+      "assets": [
+        "Bortezomib"
+      ],
+      "reason": null
+    },
+    "Ixazomib": {
+      "assets": [
+        "Ixazomib"
+      ],
+      "reason": null
+    },
+    "Elotuzumab": {
+      "assets": [
+        "Elotuzumab"
+      ],
+      "reason": null
+    },
+    "Clarithromycin": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Belantamab Mafodotin": {
+      "assets": [
+        "Belantamab mafodotin"
+      ],
+      "reason": null
+    },
+    "BMS-986515": {
+      "assets": [
+        "BMS-986515"
+      ],
+      "reason": null
+    },
+    "Tocilizumab": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Nivolumab 240 mg / Relatlimab 80 mg in a fixed dose combination": {
+      "assets": [
+        "Nivolumab",
+        "Relatlimab"
+      ],
+      "reason": null
+    },
+    "BMS-986490": {
+      "assets": [
+        "BMS-986490"
+      ],
+      "reason": null
+    },
+    "Nivolumab plus ipilimumab": {
+      "assets": [
+        "Nivolumab",
+        "Ipilimumab"
+      ],
+      "reason": null
+    },
+    "BMS-986340": {
+      "assets": [
+        "Imzokitug"
+      ],
+      "reason": null
+    },
+    "BMS-936558-01": {
+      "assets": [
+        "BMS-936558-01"
+      ],
+      "reason": null
+    },
+    "Docetaxel": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "5-FU": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Leucovorin": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Oxaliplatin": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Platinum": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Daratumumab/rHuPH20 Co-formulation": {
+      "assets": [
+        "Daratumumab"
+      ],
+      "reason": null
+    },
+    "Isatuximab": {
+      "assets": [
+        "Isatuximab"
+      ],
+      "reason": null
+    },
+    "BMS-986458": {
+      "assets": [
+        "BMS-986458"
+      ],
+      "reason": null
+    },
+    "Glofitamab/Obinutuzumab": {
+      "assets": [
+        "glofitamab",
+        "Obinutuzumab"
+      ],
+      "reason": null
+    },
+    "Mosunetuzumab": {
+      "assets": [
+        "Mosunetuzumab"
+      ],
+      "reason": null
+    },
+    "Epcoritamab": {
+      "assets": [
+        "Epcoritamab"
+      ],
+      "reason": null
+    },
+    "Golcadomide": {
+      "assets": [
+        "golcadomide"
+      ],
+      "reason": null
+    },
+    "Ruxolitinib": {
+      "assets": [
+        "Ruxolitinib"
+      ],
+      "reason": null
+    },
+    "Cohort A1 & A2: KTX-1001": {
+      "assets": [
+        "KTX-1001"
+      ],
+      "reason": null
+    },
+    "Cohort B1 & B2: KTX-1001+Mezigdomide": {
+      "assets": [
+        "KTX-1001",
+        "CC-92480"
+      ],
+      "reason": null
+    },
+    "Cohort C1 & C2: KTX-1001 + Carfilzomib (KYPROLIS®)": {
+      "assets": [
+        "KTX-1001",
+        "Carfilzomib"
+      ],
+      "reason": null
+    },
+    "Cohort D: KTX-1001+ pomalidomide (Pomalyst, Imnovid)": {
+      "assets": [
+        "KTX-1001",
+        "Pomalidomide"
+      ],
+      "reason": null
+    },
+    "Iberdomide Hydrochloride": {
+      "assets": [
+        "CC-220"
+      ],
+      "reason": null
+    },
+    "Quality-of-Life Assessment": {
+      "assets": [],
+      "reason": "not_an_asset"
+    },
+    "DISP-10": {
+      "assets": [
+        "DISP-10"
+      ],
+      "reason": null
+    },
+    "Palbociclib": {
+      "assets": [
+        "Palbociclib"
+      ],
+      "reason": null
+    },
+    "Sunitinib": {
+      "assets": [
+        "Sunitinib"
+      ],
+      "reason": null
+    },
+    "Temsirolimus": {
+      "assets": [
+        "Temsirolimus"
+      ],
+      "reason": null
+    },
+    "Trastuzumab and Pertuzumab": {
+      "assets": [
+        "Trastuzumab",
+        "Pertuzumab"
+      ],
+      "reason": null
+    },
+    "Vemurafenib and Cobimetinib": {
+      "assets": [
+        "Vemurafenib",
+        "Cobimetinib"
+      ],
+      "reason": null
+    },
+    "Regorafenib": {
+      "assets": [
+        "Regorafenib"
+      ],
+      "reason": null
+    },
+    "Olaparib": {
+      "assets": [
+        "Olaparib"
+      ],
+      "reason": null
+    },
+    "Nivolumab and Ipilimumab": {
+      "assets": [
+        "Nivolumab",
+        "Ipilimumab"
+      ],
+      "reason": null
+    },
+    "Abemaciclib": {
+      "assets": [
+        "Abemaciclib"
+      ],
+      "reason": null
+    },
+    "Talazoparib": {
+      "assets": [
+        "Talazoparib"
+      ],
+      "reason": null
+    },
+    "Atezolizumab and Talazoparib": {
+      "assets": [
+        "Atezolizumab",
+        "Talazoparib"
+      ],
+      "reason": null
+    },
+    "Tucatinib plus Trastuzumab Subcutaneous (SC)": {
+      "assets": [
+        "Tucatinib",
+        "Trastuzumab"
+      ],
+      "reason": null
+    },
+    "Futibatinib": {
+      "assets": [
+        "Futibatinib"
+      ],
+      "reason": null
+    },
+    "Dabrafenib plus Trametinib": {
+      "assets": [
+        "Dabrafenib",
+        "Trametinib"
+      ],
+      "reason": null
+    },
+    "Fam-Trastuzumab Deruxtecan-Nxki (TDxD)": {
+      "assets": [
+        "Trastuzumab deruxtecan"
+      ],
+      "reason": null
+    },
+    "BMS-986523": {
+      "assets": [
+        "BMS-986523"
+      ],
+      "reason": null
+    },
+    "Nab-Paclitaxel": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Arlocabtagene Autoleucel": {
+      "assets": [
+        "Arlocabtagene autoleucel"
+      ],
+      "reason": null
+    },
+    "Drugs Nivolumab": {
+      "assets": [
+        "Nivolumab"
+      ],
+      "reason": null
+    },
+    "BMS-986213 (Relatlimab-Nivolumab FDC)": {
+      "assets": [
+        "Relatlimab-Nivolumab Fixed-Dose Combination"
+      ],
+      "reason": null
+    },
+    "BMS-986489": {
+      "assets": [
+        "BMS-986489"
+      ],
+      "reason": null
+    },
+    "BMS-986497": {
+      "assets": [
+        "BMS-986497"
+      ],
+      "reason": null
+    },
+    "Azacitidine": {
+      "assets": [],
+      "reason": "backbone"
+    },
+    "Venetoclax": {
+      "assets": [
+        "Venetoclax"
+      ],
+      "reason": null
+    },
+    "Nivolumab + Relatlimab": {
+      "assets": [
+        "Nivolumab",
+        "Relatlimab"
+      ],
+      "reason": null
+    },
+    "SBRT": {
+      "assets": [],
+      "reason": "not_an_asset"
+    },
+    "Dasatinib": {
+      "assets": [
+        "Dasatinib"
+      ],
+      "reason": null
+    },
+    "Nivolumab plus Ipilimumab": {
+      "assets": [
+        "Nivolumab",
+        "Ipilimumab"
+      ],
+      "reason": null
+    },
+    "Axitinib": {
+      "assets": [
+        "Axitinib"
+      ],
+      "reason": null
+    },
+    "Bosutinib": {
+      "assets": [
+        "Bosutinib"
+      ],
+      "reason": null
+    },
+    "Crizotinib": {
+      "assets": [
+        "Crizotinib"
+      ],
+      "reason": null
+    },
+    "Erlotinib": {
+      "assets": [
+        "Erlotinib"
+      ],
+      "reason": null
+    },
+    "Trastuzumab plus Pertuzumab": {
+      "assets": [
+        "Trastuzumab",
+        "Pertuzumab"
+      ],
+      "reason": null
+    },
+    "Vemurafenib plus Cobimetinib": {
+      "assets": [
+        "Vemurafenib",
+        "Cobimetinib"
+      ],
+      "reason": null
+    },
+    "Vismodegib": {
+      "assets": [
+        "Vismodegib"
+      ],
+      "reason": null
+    },
+    "Tucatinib": {
+      "assets": [
+        "Tucatinib"
+      ],
+      "reason": null
+    },
+    "BMS-986453": {
+      "assets": [
+        "BMS-986453"
+      ],
+      "reason": null
+    },
+    "Non-Interventional Study": {
+      "assets": [],
+      "reason": "not_an_asset"
+    },
+    "Acetaminophen": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Diphenhydramine": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Montelukast": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "Celecoxib 200mg": {
+      "assets": [],
+      "reason": "supportive"
+    },
+    "BMS-986253": {
+      "assets": [
+        "ADAKITUG"
+      ],
+      "reason": null
+    },
+    "BMS-986016": {
+      "assets": [
+        "Relatlimab"
+      ],
+      "reason": null
+    }
+  },
+  "conditionToIndication": {
+    "Acute Myeloid Leukemia": "Acute Myeloid Leukemia (AML)",
+    "Advanced Malignant Tumors": "Malignant Tumors",
+    "Advanced Solid Malignancies": "Advanced Solid Malignancies",
+    "Advanced Solid Tumors": "Advanced Solid Tumors",
+    "Basal Cell Carcinoma": "Basal Cell Carcinoma",
+    "Brain Metastases": "Brain Metastases",
+    "Breast Cancer": "Breast Cancer",
+    "Carcinoma, Non-Small-Cell Lung": "Non-Squamous Non-Small Cell Lung Cancer",
+    "Cervical Cancer": "Cervical Cancer",
+    "Colon Carcinoma": "Colon cancer",
+    "Colorectal Cancer": "Colorectal Cancer",
+    "Colorectal Carcinoma": "Colorectal Cancer",
+    "Cutaneous Squamous Cell Carcinoma": "Cutaneous Squamous Cell Carcinoma",
+    "Esophageal Adenocarcinoma": "Adenocarcinoma of the Esophagus",
+    "Extensive-Stage Small Cell Lung Cancer": "Extensive-Stage Small Cell Lung Cancer",
+    "Extensive-stage Small-cell Lung Cancer": "Extensive-Stage Small Cell Lung Cancer",
+    "Gastric Adenocarcinoma": "Gastric Cancer",
+    "Gastric Cancer": "Gastric Cancer",
+    "Gastric/Gastroesophageal Junction Adenocarcinoma": "Gastric/Esophageal Adenocarcinoma",
+    "Gastroesophageal Adenocarcinoma": "Gastric/Esophageal Adenocarcinoma",
+    "Hepatocellular Cancer": "Hepatocellular Carcinoma",
+    "Hepatocellular Carcinoma": "Hepatocellular Carcinoma",
+    "Hodgkin Lymphoma": "Hodgkin Lymphoma",
+    "Limited Stage Small Cell Lung Cancer": "Limited-stage small cell lung cancer",
+    "Liver Metastases": "Liver Metastases",
+    "Lung Cancer": "Small Cell Lung Cancer",
+    "Lung Non-Small Cell Carcinoma": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Lymphoma": "Lymphoma",
+    "Lymphoma, Non-Hodgkin": "Non-Hodgkin's Lymphoma",
+    "Melanoma": "Melanoma",
+    "Multiple Myeloma": "Multiple Myeloma",
+    "Myelodysplastic Syndrome": "Myelodysplastic Syndrome (MDS)",
+    "Myeloma": "Multiple Myeloma",
+    "Myeloma Multiple": "Multiple Myeloma",
+    "Non Small Cell Lung Cancer": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non Small Cell Lung Cancer NSCLC": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non-Small Cell Lung Cancer": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non-Small Cell Lung Cancer (NSCLC)": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non-Small-Cell Lung Cancer": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non-small Cell Lung Cancer": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Non-small Cell Lung Cancer (NSCLC)": "Non-Small Cell Lung Cancer (NSCLC)",
+    "Ovarian Neoplasms": "Ovarian Cancer",
+    "Pancreatic Adenocarcinoma": "Pancreatic Ductal Adenocarcinoma",
+    "Pancreatic Ductal Adenocarcinoma (PDAC)": "Pancreatic ductal adenocarcinoma (PDAC)",
+    "Refractory Autoimmune Diseases": "Relapsed/Refractory Autoimmune Diseases",
+    "Refractory Multiple Myeloma": "Multiple Myeloma",
+    "Renal Cell Carcinoma": "Renal Cell Carcinoma",
+    "Renal Cell Carcinoma, Clear Cell": "Clear Cell Renal Cell Carcinoma",
+    "Solid Tumors": "Advanced Solid Tumors",
+    "Squamous Cell Carcinoma of Head and Neck": "Head and neck squamous cell carcinoma",
+    "T-cell Lymphoma": "T-cell Lymphoma",
+    "Triple Negative Breast Neoplasms": "Triple Negative Breast Cancer",
+    "Urothelial Cancer": "Urothelial Cancer",
+    "Urothelial Carcinoma": "Urothelial Carcinoma"
+  },
+  "programsByAsset": {
+    "Belantamab mafodotin": [
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BCMA"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BCMA"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "BCMA"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      }
+    ],
+    "Bortezomib": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Cabozantinib": [
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma (UC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "C-Met",
+          "RET"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Crizotinib": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "C-Met",
+          "ROS1",
+          "ALK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "C-Met",
+          "ROS1",
+          "ALK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "C-Met",
+          "ROS1",
+          "ALK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "C-Met",
+          "ROS1",
+          "ALK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "C-Met",
+          "ROS1",
+          "ALK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Dabrafenib": [
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Elotuzumab": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "SLAMF7"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "SLAMF7"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Elranatamab": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CD3",
+          "BCMA"
+        ],
+        "modalities": [
+          "T-Cell Engager",
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CD3",
+          "BCMA"
+        ],
+        "modalities": [
+          "T-Cell Engager",
+          "MAb"
+        ]
+      }
+    ],
+    "Erlotinib": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Ixazomib": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Olaparib": [
+      {
+        "indication": "Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "High Grade Serous Ovarian Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Limited-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Osimertinib": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Rituximab": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "T-Cell Lymphoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Sunitinib": [
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Brain Metastases",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PDGFR-Beta",
+          "VEGF-A",
+          "VEGFR2",
+          "C-Kit"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Vismodegib": [
+      {
+        "indication": "Basal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "SHH",
+          "Hedgehog"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Alnuctamab": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "BCMA",
+          "CD3"
+        ],
+        "modalities": [
+          "T-Cell Engager"
+        ]
+      }
+    ],
+    "Arlocabtagene autoleucel": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "GPRC5D"
+        ],
+        "modalities": [
+          "CAR-T"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "GPRC5D"
+        ],
+        "modalities": [
+          "CAR-T"
+        ]
+      }
+    ],
+    "BMS-986489": [
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "FUCOSYL-GM1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "FUCOSYL-GM1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "CC-92480": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Mosunetuzumab": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CD20",
+          "CD3"
+        ],
+        "modalities": [
+          "T-Cell Engager",
+          "MAb"
+        ]
+      }
+    ],
+    "Obinutuzumab": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD20"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Palbociclib": [
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "CDK4",
+          "CDK6"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Pertuzumab": [
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb",
+          "ADC"
+        ]
+      }
+    ],
+    "glofitamab": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CD20",
+          "CD3"
+        ],
+        "modalities": [
+          "T-Cell Engager",
+          "MAb"
+        ]
+      }
+    ],
+    "Cobimetinib": [
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma (UC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MAPK"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Ipilimumab": [
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Probable Inactive",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Probable Inactive",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "CTLA-4"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "MRTX1719": [
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "PRMT5"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PRMT5"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PRMT5"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PRMT5"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PRMT5"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Nivolumab": [
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "CNS Malignancy",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Basal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "High Grade Serous Ovarian Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cutaneous T-Cell Lymphoma (CTCL)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastroesophageal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma (UC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Tucatinib": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Vemurafenib": [
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2/3",
+        "stageRank": 5,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "BRAF"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Dasatinib": [
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Epcoritamab": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CD3",
+          "CD20"
+        ],
+        "modalities": [
+          "T-Cell Engager",
+          "MAb"
+        ]
+      }
+    ],
+    "Trastuzumab": [
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Active",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Squamous Cell Carcinoma Of The Skin",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "HER2"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "ADAKITUG": [
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CXCR2",
+          "IL-8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CXCR2",
+          "IL-8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "CXCR2",
+          "IL-8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Abemaciclib": [
+      {
+        "indication": "Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Brain Metastases",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CDK6",
+          "CDK4"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Adagrasib": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Brain Metastases",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "KRAS G12C",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Atezolizumab": [
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Mucosal Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cutaneous Squamous Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Limited-Stage Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma (UC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Axitinib": [
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Basal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGFR2",
+          "VEGFR",
+          "VEGF-A",
+          "VEGFR1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "BL-B01D1": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "EGFR",
+          "HER3"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      }
+    ],
+    "BMS-986490": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CEA"
+        ],
+        "modalities": []
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CEA"
+        ],
+        "modalities": []
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CEA"
+        ],
+        "modalities": []
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CEA"
+        ],
+        "modalities": []
+      }
+    ],
+    "BMS-986523": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "FAP",
+          "CD40"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "FAP",
+          "CD40"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "FAP",
+          "CD40"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "FAP",
+          "CD40"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "BMS-986525": [
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Bispecific Antibody"
+        ]
+      }
+    ],
+    "Bevacizumab": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Mucosal Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "VEGF-A"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Bosutinib": [
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "ABL1",
+          "Src"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "CC-220": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Carfilzomib": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "Proteasome"
+        ],
+        "modalities": [
+          "Protein",
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Cetuximab": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cutaneous Squamous Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "EGFR"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Daratumumab": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Durvalumab": [
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Limited-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PD-L1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Enasidenib": [
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "IDH2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "IDH2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Futibatinib": [
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "FGFR1",
+          "FGFR3",
+          "FGFR4",
+          "FGFR2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Imzokitug": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CCR8"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Isatuximab": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CD38"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Lenalidomide": [
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Active",
+        "targets": [
+          "HER2",
+          "CRBN"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Pembrolizumab": [
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Squamous Cell Carcinoma Of The Skin",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Head And Neck Squamous Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Brain Metastases",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Limited-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastroesophageal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cutaneous Squamous Cell Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "High Grade Serous Ovarian Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastric/Esophageal Adenocarcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cutaneous T-Cell Lymphoma (CTCL)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Pancreatic Ductal Adenocarcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Locally Advanced Or Metastatic Urothelial Carcinoma (La/MUC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Basal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "T-Cell Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "PD-1"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Pomalidomide": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Pumitamig": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-L1",
+          "VEGF-A"
+        ],
+        "modalities": [
+          "Bispecific Antibody"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1",
+          "VEGF-A"
+        ],
+        "modalities": [
+          "Bispecific Antibody"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-L1",
+          "VEGF-A"
+        ],
+        "modalities": [
+          "Bispecific Antibody"
+        ]
+      }
+    ],
+    "RMC-6236": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "RAS",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "RAS",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "RAS",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "RAS",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "RAS",
+          "KRAS"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Regorafenib": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Malignant Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "C-Kit",
+          "TIE2",
+          "PDGFR-Beta",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "C-Kit",
+          "TIE2",
+          "PDGFR-Beta",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "TIE2",
+          "C-Kit",
+          "VEGFR",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "C-Kit",
+          "TIE2",
+          "PDGFR-Beta",
+          "PDGFR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Relatlimab": [
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hodgkin Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Relatlimab-Nivolumab Fixed-Dose Combination": [
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Hepatocellular Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PD-1",
+          "LAG-3"
+        ],
+        "modalities": [
+          "MAb"
+        ]
+      }
+    ],
+    "Ruxolitinib": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "JAK",
+          "JAK1",
+          "JAK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Selinexor": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Cutaneous T-Cell Lymphoma (CTCL)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "XPO1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Talazoparib": [
+      {
+        "indication": "Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Urothelial Carcinoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Discontinued",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "PARP2",
+          "PARP",
+          "PARP1"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Temsirolimus": [
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "MTOR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "MTOR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Probable Inactive",
+        "targets": [
+          "MTOR"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Trametinib": [
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Discontinued",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Lung Neoplasms",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "MAPKK",
+          "MEK1",
+          "MEK2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "Trastuzumab deruxtecan": [
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "High Grade Serous Ovarian Carcinoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Cervical Cancer",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Gastric/Esophageal Adenocarcinoma",
+        "stage": "Phase 2",
+        "stageRank": 4,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Triple Negative Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "Topoisomerase I",
+          "HER2"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Melanoma",
+        "stage": "Unspecified",
+        "stageRank": 0,
+        "status": "Probable Inactive",
+        "targets": [
+          "HER2",
+          "Topoisomerase I"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      }
+    ],
+    "Venetoclax": [
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Regulatory Approval",
+        "stageRank": 7,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 3",
+        "stageRank": 6,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Breast Cancer",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "T-Cell Lymphoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Small Cell Lung Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Extensive-Stage Small Cell Lung Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Discontinued",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Probable Inactive",
+        "targets": [
+          "BCL-2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "golcadomide": [
+      {
+        "indication": "Non-Hodgkin's Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Aiolos",
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule Protein Degrader",
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "T-Cell Lymphoma",
+        "stage": "Phase 1/2",
+        "stageRank": 3,
+        "status": "Active",
+        "targets": [
+          "Aiolos",
+          "CRBN",
+          "Ikaros"
+        ],
+        "modalities": [
+          "Small Molecule Protein Degrader",
+          "Small Molecule"
+        ]
+      }
+    ],
+    "BMS-986453": [
+      {
+        "indication": "Multiple Myeloma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "BCMA",
+          "GPRC5D"
+        ],
+        "modalities": [
+          "CAR-T"
+        ]
+      }
+    ],
+    "BMS-986488": [
+      {
+        "indication": "Non-Small Cell Lung Cancer (NSCLC)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Small Molecule"
+        ]
+      },
+      {
+        "indication": "Ovarian Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "BMS-986497": [
+      {
+        "indication": "Acute Myeloid Leukemia (AML)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD33",
+          "GSPT1"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      },
+      {
+        "indication": "Myelodysplastic Syndrome (MDS)",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CD33",
+          "GSPT1"
+        ],
+        "modalities": [
+          "ADC"
+        ]
+      }
+    ],
+    "BMS-986506": [
+      {
+        "indication": "Renal Cell Carcinoma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "CRBN"
+        ],
+        "modalities": [
+          "Molecular Glue"
+        ]
+      }
+    ],
+    "DISP-10": [
+      {
+        "indication": "Adenocarcinoma Of The Esophagus",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Adenoviral Gene Therapy",
+          "CAR-T"
+        ]
+      },
+      {
+        "indication": "Colorectal Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Adenoviral Gene Therapy",
+          "CAR-T"
+        ]
+      },
+      {
+        "indication": "Gastric Cancer",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [],
+        "modalities": [
+          "Adenoviral Gene Therapy",
+          "CAR-T"
+        ]
+      }
+    ],
+    "KTX-1001": [
+      {
+        "indication": "Relapsed And Refractory Multiple Myeloma",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "NSD2"
+        ],
+        "modalities": [
+          "Small Molecule"
+        ]
+      }
+    ],
+    "WEE1 CELMoD": [
+      {
+        "indication": "Advanced Solid Tumors",
+        "stage": "Phase 1",
+        "stageRank": 2,
+        "status": "Active",
+        "targets": [
+          "WEE1"
+        ],
+        "modalities": [
+          "Molecular Glue"
+        ]
+      }
+    ]
+  },
+  "catalystsByAsset": {
+    "BMS-986490": [
+      {
+        "eventId": 377816,
+        "name": "NCT06730750 primary completion",
+        "reportedDate": "2026-09-05",
+        "sortDate": "2026-09-05",
+        "indications": [
+          "Gastric Cancer",
+          "Non-Small Cell Lung Cancer (NSCLC)",
+          "Advanced Solid Tumors",
+          "Colorectal Cancer"
+        ]
+      }
+    ],
+    "Bevacizumab": [
+      {
+        "eventId": 377816,
+        "name": "NCT06730750 primary completion",
+        "reportedDate": "2026-09-05",
+        "sortDate": "2026-09-05",
+        "indications": [
+          "Gastric Cancer",
+          "Non-Small Cell Lung Cancer (NSCLC)",
+          "Advanced Solid Tumors",
+          "Colorectal Cancer"
+        ]
+      }
+    ],
+    "Atezolizumab": [
+      {
+        "eventId": 377816,
+        "name": "NCT06730750 primary completion",
+        "reportedDate": "2026-09-05",
+        "sortDate": "2026-09-05",
+        "indications": [
+          "Gastric Cancer",
+          "Non-Small Cell Lung Cancer (NSCLC)",
+          "Advanced Solid Tumors",
+          "Colorectal Cancer"
+        ]
+      }
+    ],
+    "Ipilimumab": [
+      {
+        "eventId": 124227,
+        "name": "NCT03071406 study completion",
+        "reportedDate": "2026-09-19",
+        "sortDate": "2026-09-19",
+        "indications": [
+          "Merkel Cell Carcinoma",
+          "Cutaneous Tumor"
+        ]
+      },
+      {
+        "eventId": 14812804,
+        "name": "NCT06946797 primary completion",
+        "reportedDate": "2027-02-05",
+        "sortDate": "2027-02-05",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)",
+          "Lung Neoplasms"
+        ]
+      }
+    ],
+    "Nivolumab": [
+      {
+        "eventId": 124227,
+        "name": "NCT03071406 study completion",
+        "reportedDate": "2026-09-19",
+        "sortDate": "2026-09-19",
+        "indications": [
+          "Merkel Cell Carcinoma",
+          "Cutaneous Tumor"
+        ]
+      },
+      {
+        "eventId": 7870,
+        "name": "NCT05888831 primary completion",
+        "reportedDate": "2026-09-30",
+        "sortDate": "2026-09-30",
+        "indications": [
+          "Triple Negative Breast Cancer",
+          "Advanced Solid Tumors",
+          "Non-Small Cell Lung Cancer (NSCLC)"
+        ]
+      },
+      {
+        "eventId": 14387050,
+        "name": "Potential launch of Opdivo in Adjuvant HCC",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Hepatocellular Carcinoma"
+        ]
+      },
+      {
+        "eventId": 14385394,
+        "name": "Opdualag RELATIVITY-123 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Melanoma"
+        ]
+      },
+      {
+        "eventId": 14385397,
+        "name": "Opdualag RELATIVITY-098 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Melanoma"
+        ]
+      },
+      {
+        "eventId": 14385389,
+        "name": "Opdivo CA017-078 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Non-Muscle Invasive Bladder Cancer (NMIBC)"
+        ]
+      },
+      {
+        "eventId": 14387056,
+        "name": "Potential launch of Opdivo+chemo in Peri-adjuvant MIUC",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Non-Muscle Invasive Bladder Cancer (NMIBC)"
+        ]
+      },
+      {
+        "eventId": 14812804,
+        "name": "NCT06946797 primary completion",
+        "reportedDate": "2027-02-05",
+        "sortDate": "2027-02-05",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)",
+          "Lung Neoplasms"
+        ]
+      }
+    ],
+    "Carfilzomib": [
+      {
+        "eventId": 15103892,
+        "name": "KYPROLIS ANDA patent litigation claim construction hearing",
+        "reportedDate": "2026-09-02",
+        "sortDate": "2026-09-02",
+        "indications": []
+      },
+      {
+        "eventId": 14372485,
+        "name": "Generic Kyprolis launch",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Trametinib": [
+      {
+        "eventId": 25126,
+        "name": "NCT05372354 primary completion",
+        "reportedDate": "2026-10-12",
+        "sortDate": "2026-10-12",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Pumitamig": [
+      {
+        "eventId": 14937035,
+        "name": "Pumitamig early-stage data in Solid Tumors",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Advanced Solid Tumors"
+        ]
+      },
+      {
+        "eventId": 14937055,
+        "name": "Potential launch of Pumitamig for NSCLC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)"
+        ]
+      },
+      {
+        "eventId": 14937059,
+        "name": "Potential launch of Pumitamig for SCLC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Small Cell Lung Cancer"
+        ]
+      },
+      {
+        "eventId": 14937065,
+        "name": "Potential launch of Pumitamig for HCC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Hepatocellular Carcinoma"
+        ]
+      },
+      {
+        "eventId": 14937062,
+        "name": "Potential launch of Pumitamig for Gastric Cancer",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Gastric Cancer"
+        ]
+      },
+      {
+        "eventId": 14937071,
+        "name": "Potential launch of Pumitamig for MSS CRC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Colorectal Cancer"
+        ]
+      },
+      {
+        "eventId": 14937068,
+        "name": "Potential launch of Pumitamig for H&N Cancer",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Head And Neck Cancer"
+        ]
+      }
+    ],
+    "Relatlimab": [
+      {
+        "eventId": 14387186,
+        "name": "Potential launch of Nivo+Rela in 1L NSCLC",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)"
+        ]
+      },
+      {
+        "eventId": 14385394,
+        "name": "Opdualag RELATIVITY-123 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Melanoma"
+        ]
+      },
+      {
+        "eventId": 14385397,
+        "name": "Opdualag RELATIVITY-098 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Melanoma"
+        ]
+      },
+      {
+        "eventId": 108268,
+        "name": "NCT05625399 study completion",
+        "reportedDate": "2027-11-18",
+        "sortDate": "2027-11-18",
+        "indications": [
+          "Malignant Melanoma Stage IV",
+          "Melanoma"
+        ]
+      },
+      {
+        "eventId": 14387252,
+        "name": "Potential launch of Opdualag in Adjuvant Melanoma",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Melanoma"
+        ]
+      }
+    ],
+    "Adagrasib": [
+      {
+        "eventId": 14385411,
+        "name": "Krazati KRYSTAL-12 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)"
+        ]
+      },
+      {
+        "eventId": 14937050,
+        "name": "Potential launch of Krazati for 1L NSCLC",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Non-Small Cell Lung Cancer (NSCLC)"
+        ]
+      },
+      {
+        "eventId": 14387248,
+        "name": "Potential launch of Krazati in 2L CRC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Colorectal Cancer"
+        ]
+      }
+    ],
+    "CC-220": [
+      {
+        "eventId": 14936953,
+        "name": "Iberdomide EXCALIBER-RRMM trial PFS data",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      },
+      {
+        "eventId": 14387214,
+        "name": "Potential launch of iberdomide in NDMM maintenance",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      },
+      {
+        "eventId": 14387258,
+        "name": "Potential launch of iberdomide in RRMM",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "CC-92480": [
+      {
+        "eventId": 14385444,
+        "name": "mezigdomide SUCCESSOR-1 trial readout",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      },
+      {
+        "eventId": 14354323,
+        "name": "Mezigdomide SUCCESSOR-1 & 2 trial data",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      },
+      {
+        "eventId": 144799,
+        "name": "NCT05519085 primary completion",
+        "reportedDate": "2027-01-10",
+        "sortDate": "2027-01-10",
+        "indications": [
+          "Relapsed And Refractory Multiple Myeloma",
+          "Multiple Myeloma"
+        ]
+      },
+      {
+        "eventId": 14387265,
+        "name": "Potential launch of mezigdomide in RRMM",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Arlocabtagene autoleucel": [
+      {
+        "eventId": 14354330,
+        "name": "Arlo-cel QUINTESSENTIAL trial data",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "golcadomide": [
+      {
+        "eventId": 14387209,
+        "name": "Potential launch of golcadomide in 3L+ FL",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Follicular Lymphoma"
+        ]
+      },
+      {
+        "eventId": 25754,
+        "name": "NCT06035497 primary completion",
+        "reportedDate": "2027-01-30",
+        "sortDate": "2027-01-30",
+        "indications": [
+          "Anaplastic Large Cell Lymphoma (ALCL)",
+          "Angioimmunoblastic T-Cell Lymphoma",
+          "Extranodal NK/T-Cell Lymphoma",
+          "Mycosis Fungoides"
+        ]
+      }
+    ],
+    "Lisocabtagene maraleucel": [
+      {
+        "eventId": 14937048,
+        "name": "Potential launch of Breyanzi for 2L FL",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Follicular Lymphoma"
+        ]
+      },
+      {
+        "eventId": 14387029,
+        "name": "Potential launch of Breyanzi in 3L+ MZL",
+        "reportedDate": "2026",
+        "sortDate": "2026-12-31",
+        "indications": [
+          "Marginal Zone Lymphoma"
+        ]
+      }
+    ],
+    "Bortezomib": [
+      {
+        "eventId": 144799,
+        "name": "NCT05519085 primary completion",
+        "reportedDate": "2027-01-10",
+        "sortDate": "2027-01-10",
+        "indications": [
+          "Relapsed And Refractory Multiple Myeloma",
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Pomalidomide": [
+      {
+        "eventId": 144799,
+        "name": "NCT05519085 primary completion",
+        "reportedDate": "2027-01-10",
+        "sortDate": "2027-01-10",
+        "indications": [
+          "Relapsed And Refractory Multiple Myeloma",
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Ixazomib": [
+      {
+        "eventId": 144799,
+        "name": "NCT05519085 primary completion",
+        "reportedDate": "2027-01-10",
+        "sortDate": "2027-01-10",
+        "indications": [
+          "Relapsed And Refractory Multiple Myeloma",
+          "Multiple Myeloma"
+        ]
+      }
+    ],
+    "Venetoclax": [
+      {
+        "eventId": 79200,
+        "name": "NCT06419634 primary completion",
+        "reportedDate": "2027-02-01",
+        "sortDate": "2027-02-01",
+        "indications": [
+          "Acute Myeloid Leukemia (AML)",
+          "Myelodysplastic Syndrome (MDS)"
+        ]
+      }
+    ],
+    "BMS-986497": [
+      {
+        "eventId": 79200,
+        "name": "NCT06419634 primary completion",
+        "reportedDate": "2027-02-01",
+        "sortDate": "2027-02-01",
+        "indications": [
+          "Acute Myeloid Leukemia (AML)",
+          "Myelodysplastic Syndrome (MDS)"
+        ]
+      }
+    ],
+    "BL-B01D1": [
+      {
+        "eventId": 14937070,
+        "name": "Potential launch of Iza-bren for mUC",
+        "reportedDate": "2027",
+        "sortDate": "2027-12-31",
+        "indications": [
+          "Non-Muscle Invasive Bladder Cancer (NMIBC)"
+        ]
+      }
+    ]
+  }
+}

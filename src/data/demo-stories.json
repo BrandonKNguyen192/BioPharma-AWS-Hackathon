@@ -1,0 +1,30 @@
+{
+  "source": "fictional composites inspired by public cancer-patient community posts (Cancer Survivors Network, 2016-2020); anonymized",
+  "stories": [
+    {
+      "id": "daniel-58-nsclc",
+      "title": "Daniel, 58 — anchor story",
+      "text": "I'm 58. Last year I was diagnosed with stage IV non-small cell lung cancer. I went through four rounds of carboplatin and pemetrexed, but my last scan showed it had spread further. My oncologist mentioned my PD-L1 is around 60%. My ECOG is 1 and there's no sign it's reached my brain. I've been on ClinicalTrials.gov for hours and I genuinely can't tell which of these studies I'd even be allowed to join. I feel like I'm running out of time and options."
+    },
+    {
+      "id": "marta-64-post-io",
+      "title": "Marta, 64 — progressed after immunotherapy",
+      "text": "I was diagnosed fourteen months ago with stage IV non-small cell lung cancer. I did six rounds of carboplatin, pemetrexed, and Keytruda, and it worked for a while. But my last scan showed the tumors in my lungs growing and a new spot on my liver. My PD-L1 was 90%. I had one small brain metastasis that was treated with radiation and it's been stable ever since. My doctor says my performance status is still 1. I've been trying to find trials for people who have already had immunotherapy, because I don't think I can go back to that."
+    },
+    {
+      "id": "frank-62-kras",
+      "title": "Frank, 62 — KRAS mutation, hunting for targeted trials",
+      "text": "I'm 62 and I have stage IV lung cancer — adenocarcinoma with a KRAS G12C mutation. I did carboplatin, pemetrexed, and Keytruda for about eight months, but my scans started showing it was growing again. My PD-L1 was 40%. I'm ECOG 1 and it hasn't spread to my brain. I heard there are new drugs for KRAS now, so I've been looking for a trial that will take someone who already had chemo and immunotherapy. The problem is I can't figure out which studies actually want people like me."
+    },
+    {
+      "id": "margaret-71-henry",
+      "title": "Margaret, writing for her father Henry, 71 — fragile, low PD-L1",
+      "text": "My father is 71 and has stage IV squamous cell lung cancer. He did carboplatin and radiation, and then it spread to his liver. His PD-L1 is only about 5%. He's fragile — he's at ECOG 2 and uses oxygen at night. No brain mets. We're looking for anything, any trial, that might still be an option for someone his age who's already had chemo. He's a fighter, but he's tired, and I don't want to bring him something that isn't even a possibility."
+    },
+    {
+      "id": "carol-67-jack",
+      "title": "Carol, writing for her husband Jack, 67 — small cell, time pressure",
+      "text": "My husband Jack is 67. He was diagnosed last June with extensive-stage small cell lung cancer. He had four rounds of carboplatin and etoposide, and it shrank at first. But his last scan shows it's growing again in his chest and lymph nodes. No brain mets. He's exhausted — ECOG 2. His PD-L1 was never high, around 10%. I've spent night after night on ClinicalTrials.gov and I still can't tell what he'd even qualify for. We don't have much time, and every hour I spend on that site feels like an hour I'm taking from him."
+    }
+  ]
+}

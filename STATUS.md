@@ -50,8 +50,11 @@ through Amplify's Next.js adapter, which was the deployment's main risk.
   rejects it; `gpt-5.3-codex` is Responses-API only. **Naming an unavailable
   model does not fail loudly** — extraction 403s, the local parser takes over,
   and the UI quietly reads "offline mode". Re-check if the key changes.
+- **Programs:** 620 program rows across 75 of 83 assets, plus 21 assets with a
+  known catalyst, in `src/data/programs.json` — committed, so the app never
+  calls Convoke at request time.
 - **Tests:** `test-scoring.mjs` (21 cases), `test-negation.mjs`,
-  `test-condition-gate.mjs` — all passing.
+  `test-condition-gate.mjs`, `test-programs.mjs` (16 cases) — all passing.
 
 ## 4. Architecture invariant — do not break this
 
@@ -103,7 +106,7 @@ promise about their odds.
 |---|---|---|
 | OpenAI | Gold | ✅ Real — extraction + Strands agent on `gpt-5.4` |
 | AWS | Gold | ✅ Real — Strands Agents SDK, deployed on Amplify |
-| Convoke | 💎 Diamond | ⏳ MCP endpoint identified; **needs `/mcp` OAuth** before we can wire real enrichment |
+| Convoke | 💎 Diamond | ✅ Real — MCP authenticated; build-time enrichment shipped on the dashboard |
 | Bright Data | Gold | 🔴 Account manually suspended |
 | HackerSquad | 💎 Diamond | ❌ Nothing yet |
 
@@ -124,16 +127,55 @@ event dashboard. ~10 minutes, highest points-per-minute remaining.
 
 1. **Developer feedback ×5** — ~10 min, pure points.
 2. **HackerSquad signup** — ~5 min; a Diamond sponsor currently at zero.
-3. **Convoke** — authenticate `/mcp`, then build-time enrichment writing
-   `src/data/programs.json`, joined on `trial.interventions` (133 distinct
-   drugs; Pumitamig ×14, Nivolumab ×13, Ipilimumab ×10). **Only 5 credits
-   exist — build-time only, never per-request.** Value: the dashboard can say
-   a criterion is blocking a *Phase 3 program with a near-term catalyst*
-   rather than just "a trial", which turns a recruitment metric into business
-   urgency. Researcher side only.
-4. **Bright Data** — blocked on the booth, not on code.
-5. **Rehearse the 3 minutes.** The largest remaining risk is delivery, not
+3. **Bright Data** — blocked on the booth, not on code.
+4. **Rehearse the 3 minutes.** The largest remaining risk is delivery, not
    engineering.
+
+### Convoke — done, Aug 13
+
+`/mcp` authenticated and wired. `scripts/build-program-queries.mjs` normalises
+135 raw intervention strings to 83 assets; the two MCP queries run once from an
+authenticated client; `scripts/build-programs.mjs` merges the saved responses
+into `src/data/programs.json`. Build-time only, never per-request.
+
+**55 of 60 trials** carry program context. The dashboard now says a criterion
+is gating *Pumitamig · Phase 3 in NSCLC, next catalyst 2026* rather than "a
+trial". Researcher side only — `src/lib/programs.ts` is imported by the
+dashboard and nothing on the patient path.
+
+Four judgement calls worth knowing, each of which would otherwise have shipped
+a wrong claim:
+
+- **Join on the primary `entity_id`, never on `drug_name` or the wider
+  `entity_ids` list.** Asking for Bevacizumab also returns SCT510, IBI305 and
+  BAT1706 — other companies' biosimilars — and Sunitinib returns Subutinib
+  Maleate, a different molecule. Merging those credits this portfolio with
+  programs it does not own.
+- **Indication resolution is held to confidence exactly 1.0.** Below that the
+  resolver inverts meaning at high confidence: `Colorectal Cancer (CRC)` →
+  *Non-Colorectal Cancer* at 0.989, and `Relapsed and/or Refractory Multiple
+  Myeloma` → *Acute Promyelocytic Leukemia* at 0.667. Costs some coverage
+  (`Hepatocellular Carcinoma (HCC)` at 0.983 is rejected though correct).
+- **The primary asset is the trial's experimental arm, not its most advanced
+  program.** Oncology trials run an investigational asset against an approved
+  comparator, so "most advanced" almost always named the competitor's approved
+  drug. Intervention order comes from the registry, so it is data, not
+  judgement.
+- **Catalysts display `reported_date`, never `sort_date`.** Convoke returns
+  `sort_date: "2026-12-31"` for a filing that only said "2026". Showing the
+  sort key would invent day-precision the source never stated.
+
+Two pre-existing bugs surfaced and were fixed on the way:
+
+- **`.gitignore` had a bare `data/`**, which also matched `src/data/`. Every
+  committed dataset the app imports at build time was excluded, so an Amplify
+  build would have failed on the new import. Now anchored to `/data/`; the
+  `jwt_secret` it was written for is still ignored.
+- **All five seeded NCT ids in `signal-store.ts` were absent from
+  `trials.json`** after the dataset was refetched, so the dashboard's default
+  view cited criteria as "verbatim" from trials it no longer carried. Re-pointed
+  at real trials with real criteria, same rule kinds and counts.
+  `scripts/test-programs.mjs` now fails if a seeded id or quote drifts again.
 
 ### Known weak spots not yet fixed
 
@@ -151,8 +193,12 @@ cd /Users/brandonnguyen/projects/biopharma-hack
 node scripts/test-scoring.mjs
 node scripts/test-negation.mjs
 node scripts/test-condition-gate.mjs
+node scripts/test-programs.mjs
 node scripts/measure-coverage.mjs
 pnpm build
+
+# The Convoke enrichment must never reach the patient portal.
+grep -rl "@/lib/programs" src/    # expect only dashboard/page.tsx + ProgramContext.tsx
 
 APP=https://main.d19m8vd3xmzmxc.amplifyapp.com
 curl -s -X POST $APP/api/match -H 'Content-Type: application/json' \

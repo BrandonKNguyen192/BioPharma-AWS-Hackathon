@@ -24,12 +24,10 @@ const themeScript = `
       const theme =
         stored === "light" || stored === "dark"
           ? stored
-          : window.matchMedia("(prefers-color-scheme: light)").matches
-            ? "light"
-            : "dark";
+          : "light";
       document.documentElement.dataset.theme = theme;
     } catch {
-      document.documentElement.dataset.theme = "dark";
+      document.documentElement.dataset.theme = "light";
     }
   })();
 `;

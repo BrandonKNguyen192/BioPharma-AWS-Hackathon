@@ -14,6 +14,51 @@ Verified before writing this: the production build traces 139 Strands files and
 165 OpenAI files into the server bundle, and correctly excludes the unused
 `@aws-sdk/client-s3` optional dependency. The SDK will ship with the app.
 
+## Regenerating the Convoke enrichment (only when the trial set changes)
+
+`src/data/programs.json` is committed and read at build time. Amplify never
+calls Convoke, so nothing here is on the deployment path — skip this section
+unless you have re-run `scripts/fetch-trials.mjs`.
+
+Convoke's `/mcp` authenticates per user over OAuth. There is no static API key
+a CI job could hold, so the two queries are issued once from an authenticated
+MCP client (Claude Code with the `convoke` server configured) and their raw
+JSON saved into `tmp/`. Everything either side of that is offline and
+deterministic.
+
+```bash
+node scripts/build-program-queries.mjs   # writes tmp/asset-map.json + the ask list
+```
+
+Then, from an authenticated MCP client, run and save the raw responses:
+
+1. `query_program_tracker` — `drug` = the printed ask list, `indication` = the
+   curated indication list, `task_relevant_fields` = `["targets","modalities"]`.
+   Paginate on `next_offset` until `truncated` is false; save each page as
+   `tmp/convoke-programs-p<N>.json`. Do **not** request `organizations` — the
+   de-branding rule keeps the sponsor's name out of the working tree.
+2. `query_program_tracker` again with a single cheap drug and *every* raw
+   condition string as `indication`, purely to harvest `entity_resolution`;
+   save as `tmp/convoke-indications.json`.
+3. `query_catalyst_calendar` — scope by sponsor organization with a forward
+   date window. Results come back newest-first, so narrow the window rather
+   than paginating to reach near-term events. Save as
+   `tmp/convoke-catalysts.json`, keeping `reported_date` alongside `sort_date`.
+
+```bash
+node scripts/build-programs.mjs   # merges tmp/ -> src/data/programs.json
+node scripts/test-programs.mjs    # data integrity + join semantics + seed drift
+```
+
+`build-programs.mjs` reports every row and mapping it rejected. Read that
+output: rejections are the mechanism that keeps a wrong claim off the
+dashboard, not noise to skim past.
+
+If you re-ran `fetch-trials.mjs`, `test-programs.mjs` will also fail when a
+seeded NCT id in `src/lib/signal-store.ts` is no longer in the dataset, or when
+a seeded criterion is no longer verbatim. Re-point the seed at real trials
+before presenting.
+
 ---
 
 ## 0. Pre-flight (2 min)

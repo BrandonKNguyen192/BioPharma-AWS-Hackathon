@@ -36,13 +36,13 @@ export function ProtocolBrief() {
 
   if (brief) {
     return (
-      <div className="rounded-xl border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] p-6">
+      <div className="rounded-[24px] border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] p-6">
         <div className="mb-3 flex items-center gap-2">
           <Sparkles className="h-4 w-4 text-[var(--ct-violet-text)]" />
           <h3 className="text-sm font-semibold text-[var(--ct-violet-text)]">
             Analyst brief
           </h3>
-          <span className="ml-auto text-[10px] uppercase tracking-wide text-[var(--ct-text-soft)]">
+          <span className="ml-auto text-[10px] font-semibold uppercase text-[var(--ct-text-soft)]">
             Strands agent
           </span>
         </div>
@@ -52,7 +52,7 @@ export function ProtocolBrief() {
         </p>
         <div className="mt-4 space-y-2 border-t border-[color:var(--ct-violet-border)] pt-3">
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
+            <p className="text-[11px] font-semibold uppercase text-[var(--ct-text-soft)]">
               Recommendation
             </p>
             <p className="mt-0.5 text-sm text-[var(--ct-text-muted)]">
@@ -60,7 +60,7 @@ export function ProtocolBrief() {
             </p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
+            <p className="text-[11px] font-semibold uppercase text-[var(--ct-text-soft)]">
               Caveat
             </p>
             <p className="mt-0.5 text-xs text-[var(--ct-text-muted)]">{brief.caveat}</p>
@@ -75,7 +75,7 @@ export function ProtocolBrief() {
       <button
         onClick={run}
         disabled={loading}
-        className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] px-3.5 py-2 text-xs font-medium text-[var(--ct-violet-text)] transition-colors hover:brightness-95 disabled:opacity-50"
+        className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] px-4 py-2 text-xs font-medium text-[var(--ct-violet-text)] hover:brightness-95 disabled:opacity-50"
       >
         {loading ? (
           <>

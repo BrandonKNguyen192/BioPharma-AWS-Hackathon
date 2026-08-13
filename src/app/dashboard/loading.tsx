@@ -1,16 +1,17 @@
 export default function DashboardLoading() {
   return (
-    <main className="min-h-screen bg-[var(--ct-bg)] px-6 py-10 transition-colors">
-      <div className="mx-auto max-w-5xl space-y-6">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <div
-              key={i}
-              className="ct-card h-28 animate-pulse rounded-xl"
-            />
-          ))}
-        </div>
-        <div className="ct-card h-40 animate-pulse rounded-xl" />
+    <main className="ct-app-canvas">
+      <div className="ct-app-shell">
+        <aside className="ct-nav-rail" />
+        <section className="ct-workspace">
+          <div className="ct-topbar" />
+          <div className="ct-workspace-content">
+            <div className="ct-dashboard-grid">
+              {Array.from({ length: 2 }).map((_, index) => <div key={index} className="ct-metric-large animate-pulse bg-[var(--ct-surface-soft)]" />)}
+              {Array.from({ length: 4 }).map((_, index) => <div key={index} className="ct-metric-small animate-pulse bg-[var(--ct-surface-soft)]" />)}
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

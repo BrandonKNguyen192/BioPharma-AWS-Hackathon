@@ -35,7 +35,7 @@ it works, and the commercial case.
 | **OpenAI** | Structured clinical-fact extraction (strict JSON schema) and explanatory prose | `src/lib/extract.ts` |
 | **AWS — Strands Agents SDK** | Researcher-side analyst agent with two real tools over the de-identified exclusion signal | `src/lib/protocol-agent.ts` |
 | **Bright Data** | Web Unlocker transport for the trial ingestion pipeline; falls back to the public ClinicalTrials.gov API | `scripts/fetch-trials.mjs` |
-| **Convoke** | Current build exports a structured decision artifact with verbatim criteria and provenance; authenticated MCP enrichment is a next step, not a shipped feature | `src/app/components/ConvokeExport.tsx` |
+| **Convoke** | Bidirectional. Inbound: development stage and catalyst dates from the Knowledge Graph over authenticated MCP, joined at build time onto every blocking criterion. Outbound: a structured decision artifact with verbatim criteria and provenance | `src/lib/programs.ts`, `scripts/build-programs.mjs`, `src/app/components/ConvokeExport.tsx` |
 | **HackerSquad** | Sponsor feedback workflow is still open | — |
 
 ## Design principle

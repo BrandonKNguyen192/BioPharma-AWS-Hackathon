@@ -43,5 +43,13 @@ next-env.d.ts
 # Local handoff doc — contains a live API key, never commit
 HANDOFF.md
 
-# Credential written into the project dir by an external tool; never commit
-data/
+# Credential written into the project dir by an external tool; never commit.
+# Anchored to the repo root: an unanchored "data/" also matches src/data/,
+# which silently excluded the committed datasets the app imports at build time.
+/data/
+
+# Raw Convoke MCP responses, the working input to scripts/build-programs.mjs.
+# Intermediates, not the artifact — src/data/programs.json is what the app
+# reads. This repo has a public mirror, and these are bulk extracts of a
+# third-party knowledge graph; regenerate them per RUNBOOK.md instead.
+/tmp/

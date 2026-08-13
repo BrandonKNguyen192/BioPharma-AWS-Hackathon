@@ -42,6 +42,12 @@ function store(): Store {
  * Seeded cohort representing searches already run through ClearTrial.
  * Counts are illustrative of a pilot cohort; every criterion quoted is real
  * text from the trials in src/data/trials.json.
+ *
+ * The NCT ids must exist in that file. They are not decoration: the dashboard
+ * resolves them to Convoke program context, and a stale id silently degrades
+ * every seeded row to "no program". An earlier revision drifted out of sync
+ * when the dataset was refetched — if you re-run scripts/fetch-trials.mjs,
+ * re-run scripts/test-programs.mjs, which fails when a seeded id is missing.
  */
 function seed(s: Store) {
   s.searches = 47;
@@ -57,40 +63,41 @@ function seed(s: Store) {
       kind: "prior_any_therapy",
       label: "Prior systemic therapy (treatment-naive required)",
       patientsBlocked: 28,
-      exampleTrial: "NCT06692738",
+      exampleTrial: "NCT07361510",
       exampleCriterion:
-        "Any prior systemic, non-curative therapy received for NSCLC.",
-    },
-    {
-      kind: "prior_checkpoint_inhibitor",
-      label: "Prior PD-1/PD-L1 immunotherapy",
-      patientsBlocked: 19,
-      exampleTrial: "NCT06692738",
-      exampleCriterion:
-        "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
+        "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
     },
     {
       kind: "prior_platinum",
       label: "Prior platinum chemotherapy",
       patientsBlocked: 24,
-      exampleTrial: "NCT06694454",
+      exampleTrial: "NCT06712316",
       exampleCriterion:
-        "Willingness to undergo tumor resection surgery per standard of care guidelines following induction therapy (platinum chemotherapy).",
+        "Previous chemotherapy (platinum-based) or PD(L)-1 for treating NSCLC in either neoadjuvant/adjuvant or locally advanced/metastatic setting.",
+    },
+    {
+      kind: "prior_checkpoint_inhibitor",
+      label: "Prior PD-1/PD-L1 immunotherapy",
+      patientsBlocked: 19,
+      exampleTrial: "NCT06712316",
+      exampleCriterion:
+        "Participants who received prior treatment with anti-VEGF monoclonal antibody, or PD(L)-1/VEGF bispecific antibody.",
     },
     {
       kind: "ecog",
       label: "ECOG performance status ceiling",
       patientsBlocked: 11,
-      exampleTrial: "NCT06694454",
-      exampleCriterion: "ECOG Performance Status <= 1",
+      exampleTrial: "NCT07361510",
+      exampleCriterion:
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
     },
     {
       kind: "brain_mets",
       label: "Brain / CNS metastases",
       patientsBlocked: 6,
-      exampleTrial: "NCT05276726",
+      exampleTrial: "NCT06712355",
       exampleCriterion:
-        "Has CNS metastases or carcinomatous meningitis, except treated CNS metastases with no evidence of radiographic progression.",
+        "Participants with untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm).",
     },
   ];
   for (const r of seeded) s.rows.set(r.kind, r);
