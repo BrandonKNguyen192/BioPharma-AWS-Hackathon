@@ -11,7 +11,7 @@ it works, and the commercial case.
 
 ## What it does
 
-- Accepts a plain-English patient cancer or illness history
+- Accepts a plain-English patient cancer history
 - Extracts structured clinical facts with OpenAI
 - Matches the extracted profile against real published trial criteria
 - Explains why each trial matched, failed, or needs clinician review
@@ -22,8 +22,9 @@ it works, and the commercial case.
 - **Frontend:** Next.js 16, React 19, TypeScript, Tailwind CSS v4
 - **Extraction:** OpenAI structured output
 - **Decision engine:** deterministic TypeScript matcher
-- **Trial data:** ClinicalTrials.gov recruiting oncology studies, sponsor-agnostic
-  (set `TRIAL_SPONSOR` to narrow to one sponsor)
+- **Trial data:** ClinicalTrials.gov recruiting oncology studies; the committed
+  snapshot is a 60-trial single-sponsor portfolio, and `TRIAL_SPONSOR` can
+  widen or narrow the fetch at build time
 - **Research workflow:** AWS Strands agent for protocol summaries
 - **Optional ingestion transport:** Bright Data Web Unlocker
 
@@ -34,8 +35,8 @@ it works, and the commercial case.
 | **OpenAI** | Structured clinical-fact extraction (strict JSON schema) and explanatory prose | `src/lib/extract.ts` |
 | **AWS — Strands Agents SDK** | Researcher-side analyst agent with two real tools over the de-identified exclusion signal | `src/lib/protocol-agent.ts` |
 | **Bright Data** | Web Unlocker transport for the trial ingestion pipeline; falls back to the public ClinicalTrials.gov API | `scripts/fetch-trials.mjs` |
-| **Convoke** | No public API exists, so rather than fake a call the dashboard exports the artifact their platform would ingest: a versioned decision record with verbatim criteria and provenance | `src/app/components/ConvokeExport.tsx` |
-| **HackerSquad** | Developer feedback submitted for the tools used | — |
+| **Convoke** | Current build exports a structured decision artifact with verbatim criteria and provenance; authenticated MCP enrichment is a next step, not a shipped feature | `src/app/components/ConvokeExport.tsx` |
+| **HackerSquad** | Sponsor feedback workflow is still open | — |
 
 ## Design principle
 

@@ -9,12 +9,12 @@ Re-run the commands in §8 before trusting it after further changes.
 
 | Repo | HEAD | State |
 |---|---|---|
-| `BrandonKNguyen192/cleartrial` (private) | `529dd6c` | Clean |
-| `BrandonKNguyen192/BioPharma-AWS-Hackathon` (public) | `3c0c79d` | Clean |
+| `BrandonKNguyen192/cleartrial` (private) | `main` (this checked-out repo) | Clean |
+| `BrandonKNguyen192/BioPharma-AWS-Hackathon` (public) | `main` (public mirror) | Clean |
 
-In sync for everything publishable. Private-only by design and **not** mirrored
-publicly: `HANDOFF.md`, `DEPLOY.md`, `PLAN.md`, `BRIEF.md`. `HANDOFF.md` is
-gitignored entirely — it contains a live API key.
+Publishable code and docs are aligned between the two repos. Private-only by
+design and **not** mirrored publicly: `HANDOFF.md`, `DEPLOY.md`, `PLAN.md`,
+`BRIEF.md`. `HANDOFF.md` is gitignored entirely — it contains a live API key.
 
 ## 2. Live deployment — verified working
 
@@ -23,8 +23,8 @@ gitignored entirely — it contains a live API key.
 | Check | Result |
 |---|---|
 | `/`, `/dashboard` | 200 |
-| `POST /api/match` | `gpt-5.4`, `usedFallback: false`, 2.2s, 12 results, 3 near misses |
-| `POST /api/protocol-brief` | 200, 14.2s, Strands brief citing 29/48 (60%) |
+| `POST /api/match` | `gpt-5.4`, `usedFallback: false`, 1.8s, 12 results, 3 near misses |
+| `POST /api/protocol-brief` | 200, 6.2s warm, Strands brief citing 29/48 (60%) |
 
 The last row is the important one: it proves the Strands SDK bundled correctly
 through Amplify's Next.js adapter, which was the deployment's main risk.
@@ -103,7 +103,7 @@ promise about their odds.
 |---|---|---|
 | OpenAI | Gold | ✅ Real — extraction + Strands agent on `gpt-5.4` |
 | AWS | Gold | ✅ Real — Strands Agents SDK, deployed on Amplify |
-| Convoke | 💎 Diamond | ⏳ MCP server added to Claude Code config; **needs `/mcp` OAuth** |
+| Convoke | 💎 Diamond | ⏳ MCP endpoint identified; **needs `/mcp` OAuth** before we can wire real enrichment |
 | Bright Data | Gold | 🔴 Account manually suspended |
 | HackerSquad | 💎 Diamond | ❌ Nothing yet |
 
@@ -172,7 +172,7 @@ serve.
 | `RUNBOOK.md` | AWS Amplify deployment + troubleshooting | Yes |
 | `README.md` | Quick start, sponsor stack | Yes |
 | `RESEARCH.md` / `RESEARCH2.md` / `RESEARCH3.md` / `RESEARCH_SYNTHESIS.md` | Market, architecture, weak-spot research | Yes |
-| `STATUS.md` | This file | Yes |
-| `PITCH.md` | 3-minute script + judge Q&A | Private |
+| `STATUS.md` | Current-state verification snapshot | Yes |
+| `PITCH.md` | 3-minute script + judge Q&A | Yes |
 | `HANDOFF.md` | Full handoff incl. credentials | **Gitignored** |
 | `DEPLOY.md`, `PLAN.md`, `BRIEF.md` | Planning history | Private |

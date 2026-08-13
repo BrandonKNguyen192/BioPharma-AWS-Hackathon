@@ -8,12 +8,13 @@ import type { AggregateRow } from "@/lib/signal-store";
  * Convoke ("AI operating system for biopharma") ingests internal evidence into
  * a structured ontology that downstream agents reason over.
  *
- * Convoke exposes no public API, so we do not pretend to call one. What we do
- * instead is emit the artifact their platform would ingest: a versioned,
- * self-describing decision record of which protocol criteria are costing
- * recruitment, with the verbatim source text and provenance for each claim.
+ * The shipped hackathon build does not call Convoke directly. Until the MCP
+ * integration is authenticated and wired in, we emit the artifact their
+ * platform would ingest: a versioned, self-describing decision record of
+ * which protocol criteria are costing recruitment, with the verbatim source
+ * text and provenance for each claim.
  *
- * That is the honest integration — the handoff format, not a fake POST.
+ * That keeps the demo honest: a real handoff format, not a fake network call.
  */
 export function ConvokeExport({
   rows,
