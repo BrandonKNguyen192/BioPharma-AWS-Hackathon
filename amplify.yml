@@ -13,12 +13,20 @@
 #
 # Trial data is committed at src/data/trials.json, so no network fetch runs
 # during the build.
+#
+# Next.js SSR note: Amplify does not expose console env vars to server-side
+# runtimes by default. The build command below copies the secrets from the
+# build environment into .env.production so the deployed functions can read
+# them. That file is written only in the build container and never committed.
 
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
+        # Amplify's default image may ship an older Node than Next 16 needs.
+        - 'nvm install 22 && nvm use 22'
+        - 'node --version'
         - 'corepack enable'
         - 'corepack prepare pnpm@10.6.2 --activate'
         - 'pnpm install --frozen-lockfile'
@@ -26,6 +34,7 @@ frontend:
         - 'test -n "$BRIGHTDATA_API_KEY" && echo "env BRIGHTDATA_API_KEY: set" || echo "env BRIGHTDATA_API_KEY: not set (direct ClinicalTrials.gov fallback)"'
     build:
       commands:
+        - '(env | grep -e OPENAI_API_KEY -e BRIGHTDATA_API_KEY -e BRIGHTDATA_ZONE >> .env.production) || true'
         - pnpm build
   artifacts:
     baseDirectory: .next
