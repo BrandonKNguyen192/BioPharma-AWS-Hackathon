@@ -24,7 +24,8 @@ import { z } from "zod";
 import { getDashboardData } from "./signal-store";
 import { TRIALS, TRIALS_META } from "./trials";
 
-export const BRIEF_MODEL = "gpt-5.6-sol";
+/** Must be a model the active key serves — see the note in extract.ts. */
+export const BRIEF_MODEL = "gpt-5.4";
 
 /** Tool 1 — the aggregate exclusion signal. De-identified by construction. */
 const getExclusionSignals = tool({

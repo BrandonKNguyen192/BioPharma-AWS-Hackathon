@@ -21,6 +21,16 @@ research teams see which protocol criteria are blocking recruitment.
 - **Research workflow:** AWS Strands agent for protocol summaries
 - **Optional ingestion transport:** Bright Data Web Unlocker
 
+## Sponsor stack
+
+| Tool | How it is used | Where |
+|---|---|---|
+| **OpenAI** | Structured clinical-fact extraction (strict JSON schema) and explanatory prose | `src/lib/extract.ts` |
+| **AWS — Strands Agents SDK** | Researcher-side analyst agent with two real tools over the de-identified exclusion signal | `src/lib/protocol-agent.ts` |
+| **Bright Data** | Web Unlocker transport for the trial ingestion pipeline; falls back to the public ClinicalTrials.gov API | `scripts/fetch-trials.mjs` |
+| **Convoke** | No public API exists, so rather than fake a call the dashboard exports the artifact their platform would ingest: a versioned decision record with verbatim criteria and provenance | `src/app/components/ConvokeExport.tsx` |
+| **HackerSquad** | Developer feedback submitted for the tools used | — |
+
 ## Design principle
 
 The language model does **not** decide eligibility.

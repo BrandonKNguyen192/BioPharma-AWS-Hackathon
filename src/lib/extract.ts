@@ -18,8 +18,22 @@ import "server-only";
 import OpenAI from "openai";
 import type { PatientProfile } from "./types";
 
-export const PRIMARY_MODEL = "gpt-5.6-sol";
-export const FALLBACK_MODEL = "gpt-5.5";
+/**
+ * Must be models the active key actually serves. The hackathon group key
+ * serves only: gpt-5.4, gpt-4.1-nano, gpt-4-turbo, gpt-5.3-codex.
+ *
+ * Verified on this key:
+ *   gpt-5.4       strict json_schema OK, ~1.1s   <- primary
+ *   gpt-4.1-nano  strict json_schema OK, ~0.5s   <- fallback
+ *   gpt-4-turbo   rejects json_schema            (unusable here)
+ *   gpt-5.3-codex Responses API only             (unusable on chat)
+ *
+ * Naming a model the key cannot serve does not error loudly — extraction
+ * 403s, the local parser silently takes over, and the UI quietly reads
+ * "offline mode". Re-check this list if the key changes.
+ */
+export const PRIMARY_MODEL = "gpt-5.4";
+export const FALLBACK_MODEL = "gpt-4.1-nano";
 
 export const EXTRACTION_SYSTEM_PROMPT = `
 You convert a patient's own description of their cancer history into structured

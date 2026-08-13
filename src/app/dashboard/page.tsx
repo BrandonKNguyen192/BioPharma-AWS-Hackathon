@@ -20,6 +20,17 @@ export default function DashboardPage() {
             <p className="text-sm text-slate-400">
               Bristol Myers Squibb — Oncology Portfolio
             </p>
+            {/*
+              The trials and criteria below are real. Patient demand is not:
+              the cohort is seeded so the dashboard has a story before any
+              searches have run. Say so on the page rather than letting a
+              viewer assume 47 real people were screened.
+            */}
+            <p className="mt-2 inline-flex items-center gap-1.5 rounded-md border border-slate-700/60 bg-slate-900/60 px-2 py-1 text-[11px] text-slate-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber-400/70" />
+              Simulated pilot cohort · real trial criteria · live searches
+              append to these counts
+            </p>
           </div>
           <div className="flex items-center gap-3">
             <ConvokeExport
@@ -141,9 +152,11 @@ export default function DashboardPage() {
         </div>
 
         <p className="text-[11px] text-slate-600">
-          Source: {TRIALS_META.source} · {TRIALS_META.count} active{" "}
-          {TRIALS_META.sponsor} trials · aggregated from de-identified
-          pre-screens. No patient-identifiable data is stored.
+          Trials and eligibility criteria: {TRIALS_META.source} —{" "}
+          {TRIALS_META.count} active {TRIALS_META.sponsor} studies, quoted
+          verbatim. Patient demand is a simulated pilot cohort seeded for this
+          demo; searches run in this session are aggregated de-identified and
+          added to it. No patient-identifiable data is stored.
         </p>
       </div>
     </main>
