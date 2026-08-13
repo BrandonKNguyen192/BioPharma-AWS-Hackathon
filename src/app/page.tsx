@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, LoaderCircle, ShieldCheck } from "lucide-react";
 import { ExtractionPanel } from "./components/ExtractionPanel";
+import { ThemeToggle } from "./components/ThemeToggle";
 import { TrialCard } from "./components/TrialCard";
 import { TRIALS_META } from "@/lib/trials";
 import type { MatchResponse } from "@/lib/types";
@@ -47,32 +48,35 @@ export default function PatientPortal() {
   const nearMisses = data?.nearMisses ?? [];
 
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-10">
+    <main className="min-h-screen bg-[var(--ct-bg)] px-6 py-10 text-[var(--ct-text)] transition-colors">
       <div className="mx-auto max-w-3xl space-y-8">
         <header className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="h-5 w-1 rounded-full bg-teal-400" />
-              <h1 className="text-2xl font-semibold tracking-tight text-white">
+              <span className="h-5 w-1 rounded-full bg-[var(--ct-accent)]" />
+              <h1 className="text-2xl font-semibold tracking-tight text-[var(--ct-text)]">
                 ClearTrial
               </h1>
             </div>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-400">
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-[var(--ct-text-muted)]">
               Tell us about your cancer in your own words — no medical terms
               needed. We will show you which studies you may qualify for, and
               explain exactly why.
             </p>
-            <p className="mt-2 text-xs text-slate-600">
+            <p className="mt-2 text-xs text-[var(--ct-text-soft)]">
               Searching {TRIAL_COUNT} active oncology trials from
               ClinicalTrials.gov
             </p>
           </div>
-          <a
-            href="/dashboard"
-            className="shrink-0 text-sm text-slate-500 transition-colors hover:text-slate-300"
-          >
-            Researcher view →
-          </a>
+          <div className="flex shrink-0 items-center gap-3">
+            <ThemeToggle />
+            <a
+              href="/dashboard"
+              className="text-sm text-[var(--ct-text-soft)] transition-colors hover:text-[var(--ct-text)]"
+            >
+              Researcher view →
+            </a>
+          </div>
         </header>
 
         <section className="space-y-3">
@@ -81,13 +85,13 @@ export default function PatientPortal() {
             onChange={(e) => setText(e.target.value)}
             rows={7}
             placeholder="For example: I was diagnosed with… I've already tried… My recent results showed…"
-            className="w-full resize-none rounded-xl border border-slate-800 bg-slate-900/60 p-4 text-sm leading-relaxed text-slate-100 placeholder:text-slate-600 focus:border-teal-500/50 focus:outline-none"
+            className="ct-input w-full resize-none rounded-xl p-4 text-sm leading-relaxed"
           />
           <div className="flex flex-wrap items-center gap-3">
             <button
               onClick={submit}
               disabled={loading}
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-teal-400 disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--ct-accent)] px-4 py-2 text-sm font-medium text-[var(--ct-accent-ink)] transition-colors hover:bg-[var(--ct-accent-hover)] disabled:opacity-50"
             >
               {loading ? (
                 <>
@@ -103,25 +107,25 @@ export default function PatientPortal() {
             </button>
             <button
               onClick={() => setText(DEMO_STORY)}
-              className="text-xs text-slate-500 hover:text-slate-300"
+              className="text-xs text-[var(--ct-text-soft)] transition-colors hover:text-[var(--ct-text)]"
             >
               Use the example story
             </button>
           </div>
-          {error && <p className="text-sm text-rose-300">{error}</p>}
+          {error && <p className="text-sm text-[var(--ct-rose-text)]">{error}</p>}
         </section>
 
         {loading && (
-          <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-6">
+          <div className="ct-card rounded-xl p-6">
             <div className="space-y-3">
               {["Reading your description", "Identifying clinical concepts", "Checking eligibility criteria"].map(
                 (s, i) => (
                   <div
                     key={s}
-                    className="flex items-center gap-3 text-sm text-slate-400"
+                    className="flex items-center gap-3 text-sm text-[var(--ct-text-muted)]"
                     style={{ animation: `ct-fade 400ms ease-out ${i * 260}ms both` }}
                   >
-                    <LoaderCircle className="h-3.5 w-3.5 animate-spin text-teal-400" />
+                    <LoaderCircle className="h-3.5 w-3.5 animate-spin text-[var(--ct-accent)]" />
                     {s}…
                   </div>
                 ),
@@ -132,12 +136,12 @@ export default function PatientPortal() {
 
         {data && (
           <>
-            <section className="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
+            <section className="ct-card rounded-xl p-5">
               <div className="mb-3 flex items-center justify-between">
-                <h2 className="text-sm font-medium text-slate-200">
+                <h2 className="text-sm font-medium text-[var(--ct-text)]">
                   What we understood
                 </h2>
-                <span className="text-[11px] text-slate-600">
+                <span className="text-[11px] text-[var(--ct-text-soft)]">
                   {data.usedFallback
                     ? "offline mode"
                     : `${data.model} · ${(data.elapsedMs / 1000).toFixed(1)}s`}
@@ -147,7 +151,7 @@ export default function PatientPortal() {
             </section>
 
             <section className="space-y-3">
-              <h2 className="text-sm font-medium text-slate-200">
+              <h2 className="text-sm font-medium text-[var(--ct-text)]">
                 {matches.length > 0
                   ? `${Math.min(matches.length, 5)} trial${Math.min(matches.length, 5) === 1 ? "" : "s"} worth asking about`
                   : "No clear matches yet"}
@@ -156,7 +160,7 @@ export default function PatientPortal() {
                 <TrialCard key={r.trial.nctId} result={r} />
               ))}
               {matches.length === 0 && (
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-[var(--ct-text-soft)]">
                   Nothing matched cleanly. The studies below explain what ruled
                   you out — that reason is sent, anonymously, to the teams who
                   design these trials.
@@ -167,11 +171,11 @@ export default function PatientPortal() {
             {nearMisses.length > 0 && (
               <section className="space-y-3">
                 <div>
-                  <h2 className="text-sm font-medium text-slate-400">
+                  <h2 className="text-sm font-medium text-[var(--ct-text-muted)]">
                     How close you came to {nearMisses.length} other stud
                     {nearMisses.length === 1 ? "y" : "ies"}
                   </h2>
-                  <p className="mt-1 text-xs text-slate-600">
+                  <p className="mt-1 text-xs text-[var(--ct-text-soft)]">
                     These ruled you out on one requirement. That reason is sent
                     — anonymously, with no text from your story — to the teams
                     who design these studies.
@@ -181,11 +185,11 @@ export default function PatientPortal() {
                   <div key={r.trial.nctId} className="space-y-2">
                     <TrialCard result={r} />
                     {r.blockers[0] && (
-                      <div className="ml-4 border-l-2 border-rose-500/30 pl-3">
-                        <p className="text-[11px] uppercase tracking-wide text-slate-600">
+                      <div className="ml-4 border-l-2 border-[color:var(--ct-rose-border)] pl-3">
+                        <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
                           The exact sentence that ruled you out
                         </p>
-                        <p className="mt-0.5 text-xs italic text-slate-400">
+                        <p className="mt-0.5 text-xs italic text-[var(--ct-text-muted)]">
                           “{r.blockers[0].source}”
                         </p>
                       </div>
@@ -195,10 +199,10 @@ export default function PatientPortal() {
               </section>
             )}
 
-            <section className="rounded-xl border border-slate-800 bg-slate-900/30 p-4">
+            <section className="ct-card rounded-xl p-4">
               <div className="flex gap-3">
-                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" />
-                <p className="text-xs leading-relaxed text-slate-500">
+                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[var(--ct-text-soft)]" />
+                <p className="text-xs leading-relaxed text-[var(--ct-text-soft)]">
                   ClearTrial is an eligibility pre-screen, not medical advice and
                   not a diagnosis. Eligibility is decided by code against
                   published protocol criteria — the language model only reads

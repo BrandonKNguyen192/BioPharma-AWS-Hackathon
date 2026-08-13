@@ -73,7 +73,7 @@ export function ConvokeExport({
   return (
     <button
       onClick={download}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-slate-500 hover:text-white"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-[color:var(--ct-border)] bg-[var(--ct-surface)] px-3 py-1.5 text-xs text-[var(--ct-text-muted)] transition-colors hover:border-[color:var(--ct-border-strong)] hover:text-[var(--ct-text)]"
       title="Emit a structured decision artifact for ingestion into Convoke"
     >
       <FileDown className="h-3.5 w-3.5" />

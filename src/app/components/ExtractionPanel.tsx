@@ -32,10 +32,12 @@ export function profileChips(p: PatientProfile): Chip[] {
 }
 
 const TONE: Record<Chip["tone"], string> = {
-  teal: "border-teal-500/30 bg-teal-500/10 text-teal-200",
-  violet: "border-violet-500/30 bg-violet-500/10 text-violet-200",
-  amber: "border-amber-500/30 bg-amber-500/10 text-amber-200",
-  slate: "border-slate-600/40 bg-slate-700/20 text-slate-300",
+  teal: "border-[color:var(--ct-teal-border)] bg-[var(--ct-teal-bg)] text-[var(--ct-teal-text)]",
+  violet:
+    "border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] text-[var(--ct-violet-text)]",
+  amber: "border-[color:var(--ct-amber-border)] bg-[var(--ct-amber-bg)] text-[var(--ct-amber-text)]",
+  slate:
+    "border-[color:var(--ct-slate-chip-border)] bg-[var(--ct-slate-chip-bg)] text-[var(--ct-slate-chip-text)]",
 };
 
 /**
@@ -65,7 +67,7 @@ export function ExtractionPanel({ profile }: { profile: PatientProfile }) {
 
   if (chips.length === 0) {
     return (
-      <p className="text-sm text-slate-500">
+      <p className="text-sm text-[var(--ct-text-soft)]">
         We could not identify specific clinical details. Try mentioning your
         diagnosis, any treatments you have had, and recent test results.
       </p>
@@ -88,12 +90,12 @@ export function ExtractionPanel({ profile }: { profile: PatientProfile }) {
       </div>
 
       {profile.quotes.length > 0 && shown >= chips.length && (
-        <div className="space-y-1 border-l-2 border-slate-700 pl-3">
-          <p className="text-[11px] uppercase tracking-wide text-slate-500">
+        <div className="space-y-1 border-l-2 border-[color:var(--ct-border-strong)] pl-3">
+          <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
             Read directly from your words
           </p>
           {profile.quotes.slice(0, 3).map((q, i) => (
-            <p key={i} className="text-xs italic text-slate-400">
+            <p key={i} className="text-xs italic text-[var(--ct-text-muted)]">
               “{q}”
             </p>
           ))}

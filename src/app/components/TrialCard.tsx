@@ -7,19 +7,19 @@ import type { MatchResult, MatchVerdict } from "@/lib/types";
 const VERDICT: Record<MatchVerdict, { label: string; cls: string }> = {
   eligible: {
     label: "Looks like a match",
-    cls: "border-teal-500/30 bg-teal-500/10 text-teal-200",
+    cls: "border-[color:var(--ct-teal-border)] bg-[var(--ct-teal-bg)] text-[var(--ct-teal-text)]",
   },
   likely: {
     label: "Possible match",
-    cls: "border-sky-500/30 bg-sky-500/10 text-sky-200",
+    cls: "border-[color:var(--ct-sky-border)] bg-[var(--ct-sky-bg)] text-[var(--ct-sky-text)]",
   },
   needs_review: {
     label: "Needs your doctor to confirm",
-    cls: "border-slate-500/30 bg-slate-500/10 text-slate-300",
+    cls: "border-[color:var(--ct-slate-chip-border)] bg-[var(--ct-slate-chip-bg)] text-[var(--ct-slate-chip-text)]",
   },
   excluded: {
     label: "Not a fit right now",
-    cls: "border-rose-500/30 bg-rose-500/10 text-rose-200",
+    cls: "border-[color:var(--ct-rose-border)] bg-[var(--ct-rose-bg)] text-[var(--ct-rose-text)]",
   },
 };
 
@@ -62,30 +62,30 @@ export function TrialCard({ result }: { result: MatchResult }) {
   const passes = result.evaluated.filter((c) => c.outcome === "pass");
 
   return (
-    <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+    <div className="ct-card rounded-xl p-5">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <div className="mb-2 flex flex-wrap items-center gap-2">
             <span className={`rounded-md border px-2 py-0.5 text-[11px] ${v.cls}`}>
               {v.label}
             </span>
-            <span className="rounded-md border border-slate-700 px-2 py-0.5 text-[11px] text-slate-400">
+            <span className="rounded-md border border-[color:var(--ct-border-strong)] px-2 py-0.5 text-[11px] text-[var(--ct-text-muted)]">
               {result.trial.phase.replace(/PHASE/g, "Phase ")}
             </span>
             <a
               href={result.trial.url}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[11px] text-slate-500 hover:text-slate-300"
+              className="font-mono text-[11px] text-[var(--ct-text-soft)] transition-colors hover:text-[var(--ct-text)]"
             >
               {result.trial.nctId} ↗
             </a>
           </div>
-          <h3 className="text-sm font-medium leading-snug text-slate-100">
+          <h3 className="text-sm font-medium leading-snug text-[var(--ct-text)]">
             {result.trial.title}
           </h3>
           {result.trial.interventions.length > 0 && (
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-[var(--ct-text-soft)]">
               {result.trial.interventions.slice(0, 4).join(" · ")}
             </p>
           )}
@@ -97,14 +97,14 @@ export function TrialCard({ result }: { result: MatchResult }) {
           were able to check at all.
         */}
         <div className="shrink-0 text-right">
-          <div className="text-2xl font-semibold tabular-nums text-slate-200">
+          <div className="text-2xl font-semibold tabular-nums text-[var(--ct-text)]">
             {result.fit}
-            <span className="text-sm font-normal text-slate-500">%</span>
+            <span className="text-sm font-normal text-[var(--ct-text-soft)]">%</span>
           </div>
-          <div className="text-[10px] uppercase tracking-wide text-slate-600">
+          <div className="text-[10px] uppercase tracking-wide text-[var(--ct-text-soft)]">
             fit
           </div>
-          <div className="mt-1 text-[10px] tabular-nums text-slate-500">
+          <div className="mt-1 text-[10px] tabular-nums text-[var(--ct-text-soft)]">
             checked {result.coverage.checked} of {result.coverage.total}
           </div>
         </div>
@@ -114,8 +114,8 @@ export function TrialCard({ result }: { result: MatchResult }) {
       {passes.length > 0 && (
         <ul className="mt-4 space-y-1.5">
           {passes.slice(0, 3).map((c, i) => (
-            <li key={i} className="flex gap-2 text-xs text-slate-300">
-              <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-teal-400" />
+            <li key={i} className="flex gap-2 text-xs text-[var(--ct-text-muted)]">
+              <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--ct-accent)]" />
               <span>{c.detail}</span>
             </li>
           ))}
@@ -125,8 +125,8 @@ export function TrialCard({ result }: { result: MatchResult }) {
       {result.blockers.length > 0 && (
         <ul className="mt-3 space-y-1.5">
           {result.blockers.slice(0, 2).map((c, i) => (
-            <li key={i} className="flex gap-2 text-xs text-rose-200/80">
-              <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose-400" />
+            <li key={i} className="flex gap-2 text-xs text-[var(--ct-rose-text)]">
+              <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--ct-rose-text)]" />
               <span>{c.detail}</span>
             </li>
           ))}
@@ -136,14 +136,14 @@ export function TrialCard({ result }: { result: MatchResult }) {
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <a
           href={draftEmail(result)}
-          className="inline-flex items-center gap-1.5 rounded-lg bg-teal-500/90 px-3 py-1.5 text-xs font-medium text-slate-950 hover:bg-teal-400"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--ct-accent)] px-3 py-1.5 text-xs font-medium text-[var(--ct-accent-ink)] transition-colors hover:bg-[var(--ct-accent-hover)]"
         >
           <Mail className="h-3.5 w-3.5" />
           Draft email to the study team
         </a>
         <button
           onClick={() => setOpen((o) => !o)}
-          className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200"
+          className="inline-flex items-center gap-1 text-xs text-[var(--ct-text-muted)] transition-colors hover:text-[var(--ct-text)]"
         >
           <ChevronDown
             className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
@@ -153,16 +153,16 @@ export function TrialCard({ result }: { result: MatchResult }) {
       </div>
 
       {open && (
-        <div className="mt-4 space-y-3 border-t border-slate-800 pt-4">
+        <div className="mt-4 space-y-3 border-t border-[color:var(--ct-border)] pt-4">
           {result.openQuestions.length > 0 && (
             <div>
-              <p className="mb-1.5 text-[11px] uppercase tracking-wide text-slate-500">
+              <p className="mb-1.5 text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
                 Your doctor will need to confirm
               </p>
               <ul className="space-y-1">
                 {result.openQuestions.slice(0, 4).map((c, i) => (
-                  <li key={i} className="flex gap-2 text-xs text-slate-400">
-                    <CircleHelp className="mt-0.5 h-3.5 w-3.5 shrink-0 text-slate-500" />
+                  <li key={i} className="flex gap-2 text-xs text-[var(--ct-text-muted)]">
+                    <CircleHelp className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--ct-text-soft)]" />
                     <span>{c.detail}</span>
                   </li>
                 ))}
@@ -176,14 +176,14 @@ export function TrialCard({ result }: { result: MatchResult }) {
           */}
           {result.unreadable.length > 0 && (
             <div>
-              <p className="mb-1.5 text-[11px] uppercase tracking-wide text-slate-500">
+              <p className="mb-1.5 text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
                 {result.unreadable.length} other requirement
                 {result.unreadable.length === 1 ? "" : "s"} your doctor will
                 need to read
               </p>
               <ul className="space-y-1">
                 {result.unreadable.slice(0, 2).map((c, i) => (
-                  <li key={i} className="text-xs italic text-slate-500">
+                  <li key={i} className="text-xs italic text-[var(--ct-text-soft)]">
                     “{c.source.length > 150 ? `${c.source.slice(0, 150)}…` : c.source}”
                   </li>
                 ))}
@@ -191,10 +191,10 @@ export function TrialCard({ result }: { result: MatchResult }) {
             </div>
           )}
           <div>
-            <p className="mb-1.5 text-[11px] uppercase tracking-wide text-slate-500">
+            <p className="mb-1.5 text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
               Conditions studied
             </p>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-[var(--ct-text-muted)]">
               {result.trial.conditions.join(" · ")}
             </p>
           </div>

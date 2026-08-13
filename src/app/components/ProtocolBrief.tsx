@@ -36,34 +36,34 @@ export function ProtocolBrief() {
 
   if (brief) {
     return (
-      <div className="rounded-xl border border-violet-500/25 bg-violet-500/5 p-6">
+      <div className="rounded-xl border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] p-6">
         <div className="mb-3 flex items-center gap-2">
-          <Sparkles className="h-4 w-4 text-violet-300" />
-          <h3 className="text-sm font-semibold text-violet-200">
+          <Sparkles className="h-4 w-4 text-[var(--ct-violet-text)]" />
+          <h3 className="text-sm font-semibold text-[var(--ct-violet-text)]">
             Analyst brief
           </h3>
-          <span className="ml-auto text-[10px] uppercase tracking-wide text-slate-600">
+          <span className="ml-auto text-[10px] uppercase tracking-wide text-[var(--ct-text-soft)]">
             Strands agent
           </span>
         </div>
-        <p className="text-sm font-medium text-slate-100">{brief.headline}</p>
-        <p className="mt-2 text-sm leading-relaxed text-slate-300">
+        <p className="text-sm font-medium text-[var(--ct-text)]">{brief.headline}</p>
+        <p className="mt-2 text-sm leading-relaxed text-[var(--ct-text-muted)]">
           {brief.finding}
         </p>
-        <div className="mt-4 space-y-2 border-t border-violet-500/15 pt-3">
+        <div className="mt-4 space-y-2 border-t border-[color:var(--ct-violet-border)] pt-3">
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-slate-500">
+            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
               Recommendation
             </p>
-            <p className="mt-0.5 text-sm text-slate-300">
+            <p className="mt-0.5 text-sm text-[var(--ct-text-muted)]">
               {brief.recommendation}
             </p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-slate-500">
+            <p className="text-[11px] uppercase tracking-wide text-[var(--ct-text-soft)]">
               Caveat
             </p>
-            <p className="mt-0.5 text-xs text-slate-400">{brief.caveat}</p>
+            <p className="mt-0.5 text-xs text-[var(--ct-text-muted)]">{brief.caveat}</p>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ export function ProtocolBrief() {
       <button
         onClick={run}
         disabled={loading}
-        className="inline-flex items-center gap-2 rounded-lg border border-violet-500/30 bg-violet-500/10 px-3.5 py-2 text-xs font-medium text-violet-200 transition-colors hover:bg-violet-500/20 disabled:opacity-50"
+        className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--ct-violet-border)] bg-[var(--ct-violet-bg)] px-3.5 py-2 text-xs font-medium text-[var(--ct-violet-text)] transition-colors hover:brightness-95 disabled:opacity-50"
       >
         {loading ? (
           <>
@@ -89,7 +89,7 @@ export function ProtocolBrief() {
           </>
         )}
       </button>
-      {error && <p className="mt-2 text-xs text-slate-500">{error}</p>}
+      {error && <p className="mt-2 text-xs text-[var(--ct-text-soft)]">{error}</p>}
     </div>
   );
 }
