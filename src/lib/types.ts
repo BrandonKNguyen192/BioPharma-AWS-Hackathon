@@ -38,6 +38,17 @@ export interface PatientProfile {
   priorTherapies: string[];
   /** Drug/class tokens normalized for matching, e.g. "platinum", "pd-1". */
   priorTherapyClasses: string[];
+  /**
+   * Distinct LINES of systemic therapy, when the patient's account supports a
+   * count. A line is a regimen, not a drug: carboplatin + pemetrexed +
+   * pembrolizumab given together is ONE line, not three. Counting drug classes
+   * instead ("platinum", "chemo", "checkpoint" -> 3) wrongly excluded patients
+   * from every trial with a prior-line cap, which is most later-line trials.
+   * Null when the patient did not describe their history clearly enough to
+   * count — the matcher then reports unknown rather than guessing.
+   */
+  priorLinesCount: number | null;
+
   biomarkers: string[];
   /** PD-L1 tumor proportion score as a percentage, when stated. */
   pdl1Percent: number | null;
@@ -62,6 +73,7 @@ export type RuleKind =
   | "measurable_disease"
   | "stage"
   | "age"
+  | "permissive"
   | "unparsed";
 
 export type CriterionOutcome = "pass" | "fail" | "unknown";
@@ -89,8 +101,13 @@ export interface MatchResult {
    * `coverage` instead.
    */
   score: number;
-  /** Share of the criteria we COULD check that the patient met, 0-100. */
-  fit: number;
+  /**
+   * Share of the criteria we COULD DECIDE that the patient met, 0-100.
+   * `null` means we decided nothing — no pass, no blocker, only unknowns.
+   * That is NOT the same as 0, which means "we checked and you failed",
+   * and it must never render as a percentage.
+   */
+  fit: number | null;
   /** How much of the protocol we could check at all. */
   coverage: {
     /** Criteria the engine could evaluate. */

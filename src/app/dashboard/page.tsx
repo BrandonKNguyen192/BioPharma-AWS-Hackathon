@@ -19,6 +19,7 @@ import { TRIALS_META } from "@/lib/trials";
 import { AppShell } from "@/app/components/AppShell";
 import { ConvokeExport } from "@/app/components/ConvokeExport";
 import { ProtocolBrief } from "@/app/components/ProtocolBrief";
+import { PipelineRadar } from "@/app/components/PipelineRadar";
 import {
   ProgramChip,
   ProgramContextBlock,
@@ -291,6 +292,19 @@ export default function DashboardPage() {
       <div className="mt-5">
         <ProtocolBrief />
       </div>
+
+      <section className="ct-soft-panel mt-5 p-5 sm:p-6">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="ct-section-label">Pipeline radar</p>
+            <h2 className="mt-1 text-xl font-semibold text-[var(--ct-text)]">Public milestones around monitored assets</h2>
+          </div>
+          <Link href="/pipeline" className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--ct-text-muted)] hover:text-[var(--ct-text)]">
+            Evidence ledger <ArrowUpRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+        <PipelineRadar limit={3} />
+      </section>
 
       <section className="mt-8">
         <div className="mb-4 flex items-end justify-between gap-4">

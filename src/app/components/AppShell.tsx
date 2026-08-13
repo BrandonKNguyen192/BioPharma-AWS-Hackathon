@@ -10,11 +10,12 @@ import {
 } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
-type View = "patient" | "dashboard";
+type View = "patient" | "dashboard" | "pipeline";
 
 const NAV_ITEMS = [
   { href: "/", label: "Patient matching", view: "patient" as const, icon: MessageCircleMore },
   { href: "/dashboard", label: "Protocol intelligence", view: "dashboard" as const, icon: BarChart3 },
+  { href: "/pipeline", label: "Trial radar", view: "pipeline" as const, icon: FileSearch },
 ];
 
 export function AppShell({
@@ -54,9 +55,6 @@ export function AppShell({
                 </Link>
               );
             })}
-            <span className="ct-rail-button is-muted" title="Eligibility evidence">
-              <FileSearch className="h-[18px] w-[18px]" />
-            </span>
             <span className="ct-rail-button is-muted" title="Privacy controls">
               <ShieldCheck className="h-[18px] w-[18px]" />
             </span>

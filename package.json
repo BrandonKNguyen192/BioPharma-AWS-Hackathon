@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:radar": "node scripts/test-radar.mjs",
+    "test:matcher": "tsx scripts/test-condition-gate.mts && tsx scripts/test-matcher.mts"
   },
   "dependencies": {
     "@strands-agents/sdk": "^1.13.0",
@@ -27,6 +29,7 @@
     "eslint-config-next": "16.3.0",
     "playwright": "^1.62.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.12",
     "typescript": "^5"
   },
   "packageManager": "pnpm@10.6.2",

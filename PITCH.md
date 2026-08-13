@@ -132,8 +132,8 @@ instructed not to infer — ask it to guess ECOG from "I still work part time"
 and it returns null.
 
 **"How much of the eligibility criteria can you actually evaluate?"**
-Be honest here — it's a strength. About 27% of published criteria lines are
-machine-evaluable today — a median of 3 per trial: ECOG, PD-L1 thresholds,
+Be honest here — it's a strength. About 27% of published criteria lines are machine-evaluable on the lung
+studies the demo uses (19% across the whole 60-study portfolio) — a median of 3 per trial: ECOG, PD-L1 thresholds,
 prior therapy classes and lines, treatment-naive requirements, biomarker
 requirements, stage windows, CNS involvement, age. The rest are shown on the
 card as "other requirements your doctor will need to read", with the verbatim

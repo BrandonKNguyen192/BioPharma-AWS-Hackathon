@@ -1,0 +1,2255 @@
+{
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-08-13T21:27:08.781Z",
+  "checkedAt": "2026-08-13",
+  "scope": "Oncology pipeline announcements for sponsors in the monitored trial portfolio",
+  "sources": [
+    "SEC EDGAR full-text search (8-K/10-K/10-Q)",
+    "GDELT DOC API (press-wire coverage)",
+    "ClinicalTrials.gov API v2 (registry join)"
+  ],
+  "signals": [
+    {
+      "id": "sig-bms-0000014272-26-000018",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-07-30",
+        "precision": "day",
+        "sortDate": "2026-07-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "3",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-07-30",
+      "summary": "inadequate response or who have been intolerant to a prior disease-modifying antirheumatic therapy. The EC approval is based on positive results from the pivotal POETYK PsA-1 and POETYK PsA-2 Phase 3 clinical trials. 4 Our Strategy At Bristol Myers Squibb, our goal is to build a company that is financially strong and delivers industry-leading, sustainable growth into the 2030s and beyond. As we ad",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000018/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-07-30",
+        "publishedAt": "2026-07-30",
+        "quote": "inadequate response or who have been intolerant to a prior disease-modifying antirheumatic therapy. The EC approval is based on positive results from the pivotal POETYK PsA-1 and POETYK PsA-2 Phase 3 clinical trials. 4 Our Strategy At Bristol Myers Squibb, our goal is to build a company that is fina"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-26-000008",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-04-30",
+        "precision": "day",
+        "sortDate": "2026-04-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "3",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-04-30",
+      "summary": "ul improvement over placebo in multiple secondary endpoints at 28 weeks with no new safety signals. Cobenfy&#8482; (xanomeline and trospium chloride) March 28 Announced data from a Phase 4,open-label clinical trial evaluating the symptom stability, safety and tolerability of Cobenfy when switching adult outpatients with schizophrenia from an oral atypical antipsychotic to Cobenfy monotherapy. Thro",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000008/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-04-30",
+        "publishedAt": "2026-04-30",
+        "quote": "ul improvement over placebo in multiple secondary endpoints at 28 weeks with no new safety signals. Cobenfy&#8482; (xanomeline and trospium chloride) March 28 Announced data from a Phase 4,open-label clinical trial evaluating the symptom stability, safety and tolerability of Cobenfy when switching a"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-26-000002",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-02-05",
+        "precision": "day",
+        "sortDate": "2026-02-05"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-02-05",
+      "summary": "ATES Entries organized by date and inclusive of fourth quarter and recent updates. Asset(s) Date Announced Milestone Camzyos &#174; (mavacamten) January 12 Announced positive topline results from the Phase 3 SCOUT-HCM trial evaluating Camzyos in adolescents with symptomatic obstructive hypertrophic cardiomyopathy. The trial met its primary endpoint, and statistical significance was also met for mu",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000002/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-02-05",
+        "publishedAt": "2026-02-05",
+        "quote": "ATES Entries organized by date and inclusive of fourth quarter and recent updates. Asset(s) Date Announced Milestone Camzyos &#174; (mavacamten) January 12 Announced positive topline results from the Phase 3 SCOUT-HCM trial evaluating Camzyos in adolescents with symptomatic obstructive hypertrophic "
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-25-000147",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-10-30",
+        "precision": "day",
+        "sortDate": "2025-10-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "pumitamig",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "3",
+      "headline": "Bristol Myers Squibb 8-K filed 2025-10-30",
+      "summary": "ple myeloma demonstrated a statistically significant improvement in minimal residual disease (MRD) negativity rates, compared with the control arm, in a planned interim analysis of the MRD endpoint. 4 pumitamig (BNT327 &#47; BMS-986545) September 8 First disclosure of data presented with BioNTech SE from the global randomized Phase 2 trial (NCT06449209) evaluating pumitamig, an investigational bis",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427225000147/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2025-10-30",
+        "publishedAt": "2025-10-30",
+        "quote": "ple myeloma demonstrated a statistically significant improvement in minimal residual disease (MRD) negativity rates, compared with the control arm, in a planned interim analysis of the MRD endpoint. 4 pumitamig (BNT327 &#47; BMS-986545) September 8 First disclosure of data presented with BioNTech SE"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-25-000149",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-10-30",
+        "precision": "day",
+        "sortDate": "2025-10-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Bristol Myers Squibb 8-K filed 2025-10-30",
+      "summary": "multiple myeloma HCC hepatocellular carcinoma RS ring sideroblast HCM hypertrophic cardiomyopathy Sanofi Sanofi S.A. HHS Health and Human Services sBLA supplemental biologics license application IND investigational new drug SEC U.S. Securities and Exchange Commission IPRD in-process research and development SLL Small Lymphocytic Lymphoma IRA Inflation Reduction Act of 2022 SPC Supplementary Protec",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427225000149/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2025-10-30",
+        "publishedAt": "2025-10-30",
+        "quote": "multiple myeloma HCC hepatocellular carcinoma RS ring sideroblast HCM hypertrophic cardiomyopathy Sanofi Sanofi S.A. HHS Health and Human Services sBLA supplemental biologics license application IND investigational new drug SEC U.S. Securities and Exchange Commission IPRD in-process research and dev"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-26-000004",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-02-11",
+        "precision": "day",
+        "sortDate": "2026-02-11"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-02-11",
+      "summary": "imated patent expiry will be 2039. (g) For Opdivo Qvantig, in the U.S. and EU, the estimated minimum market exclusivity dates are 2028 and 2030, respectively, based on the expiry of the COM patent for nivolumab and does not include any potential exclusivity resulting from pending patent applications relating to Opdivo Qvantig . (h) For Opdualag in the U.S., a PTR application is pending and, if gra",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000004/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-02-11",
+        "publishedAt": "2026-02-11",
+        "quote": "imated patent expiry will be 2039. (g) For Opdivo Qvantig, in the U.S. and EU, the estimated minimum market exclusivity dates are 2028 and 2030, respectively, based on the expiry of the COM patent for nivolumab and does not include any potential exclusivity resulting from pending patent applications"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-26-000020",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-07-30",
+        "precision": "day",
+        "sortDate": "2026-07-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "pumitamig",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-07-30",
+      "summary": "x months ended June&#160;30, 2026 and 2025 are set forth below. BioNTech In June 2025, BMS and BioNTech entered into a global strategic collaboration for the co-development and co-commercialization of pumitamig (BNT327/BMS986545), a bispecific antibody targeting PD-L1 and VEGF-A, which is currently being evaluated in several indications, including in CRC, ES-SCLC, NSCLC and TNBC. The companies wil",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000020/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-07-30",
+        "publishedAt": "2026-07-30",
+        "quote": "x months ended June&#160;30, 2026 and 2025 are set forth below. BioNTech In June 2025, BMS and BioNTech entered into a global strategic collaboration for the co-development and co-commercialization of pumitamig (BNT327/BMS986545), a bispecific antibody targeting PD-L1 and VEGF-A, which is currently "
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0001724521-26-000042",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-08-05",
+        "precision": "day",
+        "sortDate": "2026-08-05"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "1",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-08-05",
+      "summary": "r care. Arcus is executing on this strategy, including embedding casdatifan into the treatment paradigm in combination with the most commonly used dual-immunotherapy regimen in the first-line setting, nivolumab (an anti-PD-1) plus ipilimumab (an anti-CTLA-4) and the standard of care in the second-line setting, cabozantinib. Arcus&#8217;s combinations were selected to complement these two core regi",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001724521/000172452126000042/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-08-05",
+        "publishedAt": "2026-08-05",
+        "quote": "r care. Arcus is executing on this strategy, including embedding casdatifan into the treatment paradigm in combination with the most commonly used dual-immunotherapy regimen in the first-line setting, nivolumab (an anti-PD-1) plus ipilimumab (an anti-CTLA-4) and the standard of care in the second-li"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-0000014272-26-000010",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-04-30",
+        "precision": "day",
+        "sortDate": "2026-04-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "iberdomide",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Bristol Myers Squibb 8-K filed 2026-04-30",
+      "summary": "tive interim top&#8209;line results from a Phase III trial conducted in China for iza-bren in previously treated unresectable locally advanced or metastatic TNBC, and (v) FDA acceptance of our NDA for iberdomide in combination with standard therapy for patients with RRMM. Additionally, Sotyktu was approved in the U.S. for the treatment of adults with active PsA and Opdivo was approved in the U.S. ",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000014272/000001427226000010/index.json",
+        "title": "Bristol Myers Squibb 8-K filed 2026-04-30",
+        "publishedAt": "2026-04-30",
+        "quote": "tive interim top&#8209;line results from a Phase III trial conducted in China for iza-bren in previously treated unresectable locally advanced or metastatic TNBC, and (v) FDA acceptance of our NDA for iberdomide in combination with standard therapy for patients with RRMM. Additionally, Sotyktu was a"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-25-043290",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-10-01",
+        "precision": "day",
+        "sortDate": "2025-10-01"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": null,
+      "headline": "Pfizer 8-K filed 2025-10-01",
+      "summary": "lity of any such information. Item 8.01 Other Events. On October 1, 2025, the Company announced that it had entered into the Agreement with Pfizer. Under the terms of the Agreement, Pfizer will supply elranatamab (ELREXFIO &#174; ), a B-cell maturation antigen CD3 targeted bispecific antibody (BCMAxCD3 bispecific), to the Company for its upcoming Phase 1b trial evaluating the safety and tolerabili",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828025043290/index.json",
+        "title": "Pfizer 8-K filed 2025-10-01",
+        "publishedAt": "2025-10-01",
+        "quote": "lity of any such information. Item 8.01 Other Events. On October 1, 2025, the Company announced that it had entered into the Agreement with Pfizer. Under the terms of the Agreement, Pfizer will supply elranatamab (ELREXFIO &#174; ), a B-cell maturation antigen CD3 targeted bispecific antibody (BCMAx"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-033861",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-05-12",
+        "precision": "day",
+        "sortDate": "2026-05-12"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "2",
+      "headline": "Pfizer 8-K filed 2026-05-12",
+      "summary": "ghlights Progressed Plans to Establish Cemsidomide as a Potentially Foundational Treatment for Multiple Myeloma&#59; Enrollment Ongoing in Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination with Elranatamab Additional Phase 1b Trial Evaluating Cemsidomide in Combination with Approved Multiple Myeloma Therapies Expected to Initiate in the First Half of 2027 Expanded Long-Term Partnership with",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026033861/index.json",
+        "title": "Pfizer 8-K filed 2026-05-12",
+        "publishedAt": "2026-05-12",
+        "quote": "ghlights Progressed Plans to Establish Cemsidomide as a Potentially Foundational Treatment for Multiple Myeloma&#59; Enrollment Ongoing in Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination with Elranatamab Additional Phase 1b Trial Evaluating Cemsidomide in Combination with Approved Multiple "
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-042365",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "iberdomide",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "3",
+      "headline": "Pfizer 8-K filed 2026-06-11",
+      "summary": "ation agreement on April 9, 2026 (https://ir.c4therapeutics.com/news-releases/news-release-details/c4- therapeutics-expands-long-term-partnership-roche-through-new) Dexamethasone (dex); Inflammation, Investigational new drug (IND); New Drug Application (NDA); Overall response rate (ORR); Inflammation, Neuroinflammation, Neurodegeneration (INN); Accelerated approval (AA); Multiple myeloma (MM); Deg",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026042365/index.json",
+        "title": "Pfizer 8-K filed 2026-06-11",
+        "publishedAt": "2026-06-11",
+        "quote": "ation agreement on April 9, 2026 (https://ir.c4therapeutics.com/news-releases/news-release-details/c4- therapeutics-expands-long-term-partnership-roche-through-new) Dexamethasone (dex); Inflammation, Investigational new drug (IND); New Drug Application (NDA); Overall response rate (ORR); Inflammatio"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-25-049850",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2025-11-06",
+        "precision": "day",
+        "sortDate": "2025-11-06"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Pfizer 8-K filed 2025-11-06",
+      "summary": "ghest Dose Level (100 &#181;g) and Differentiated Safety and Tolerability Profile Entered Into Clinical Trial Collaboration and Supply Agreement With Pfizer to Evaluate Cemsidomide in Combination With Elranatamab On Track to Initiate Next Phase of Cemsidomide Multiple Myeloma Development Including Registrational Phase 2 MOMENTUM Trial in Combination with Dexamethasone in Q1 2026 and Phase 1b Trial",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828025049850/index.json",
+        "title": "Pfizer 8-K filed 2025-11-06",
+        "publishedAt": "2025-11-06",
+        "quote": "ghest Dose Level (100 &#181;g) and Differentiated Safety and Tolerability Profile Entered Into Clinical Trial Collaboration and Supply Agreement With Pfizer to Evaluate Cemsidomide in Combination With Elranatamab On Track to Initiate Next Phase of Cemsidomide Multiple Myeloma Development Including R"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-024336",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-04-09",
+        "precision": "day",
+        "sortDate": "2026-04-09"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Pfizer 8-K filed 2026-04-09",
+      "summary": "cccc-20260409 0001662579 false 0001662579 2026-04-09 2026-04-09 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 _________________________________________________________________ FORM 8-K _________________________________________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest eve",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026024336/index.json",
+        "title": "Pfizer 8-K filed 2026-04-09",
+        "publishedAt": "2026-04-09",
+        "quote": "cccc-20260409 0001662579 false 0001662579 2026-04-09 2026-04-09 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 _________________________________________________________________ FORM 8-K _________________________________________________________________ CURRENT REPORT Pursuant"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "public_record",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-25-045157",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2025-10-16",
+        "precision": "day",
+        "sortDate": "2025-10-16"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Pfizer 8-K filed 2025-10-16",
+      "summary": "on antigen CD3 targeted bispecific antibody, to C4T for its upcoming Phase 1b trial 2 Collaboration with Merck will conclude in late November 2025 Overall Response Rate (ORR); Proof of Concept (POC); Investigational New Drug (IND); Accelerated approval (AA) 33 &nbsp;",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828025045157/index.json",
+        "title": "Pfizer 8-K filed 2025-10-16",
+        "publishedAt": "2025-10-16",
+        "quote": "on antigen CD3 targeted bispecific antibody, to C4T for its upcoming Phase 1b trial 2 Collaboration with Merck will conclude in late November 2025 Overall Response Rate (ORR); Proof of Concept (POC); Investigational New Drug (IND); Accelerated approval (AA) 33 &nbsp;"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-002010",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-01-14",
+        "precision": "day",
+        "sortDate": "2026-01-14"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "2",
+      "headline": "Pfizer 8-K filed 2026-01-14",
+      "summary": "-China clinical development. Early Portfolio&#58; Internal Discovery Projects Focused on Inflammation, Neuro-inflammation and Neuro-degenerative Diseases &#8226; By year-end 2028, deliver up to three investigational new drug applications. Early Portfolio&#58; Discovery Collaborations &#8226; Earn additional research milestones and potential licensing fees from collaborations with&#8239;Merck KGaA,",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026002010/index.json",
+        "title": "Pfizer 8-K filed 2026-01-14",
+        "publishedAt": "2026-01-14",
+        "quote": "-China clinical development. Early Portfolio&#58; Internal Discovery Projects Focused on Inflammation, Neuro-inflammation and Neuro-degenerative Diseases &#8226; By year-end 2028, deliver up to three investigational new drug applications. Early Portfolio&#58; Discovery Collaborations &#8226; Earn ad"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-011971",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-02-26",
+        "precision": "day",
+        "sortDate": "2026-02-26"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "2",
+      "headline": "Pfizer 8-K filed 2026-02-26",
+      "summary": "opment with Potential for Accelerated Approval&#59; First Patient Dosed in the Phase 2 MOMENTUM Trial for Multiple Myeloma in the Fourth Line or Later Phase 1b Trial of Cemsidomide in Combination with Elranatamab on Track to Initiate in Q2 2026 to Support Use in Earlier Lines of Multiple Myeloma Therapy Second Degrader Designed and Delivered to Biogen Entered Clinical Development for Autoimmune Di",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026011971/index.json",
+        "title": "Pfizer 8-K filed 2026-02-26",
+        "publishedAt": "2026-02-26",
+        "quote": "opment with Potential for Accelerated Approval&#59; First Patient Dosed in the Phase 2 MOMENTUM Trial for Multiple Myeloma in the Fourth Line or Later Phase 1b Trial of Cemsidomide in Combination with Elranatamab on Track to Initiate in Q2 2026 to Support Use in Earlier Lines of Multiple Myeloma The"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001628280-26-055490",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-08-11",
+        "precision": "day",
+        "sortDate": "2026-08-11"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "elranatamab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "2",
+      "headline": "Pfizer 8-K filed 2026-08-11",
+      "summary": "ment Exhibit 99.1 C4 Therapeutics Reports Second Quarter 2026 Financial Results and Recent Business Highlights Cemsidomide&#8217;s Ongoing Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination With Elranatamab Remain on Track to Deliver Clinical Data Readouts in 2027 Phase 1 Data Presented at European Hematology Association (EHA) 2026 Congress Further Support Cemsidomide&#8217;s Potential Best-",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001662579/000162828026055490/index.json",
+        "title": "Pfizer 8-K filed 2026-08-11",
+        "publishedAt": "2026-08-11",
+        "quote": "ment Exhibit 99.1 C4 Therapeutics Reports Second Quarter 2026 Financial Results and Recent Business Highlights Cemsidomide&#8217;s Ongoing Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination With Elranatamab Remain on Track to Deliver Clinical Data Readouts in 2027 Phase 1 Data Presented at Eur"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06121843",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2023-11-08",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001493152-26-033357",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-07-15",
+        "precision": "day",
+        "sortDate": "2026-07-15"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "palbociclib",
+        "aliases": []
+      },
+      "indication": "breast cancer",
+      "phase": "3",
+      "headline": "Pfizer 8-K filed 2026-07-15",
+      "summary": "proved therapy that inhibits all class I PI3K isoforms (&alpha;, &beta;, &delta;, &gamma;) and mTOR complexes mTORC1 and mTORC2 &nbsp; &nbsp; - In the Phase 3 VIKTORIA-1 trial, REVTORPYK combined with palbociclib and fulvestrant and REVTORPYK combined with fulvestrant reduced the risk of disease progression or death by 76% and 67%, respectively, compared to fulvestrant among patients with PIK3CA w",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001603454/000149315226033357/index.json",
+        "title": "Pfizer 8-K filed 2026-07-15",
+        "publishedAt": "2026-07-15",
+        "quote": "proved therapy that inhibits all class I PI3K isoforms (&alpha;, &beta;, &delta;, &gamma;) and mTOR complexes mTORC1 and mTORC2 &nbsp; &nbsp; - In the Phase 3 VIKTORIA-1 trial, REVTORPYK combined with palbociclib and fulvestrant and REVTORPYK combined with fulvestrant reduced the risk of disease pro"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT02693535",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2016-02-26",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-pfizer-0001104659-25-055709",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-06-03",
+        "precision": "day",
+        "sortDate": "2025-06-03"
+      },
+      "company": "Pfizer",
+      "asset": {
+        "name": "palbociclib",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "3",
+      "headline": "Pfizer 8-K filed 2025-06-03",
+      "summary": "ped due to expression of these proteins &#8226; Differentiation vs. other CDK4/6s: Goes beyond cell cycle inhibition to address resistance escape mechanisms not covered by current therapies, active in palbociclib resistant cell lines Narazaciclib: Advancing Beyond Existing CDK4/6 to Overcome Resistance Opportunity to Address Resistance - Driven Gaps in Metastatic Breast Cancer and Other Hard - to ",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001130598/000110465925055709/index.json",
+        "title": "Pfizer 8-K filed 2025-06-03",
+        "publishedAt": "2025-06-03",
+        "quote": "ped due to expression of these proteins &#8226; Differentiation vs. other CDK4/6s: Goes beyond cell cycle inhibition to address resistance escape mechanisms not covered by current therapies, active in palbociclib resistant cell lines Narazaciclib: Advancing Beyond Existing CDK4/6 to Overcome Resista"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT02693535",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2016-02-26",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-180830",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2025-08-14",
+        "precision": "day",
+        "sortDate": "2025-08-14"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Merck & Co 8-K filed 2025-08-14",
+      "summary": "#8217;s (known as MSD outside of the United States and Canada) anti-PD-1 therapy KEYTRUDA &reg; (pembrolizumab) for the treatment of advanced melanoma. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable or metastatic (advanced) melanoma. In the study, Cylembio plus pembrolizumab demonstrated clinical im",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001865494/000119312525180830/index.json",
+        "title": "Merck & Co 8-K filed 2025-08-14",
+        "publishedAt": "2025-08-14",
+        "quote": "#8217;s (known as MSD outside of the United States and Canada) anti-PD-1 therapy KEYTRUDA &reg; (pembrolizumab) for the treatment of advanced melanoma. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable o"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-177471",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2025-08-11",
+        "precision": "day",
+        "sortDate": "2025-08-11"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Merck & Co 8-K filed 2025-08-11",
+      "summary": "noma Cylembio | 1L Lung (NSCLC) Cylembio | Head &amp; Neck (SCCHN) IO112 | Solid Tumors (pre-clinical) IO170 | Solid Tumors (pre-clinical) Final data from Ph2 BLA, biologics license application; IND, investigational new drug; NSCLC, non-small cell lung cancer; SCCHN, squamous cell carcinoma of the head and neck Potential US approval Potential US launch Potential EU MAA submission 2026 IND submissi",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001865494/000119312525177471/index.json",
+        "title": "Merck & Co 8-K filed 2025-08-11",
+        "publishedAt": "2025-08-11",
+        "quote": "noma Cylembio | 1L Lung (NSCLC) Cylembio | Head &amp; Neck (SCCHN) IO112 | Solid Tumors (pre-clinical) IO170 | Solid Tumors (pre-clinical) Final data from Ph2 BLA, biologics license application; IND, investigational new drug; NSCLC, non-small cell lung cancer; SCCHN, squamous cell carcinoma of the h"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-281657",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-11-14",
+        "precision": "day",
+        "sortDate": "2025-11-14"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Merck & Co 8-K filed 2025-11-14",
+      "summary": "&reg; (pembrolizumab) for the treatment of advanced melanoma in an oral presentation at the 2025 European Society for Medical Oncology (ESMO) congress. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable or metastatic (advanced) melanoma. In the study, Cylembio plus pembrolizumab demonstrated a clinicall",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001865494/000119312525281657/index.json",
+        "title": "Merck & Co 8-K filed 2025-11-14",
+        "publishedAt": "2025-11-14",
+        "quote": "&reg; (pembrolizumab) for the treatment of advanced melanoma in an oral presentation at the 2025 European Society for Medical Oncology (ESMO) congress. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable o"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001140361-26-006410",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-02-23",
+        "precision": "day",
+        "sortDate": "2026-02-23"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "colorectal cancer",
+      "phase": "3",
+      "headline": "Merck & Co 8-K filed 2026-02-23",
+      "summary": "tiple Indications Validated by World-Class Partners &#160;&#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101+ pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head and neck cancer&#160;&#160;PDS0101+ chemoRT (IMMUNOCERV)&#160;&#160;Locally advanced cervical cance",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001472091/000114036126006410/index.json",
+        "title": "Merck & Co 8-K filed 2026-02-23",
+        "publishedAt": "2026-02-23",
+        "quote": "tiple Indications Validated by World-Class Partners &#160;&#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101+ pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001140361-25-023644",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-06-25",
+        "precision": "day",
+        "sortDate": "2025-06-25"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "renal cell carcinoma",
+      "phase": "2",
+      "headline": "Merck & Co 8-K filed 2025-06-25",
+      "summary": "conducted between checkpoint inhibitors and Versamune&#174; HPV or between EGFR inhibitors and Versamune&#174; HPV.&#160; &#160; &#160;VERSATILE-002: A Global Phase 2 Study of Versamune&#174; HPV and Pembrolizumab in Subjects with HPV16-positive R/M HNSCC&#160;&#160;Partner&#160;&#160;StudyDesign&#160;&#160;Single-arm study&#160;&#160;31 sites in US and EU&#160;&#160;2 Cohorts: &#160;&#160;ICI Na&",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001472091/000114036125023644/index.json",
+        "title": "Merck & Co 8-K filed 2025-06-25",
+        "publishedAt": "2025-06-25",
+        "quote": "conducted between checkpoint inhibitors and Versamune&#174; HPV or between EGFR inhibitors and Versamune&#174; HPV.&#160; &#160; &#160;VERSATILE-002: A Global Phase 2 Study of Versamune&#174; HPV and Pembrolizumab in Subjects with HPV16-positive R/M HNSCC&#160;&#160;Partner&#160;&#160;StudyDesign&#1"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-323704",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-12-18",
+        "precision": "day",
+        "sortDate": "2025-12-18"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": "1",
+      "headline": "Merck & Co 8-K filed 2025-12-18",
+      "summary": "One patient confirmed response after November 3, 2025 data cutoff. &#160; Combination Therapy &#160; The ongoing MICVO Phase 1/2 study evaluating MICVO in combination with KEYTRUDA&#174; is part of a Clinical Trial Collaboration Agreement with Merck (known as MSD outside the US and Canada) and is currently in dose escalation across multiple doses and tumor types, including 1L/2L+ R/M HNSCC. The da",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001782223/000119312525323704/index.json",
+        "title": "Merck & Co 8-K filed 2025-12-18",
+        "publishedAt": "2025-12-18",
+        "quote": "One patient confirmed response after November 3, 2025 data cutoff. &#160; Combination Therapy &#160; The ongoing MICVO Phase 1/2 study evaluating MICVO in combination with KEYTRUDA&#174; is part of a Clinical Trial Collaboration Agreement with Merck (known as MSD outside the US and Canada) and is cu"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001140361-26-016684",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-04-24",
+        "precision": "day",
+        "sortDate": "2026-04-24"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "colorectal cancer",
+      "phase": "3",
+      "headline": "Merck & Co 8-K filed 2026-04-24",
+      "summary": "infiltrate tumor &#160;&#160;2&#160;&#160;1&#160; &#160; &#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101 + pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head and neck cancer&#160;&#160;PDS0101 + ChemoRT* (IMMUNOCERV)&#160;&#160;Locally advanced cervical can",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001472091/000114036126016684/index.json",
+        "title": "Merck & Co 8-K filed 2026-04-24",
+        "publishedAt": "2026-04-24",
+        "quote": "infiltrate tumor &#160;&#160;2&#160;&#160;1&#160; &#160; &#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101 + pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-221704",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-09-29",
+        "precision": "day",
+        "sortDate": "2025-09-29"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Merck & Co 8-K filed 2025-09-29",
+      "summary": "y announced that the FDA has recommended that the Company not submit a BLA based on the data from the IOB-013 clinical trial. As previously announced, in the IOB-013 trial treatment with Cylembio plus pembrolizumab improved progression free survival, but the results narrowly missed statistical significance. The Company plans to continue the dialogue with FDA to align on an efficient path to market",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001865494/000119312525221704/index.json",
+        "title": "Merck & Co 8-K filed 2025-09-29",
+        "publishedAt": "2025-09-29",
+        "quote": "y announced that the FDA has recommended that the Company not submit a BLA based on the data from the IOB-013 clinical trial. As previously announced, in the IOB-013 trial treatment with Cylembio plus pembrolizumab improved progression free survival, but the results narrowly missed statistical signi"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-25-243046",
+      "eventType": "trial_planned",
+      "eventDate": {
+        "reported": "2025-10-20",
+        "precision": "day",
+        "sortDate": "2025-10-20"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "urothelial carcinoma",
+      "phase": "2",
+      "headline": "Merck & Co 8-K filed 2025-10-20",
+      "summary": "Exchange Act. &#9744; &#160; Item 7.01 Regulation FD Disclosure. On October 18, 2025, Corbus Pharmaceuticals Holdings, Inc. (the &#8220;Company&#8221;) issued a press release announcing data from its Phase 1/2 clinical study of CRB-701 (SYS6002) that was presented at the 2025 European Society for Medical Oncology Congress (&#8220;ESMO25&#8221;) on October 19, 2025. A copy of the press release is f",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001595097/000119312525243046/index.json",
+        "title": "Merck & Co 8-K filed 2025-10-20",
+        "publishedAt": "2025-10-20",
+        "quote": "Exchange Act. &#9744; &#160; Item 7.01 Regulation FD Disclosure. On October 18, 2025, Corbus Pharmaceuticals Holdings, Inc. (the &#8220;Company&#8221;) issued a press release announcing data from its Phase 1/2 clinical study of CRB-701 (SYS6002) that was presented at the 2025 European Society for Me"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-merck-0001193125-26-222818",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-05-14",
+        "precision": "day",
+        "sortDate": "2026-05-14"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "hepatocellular carcinoma",
+      "phase": "1",
+      "headline": "Merck & Co 8-K filed 2026-05-14",
+      "summary": "target enrollment in Phase 1 monotherapy dose expansion study of MICVO in 2L+ R/M HNSCC in the first quarter of 2026 &#160; Updated data from MICVO Phase 1/2 dose escalation study in combination with pembrolizumab in 1L R/M HNSCC on track for the second half of 2026 &#160; Presented new preclinical data at the American Association for Cancer Research (AACR) Annual Meeting 2026 that support the cli",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001782223/000119312526222818/index.json",
+        "title": "Merck & Co 8-K filed 2026-05-14",
+        "publishedAt": "2026-05-14",
+        "quote": "target enrollment in Phase 1 monotherapy dose expansion study of MICVO in 2L+ R/M HNSCC in the first quarter of 2026 &#160; Updated data from MICVO Phase 1/2 dose escalation study in combination with pembrolizumab in 1L R/M HNSCC on track for the second half of 2026 &#160; Presented new preclinical "
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001193125-25-271189",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2025-11-07",
+        "precision": "day",
+        "sortDate": "2025-11-07"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "atezolizumab",
+        "aliases": []
+      },
+      "indication": "colorectal cancer",
+      "phase": "2",
+      "headline": "Roche / Genentech 8-K filed 2025-11-07",
+      "summary": "(the &#8220;Company&#8221;) issued a press release announcing new data related to high plasma tumor mutational burden from its ongoing Phase 2 clinical trial evaluating vilastobart in combination with atezolizumab in patients with microsatellite stable metastatic colorectal cancer, a copy of which is furnished as Exhibit 99.1 to this Current Report on Form 8-K. Also on November 7, 2025, the Compan",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001840233/000119312525271189/index.json",
+        "title": "Roche / Genentech 8-K filed 2025-11-07",
+        "publishedAt": "2025-11-07",
+        "quote": "(the &#8220;Company&#8221;) issued a press release announcing new data related to high plasma tumor mutational burden from its ongoing Phase 2 clinical trial evaluating vilastobart in combination with atezolizumab in patients with microsatellite stable metastatic colorectal cancer, a copy of which i"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712355",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001193125-25-132710",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-06-02",
+        "precision": "day",
+        "sortDate": "2025-06-02"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "2",
+      "headline": "Roche / Genentech 8-K filed 2025-06-02",
+      "summary": "mitation, general market conditions; risks and uncertainties related to ongoing and planned research and development activities, including initiating, conducting or completing preclinical studies and clinical trials and the timing and results of such preclinical studies or clinical trials; the delay of any current or planned preclinical studies or clinical trials or the development of Xilio&#146;s",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001840233/000119312525132710/index.json",
+        "title": "Roche / Genentech 8-K filed 2025-06-02",
+        "publishedAt": "2025-06-02",
+        "quote": "mitation, general market conditions; risks and uncertainties related to ongoing and planned research and development activities, including initiating, conducting or completing preclinical studies and clinical trials and the timing and results of such preclinical studies or clinical trials; the delay"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001129928-26-000035",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-05-22",
+        "precision": "day",
+        "sortDate": "2026-05-22"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche / Genentech 8-K filed 2026-05-22",
+      "summary": "oncy-20260522 FALSE 0001129928 A0 0001129928 2026-01-08 2026-01-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________ FORM 8-K ___________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): May 22, 2026 ______________________________",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001129928/000112992826000035/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-05-22",
+        "publishedAt": "2026-05-22",
+        "quote": "oncy-20260522 FALSE 0001129928 A0 0001129928 2026-01-08 2026-01-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________ FORM 8-K ___________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "public_record",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001641172-25-015524",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-06-18",
+        "precision": "day",
+        "sortDate": "2025-06-18"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche / Genentech 8-K filed 2025-06-18",
+      "summary": "false 0001878313 0001878313 2025-06-18 2025-06-18 iso4217:USD xbrli:shares iso4217:USD xbrli:shares &#160; &#160; &#160; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &#160; FORM 8-K &#160; Current Report &#160; Pursuant to Section 13 or 15(d) of The Securities Exchange Act of 1934 &#160; Date of Report (Date of earliest event reported): June 18, 2025 &#160; MAIA Biotech",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001878313/000164117225015524/index.json",
+        "title": "Roche / Genentech 8-K filed 2025-06-18",
+        "publishedAt": "2025-06-18",
+        "quote": "false 0001878313 0001878313 2025-06-18 2025-06-18 iso4217:USD xbrli:shares iso4217:USD xbrli:shares &#160; &#160; &#160; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &#160; FORM 8-K &#160; Current Report &#160; Pursuant to Section 13 or 15(d) of The Securities Exchange Act"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "public_record",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001645113-26-000023",
+      "eventType": "topline_results",
+      "eventDate": {
+        "reported": "2026-03-26",
+        "precision": "day",
+        "sortDate": "2026-03-26"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "atezolizumab",
+        "aliases": []
+      },
+      "indication": "pancreatic cancer",
+      "phase": "2",
+      "headline": "Roche / Genentech 8-K filed 2026-03-26",
+      "summary": "Regulation FD Disclosure. On March 26, 2026, the Company issued a press release announcing positive results from the Phase 2 PANOVA-4 trial of Tumor Treating Fields (TTFields) therapy concomitant with atezolizumab (Tecentriq&#174;)*, gemcitabine and nab-paclitaxel (gem/nab-pac) as a first-line treatment for metastatic pancreatic ductal adenocarcinoma (mPDAC). PANOVA-4 met its pre-specified primary",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001645113/000164511326000023/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-03-26",
+        "publishedAt": "2026-03-26",
+        "quote": "Regulation FD Disclosure. On March 26, 2026, the Company issued a press release announcing positive results from the Phase 2 PANOVA-4 trial of Tumor Treating Fields (TTFields) therapy concomitant with atezolizumab (Tecentriq&#174;)*, gemcitabine and nab-paclitaxel (gem/nab-pac) as a first-line treat"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712355",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001193125-26-045543",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-02-11",
+        "precision": "day",
+        "sortDate": "2026-02-11"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "atezolizumab",
+        "aliases": []
+      },
+      "indication": "multiple myeloma",
+      "phase": "1",
+      "headline": "Roche / Genentech 8-K filed 2026-02-11",
+      "summary": "ine NLR is predictive of ORR and/or OS in HCC with atezo + bev regimen . 25 subjects PD-L1 e evaluable; 39 subjects PD-L1 evaluable 1 Cheng AL, et al. Updated efficacy and safety data from IMbrave150: Atezolizumab plus bevacizumab vs. sorafenib for unresectable hepatocellular carcinoma. Journal of Hepatology 2022 vol. 76 862&#8211;873; Espinoza M, et al. Disease Etiology and Outcomes After Atezoli",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001544227/000119312526045543/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-02-11",
+        "publishedAt": "2026-02-11",
+        "quote": "ine NLR is predictive of ORR and/or OS in HCC with atezo + bev regimen . 25 subjects PD-L1 e evaluable; 39 subjects PD-L1 evaluable 1 Cheng AL, et al. Updated efficacy and safety data from IMbrave150: Atezolizumab plus bevacizumab vs. sorafenib for unresectable hepatocellular carcinoma. Journal of H"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712355",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0001193125-25-278835",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-11-13",
+        "precision": "day",
+        "sortDate": "2025-11-13"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "atezolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "2",
+      "headline": "Roche / Genentech 8-K filed 2025-11-13",
+      "summary": "erapy activity (including in settings insensitive to PD-1) and tumor-selective pharmacodynamics consistent with its intended mechanism of action. &#160; &#x2022; XTX501 is currently advancing through investigational new drug (IND)-enabling studies, and Xilio plans to submit an IND application for XTX501 in the middle of 2026. &#160; Masked T Cell Engager Programs &#160; Xilio is leveraging its pro",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001840233/000119312525278835/index.json",
+        "title": "Roche / Genentech 8-K filed 2025-11-13",
+        "publishedAt": "2025-11-13",
+        "quote": "erapy activity (including in settings insensitive to PD-1) and tumor-selective pharmacodynamics consistent with its intended mechanism of action. &#160; &#x2022; XTX501 is currently advancing through investigational new drug (IND)-enabling studies, and Xilio plans to submit an IND application for XT"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712355",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-0000939767-26-000096",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2026-08-05",
+        "precision": "day",
+        "sortDate": "2026-08-05"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Roche / Genentech 8-K filed 2026-08-05",
+      "summary": "the company expects topline results from the STELLAR-304 trial in the second half of 2026, depending on event rates. STELLAR-304 is a phase 3 pivotal trial evaluating zanzalintinib in combination with nivolumab versus sunitinib in previously untreated patients with advanced non-clear cell renal cell carcinoma (nccRCC). The primary endpoints of the trial are PFS as assessed by blinded independent r",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000939767/000093976726000096/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-08-05",
+        "publishedAt": "2026-08-05",
+        "quote": "the company expects topline results from the STELLAR-304 trial in the second half of 2026, depending on event rates. STELLAR-304 is a phase 3 pivotal trial evaluating zanzalintinib in combination with nivolumab versus sunitinib in previously untreated patients with advanced non-clear cell renal cell"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001493152-25-011441",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-07-28",
+        "precision": "day",
+        "sortDate": "2025-07-28"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "durvalumab",
+        "aliases": []
+      },
+      "indication": "pancreatic cancer",
+      "phase": "2",
+      "headline": "AstraZeneca 8-K filed 2025-07-28",
+      "summary": "&#160; &#160; &#160; &#160; &#160; &#160; Item 8.01 Other Events &#160; On July 28, 2025, AIM ImmunoTech Inc. (the &#8220;Company&#8221;) reported positive data in a mid-year update from the ongoing Phase 2 clinical study evaluating its drug Ampligen&#174; (rintatolimod) combined with AstraZeneca&#8217;s anti-PD-L1 immune checkpoint inhibitor Imfinzi&#174; (durvalumab) in the treatment of metastat",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000946644/000149315225011441/index.json",
+        "title": "AstraZeneca 8-K filed 2025-07-28",
+        "publishedAt": "2025-07-28",
+        "quote": "&#160; &#160; &#160; &#160; &#160; &#160; Item 8.01 Other Events &#160; On July 28, 2025, AIM ImmunoTech Inc. (the &#8220;Company&#8221;) reported positive data in a mid-year update from the ongoing Phase 2 clinical study evaluating its drug Ampligen&#174; (rintatolimod) combined with AstraZeneca&#8"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07361497",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2026-01-23",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001493152-26-005208",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-02-05",
+        "precision": "day",
+        "sortDate": "2026-02-05"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "durvalumab",
+        "aliases": []
+      },
+      "indication": "pancreatic cancer",
+      "phase": "1",
+      "headline": "AstraZeneca 8-K filed 2026-02-05",
+      "summary": "extent such subsequent filing specifically references the information herein as being incorporated by reference in such filing. &#160; Item 8.01. Other Events. &#160; A Phase I/II Open Label Study of Durvalumab (Imfinzi) and Rintatolimod (Ampligen) in pancreatic cancer patients with stable disease Post-FOLFIRINOX is being conducted. Attached hereto as Exhibit 99.2 is an interim clinical progress u",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000946644/000149315226005208/index.json",
+        "title": "AstraZeneca 8-K filed 2026-02-05",
+        "publishedAt": "2026-02-05",
+        "quote": "extent such subsequent filing specifically references the information herein as being incorporated by reference in such filing. &#160; Item 8.01. Other Events. &#160; A Phase I/II Open Label Study of Durvalumab (Imfinzi) and Rintatolimod (Ampligen) in pancreatic cancer patients with stable disease P"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07361497",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2026-01-23",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001370053-25-000103",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2025-11-26",
+        "precision": "day",
+        "sortDate": "2025-11-26"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "AstraZeneca 8-K filed 2025-11-26",
+      "summary": "btain the &#8220;optimum&#8221; commercial return for dostarlimab in all major markets of the world. 5. In 2020, after GSK acquired Tesaro, Tesaro and GSK decided to ignore these duties and conduct a clinical trial with their product Zejula&reg; (niraparib) in combination with Merck Sharp &amp; Dohme B.V.&#8217;s (&#8220;Merck&#8221;) Keytruda&reg; (pembrolizumab). Keytruda&reg; is dostarlimab&#82",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001370053/000137005325000103/index.json",
+        "title": "AstraZeneca 8-K filed 2025-11-26",
+        "publishedAt": "2025-11-26",
+        "quote": "btain the &#8220;optimum&#8221; commercial return for dostarlimab in all major markets of the world. 5. In 2020, after GSK acquired Tesaro, Tesaro and GSK decided to ignore these duties and conduct a clinical trial with their product Zejula&reg; (niraparib) in combination with Merck Sharp &amp; Dohm"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001599298-26-000014",
+      "eventType": "trial_initiated",
+      "eventDate": {
+        "reported": "2026-02-23",
+        "precision": "day",
+        "sortDate": "2026-02-23"
+      },
+      "company": "Merck & Co",
+      "asset": {
+        "name": "pembrolizumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "AstraZeneca 8-K filed 2026-02-23",
+      "summary": "4 ILLUMINE (NCT07264075). This study will evaluate ivonescimab monotherapy and ivonescimab in combination with ligufalimab, Akeso&#8217;s proprietary anti-CD47 monoclonal antibody, against monotherapy pembrolizumab in a randomized three-arm study. The study is intended to be conducted in multiple countries in Europe and in China; Summit may consider the expansion of this study into the United Stat",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001599298/000159929826000014/index.json",
+        "title": "AstraZeneca 8-K filed 2026-02-23",
+        "publishedAt": "2026-02-23",
+        "quote": "4 ILLUMINE (NCT07264075). This study will evaluate ivonescimab monotherapy and ivonescimab in combination with ligufalimab, Akeso&#8217;s proprietary anti-CD47 monoclonal antibody, against monotherapy pembrolizumab in a randomized three-arm study. The study is intended to be conducted in multiple co"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001599298-26-000004",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-01-12",
+        "precision": "day",
+        "sortDate": "2026-01-12"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": null,
+      "headline": "AstraZeneca 8-K filed 2026-01-12",
+      "summary": "copy of the press release is attached as Exhibit 99.2 to this Current Report on Form 8-K and is incorporated by reference herein. On January 12, 2026, the Company issued a press release announcing a clinical trial collaboration with GSK plc (&#8220;GSK&#8221;) to evaluate ivonescimab in combination with GSK&#8217;s risvutatug rezetecan (also known as GSK&#8217;227), GSK&#8217;s novel investigation",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001599298/000159929826000004/index.json",
+        "title": "AstraZeneca 8-K filed 2026-01-12",
+        "publishedAt": "2026-01-12",
+        "quote": "copy of the press release is attached as Exhibit 99.2 to this Current Report on Form 8-K and is incorporated by reference herein. On January 12, 2026, the Company issued a press release announcing a clinical trial collaboration with GSK plc (&#8220;GSK&#8221;) to evaluate ivonescimab in combination "
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "public_record",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001193125-26-148777",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2026-04-09",
+        "precision": "day",
+        "sortDate": "2026-04-09"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "durvalumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "1",
+      "headline": "AstraZeneca 8-K filed 2026-04-09",
+      "summary": "small cell lung cancer (&#8220;SCLC&#8221;). The Company will sponsor the clinical combination study and AstraZeneca will supply Imfinzi &#174; . The Company is advancing a multi-site global Phase 1 clinical trial for IDE849 in DLL3 upregulated solid tumor indications, including SCLC, neuroendocrine carcinomas (&#8220;NECs&#8221;), neuroendocrine tumors (&#8220;NETs&#8221;), and melanoma. The stud",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001676725/000119312526148777/index.json",
+        "title": "AstraZeneca 8-K filed 2026-04-09",
+        "publishedAt": "2026-04-09",
+        "quote": "small cell lung cancer (&#8220;SCLC&#8221;). The Company will sponsor the clinical combination study and AstraZeneca will supply Imfinzi &#174; . The Company is advancing a multi-site global Phase 1 clinical trial for IDE849 in DLL3 upregulated solid tumor indications, including SCLC, neuroendocrine"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07361497",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2026-01-23",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001104659-26-002750",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2026-01-12",
+        "precision": "day",
+        "sortDate": "2026-01-12"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "AstraZeneca 8-K filed 2026-01-12",
+      "summary": "anced solid tumors: a meta - analysis. Front Pharmacol 14:1228225 Replimune : RP1,RP2 ( vusolimogene oderparepvec ) https://replimune.com Chmielowski et al. (2023) Initial efficacy and safety of RP1 + nivolumab in patients with anti &#8211; PD1 &#8211; failed melanoma from the ongo ing phase 1/2 IGNYTE study. Abstract 9609. Poster presentation American Society of Clinical Oncologists Annual Meetin",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000894158/000110465926002750/index.json",
+        "title": "AstraZeneca 8-K filed 2026-01-12",
+        "publishedAt": "2026-01-12",
+        "quote": "anced solid tumors: a meta - analysis. Front Pharmacol 14:1228225 Replimune : RP1,RP2 ( vusolimogene oderparepvec ) https://replimune.com Chmielowski et al. (2023) Initial efficacy and safety of RP1 + nivolumab in patients with anti &#8211; PD1 &#8211; failed melanoma from the ongo ing phase 1/2 IGN"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-0001193125-26-204944",
+      "eventType": "enrollment_completed",
+      "eventDate": {
+        "reported": "2026-05-05",
+        "precision": "day",
+        "sortDate": "2026-05-05"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "durvalumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "AstraZeneca 8-K filed 2026-05-05",
+      "summary": "(R&amp;D) expenses for the three months ended March 31, 2026 totaled $95.7 million compared to $86.6 million for the three months ended December 31, 2025. The increase was primarily driven by higher clinical trial and personnel-related expenses to support our programs. General and administrative (G&amp;A) expenses for the three months ended March 31, 2026 totaled $19.4 million compared to $18.8 mi",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001676725/000119312526204944/index.json",
+        "title": "AstraZeneca 8-K filed 2026-05-05",
+        "publishedAt": "2026-05-05",
+        "quote": "(R&amp;D) expenses for the three months ended March 31, 2026 totaled $95.7 million compared to $86.6 million for the three months ended December 31, 2025. The increase was primarily driven by higher clinical trial and personnel-related expenses to support our programs. General and administrative (G&"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT07361497",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2026-01-23",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-gdelt-67",
+      "eventType": "trial_planned",
+      "eventDate": {
+        "reported": "2026-05-30",
+        "precision": "day",
+        "sortDate": "2026-05-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "pumitamig",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": null,
+      "headline": "Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer",
+      "summary": "Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial | Company Announcement",
+      "source": {
+        "publisher": "investegate.co.uk",
+        "type": "company_release",
+        "url": "https://www.investegate.co.uk/announcement/gnw/biontech-se-adr--0a3m/global-data-for-biontech-and-bristol-myers-sq-/9593066",
+        "title": "Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer",
+        "publishedAt": "2026-05-30",
+        "quote": "Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial | Company Announcement"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-gdelt-68",
+      "eventType": "trial_planned",
+      "eventDate": {
+        "reported": "2026-05-30",
+        "precision": "day",
+        "sortDate": "2026-05-30"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "pumitamig",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": null,
+      "headline": "BioNTech SE : Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Ce",
+      "summary": "BioNTech SE : Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial",
+      "source": {
+        "publisher": "finanznachrichten.de",
+        "type": "company_release",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68636990-biontech-se-global-data-for-biontech-and-bristol-myers-squibb-s-pd-l1xvegf-a-bispecific-pumitamig-shows-encouraging-efficacy-in-patients-with-non-sma-399.htm",
+        "title": "BioNTech SE : Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Ce",
+        "publishedAt": "2026-05-30",
+        "quote": "BioNTech SE : Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2024-12-02",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-gdelt-69",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-07-31",
+        "precision": "day",
+        "sortDate": "2026-07-31"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "melanoma",
+      "phase": null,
+      "headline": "FDA Advisory Panel Backs Replimune RP1 , Bringing The Melanoma Therapy One Step Closer To Approval",
+      "summary": "FDA Advisory Panel Backs Replimune RP1 , Bringing The Melanoma Therapy One Step Closer To Approval",
+      "source": {
+        "publisher": "rttnews.com",
+        "type": "company_release",
+        "url": "https://www.rttnews.com/3673754/fda-advisory-panel-backs-replimune-s-rp1-bringing-the-melanoma-therapy-one-step-closer-to-approval.aspx",
+        "title": "FDA Advisory Panel Backs Replimune RP1 , Bringing The Melanoma Therapy One Step Closer To Approval",
+        "publishedAt": "2026-07-31",
+        "quote": "FDA Advisory Panel Backs Replimune RP1 , Bringing The Melanoma Therapy One Step Closer To Approval"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-bms-gdelt-70",
+      "eventType": "trial_planned",
+      "eventDate": {
+        "reported": "2026-06-03",
+        "precision": "day",
+        "sortDate": "2026-06-03"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "renal cell carcinoma",
+      "phase": null,
+      "headline": "Arcus Biosciences In Clinical Trial Collaboration With Bristol Myers Squibb For Renal Cell Carcinoma",
+      "summary": "Arcus Biosciences In Clinical Trial Collaboration With Bristol Myers Squibb For Renal Cell Carcinoma",
+      "source": {
+        "publisher": "finanznachrichten.de",
+        "type": "company_release",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-06/68670966-arcus-biosciences-in-clinical-trial-collaboration-with-bristol-myers-squibb-for-renal-cell-carcinoma-020.htm",
+        "title": "Arcus Biosciences In Clinical Trial Collaboration With Bristol Myers Squibb For Renal Cell Carcinoma",
+        "publishedAt": "2026-06-03",
+        "quote": "Arcus Biosciences In Clinical Trial Collaboration With Bristol Myers Squibb For Renal Cell Carcinoma"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-roche-gdelt-72",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-08-06",
+        "precision": "day",
+        "sortDate": "2026-08-06"
+      },
+      "company": "Roche / Genentech",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Natera seeks Japan PMDA approval for Signatera test in MIBC",
+      "summary": "Natera seeks Japan PMDA approval for Signatera test in MIBC",
+      "source": {
+        "publisher": "yahoo.com",
+        "type": "company_release",
+        "url": "https://www.yahoo.com/news/science/articles/natera-seeks-japan-pmda-approval-104923699.html",
+        "title": "Natera seeks Japan PMDA approval for Signatera test in MIBC",
+        "publishedAt": "2026-08-06",
+        "quote": "Natera seeks Japan PMDA approval for Signatera test in MIBC"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-76",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "summary": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "source": {
+        "publisher": "prnewswire.com",
+        "type": "company_release",
+        "url": "http://www.prnewswire.com/news-releases/roches-ventana-mmr-rxdx-panel-companion-diagnostic-receives-ivdr-approval-across-multiple-cancer-types-and-therapies-302797333.html",
+        "title": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+        "publishedAt": "2026-06-11",
+        "quote": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-77",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "summary": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "source": {
+        "publisher": "prnewswire.com",
+        "type": "company_release",
+        "url": "https://www.prnewswire.com/news-releases/roches-ventana-mmr-rxdx-panel-companion-diagnostic-receives-ivdr-approval-across-multiple-cancer-types-and-therapies-302797333.html",
+        "title": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+        "publishedAt": "2026-06-11",
+        "quote": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-78",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "summary": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "source": {
+        "publisher": "prnewswire.com",
+        "type": "company_release",
+        "url": "http://www.prnewswire.com/news-releases/roches-ventana-mmr-rxdx-panel-companion-diagnostic-receives-ivdr-approval-across-multiple-cancer-types-and-therapies-302797311.html",
+        "title": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+        "publishedAt": "2026-06-11",
+        "quote": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-79",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "summary": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "source": {
+        "publisher": "prnewswire.com",
+        "type": "company_release",
+        "url": "https://www.prnewswire.com/news-releases/roches-ventana-mmr-rxdx-panel-companion-diagnostic-receives-ivdr-approval-across-multiple-cancer-types-and-therapies-302797311.html",
+        "title": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+        "publishedAt": "2026-06-11",
+        "quote": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-80",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-06-11",
+        "precision": "day",
+        "sortDate": "2026-06-11"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "summary": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+      "source": {
+        "publisher": "finanznachrichten.de",
+        "type": "company_release",
+        "url": "https://www.finanznachrichten.de/nachrichten-2026-06/68737011-roche-s-ventana-mmr-rxdx-panel-companion-diagnostic-receives-ivdr-approval-across-multiple-cancer-types-and-therapies-008.htm",
+        "title": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies",
+        "publishedAt": "2026-06-11",
+        "quote": "Roche VENTANA MMR RxDx Panel companion diagnostic receives IVDR approval across multiple cancer types and therapies"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-81",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-07-19",
+        "precision": "day",
+        "sortDate": "2026-07-19"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "olaparib",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "Alembic Pharmaceuticals Limited Partner NATCO Pharma Limited receives USFDA Tentative Approval for Olaparib Tablets , 100 mg and 150 mg",
+      "summary": "Alembic Pharmaceuticals Limited Partner NATCO Pharma Limited receives USFDA Tentative Approval for Olaparib Tablets , 100 mg and 150 mg",
+      "source": {
+        "publisher": "equitybulls.com",
+        "type": "company_release",
+        "url": "https://www.equitybulls.com/category.php?id=373112",
+        "title": "Alembic Pharmaceuticals Limited Partner NATCO Pharma Limited receives USFDA Tentative Approval for Olaparib Tablets , 100 mg and 150 mg",
+        "publishedAt": "2026-07-19",
+        "quote": "Alembic Pharmaceuticals Limited Partner NATCO Pharma Limited receives USFDA Tentative Approval for Olaparib Tablets , 100 mg and 150 mg"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT02693535",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2016-02-26",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-82",
+      "eventType": "approval_granted",
+      "eventDate": {
+        "reported": "2026-07-19",
+        "precision": "day",
+        "sortDate": "2026-07-19"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "olaparib",
+        "aliases": []
+      },
+      "indication": "not stated",
+      "phase": null,
+      "headline": "NATCO receives Tentative Approval for Olaparib Tablets from the U . S . FDA",
+      "summary": "NATCO receives Tentative Approval for Olaparib Tablets from the U . S . FDA",
+      "source": {
+        "publisher": "equitybulls.com",
+        "type": "company_release",
+        "url": "https://www.equitybulls.com/category.php?id=373106",
+        "title": "NATCO receives Tentative Approval for Olaparib Tablets from the U . S . FDA",
+        "publishedAt": "2026-07-19",
+        "quote": "NATCO receives Tentative Approval for Olaparib Tablets from the U . S . FDA"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT02693535",
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": "2016-02-26",
+        "reasons": [
+          "drug matched to trial interventions in the monitored portfolio"
+        ]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    },
+    {
+      "id": "sig-astrazeneca-gdelt-83",
+      "eventType": "trial_planned",
+      "eventDate": {
+        "reported": "2026-06-18",
+        "precision": "day",
+        "sortDate": "2026-06-18"
+      },
+      "company": "AstraZeneca",
+      "asset": {
+        "name": "unnamed asset",
+        "aliases": []
+      },
+      "indication": "pancreatic cancer",
+      "phase": "2",
+      "headline": "AIM ImmunoTech Achieves Clinical Milestone as Final Subject Receives First Dose in Phase 2 DURIPANC Study in Metastatic Pancreatic Cancer",
+      "summary": "AIM ImmunoTech Achieves Clinical Milestone as Final Subject Receives First Dose in Phase 2 DURIPANC Study in Metastatic Pancreatic Cancer",
+      "source": {
+        "publisher": "manilatimes.net",
+        "type": "company_release",
+        "url": "https://www.manilatimes.net/2026/06/18/tmt-newswire/globenewswire/aim-immunotech-achieves-clinical-milestone-as-final-subject-receives-first-dose-in-phase-2-duripanc-study-in-metastatic-pancreatic-cancer/2368508",
+        "title": "AIM ImmunoTech Achieves Clinical Milestone as Final Subject Receives First Dose in Phase 2 DURIPANC Study in Metastatic Pancreatic Cancer",
+        "publishedAt": "2026-06-18",
+        "quote": "AIM ImmunoTech Achieves Clinical Milestone as Final Subject Receives First Dose in Phase 2 DURIPANC Study in Metastatic Pancreatic Cancer"
+      },
+      "registryMatch": {
+        "status": "no_match_as_of",
+        "nctId": null,
+        "checkedAt": "2026-08-13",
+        "currentStatus": null,
+        "firstPosted": null,
+        "reasons": [
+          "no monitored trial studies this drug"
+        ]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+    }
+  ]
+}

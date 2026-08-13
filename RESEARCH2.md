@@ -150,6 +150,7 @@ This extends the load-bearing design choice to the agentic architecture unchange
 | 5 | **Explainer** | verdicts + quotes from layer → trial-card prose | LLM (post-verdict only) | Exists |
 | 6 | **Signal Analyst** | exclusion signals from layer → Protocol Optimization Alert | LLM agent (Strands SDK) | Exists (`protocol-agent.ts`) |
 | 7 | **Privacy Scrubber** | any outbound artifact → PII/identifier scan, concept-only telemetry | Rules + LLM check | New |
+| 8 | **Trial Radar** (announcement monitor) | press releases, SEC filings, wires → `TrialAnnouncement[]` (drug, phase, indication, mechanism, date, source) | LLM extract + **code dedupe vs CT.gov** | New |
 | — | **Decision Engine** | reads layer → `MatchResult` verdicts & scores | **Code only** | Exists (`match.ts`) |
 | — | **Orchestrator/Controller** | manages pipeline, timeouts, fallbacks, parallelism | Code (thin router) | Exists (API route) |
 
@@ -170,6 +171,56 @@ Why these roles, per the literature:
 - **#6 (Signal Analyst) already proves the pattern in the repo** — the Strands agent
   (verified: `@strands-agents/sdk` 1.13.0 on npm, Apache-2.0) writes a structured
   brief from the layer's signals. It reads; it does not decide.
+
+### B.8 Trial Radar — announced-before-registry intelligence (role #8)
+
+**The regulatory facts that make this valuable:**
+- IND applications are confidential — 21 CFR 312.130 keeps everything submitted to
+  FDA under an IND confidential; FDA does not publish IND numbers (the user's
+  understanding is correct). You cannot monitor INDs; you CAN monitor the public
+  announcements companies make about the trials those INDs cover.
+- ClinicalTrials.gov registration is required within 21 days of first participant
+  enrollment (FDAAA §801) and results within 12 months of completion. So a press
+  release announcing "phase 1 initiated" typically leads the registry by weeks to
+  months. **Press releases and SEC filings are the earliest public signal a trial
+  exists.**
+- Companies announce trials via: press-release wires, investor materials (8-K/10-K/
+  10-Q, earnings calls), and IR/pipeline pages. For BMS: news.bms.com (Cloudflare-
+  walled), SEC EDGAR filings, quarterly business-review decks.
+
+**The opportunity:** a leading-indicator "pipeline radar" that (a) ingests company
+announcements, (b) extracts structured trial facts (drug, phase, indication,
+mechanism/target, patient-population hints, announcement date, source), (c)
+dedupes/merges against the CT.gov dataset (normalize drug names; match by
+indication + phase), and (d) assigns a status: `pre-registration` (announced, not on
+CT.gov), `registered` (on CT.gov), or `duplicate`. The researcher dashboard gains a
+recruitment-planning head start and competitive intelligence ("who else is targeting
+KRAS G12C / BCMA×CD3"), which is exactly the demand-side data the BMS AI-factory
+storyline wants.
+
+**Sources — verified this session (2026-08-13):**
+- SEC EDGAR full-text search — `https://efts.sec.gov/LATEST/search-index?q=...`
+  (free, keyless, official). Requires a declared User-Agent with contact info
+  ("Undeclared Automated Tool" block otherwise; a UA like
+  `ClearTrialDemo contact@example.com` passes). Verified: returns 8-K hits for
+  "investigational new drug" (e.g., Heron Therapeutics 2019 8-K). Filter by
+  `forms=8-K,10-K,10-Q` and `dateRange`.
+- GDELT doc API — `https://api.gdeltproject.org/api/v2/doc/doc?query=...&mode=artlist&format=json`
+  (free, real-time global news incl. press-wire pickups). Throttle to ≥5s between
+  requests (verified: API responds, throttle message is the standard behavior).
+- Press wires — PR.com search (`https://www.pr.com/press_list.php`), EINPressWire
+  (`https://world.einnews.com/search`), BusinessWire / PR Newswire (bot-walled;
+  reach them via GDELT or RSS rather than direct scraping). Include company IR/RSS
+  where available.
+- ClinicalTrials.gov API v2 remains the official registry source for dedupe.
+
+**Architecture (same invariant as everything else):** the LLM extracts announcement
+facts into typed `TrialAnnouncement` artifacts; CODE matches them against the
+registry and assigns status; no agent decides "this is a new trial" alone. Runs as a
+build-time/cron pipeline (like `scripts/fetch-trials.mjs`, continuous), NOT in the
+patient request path. Demo: a seeded "Pipeline Radar" panel on the researcher
+dashboard listing announced-but-not-registered trials with the source press
+release/SEC filing cited.
 
 ### B.3 The primary data layer (the "report back" contract)
 
@@ -260,6 +311,10 @@ a detail.
   evals for the extractor; persist the signal store.
 - **Phase 3:** Privacy Scrubber formalization; Strands analyst brief hardening;
   optional Bedrock AgentCore migration for the AWS story.
+- **Phase 4 (Trial Radar):** EDGAR + GDELT ingestion script (throttled, cron),
+  announcement → typed artifacts → code dedupe vs TRIALS → `pre-registration`
+  status; seeded pipeline-radar panel on the dashboard; press-wire search endpoints
+  per source (PR.com/EIN verified; BusinessWire via GDELT/RSS).
 
 ---
 

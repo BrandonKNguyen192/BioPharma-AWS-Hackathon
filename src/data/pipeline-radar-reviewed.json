@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-13T21:30:00.000Z",
+  "checkedAt": "2026-08-13",
+  "scope": "Manually reviewed primary-source signals connected to ClearTrial portfolio assets",
+  "sources": ["Official sponsor and partner releases", "ClinicalTrials.gov API v2", "Convoke Knowledge Graph"],
+  "signals": [
+    {
+      "id": "ktx1001-ind-cleared-2022-08-23",
+      "eventType": "regulatory_accepted",
+      "eventDate": { "reported": "2022-08-23", "precision": "day", "sortDate": "2022-08-23" },
+      "company": "K36 Therapeutics",
+      "asset": { "name": "KTX-1001", "aliases": ["gintemetostat"] },
+      "indication": "Relapsed or refractory multiple myeloma",
+      "phase": "Phase 1",
+      "headline": "K36 reported FDA clearance of the KTX-1001 IND",
+      "summary": "The sponsor said its lead MMSET inhibitor could proceed into a Phase 1 study.",
+      "source": {
+        "publisher": "K36 Therapeutics via PR Newswire",
+        "type": "company_release",
+        "url": "https://www.prnewswire.com/news-releases/k36-therapeutics-announces-fda-clearance-of-investigational-new-drug-application-and-formation-of-clinical-advisory-board-for-lead-program-ktx-1001-301610149.html",
+        "title": "K36 Therapeutics Announces FDA Clearance of Investigational New Drug Application for KTX-1001",
+        "publishedAt": "2022-08-23",
+        "quote": "FDA has cleared its Investigational New Drug (IND) Application for the Company's lead program KTX-1001."
+      },
+      "registryMatch": {
+        "status": "probable",
+        "nctId": "NCT05651932",
+        "checkedAt": "2026-08-13",
+        "currentStatus": "RECRUITING",
+        "firstPosted": "2022-12-15",
+        "reasons": ["same sponsor", "same primary asset", "same indication", "compatible phase"]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "ClinicalTrials.gov corroborates the later Phase 1 program, not FDA's IND action itself."
+    },
+    {
+      "id": "ktx1001-first-patient-2023-04-11",
+      "eventType": "first_patient_dosed",
+      "eventDate": { "reported": "2023-04-11", "precision": "day", "sortDate": "2023-04-11" },
+      "company": "K36 Therapeutics",
+      "asset": { "name": "KTX-1001", "aliases": ["gintemetostat"] },
+      "indication": "Relapsed or refractory multiple myeloma",
+      "phase": "Phase 1",
+      "headline": "K36 reported the first patient dosed in NCT05651932",
+      "summary": "The company linked the dosing milestone to the registered KTX-MMSET-001 study.",
+      "source": {
+        "publisher": "K36 Therapeutics via PR Newswire",
+        "type": "company_release",
+        "url": "https://www.prnewswire.com/news-releases/k36-therapeutics-announces-dosing-of-first-patient-in-ktx-1001-phase-1-clinical-trial-for-relapsed-or-refractory-multiple-myeloma-and-addition-of-mr-michael-heffernan-as-independent-board-director-301793617.html",
+        "title": "K36 Therapeutics Announces Dosing of First Patient in KTX-1001 Phase 1 Clinical Trial",
+        "publishedAt": "2023-04-11",
+        "quote": "the first patient has been dosed in its Phase 1 clinical trial earlier this year."
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT05651932",
+        "checkedAt": "2026-08-13",
+        "currentStatus": "RECRUITING",
+        "firstPosted": "2022-12-15",
+        "reasons": ["NCT identifier in source", "same sponsor", "same primary asset"]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "The registry confirms the study identity and status; dosing remains a sponsor-reported event."
+    },
+    {
+      "id": "orm6151-program-acquired-2023-11-06",
+      "eventType": "regulatory_accepted",
+      "eventDate": { "reported": "2023-11-06", "precision": "day", "sortDate": "2023-11-06" },
+      "company": "Orum Therapeutics / Bristol Myers Squibb",
+      "asset": { "name": "ORM-6151", "aliases": ["BMS-986497"] },
+      "indication": "Acute myeloid leukemia or high-risk myelodysplastic syndrome",
+      "phase": "Phase 1",
+      "headline": "Orum reported FDA clearance before BMS acquired ORM-6151",
+      "summary": "The release connects a regulatory milestone, an asset transaction, and the later BMS-986497 program.",
+      "source": {
+        "publisher": "Orum Therapeutics",
+        "type": "company_release",
+        "url": "https://www.orumrx.com/news/orum-orm-6151-acquisition-by-bms/",
+        "title": "Orum Therapeutics Announces Acquisition of ORM-6151 Program by Bristol Myers Squibb",
+        "publishedAt": "2023-11-06",
+        "quote": "ORM-6151 ... has received the FDA's clearance for Phase 1."
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06419634",
+        "checkedAt": "2026-08-13",
+        "currentStatus": "RECRUITING",
+        "firstPosted": "2024-05-17",
+        "reasons": ["ORM-6151 alias appears in registry title", "same indication", "same phase"]
+      },
+      "evidence": "company_asserted",
+      "reviewNote": "The registry establishes the later BMS-986497 study; it does not independently confirm the clearance claim."
+    },
+    {
+      "id": "pumitamig-lung02-readout-2026-05-30",
+      "eventType": "topline_results",
+      "eventDate": { "reported": "2026-05-30", "precision": "day", "sortDate": "2026-05-30" },
+      "company": "BioNTech / Bristol Myers Squibb",
+      "asset": { "name": "pumitamig", "aliases": ["BNT327", "BMS-986545"] },
+      "indication": "First-line non-small cell lung cancer",
+      "phase": "Phase 2/3",
+      "headline": "Partners announced interim ROSETTA Lung-02 data",
+      "summary": "The announcement names the exact recruiting trial and notes its Phase 3 portion.",
+      "source": {
+        "publisher": "BioNTech",
+        "type": "company_release",
+        "url": "https://www.biontech.com/int/en/home/mediaroom/news/press-releases/2026/05/Global-Data-for-BioNTech-and-Bristol-Myers-Squibb-s-PD-L1xVEGF-A-Bispecific-Pumitamig-Shows-Encouraging-Efficacy-in-Patients-with-Non-Small-Cell-Lung-Cancer-in-ROSETTA-Lung-02-Trial.html",
+        "title": "Global Data for Pumitamig in ROSETTA Lung-02",
+        "publishedAt": "2026-05-30",
+        "quote": "interim Phase 2 data from the global Phase 2/3 ROSETTA Lung-02 clinical trial (NCT06712316)"
+      },
+      "registryMatch": {
+        "status": "exact",
+        "nctId": "NCT06712316",
+        "checkedAt": "2026-08-13",
+        "currentStatus": "RECRUITING",
+        "firstPosted": "2024-12-02",
+        "reasons": ["NCT identifier in source", "same primary asset", "same indication and phase"]
+      },
+      "evidence": "corroborated",
+      "reviewNote": "The registry corroborates study identity and recruiting status, not the sponsor-reported efficacy results."
+    }
+  ]
+}

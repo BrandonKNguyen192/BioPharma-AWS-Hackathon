@@ -489,6 +489,113 @@ a:active {
   color: var(--ct-text);
 }
 
+.ct-radar-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ct-radar-row {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--ct-border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--ct-surface-soft) 54%, var(--ct-surface-strong));
+}
+
+.ct-radar-date {
+  display: flex;
+  min-height: 68px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  border-radius: 16px;
+  background: var(--ct-surface-strong);
+  color: var(--ct-text-soft);
+  font-size: 0.65rem;
+  line-height: 1.2;
+}
+
+.ct-radar-date strong {
+  margin-top: 0.25rem;
+  color: var(--ct-text);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.ct-evidence-chip,
+.ct-event-chip,
+.ct-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ct-evidence-chip,
+.ct-event-chip {
+  min-height: 24px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--ct-border);
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 650;
+}
+
+.ct-evidence-chip.is-strong {
+  border-color: var(--ct-teal-border);
+  background: var(--ct-teal-bg);
+  color: var(--ct-teal-text);
+}
+
+.ct-evidence-chip.is-company {
+  border-color: var(--ct-violet-border);
+  background: var(--ct-violet-bg);
+  color: var(--ct-violet-text);
+}
+
+.ct-evidence-chip.is-review,
+.ct-event-chip {
+  background: var(--ct-surface-strong);
+  color: var(--ct-text-muted);
+}
+
+.ct-radar-quote {
+  margin-top: 0.8rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--ct-lilac-strong);
+  color: var(--ct-text-muted);
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.ct-source-link {
+  min-height: 30px;
+  padding: 0 0.65rem;
+  border: 1px solid var(--ct-border);
+  border-radius: 999px;
+  background: var(--ct-surface-strong);
+  color: var(--ct-text-muted);
+}
+
+.ct-source-link:hover {
+  border-color: var(--ct-border-strong);
+  color: var(--ct-text);
+}
+
+.ct-radar-more {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--ct-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* Patient chat workspace */
 .ct-chat-canvas {
   min-height: 100vh;
@@ -1231,6 +1338,16 @@ a:active {
 
   .ct-ring::after {
     inset: 20px;
+  }
+
+  .ct-radar-row {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .ct-radar-date {
+    min-height: 56px;
   }
 
   .ct-chat-canvas {

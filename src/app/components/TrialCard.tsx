@@ -99,11 +99,17 @@ export function TrialCard({ result }: { result: MatchResult }) {
         */}
         <div className="shrink-0 rounded-2xl bg-[var(--ct-surface-soft)] px-3 py-2 text-right">
           <div className="text-2xl font-semibold tabular-nums text-[var(--ct-text)] sm:text-3xl">
-            {result.fit}
-            <span className="text-sm font-normal text-[var(--ct-text-soft)]">%</span>
+            {result.fit === null ? (
+              <span className="text-[var(--ct-text-soft)]">&mdash;</span>
+            ) : (
+              <>
+                {result.fit}
+                <span className="text-sm font-normal text-[var(--ct-text-soft)]">%</span>
+              </>
+            )}
           </div>
           <div className="text-[10px] font-semibold uppercase text-[var(--ct-text-soft)]">
-            fit
+            {result.fit === null ? "not assessed" : "fit"}
           </div>
           <div className="mt-1 text-[10px] tabular-nums text-[var(--ct-text-soft)]">
             checked {result.coverage.checked} of {result.coverage.total}

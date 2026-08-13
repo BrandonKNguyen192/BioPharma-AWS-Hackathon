@@ -17,6 +17,9 @@
 import "server-only";
 import OpenAI from "openai";
 import type { PatientProfile } from "./types";
+import { extractLocally } from "./extract-local";
+
+export { extractLocally };
 
 /**
  * Must be models the active key actually serves. The hackathon group key
@@ -60,11 +63,21 @@ Rules, in priority order:
    "targeted"    - EGFR/ALK/KRAS and similar targeted agents
    "radiation"   - radiotherapy
    "surgery"     - resection or surgical removal
-6. pdl1Percent: only when a PD-L1 percentage is stated. "PD-L1 is high" without
+6. priorLinesCount: the number of distinct LINES of systemic therapy the
+   patient has had. A line is a REGIMEN, not a drug. Drugs named together as
+   one course are ONE line — "carboplatin, pemetrexed and Keytruda for eight
+   months" is 1, not 3. A new line starts when treatment changes after
+   progression or intolerance: "FOLFOX, then FOLFIRI, then regorafenib" is 3.
+   Maintenance continuing the same regimen is not a new line.
+   Return 0 only when the patient plainly says they have had no systemic
+   treatment yet ("I haven't started anything", "treatment naive").
+   Return null if you cannot count confidently. Do NOT approximate. Surgery
+   and radiation alone are not lines of systemic therapy.
+7. pdl1Percent: only when a PD-L1 percentage is stated. "PD-L1 is high" without
    a number is null.
-7. hasBrainMets: true or false ONLY if the patient addresses brain/CNS spread.
+8. hasBrainMets: true or false ONLY if the patient addresses brain/CNS spread.
    Otherwise null.
-8. quotes: 2-4 short verbatim fragments (under 12 words each) copied exactly
+9. quotes: 2-4 short verbatim fragments (under 12 words each) copied exactly
    from the patient's text, showing where the key facts came from. These are
    displayed back to the patient so they can see what was read.
 
@@ -87,6 +100,10 @@ const PROFILE_SCHEMA = {
         enum: ["platinum", "checkpoint", "chemo", "targeted", "radiation", "surgery"],
       },
     },
+    priorLinesCount: {
+      type: ["integer", "null"],
+      description: "distinct lines (regimens) of systemic therapy; null if not countable",
+    },
     biomarkers: { type: "array", items: { type: "string" } },
     pdl1Percent: { type: ["number", "null"] },
     ecog: { type: ["integer", "null"] },
@@ -100,6 +117,7 @@ const PROFILE_SCHEMA = {
     "stageNumber",
     "priorTherapies",
     "priorTherapyClasses",
+    "priorLinesCount",
     "biomarkers",
     "pdl1Percent",
     "ecog",
@@ -109,19 +127,6 @@ const PROFILE_SCHEMA = {
   ],
 } as const;
 
-const EMPTY: PatientProfile = {
-  cancerType: null,
-  stage: null,
-  stageNumber: null,
-  priorTherapies: [],
-  priorTherapyClasses: [],
-  biomarkers: [],
-  pdl1Percent: null,
-  ecog: null,
-  hasBrainMets: null,
-  ageYears: null,
-  quotes: [],
-};
 
 /** Guard against a model returning a shape we did not ask for. */
 function coerce(raw: unknown): PatientProfile {
@@ -143,6 +148,12 @@ function coerce(raw: unknown): PatientProfile {
     stageNumber: int(o.stageNumber),
     priorTherapies: strArr(o.priorTherapies),
     priorTherapyClasses: strArr(o.priorTherapyClasses).filter((c) => allowed.has(c)),
+    // A negative or absurd line count is a model error, not a fact. Clamp to
+    // null so the matcher reports unknown rather than acting on nonsense.
+    priorLinesCount: (() => {
+      const n = int(o.priorLinesCount);
+      return n === null || n < 0 || n > 20 ? null : n;
+    })(),
     biomarkers: strArr(o.biomarkers),
     pdl1Percent: num(o.pdl1Percent),
     ecog: int(o.ecog),
@@ -152,117 +163,6 @@ function coerce(raw: unknown): PatientProfile {
   };
 }
 
-/* ------------------------------------------------------------------ *
- * Deterministic fallback
- * ------------------------------------------------------------------ */
-
-/**
- * A dependency-free parser used when no API key is present or the API call
- * fails. Deliberately conservative: it recognizes only unambiguous phrasing,
- * so it under-extracts rather than inventing facts.
- */
-export function extractLocally(text: string): PatientProfile {
-  const t = text.toLowerCase();
-  const p: PatientProfile = { ...EMPTY, priorTherapies: [], priorTherapyClasses: [], biomarkers: [], quotes: [] };
-
-  const cancers: Array<[RegExp, string]> = [
-    [/non-?small[- ]cell lung|nsclc/, "non-small cell lung cancer"],
-    [/small[- ]cell lung|sclc/, "small cell lung cancer"],
-    [/lung cancer/, "lung cancer"],
-    [/melanoma/, "melanoma"],
-    [/lymphoma/, "lymphoma"],
-    [/myeloma/, "multiple myeloma"],
-    [/leukemia|leukaemia/, "leukemia"],
-    [/bladder|urothelial/, "bladder cancer"],
-    [/renal|kidney/, "renal cell carcinoma"],
-    [/hepatocellular|liver cancer/, "hepatocellular carcinoma"],
-    [/colorectal|colon cancer/, "colorectal cancer"],
-    [/gastric|stomach cancer/, "gastric cancer"],
-    [/mesothelioma/, "mesothelioma"],
-    [/breast cancer/, "breast cancer"],
-  ];
-  for (const [re, label] of cancers) {
-    if (re.test(t)) { p.cancerType = label; break; }
-  }
-
-  const roman: Record<string, number> = { i: 1, ii: 2, iii: 3, iv: 4 };
-  const stage = /stage\s+(iv|iii|ii|i|[1-4])\b/.exec(t);
-  if (stage) {
-    const raw = stage[1];
-    p.stageNumber = /^[1-4]$/.test(raw) ? Number(raw) : (roman[raw] ?? null);
-    p.stage = `Stage ${raw.toUpperCase()}`;
-  } else if (/metastatic|advanced|spread/.test(t)) {
-    p.stage = "advanced / metastatic (as described)";
-  }
-
-  const drugs: Array<[RegExp, string, string]> = [
-    [/carboplatin/, "carboplatin", "platinum"],
-    [/cisplatin/, "cisplatin", "platinum"],
-    [/oxaliplatin/, "oxaliplatin", "platinum"],
-    [/platinum/, "platinum-based chemotherapy", "platinum"],
-    [/pemetrexed|alimta/, "pemetrexed", "chemo"],
-    [/paclitaxel|taxol/, "paclitaxel", "chemo"],
-    [/nivolumab|opdivo/, "nivolumab", "checkpoint"],
-    [/pembrolizumab|keytruda/, "pembrolizumab", "checkpoint"],
-    [/atezolizumab|tecentriq/, "atezolizumab", "checkpoint"],
-    [/durvalumab|imfinzi/, "durvalumab", "checkpoint"],
-    [/ipilimumab|yervoy/, "ipilimumab", "checkpoint"],
-    [/osimertinib|tagrisso/, "osimertinib", "targeted"],
-    [/radiation|radiotherapy/, "radiation therapy", "radiation"],
-    [/surgery|resect/, "surgery", "surgery"],
-  ];
-  for (const [re, name, cls] of drugs) {
-    if (re.test(t)) {
-      if (!p.priorTherapies.includes(name)) p.priorTherapies.push(name);
-      if (!p.priorTherapyClasses.includes(cls)) p.priorTherapyClasses.push(cls);
-    }
-  }
-  if (/\bchemo\b|chemotherapy/.test(t) && !p.priorTherapyClasses.includes("chemo")) {
-    p.priorTherapyClasses.push("chemo");
-    if (p.priorTherapies.length === 0) p.priorTherapies.push("chemotherapy");
-  }
-
-  const pdl1 = /pd-?l1[^.]{0,40}?(\d{1,3})\s*%/.exec(t) ?? /(\d{1,3})\s*%[^.]{0,20}?pd-?l1/.exec(t);
-  if (pdl1) {
-    p.pdl1Percent = Number(pdl1[1]);
-    p.biomarkers.push(`PD-L1 ${pdl1[1]}%`);
-  }
-  for (const [re, label] of [
-    [/egfr/, "EGFR"], [/\balk\b/, "ALK"], [/kras/, "KRAS"],
-    [/braf/, "BRAF"], [/\bros1\b/, "ROS1"], [/her2/, "HER2"],
-  ] as Array<[RegExp, string]>) {
-    if (re.test(t)) p.biomarkers.push(label);
-  }
-
-  const ecog = /ecog[^\d]{0,15}(\d)/.exec(t) ?? /performance status[^\d]{0,15}(\d)/.exec(t);
-  if (ecog) p.ecog = Number(ecog[1]);
-
-  // Negation MUST be tested before the positive pattern: "no brain mets"
-  // contains "brain met", so checking the positive case first would invert
-  // the meaning. Getting this backwards is the difference between a match
-  // and a dangerous one.
-  const NEG_BRAIN =
-    /\b(?:no|not|without|negative for|denies|free of|clear of)\b[^.]{0,30}?(?:brain|cns)\b|(?:brain|cns)[^.]{0,30}?\b(?:clear|clean|negative|unremarkable|no evidence)\b/;
-  const POS_BRAIN = /brain metast|cns metast|spread to (?:my |the )?brain|mets? in (?:my |the )?brain|brain mets?\b/;
-
-  if (NEG_BRAIN.test(t)) p.hasBrainMets = false;
-  else if (POS_BRAIN.test(t)) p.hasBrainMets = true;
-
-  const age = /\b(?:i'?m|i am|age|aged)\s+(\d{2})\b/.exec(t) ?? /\b(\d{2})[- ]years?[- ]old\b/.exec(t);
-  if (age) {
-    const n = Number(age[1]);
-    if (n >= 18 && n <= 100) p.ageYears = n;
-  }
-
-  // Pull short verbatim fragments so the UI can show what was read.
-  p.quotes = text
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter((s) => s.length > 15 && s.length < 120)
-    .slice(0, 3);
-
-  return p;
-}
 
 /* ------------------------------------------------------------------ *
  * Public entry point

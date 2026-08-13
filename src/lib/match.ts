@@ -142,9 +142,29 @@ const RE = {
     /\b(prior|previous|received|treated with|pretreat|has had|refractory to|na(?:i|ï)ve)\b/i,
 };
 
+/**
+ * Permissive clauses: lines that GRANT latitude rather than impose a hurdle.
+ *
+ * NCT07339254 inclusion reads "Previous chemotherapy/radiotherapy/targeted/
+ * immunotherapy is allowed at any prior timepoint." That is the protocol
+ * removing a restriction, not a requirement the patient cleared — but it
+ * contains "immunotherapy" + "Previous", so it classified as
+ * prior_checkpoint_inhibitor and scored as a pass. Combined with the real
+ * checkpoint line it produced two passes for one fact, and a six-line survey
+ * rendered as a fully verified 100% match to a man with progressing disease.
+ *
+ * Checked FIRST in classify() for that reason: the drug names in these lines
+ * would otherwise win.
+ */
+const RE_PERMISSIVE =
+  /\b(?:is|are)\s+(?:allowed|permitted|acceptable|not required)\b|\b(?:no|without)\s+(?:restriction|limit|upper limit)\b|\bany number of prior\b|\bwill not (?:be )?exclude/i;
+
 /** Assign a machine-evaluable rule kind to a raw criterion line. */
 export function classify(text: string): RuleKind {
+  // Permissive language first — see RE_PERMISSIVE.
+  if (RE_PERMISSIVE.test(text)) return "permissive";
   // Order matters: more specific patterns first.
+
   if (parseEcogCeiling(text) !== null) return "ecog";
   if (parsePdl1Threshold(text) !== null) return "pdl1_threshold";
   if (RE.brainMets.test(text)) return "brain_mets";
@@ -313,24 +333,46 @@ function evaluate(
     case "prior_lines": {
       const req = parsePriorLines(text);
       if (req === null) return UNKNOWN("your treatment history meets this requirement");
-      // Count distinct systemic lines the patient described.
-      const systemic = p.priorTherapyClasses.filter((c) =>
-        ["platinum", "checkpoint", "chemo", "targeted"].includes(c),
-      ).length;
-      if (systemic === 0 && p.priorTherapies.length === 0)
-        return UNKNOWN("how many lines of treatment you have had");
 
+      // Whether ANY systemic therapy happened is reliably known from the drug
+      // classes; HOW MANY LINES is not, and must come from priorLinesCount.
+      const hadAnySystemic =
+        p.priorTherapyClasses.some((c) =>
+          ["platinum", "checkpoint", "chemo", "targeted"].includes(c),
+        ) || p.priorTherapies.length > 0;
+
+      // "Treatment-naive required" needs only the boolean, not a count.
       if (req.max === 0) {
-        return systemic === 0
-          ? { outcome: "pass", detail: "This trial is for people who have not had systemic treatment yet." }
-          : { outcome: "fail", detail: "This trial is for people who have not had systemic treatment yet; you have had prior therapy." };
+        if (p.priorLinesCount === 0)
+          return { outcome: "pass", detail: "This trial is for people who have not had systemic treatment yet, and you have not." };
+        if (!hadAnySystemic && p.priorLinesCount === null)
+          return UNKNOWN("you have had any previous systemic treatment");
+        return { outcome: "fail", detail: "This trial is for people who have not had systemic treatment yet; you have had prior therapy." };
       }
-      if (req.max !== null && systemic > req.max)
-        return { outcome: "fail", detail: `This trial allows at most ${req.max} prior line(s); you described about ${systemic}.` };
-      if (req.min !== null && systemic < req.min)
-        return { outcome: "fail", detail: `This trial requires at least ${req.min} prior line(s) of therapy.` };
-      return { outcome: "pass", detail: `Your prior treatment history fits this trial's requirement.` };
+
+      /*
+       * Everything below compares against a NUMBER of lines, so it needs a real
+       * line count. It used to substitute priorTherapyClasses.length, which
+       * counts drugs, not regimens: carboplatin + pemetrexed + pembrolizumab
+       * given together scored as three lines instead of one and failed every
+       * "no more than 2 prior lines" trial. An unknown is the honest answer
+       * when we cannot count.
+       */
+      const lines = p.priorLinesCount;
+      if (lines === null)
+        return UNKNOWN(
+          `how many separate lines of treatment you have had (this trial ${
+            req.max !== null ? `allows at most ${req.max}` : `requires at least ${req.min}`
+          })`,
+        );
+
+      if (req.max !== null && lines > req.max)
+        return { outcome: "fail", detail: `This trial allows at most ${req.max} prior line(s); you described ${lines}.` };
+      if (req.min !== null && lines < req.min)
+        return { outcome: "fail", detail: `This trial requires at least ${req.min} prior line(s) of therapy; you described ${lines}.` };
+      return { outcome: "pass", detail: `Your ${lines} prior line(s) of treatment fit this trial's requirement.` };
     }
+
 
     case "stage": {
       const stages = parseStages(text);
@@ -345,6 +387,12 @@ function evaluate(
 
     case "measurable_disease":
       return UNKNOWN("you have measurable disease by RECIST (your oncologist confirms this from scans)");
+
+    case "permissive":
+      return {
+        outcome: "unknown",
+        detail: "This line relaxes a restriction rather than setting one, so it is not scored for or against you.",
+      };
 
     default:
       return {
@@ -386,6 +434,9 @@ const CANCER_SYNONYMS: Record<string, string[]> = {
   headneck: ["head and neck", "squamous cell carcinoma of the head"],
 };
 
+const NSCLC_TERMS = ["nsclc", "non-small cell", "non small cell"];
+const SCLC_TERMS = ["sclc", "small cell"];
+
 /** Whole-word / whole-phrase containment. Avoids the "all" in "small" trap. */
 function hasTerm(haystack: string, term: string): boolean {
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -397,6 +448,15 @@ function conditionMatches(patientCancer: string | null, trial: Trial): boolean {
   const pc = patientCancer.toLowerCase();
   const trialText = trial.conditions.join(" ").toLowerCase();
   if (!trialText) return false;
+
+  // Histologies that share an organ are not interchangeable. Keep a generic
+  // "lung cancer" profile broad, but never route an explicit NSCLC profile to
+  // an SCLC protocol (or the reverse).
+  const patientNsclc = NSCLC_TERMS.some((term) => hasTerm(pc, term));
+  const patientSclc = !patientNsclc && SCLC_TERMS.some((term) => hasTerm(pc, term));
+  const trialNsclc = NSCLC_TERMS.some((term) => hasTerm(trialText, term));
+  const trialSclc = !trialNsclc && SCLC_TERMS.some((term) => hasTerm(trialText, term));
+  if ((patientNsclc && trialSclc) || (patientSclc && trialNsclc)) return false;
 
   for (const synonyms of Object.values(CANCER_SYNONYMS)) {
     const patientHits = synonyms.some((s) => hasTerm(pc, s));
@@ -425,17 +485,48 @@ function evaluateSide(
   });
 }
 
+/**
+ * Collapse criteria that test the SAME patient fact on the same side into one
+ * piece of evidence.
+ *
+ * A protocol may state one requirement across several lines. Counting each
+ * line separately inflates the numerator without checking anything new — the
+ * survey study NCT07339254 stated prior-immunotherapy twice and reached three
+ * "passes" from two facts. Display still shows every line; only counting is
+ * deduplicated.
+ *
+ * A `fail` always wins its slot: deduplication must never be able to hide a
+ * blocker behind a pass on the same fact.
+ */
+const OUTCOME_RANK: Record<CriterionOutcome, number> = { fail: 0, pass: 1, unknown: 2 };
+
+function distinctEvidence(criteria: EvaluatedCriterion[]): EvaluatedCriterion[] {
+  const best = new Map<string, EvaluatedCriterion>();
+  for (const c of criteria) {
+    const key = `${c.side}:${c.kind}`;
+    const cur = best.get(key);
+    if (!cur || OUTCOME_RANK[c.outcome] < OUTCOME_RANK[cur.outcome]) best.set(key, c);
+  }
+  return [...best.values()];
+}
+
 export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   const evaluated = [
     ...evaluateSide(trial.inclusion, "inclusion", profile),
     ...evaluateSide(trial.exclusion, "exclusion", profile),
   ];
 
-  const decidable = evaluated.filter((c) => c.kind !== "unparsed");
+  // `permissive` lines grant latitude and are scored neither way; `unparsed`
+  // lines we simply could not read. Neither is evidence about this patient.
+  const scorable = evaluated.filter(
+    (c) => c.kind !== "unparsed" && c.kind !== "permissive",
+  );
+  const decidable = distinctEvidence(scorable);
   const unreadable = evaluated.filter((c) => c.kind === "unparsed");
   const blockers = decidable.filter((c) => c.outcome === "fail");
   const passes = decidable.filter((c) => c.outcome === "pass");
   const openQuestions = decidable.filter((c) => c.outcome === "unknown");
+
 
   const onCondition = conditionMatches(profile.cancerType, trial);
 
@@ -449,6 +540,8 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   let verdict: MatchVerdict;
   if (!onCondition || blockers.length > 0) {
     verdict = "excluded";
+  } else if (openQuestions.length > passes.length) {
+    verdict = "needs_review";
   } else if (passes.length >= 2 && decidable.length >= 3) {
     verdict = "eligible";
   } else if (passes.length >= 1 && openQuestions.length <= passes.length) {
@@ -471,10 +564,16 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   const score = Math.max(0, Math.min(100, Math.round(base + conditionBonus)));
 
   // Two separate honest numbers, because one number cannot say both things.
-  // fit      = of what we could check, how much did the patient meet
-  // coverage = how much of the protocol we could check at all
+  // fit      = of what we could DECIDE, how much did the patient meet
+  // coverage = how much of the protocol we could read at all
+  //
+  // `decided === 0` means every criterion we classified came back unknown.
+  // That is an absence of evidence, and it used to be reported as 0 — the
+  // same value as failing every check. A patient reading a card for a trial
+  // he might well qualify for saw a hard zero. It is now null, and the UI is
+  // required to render it as "not assessed" rather than a percentage.
   const decided = passes.length + blockers.length;
-  const fit = decided === 0 ? 0 : Math.round((passes.length / decided) * 100);
+  const fit = decided === 0 ? null : Math.round((passes.length / decided) * 100);
 
   const total = evaluated.length;
   const coverage = {
@@ -483,6 +582,7 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
     unreadable: unreadable.length,
     pct: total === 0 ? 0 : Math.round((decidable.length / total) * 100),
   };
+
 
   return {
     trial,
@@ -497,10 +597,24 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   };
 }
 
+/**
+ * Observational studies — surveys, registries, questionnaires — are not
+ * treatment options. NCT07339254 is a patient-attitudes survey with six
+ * eligibility lines; it out-ranked every interventional trial because loose
+ * protocols are trivially easy to satisfy. A patient asking for a trial is
+ * asking for treatment, so these are held out of the ranked list.
+ */
+function isInterventional(t: Trial): boolean {
+  const text = `${t.interventions.join(" ")} ${t.phase}`;
+  return !/non-?interventional|observational|survey|registry|questionnaire/i.test(text);
+}
+
 export function matchAll(trials: Trial[], profile: PatientProfile): MatchResult[] {
-  const onCondition = trials.filter((t) => conditionMatches(profile.cancerType, t));
+  const treatable = trials.filter(isInterventional);
+  const onCondition = treatable.filter((t) => conditionMatches(profile.cancerType, t));
   // Only rank trials in the patient's disease area; the rest are noise.
-  const pool = onCondition.length > 0 ? onCondition : trials;
+  const pool = onCondition.length > 0 ? onCondition : treatable;
+
 
   return pool
     .map((t) => matchTrial(t, profile))
@@ -534,7 +648,7 @@ export function closestMisses(results: MatchResult[], limit = 3): MatchResult[] 
       const ap = a.evaluated.filter((c) => c.outcome === "pass").length;
       const bp = b.evaluated.filter((c) => c.outcome === "pass").length;
       if (ap !== bp) return bp - ap; // most things already right
-      return b.coverage.checked - a.coverage.checked; // best understood
+      return b.score - a.score; // strongest remaining evidence
     })
     .slice(0, limit);
 }
@@ -544,6 +658,7 @@ export function closestMisses(results: MatchResult[], limit = 3): MatchResult[] 
  * ------------------------------------------------------------------ */
 
 const SIGNAL_LABELS: Record<RuleKind, string> = {
+  permissive: "Protocol latitude (not a requirement)",
   prior_any_therapy: "Prior systemic therapy (treatment-naive required)",
   biomarker: "Required tumour biomarker",
   ecog: "ECOG performance status ceiling",
