@@ -90,12 +90,22 @@ export function TrialCard({ result }: { result: MatchResult }) {
             </p>
           )}
         </div>
+        {/*
+          Two numbers, not one. A single "confidence" score hid the fact that a
+          trial could show 100 after checking a single requirement. Fit says how
+          much of what we checked the patient met; coverage says how much we
+          were able to check at all.
+        */}
         <div className="shrink-0 text-right">
           <div className="text-2xl font-semibold tabular-nums text-slate-200">
-            {result.score}
+            {result.fit}
+            <span className="text-sm font-normal text-slate-500">%</span>
           </div>
           <div className="text-[10px] uppercase tracking-wide text-slate-600">
-            confidence
+            fit
+          </div>
+          <div className="mt-1 text-[10px] tabular-nums text-slate-500">
+            checked {result.coverage.checked} of {result.coverage.total}
           </div>
         </div>
       </div>
@@ -154,6 +164,27 @@ export function TrialCard({ result }: { result: MatchResult }) {
                   <li key={i} className="flex gap-2 text-xs text-slate-400">
                     <CircleHelp className="mt-0.5 h-3.5 w-3.5 shrink-0 text-slate-500" />
                     <span>{c.detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {/*
+            The requirements no rule could read. These used to be computed and
+            then silently dropped, which is how a card could look fully checked
+            when most of the protocol had never been examined.
+          */}
+          {result.unreadable.length > 0 && (
+            <div>
+              <p className="mb-1.5 text-[11px] uppercase tracking-wide text-slate-500">
+                {result.unreadable.length} other requirement
+                {result.unreadable.length === 1 ? "" : "s"} your doctor will
+                need to read
+              </p>
+              <ul className="space-y-1">
+                {result.unreadable.slice(0, 2).map((c, i) => (
+                  <li key={i} className="text-xs italic text-slate-500">
+                    “{c.source.length > 150 ? `${c.source.slice(0, 150)}…` : c.source}”
                   </li>
                 ))}
               </ul>

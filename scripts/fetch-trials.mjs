@@ -84,21 +84,38 @@ async function fetchStudies(url) {
   const zone = process.env.BRIGHTDATA_ZONE || "web_unlocker1";
 
   if (key) {
-    console.log("→ transport: Bright Data Web Unlocker");
-    const res = await fetch("https://api.brightdata.com/request", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${key}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ zone, url, format: "raw" }),
-    });
-    if (!res.ok) {
+    console.log(`→ transport: Bright Data Web Unlocker (zone: ${zone})`);
+    // Every failure mode here must fall through to the direct fetch, including
+    // a thrown network error and a 200 with an empty body — an unusable
+    // response is not a reason to fail the whole ingestion.
+    try {
+      const res = await fetch("https://api.brightdata.com/request", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${key}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ zone, url, format: "raw" }),
+      });
+      const body = res.ok ? await res.text() : "";
+      if (!res.ok) {
+        console.warn(`  Bright Data returned ${res.status}; using direct fetch.`);
+      } else if (!body.trim()) {
+        console.warn(
+          `  Bright Data returned an empty body — check that zone "${zone}" exists ` +
+            `on your account (set BRIGHTDATA_ZONE). Using direct fetch.`,
+        );
+      } else {
+        try {
+          return JSON.parse(body);
+        } catch {
+          console.warn("  Bright Data body was not JSON; using direct fetch.");
+        }
+      }
+    } catch (err) {
       console.warn(
-        `  Bright Data returned ${res.status}; falling back to direct fetch.`,
+        `  Bright Data request failed (${err.message}); using direct fetch.`,
       );
-    } else {
-      return JSON.parse(await res.text());
     }
   } else {
     console.log("→ transport: direct ClinicalTrials.gov API v2 (no key set)");
@@ -180,7 +197,10 @@ async function main() {
     JSON.stringify(
       {
         source: "ClinicalTrials.gov API v2",
-        sponsor: SPONSOR || "All sponsors",
+        // Deliberately not the sponsor's name: the filter is a fetch-time
+        // choice, and the client's name is kept out of the committed repo.
+        // The NCT ids below are public record either way.
+        sponsor: SPONSOR ? "single-sponsor portfolio" : "all sponsors",
         fetchedAt: new Date().toISOString(),
         count: trials.length,
         trials,

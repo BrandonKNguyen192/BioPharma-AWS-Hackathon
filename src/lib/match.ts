@@ -99,6 +99,37 @@ function parseStages(text: string): number[] | null {
   return found.size > 0 ? [...found].sort() : null;
 }
 
+/**
+ * "Treatment-naive required" / "any prior systemic therapy excluded".
+ *
+ * This is the single most common blocker pattern in the dataset and the reason
+ * a pretreated patient falls out of first-line trials. Without it those lines
+ * classify as unparsed, and a patient who is plainly ineligible is shown a
+ * hopeful card.
+ */
+const RE_NAIVE =
+  /\b(?:no prior systemic|treatment[-\s]na(?:i|ï)ve|systemic treatment na(?:i|ï)ve|previously untreated|no prior (?:systemic\s+)?(?:anti-?tumou?r|antineoplastic|antitumor|therapy|treatment)|has not received (?:any )?prior)\b/i;
+
+const RE_PRIOR_SYSTEMIC =
+  /\b(?:any prior systemic|prior systemic (?:anti-?tumou?r|antitumor|therapy|treatment)|systemic anti-?tumou?r therapy for (?:advanced|metastatic)|prior treatments? including)\b/i;
+
+/**
+ * Driver-mutation requirements. Boundary-matched on purpose: a bare /alk/
+ * substring also matches "alkalization", which appears verbatim in this
+ * dataset and has nothing to do with the ALK gene.
+ */
+const BIOMARKER_GENES = [
+  "egfr", "alk", "ros1", "kras", "braf", "her2", "ret", "met", "ntrk", "pik3ca",
+];
+const RE_BIOMARKER_CONTEXT =
+  /\b(mutation|alteration|rearrangement|fusion|positive|amplification|translocation|wild[-\s]?type)\b/i;
+
+function biomarkerGenesIn(text: string): string[] {
+  return BIOMARKER_GENES.filter((g) =>
+    new RegExp(`(?<![a-z0-9])${g}(?![a-z0-9])`, "i").test(text),
+  );
+}
+
 const RE = {
   platinum:
     /\b(platinum|carboplatin|cisplatin|oxaliplatin|platinum-based)\b/i,
@@ -122,6 +153,12 @@ export function classify(text: string): RuleKind {
     return "prior_platinum";
   if (RE.checkpoint.test(text) && RE.priorTherapyContext.test(text))
     return "prior_checkpoint_inhibitor";
+  // Checked after the drug-specific rules so a line naming platinum or a
+  // checkpoint inhibitor keeps its more precise classification.
+  if (RE_NAIVE.test(text) || RE_PRIOR_SYSTEMIC.test(text))
+    return "prior_any_therapy";
+  if (biomarkerGenesIn(text).length > 0 && RE_BIOMARKER_CONTEXT.test(text))
+    return "biomarker";
   if (parseStages(text) !== null) return "stage";
   if (RE.measurable.test(text)) return "measurable_disease";
   if (parseAgeFloor(text) !== null) return "age";
@@ -219,6 +256,58 @@ function evaluate(
       return p.ageYears >= floor
         ? { outcome: "pass", detail: `You are ${p.ageYears}, meeting the ${floor}+ requirement.` }
         : { outcome: "fail", detail: `This trial requires age ${floor}+.` };
+    }
+
+    case "prior_any_therapy": {
+      const systemic = p.priorTherapyClasses.filter((c) =>
+        ["platinum", "checkpoint", "chemo", "targeted"].includes(c),
+      );
+      if (systemic.length === 0 && p.priorTherapies.length === 0)
+        return UNKNOWN("you have had any previous systemic treatment");
+
+      const hadSystemic = systemic.length > 0;
+      const named = p.priorTherapies.slice(0, 2).join(" and ");
+
+      // A "treatment-naive required" line and an "any prior systemic therapy"
+      // exclusion mean the same thing from opposite directions, so normalise
+      // to the naive-required reading and let `flip` handle the side.
+      const naiveRequired = RE_NAIVE.test(text);
+      if (naiveRequired) {
+        return hadSystemic
+          ? {
+              outcome: "fail",
+              detail: `This study is for people who have not had systemic treatment yet; you described ${named || "previous therapy"}.`,
+            }
+          : { outcome: "pass", detail: "You have not had prior systemic treatment." };
+      }
+      return flip(
+        hadSystemic
+          ? {
+              outcome: "pass",
+              detail: `You reported previous systemic treatment (${named || "prior therapy"}).`,
+            }
+          : { outcome: "fail", detail: "You did not report previous systemic treatment." },
+      );
+    }
+
+    case "biomarker": {
+      const genes = biomarkerGenesIn(text);
+      if (genes.length === 0) return UNKNOWN("your tumour testing matches");
+      const patientGenes = p.biomarkers.join(" ").toLowerCase();
+      const hasAny = genes.some((g) =>
+        new RegExp(`(?<![a-z0-9])${g}(?![a-z0-9])`, "i").test(patientGenes),
+      );
+      const label = genes.map((g) => g.toUpperCase()).join("/");
+      if (p.biomarkers.length === 0)
+        return UNKNOWN(`your tumour has a ${label} alteration`);
+      return flip(
+        hasAny
+          ? { outcome: "pass", detail: `Your ${label} result matches what this study is testing.` }
+          : {
+              outcome: "fail",
+              detail: `This study is for people with a ${label} alteration; you did not report one.`,
+            },
+      );
     }
 
     case "prior_lines": {
@@ -343,23 +432,29 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   ];
 
   const decidable = evaluated.filter((c) => c.kind !== "unparsed");
+  const unreadable = evaluated.filter((c) => c.kind === "unparsed");
   const blockers = decidable.filter((c) => c.outcome === "fail");
   const passes = decidable.filter((c) => c.outcome === "pass");
   const openQuestions = decidable.filter((c) => c.outcome === "unknown");
 
   const onCondition = conditionMatches(profile.cancerType, trial);
 
+  /*
+   * Verdicts are gated on how much evidence exists, not only on its direction.
+   * Previously a single passing criterion could produce a top-tier verdict on
+   * a trial with twenty unread requirements. Requiring a minimum number of
+   * decidable criteria makes "we barely checked this" structurally incapable
+   * of presenting as "you're a match".
+   */
   let verdict: MatchVerdict;
-  if (!onCondition) {
+  if (!onCondition || blockers.length > 0) {
     verdict = "excluded";
-  } else if (blockers.length > 0) {
-    verdict = "excluded";
-  } else if (openQuestions.length > passes.length) {
-    verdict = "needs_review";
-  } else if (passes.length >= 2) {
+  } else if (passes.length >= 2 && decidable.length >= 3) {
     verdict = "eligible";
-  } else {
+  } else if (passes.length >= 1 && openQuestions.length <= passes.length) {
     verdict = "likely";
+  } else {
+    verdict = "needs_review";
   }
 
   // Score is a transparent function of evaluated criteria only.
@@ -375,7 +470,31 @@ export function matchTrial(trial: Trial, profile: PatientProfile): MatchResult {
   const conditionBonus = onCondition ? 0 : -100;
   const score = Math.max(0, Math.min(100, Math.round(base + conditionBonus)));
 
-  return { trial, verdict, score, evaluated, blockers, openQuestions };
+  // Two separate honest numbers, because one number cannot say both things.
+  // fit      = of what we could check, how much did the patient meet
+  // coverage = how much of the protocol we could check at all
+  const decided = passes.length + blockers.length;
+  const fit = decided === 0 ? 0 : Math.round((passes.length / decided) * 100);
+
+  const total = evaluated.length;
+  const coverage = {
+    checked: decidable.length,
+    total,
+    unreadable: unreadable.length,
+    pct: total === 0 ? 0 : Math.round((decidable.length / total) * 100),
+  };
+
+  return {
+    trial,
+    verdict,
+    score,
+    fit,
+    coverage,
+    evaluated,
+    blockers,
+    openQuestions,
+    unreadable,
+  };
 }
 
 export function matchAll(trials: Trial[], profile: PatientProfile): MatchResult[] {
@@ -397,11 +516,36 @@ export function matchAll(trials: Trial[], profile: PatientProfile): MatchResult[
     });
 }
 
+/**
+ * The trials the patient came closest to qualifying for, ranked by nearness.
+ *
+ * People understand a decision by contrast — "why this one and not that one".
+ * A near miss with the exact blocking sentence quoted is a better explanation
+ * than any amount of prose about the ones that matched, and it is also the
+ * evidence the researcher dashboard later aggregates. It must never be an
+ * incidental leftover of the results list, so it is computed separately.
+ */
+export function closestMisses(results: MatchResult[], limit = 3): MatchResult[] {
+  return results
+    .filter((r) => r.verdict === "excluded" && r.blockers.length > 0)
+    .sort((a, b) => {
+      if (a.blockers.length !== b.blockers.length)
+        return a.blockers.length - b.blockers.length; // fewest things wrong
+      const ap = a.evaluated.filter((c) => c.outcome === "pass").length;
+      const bp = b.evaluated.filter((c) => c.outcome === "pass").length;
+      if (ap !== bp) return bp - ap; // most things already right
+      return b.coverage.checked - a.coverage.checked; // best understood
+    })
+    .slice(0, limit);
+}
+
 /* ------------------------------------------------------------------ *
  * Researcher signal
  * ------------------------------------------------------------------ */
 
 const SIGNAL_LABELS: Record<RuleKind, string> = {
+  prior_any_therapy: "Prior systemic therapy (treatment-naive required)",
+  biomarker: "Required tumour biomarker",
   ecog: "ECOG performance status ceiling",
   pdl1_threshold: "PD-L1 expression threshold",
   prior_platinum: "Prior platinum chemotherapy",

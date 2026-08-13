@@ -50,10 +50,21 @@ function seed(s: Store) {
   s.byCancer.set("renal cell carcinoma", 7);
 
   const seeded: AggregateRow[] = [
+    // Leading row is deliberately the criterion a pretreated patient actually
+    // trips, so a live search visibly increments the top bar rather than
+    // telling a story disconnected from what the patient just saw.
+    {
+      kind: "prior_any_therapy",
+      label: "Prior systemic therapy (treatment-naive required)",
+      patientsBlocked: 28,
+      exampleTrial: "NCT06692738",
+      exampleCriterion:
+        "Any prior systemic, non-curative therapy received for NSCLC.",
+    },
     {
       kind: "prior_checkpoint_inhibitor",
       label: "Prior PD-1/PD-L1 immunotherapy",
-      patientsBlocked: 28,
+      patientsBlocked: 19,
       exampleTrial: "NCT06692738",
       exampleCriterion:
         "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",

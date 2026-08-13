@@ -54,8 +54,10 @@ export type RuleKind =
   | "ecog"
   | "prior_platinum"
   | "prior_checkpoint_inhibitor"
+  | "prior_any_therapy"
   | "prior_lines"
   | "pdl1_threshold"
+  | "biomarker"
   | "brain_mets"
   | "measurable_disease"
   | "stage"
@@ -80,13 +82,33 @@ export type MatchVerdict = "eligible" | "likely" | "excluded" | "needs_review";
 export interface MatchResult {
   trial: Trial;
   verdict: MatchVerdict;
-  /** 0-100, derived only from evaluated criteria. Not model output. */
+  /**
+   * 0-100 ranking signal only. Do NOT surface this alone as "confidence":
+   * a trial where one criterion passed and twenty were unreadable scores
+   * 100, which reads as "fully verified" and is not. Show `fit` alongside
+   * `coverage` instead.
+   */
   score: number;
+  /** Share of the criteria we COULD check that the patient met, 0-100. */
+  fit: number;
+  /** How much of the protocol we could check at all. */
+  coverage: {
+    /** Criteria the engine could evaluate. */
+    checked: number;
+    /** Total published criteria on the trial. */
+    total: number;
+    /** Criteria no rule could read — a clinician must confirm these. */
+    unreadable: number;
+    /** checked / total, 0-100. */
+    pct: number;
+  };
   evaluated: EvaluatedCriterion[];
   /** Criteria that ruled the patient out. Drives the dashboard signal. */
   blockers: EvaluatedCriterion[];
   /** Criteria the engine could not decide without more information. */
   openQuestions: EvaluatedCriterion[];
+  /** Criteria no rule could parse, kept so the UI can admit to them. */
+  unreadable: EvaluatedCriterion[];
 }
 
 /**
@@ -106,6 +128,13 @@ export interface UnmatchedSignal {
 export interface MatchResponse {
   profile: PatientProfile;
   results: MatchResult[];
+  /**
+   * Trials the patient was ruled out of, closest first. Returned separately
+   * and unconditionally so the "why you didn't match" explanation cannot be
+   * cut off by the results page limit — that explanation is the product, not
+   * an afterthought.
+   */
+  nearMisses: MatchResult[];
   signals: UnmatchedSignal[];
   /** True when the OpenAI call was skipped or failed and mock data was used. */
   usedFallback: boolean;

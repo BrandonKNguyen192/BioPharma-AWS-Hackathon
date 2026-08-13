@@ -42,7 +42,9 @@ export default function PatientPortal() {
   }
 
   const matches = data?.results.filter((r) => r.verdict !== "excluded") ?? [];
-  const excluded = data?.results.filter((r) => r.verdict === "excluded") ?? [];
+  // Near misses come from the API as their own list, computed before the
+  // results page limit, so this explanation can never be cut off.
+  const nearMisses = data?.nearMisses ?? [];
 
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-10">
@@ -162,13 +164,33 @@ export default function PatientPortal() {
               )}
             </section>
 
-            {excluded.length > 0 && (
+            {nearMisses.length > 0 && (
               <section className="space-y-3">
-                <h2 className="text-sm font-medium text-slate-400">
-                  Why other studies ruled you out
-                </h2>
-                {excluded.slice(0, 3).map((r) => (
-                  <TrialCard key={r.trial.nctId} result={r} />
+                <div>
+                  <h2 className="text-sm font-medium text-slate-400">
+                    How close you came to {nearMisses.length} other stud
+                    {nearMisses.length === 1 ? "y" : "ies"}
+                  </h2>
+                  <p className="mt-1 text-xs text-slate-600">
+                    These ruled you out on one requirement. That reason is sent
+                    — anonymously, with no text from your story — to the teams
+                    who design these studies.
+                  </p>
+                </div>
+                {nearMisses.map((r) => (
+                  <div key={r.trial.nctId} className="space-y-2">
+                    <TrialCard result={r} />
+                    {r.blockers[0] && (
+                      <div className="ml-4 border-l-2 border-rose-500/30 pl-3">
+                        <p className="text-[11px] uppercase tracking-wide text-slate-600">
+                          The exact sentence that ruled you out
+                        </p>
+                        <p className="mt-0.5 text-xs italic text-slate-400">
+                          “{r.blockers[0].source}”
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </section>
             )}

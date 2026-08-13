@@ -10,7 +10,7 @@
 
 import { NextResponse } from "next/server";
 import { extractProfile } from "@/lib/extract";
-import { matchAll, deriveSignals } from "@/lib/match";
+import { matchAll, deriveSignals, closestMisses } from "@/lib/match";
 import { TRIALS } from "@/lib/trials";
 import { recordSignals } from "@/lib/signal-store";
 import type { MatchResponse } from "@/lib/types";
@@ -42,6 +42,9 @@ export async function POST(req: Request) {
   const { profile, usedFallback, model } = await extractProfile(text);
   const results = matchAll(TRIALS, profile);
   const signals = deriveSignals(results);
+  // Computed over the FULL result set, before the display cut below, so the
+  // rejection explanation can never be truncated away.
+  const nearMisses = closestMisses(results, 3);
 
   // Aggregate, de-identified only: rule kinds and counts. Never the text.
   recordSignals(profile.cancerType, signals);
@@ -49,6 +52,7 @@ export async function POST(req: Request) {
   const payload: MatchResponse = {
     profile,
     results: results.slice(0, 12),
+    nearMisses,
     signals,
     usedFallback,
     model,
