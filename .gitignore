@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Local handoff doc — contains a live API key, never commit
 HANDOFF.md
+
+# Credential written into the project dir by an external tool; never commit
+data/
