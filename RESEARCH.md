@@ -319,3 +319,164 @@ Key facts to use in the pitch close:
    group key, change `PRIMARY_MODEL`/`FALLBACK_MODEL` in `src/lib/extract.ts` and
    `BRIEF_MODEL` in `src/lib/protocol-agent.ts` to gpt-5.4 first, or the live path
    will 404 and silently fall back to offline mode.
+
+---
+
+## 11. Concrete Repo Backlog (Now / Next / Later)
+
+This turns the research into implementation work tied to the current repository.
+The goal is to make it obvious what belongs in the build immediately, what is the
+highest-value follow-on engineering work, and what is a separate product track.
+
+### Now
+
+These are the highest-leverage changes for the current demo and repo.
+
+1. **Refresh product and pitch language around regulation and risk posture**
+   - Why: The repo's architecture already supports the safer framing in §6, but the
+     messaging should stop implying a broad patient-side CDS exemption.
+   - Files:
+     - `PITCH.md`
+     - `README.md`
+     - `src/app/page.tsx`
+     - `src/app/dashboard/page.tsx`
+   - Change:
+     - Frame the product as trial-information retrieval, navigation, and pre-screening.
+     - Emphasize that final eligibility is determined by the study team.
+     - Keep the "deterministic engine + verbatim criterion + patient value" audit path
+       as the core compliance story.
+
+2. **Align model configuration with the actually available key**
+   - Why: If the environment key does not support `gpt-5.6-sol` / `gpt-5.5`, the app
+     will keep dropping to fallback mode.
+   - Files:
+     - `src/lib/extract.ts`
+     - `src/lib/protocol-agent.ts`
+   - Change:
+     - Update `PRIMARY_MODEL`, `FALLBACK_MODEL`, and `BRIEF_MODEL` to the models
+       actually available in the active OpenAI account, likely `gpt-5.4` first.
+
+3. **Use the research numbers directly in the sponsor-facing narrative**
+   - Why: The repository already has the right architecture; the research mainly gives
+     it sharper proof points.
+   - Files:
+     - `PITCH.md`
+     - `output/pdf/cleartrial-one-pager.md`
+     - `output/pdf/cleartrial-one-pager.pdf`
+   - Change:
+     - Incorporate the 3% enrollment anchor, TrialGPT's 42.6% screening-time reduction,
+       and the "~50% ceiling" framing for computable criteria.
+
+4. **Keep the Bright Data path wired and demonstrable**
+   - Why: The repo already supports optional Bright Data transport for trial ingestion.
+   - Files:
+     - `scripts/fetch-trials.mjs`
+     - `.env.local`
+     - `.env.example` (if added later)
+   - Change:
+     - Verify the `BRIGHTDATA_API_KEY` and `BRIGHTDATA_ZONE` path works locally.
+     - Keep the direct ClinicalTrials.gov fallback intact.
+
+### Next
+
+These are the most natural product-strengthening changes inside the current
+architecture.
+
+1. **Expand deterministic matcher coverage**
+   - Why: §3 and §8 suggest the strongest next win is more computable criteria, not
+     more model magic.
+   - Files:
+     - `src/lib/match.ts`
+     - `src/lib/types.ts`
+     - `scripts/test-*.mjs`
+   - Change:
+     - Add rule kinds and evaluators for:
+       - ALT / AST / bilirubin thresholds
+       - histology subtype constraints
+       - EGFR / ALK / KRAS / biomarker gating
+     - Add focused regression fixtures per new rule.
+
+2. **Make the dashboard's signal store persistent**
+   - Why: The research strongly supports the demand-side accrual observability thesis,
+     and the current in-memory store is the right prototype but not the right shape for
+     a continuing product.
+   - Files:
+     - `src/lib/signal-store.ts`
+     - `src/app/api/match/route.ts`
+     - likely a new persistence module such as `src/lib/db.ts` or `src/lib/signals-repo.ts`
+   - Change:
+     - Replace in-process memory with SQLite or Postgres behind the same interface.
+     - Preserve the privacy boundary: no patient free text, only de-identified signal rows.
+
+3. **Upgrade the dashboard from static alerting to explicit recruitment analytics**
+   - Why: §1 and §8 show that accrual observability is a validated category.
+   - Files:
+     - `src/app/dashboard/page.tsx`
+     - `src/lib/signal-store.ts`
+     - `src/lib/protocol-agent.ts`
+   - Change:
+     - Add trend framing, more explicit indication slices, and stronger "what changed"
+       summaries in the protocol brief.
+
+4. **Generalize patient-facing wording without over-claiming implementation**
+   - Why: Collaborator feedback wants the product framed beyond cancer, but the current
+     data and matcher are still oncology-centered.
+   - Files:
+     - `src/app/page.tsx`
+     - `README.md`
+     - `PITCH.md`
+   - Change:
+     - Broaden wording carefully where appropriate while keeping "current dataset:
+       active BMS oncology trials" explicit.
+
+### Later
+
+These are compelling extensions, but they are better treated as a new subsystem than
+as a tweak to the current patient-matching path.
+
+1. **Public sponsor signal / pipeline visibility ingestion**
+   - Why: The collaborator and AstraZeneca-style feedback is strong, but the repo does
+     not yet have this ingestion path.
+   - Files:
+     - new script: `scripts/fetch-sponsor-signals.mjs`
+     - new dataset: `src/data/sponsor-signals.json`
+     - new lib modules: `src/lib/sponsor-signals.ts`, `src/lib/sponsor-signal-extract.ts`
+     - new UI surface: either a new dashboard section or a new route such as
+       `src/app/pipeline/page.tsx`
+   - Change:
+     - Pull public press releases, IR pages, pipeline pages, and reports.
+     - Extract structured trial-launch signals with OpenAI.
+     - Normalize sponsor / asset / indication / phase / event type.
+
+2. **Convoke-backed biotech reconciliation**
+   - Why: Once public sponsor signals exist, Convoke becomes an enrichment and
+     canonicalization layer rather than a general export story.
+   - Files:
+     - new integration module, likely `src/lib/convoke.ts`
+     - new sponsor-signal reconciliation layer
+     - possible UI additions to dashboard or pipeline pages
+   - Change:
+     - Resolve sponsor, asset, indication, and program identity.
+     - Link public sponsor communications to likely clinical programs and catalysts.
+
+3. **Broader disease-area support**
+   - Why: The product framing may eventually extend beyond oncology, but the current
+     trial corpus, heuristics, and seeded analytics are BMS oncology-specific.
+   - Files:
+     - `scripts/fetch-trials.mjs`
+     - `src/lib/extract.ts`
+     - `src/lib/match.ts`
+     - `src/lib/signal-store.ts`
+     - `src/app/page.tsx`
+     - `src/app/dashboard/page.tsx`
+   - Change:
+     - Expand the trial corpus beyond oncology.
+     - Add disease-aware extraction heuristics and matcher rules.
+     - Rework seeded dashboard assumptions away from oncology-only cohorts.
+
+### The short version
+
+- **Now:** tighten messaging, align model configuration, keep the data path working.
+- **Next:** expand deterministic matcher coverage and persist the researcher signal loop.
+- **Later:** add sponsor/pipeline ingestion and Convoke-backed reconciliation as a
+  distinct intelligence layer on top of the current ClearTrial core.
