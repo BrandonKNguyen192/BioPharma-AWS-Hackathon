@@ -1,121 +1,111 @@
 /**
- * ClearTrial Trial Radar source collector.
+ * Collect discovery-grade pipeline announcements from SEC EDGAR and GDELT.
  *
- * Discovery is build-time only. Search results are written to tmp/radar and
- * never displayed as facts. A separate reviewed build step is required before
- * a claim can enter src/data/pipeline-radar.json.
- *
- * Direct HTML is preferred. Bright Data is an optional transport fallback for
- * sponsor pages that return a challenge; it is never treated as an authority.
+ * Raw responses are inputs to build-pipeline-signals.mjs. They are not product
+ * facts and must pass through the reviewed ledger before display.
  */
 
-import { createHash } from "node:crypto";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
-const OUT = join(ROOT, "tmp", "radar");
-const ENV_LOCAL = join(ROOT, ".env.local");
-const UA = "ClearTrialHackathon research@cleartrial.demo";
+const OUT = process.env.RADAR_OUT_DIR || join(ROOT, "tmp", "radar");
+const EDGAR = "https://efts.sec.gov/LATEST/search-index";
+const GDELT = "https://api.gdeltproject.org/api/v2/doc/doc";
+const UA = "ClearTrialHackathon cleartrial@hackathon.demo";
+const START_DATE = process.env.RADAR_START_DATE || "2025-01-01";
+const END_DATE = process.env.RADAR_END_DATE || new Date().toISOString().slice(0, 10);
 
-const SOURCES = [
-  {
-    id: "ktx1001-ind-clearance",
-    sponsor: "K36 Therapeutics",
-    url: "https://www.prnewswire.com/news-releases/k36-therapeutics-announces-fda-clearance-of-investigational-new-drug-application-and-formation-of-clinical-advisory-board-for-lead-program-ktx-1001-301610149.html",
-  },
-  {
-    id: "ktx1001-first-patient",
-    sponsor: "K36 Therapeutics",
-    url: "https://www.prnewswire.com/news-releases/k36-therapeutics-announces-dosing-of-first-patient-in-ktx-1001-phase-1-clinical-trial-for-relapsed-or-refractory-multiple-myeloma-and-addition-of-mr-michael-heffernan-as-independent-board-director-301793617.html",
-  },
-  {
-    id: "orm6151-acquisition",
-    sponsor: "Orum Therapeutics / Bristol Myers Squibb",
-    url: "https://www.orumrx.com/news/orum-orm-6151-acquisition-by-bms/",
-  },
-  {
-    id: "pumitamig-lung02-readout",
-    sponsor: "BioNTech / Bristol Myers Squibb",
-    url: "https://www.biontech.com/int/en/home/mediaroom/news/press-releases/2026/05/Global-Data-for-BioNTech-and-Bristol-Myers-Squibb-s-PD-L1xVEGF-A-Bispecific-Pumitamig-Shows-Encouraging-Efficacy-in-Patients-with-Non-Small-Cell-Lung-Cancer-in-ROSETTA-Lung-02-Trial.html",
-  },
-  {
-    id: "iberdomide-excaliber",
-    sponsor: "Bristol Myers Squibb",
-    url: "https://news.bms.com/news/details/2025/Bristol-Myers-Squibb-Announces-Phase-3-EXCALIBER-RRMM-Study-Evaluating-Iberdomide-in-Combination-with-Standard-Therapies-Demonstrated-a-Significant-Improvement-in-Minimal-Residual-Disease-Negativity-Rates-in-Relapsed-or-Refractory-Multiple-Myeloma/default.aspx",
-  },
+const SPONSORS = [
+  { id: "bms", drugs: ["nivolumab", "Opdivo", "pumitamig", "iberdomide"] },
+  { id: "pfizer", drugs: ["elranatamab", "palbociclib", "sunitinib"] },
+  { id: "merck", drugs: ["pembrolizumab", "Keytruda"] },
+  { id: "roche", drugs: ["atezolizumab", "Tecentriq", "bevacizumab"] },
+  { id: "astrazeneca", drugs: ["durvalumab", "Imfinzi", "olaparib"] },
 ];
 
-async function loadEnvLocal() {
-  try {
-    const raw = await readFile(ENV_LOCAL, "utf8");
-    for (const line of raw.split(/\r?\n/)) {
-      const trimmed = line.trim();
-      if (!trimmed || trimmed.startsWith("#")) continue;
-      const eq = trimmed.indexOf("=");
-      if (eq < 1) continue;
-      const key = trimmed.slice(0, eq).trim();
-      let value = trimmed.slice(eq + 1).trim();
-      if (process.env[key]) continue;
-      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) value = value.slice(1, -1);
-      process.env[key] = value;
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchJson(url, { tries = 4 } = {}) {
+  for (let attempt = 1; attempt <= tries; attempt += 1) {
+    const response = await fetch(url, {
+      headers: { "User-Agent": UA, Accept: "application/json" },
+    });
+    if (response.ok) return response.json();
+    if (![403, 429, 500, 502, 503, 504].includes(response.status) || attempt === tries) {
+      throw new Error(`HTTP ${response.status}: ${(await response.text()).slice(0, 160)}`);
     }
-  } catch {
-    // Optional local credentials.
+    await sleep(attempt * 3000);
   }
 }
 
-async function directFetch(url) {
-  const response = await fetch(url, { headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml" }, redirect: "follow" });
-  const body = await response.text();
-  if (!response.ok || /Attention Required!|cf-chl-/i.test(body)) throw new Error(`direct ${response.status}`);
-  return { body, transport: "direct" };
+function drugQuery(sponsor) {
+  return `(${sponsor.drugs.map((drug) => `"${drug}"`).join(" OR ")})`;
 }
 
-async function brightDataFetch(url) {
-  const key = process.env.BRIGHTDATA_API_KEY;
-  if (!key) throw new Error("no Bright Data key");
-  const response = await fetch("https://api.brightdata.com/request", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ zone: process.env.BRIGHTDATA_ZONE || "web_unlocker1", url, format: "raw" }),
+async function collectEdgar(sponsor) {
+  const params = new URLSearchParams({
+    q: `${drugQuery(sponsor)} ("clinical trial" OR "Phase 1" OR "Phase 2" OR "Phase 3" OR IND)`,
+    dateRange: "custom",
+    startdt: START_DATE,
+    enddt: END_DATE,
+    forms: "8-K,10-K,10-Q",
+    from: "0",
+    size: "100",
   });
-  const body = await response.text();
-  if (!response.ok || !body.trim()) throw new Error(`Bright Data ${response.status}${body ? `: ${body.slice(0, 120)}` : " empty body"}`);
-  return { body, transport: "bright_data" };
+  return fetchJson(`${EDGAR}?${params}`);
 }
 
-async function fetchSource(source) {
-  try {
-    return await directFetch(source.url);
-  } catch (directError) {
-    try {
-      return await brightDataFetch(source.url);
-    } catch (brightError) {
-      throw new Error(`${directError.message}; ${brightError.message}`);
-    }
-  }
+async function collectGdelt(sponsor) {
+  const params = new URLSearchParams({
+    query: `${drugQuery(sponsor)} ("clinical trial" OR phase OR IND OR enrollment OR readout)`,
+    mode: "ArtList",
+    format: "json",
+    maxrecords: "250",
+    startdatetime: `${START_DATE.replaceAll("-", "")}000000`,
+    enddatetime: `${END_DATE.replaceAll("-", "")}235959`,
+  });
+  return fetchJson(`${GDELT}?${params}`);
 }
 
-await loadEnvLocal();
 await mkdir(OUT, { recursive: true });
+const manifest = {
+  schemaVersion: "1.0.0",
+  collectedAt: new Date().toISOString(),
+  dateRange: { start: START_DATE, end: END_DATE },
+  sources: [],
+};
 
-const manifest = { schemaVersion: "1.0.0", collectedAt: new Date().toISOString(), documents: [] };
-for (const source of SOURCES) {
+for (const sponsor of SPONSORS) {
   try {
-    const { body, transport } = await fetchSource(source);
-    const sha256 = createHash("sha256").update(body).digest("hex");
-    const path = join(OUT, `${source.id}.html`);
-    await writeFile(path, body);
-    manifest.documents.push({ ...source, status: "collected", transport, sha256, bytes: Buffer.byteLength(body), path: `tmp/radar/${source.id}.html` });
-    console.log(`OK ${source.id}: ${transport}, ${Buffer.byteLength(body)} bytes`);
+    const edgar = await collectEdgar(sponsor);
+    const count = edgar.hits?.hits?.length ?? 0;
+    await writeFile(join(OUT, `edgar-${sponsor.id}.json`), JSON.stringify(edgar, null, 2));
+    manifest.sources.push({ sponsor: sponsor.id, source: "edgar", status: "collected", count });
+    console.log(`EDGAR ${sponsor.id}: ${count} hits`);
   } catch (error) {
-    manifest.documents.push({ ...source, status: "failed", error: error.message });
-    console.warn(`FAIL ${source.id}: ${error.message}`);
+    manifest.sources.push({ sponsor: sponsor.id, source: "edgar", status: "failed", error: error.message });
+    console.warn(`EDGAR ${sponsor.id}: ${error.message}`);
   }
+
+  await sleep(1000);
+
+  try {
+    const gdelt = await collectGdelt(sponsor);
+    const count = gdelt.articles?.length ?? 0;
+    await writeFile(join(OUT, `gdelt-${sponsor.id}.json`), JSON.stringify(gdelt, null, 2));
+    manifest.sources.push({ sponsor: sponsor.id, source: "gdelt", status: "collected", count });
+    console.log(`GDELT ${sponsor.id}: ${count} articles`);
+  } catch (error) {
+    manifest.sources.push({ sponsor: sponsor.id, source: "gdelt", status: "failed", error: error.message });
+    console.warn(`GDELT ${sponsor.id}: ${error.message}`);
+  }
+
+  await sleep(5000);
 }
 
 await writeFile(join(OUT, "manifest.json"), JSON.stringify(manifest, null, 2));
-console.log(`done: ${manifest.documents.filter((document) => document.status === "collected").length}/${SOURCES.length} sources collected`);
+const total = manifest.sources.reduce((sum, source) => sum + (source.count ?? 0), 0);
+console.log(`done: ${total} discovery records collected across ${manifest.sources.length} source queries`);

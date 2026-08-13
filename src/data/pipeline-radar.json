@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.1.0",
-  "generatedAt": "2026-08-13T21:27:08.781Z",
+  "generatedAt": "2026-08-13T21:41:45.693Z",
   "checkedAt": "2026-08-13",
-  "scope": "Oncology pipeline announcements for sponsors in the monitored trial portfolio",
+  "scope": "Unreviewed discovery candidates for assets in the monitored trial portfolio",
   "sources": [
     "SEC EDGAR full-text search (8-K/10-K/10-Q)",
-    "GDELT DOC API (press-wire coverage)",
-    "ClinicalTrials.gov API v2 (registry join)"
+    "GDELT DOC API (news and press-wire index)",
+    "ClinicalTrials.gov API v2 (candidate registry join)"
   ],
   "signals": [
     {
@@ -35,17 +35,17 @@
         "quote": "inadequate response or who have been intolerant to a prior disease-modifying antirheumatic therapy. The EC approval is based on positive results from the pivotal POETYK PsA-1 and POETYK PsA-2 Phase 3 clinical trials. 4 Our Strategy At Bristol Myers Squibb, our goal is to build a company that is fina"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-26-000008",
@@ -73,17 +73,17 @@
         "quote": "ul improvement over placebo in multiple secondary endpoints at 28 weeks with no new safety signals. Cobenfy&#8482; (xanomeline and trospium chloride) March 28 Announced data from a Phase 4,open-label clinical trial evaluating the symptom stability, safety and tolerability of Cobenfy when switching a"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-26-000002",
@@ -111,17 +111,17 @@
         "quote": "ATES Entries organized by date and inclusive of fourth quarter and recent updates. Asset(s) Date Announced Milestone Camzyos &#174; (mavacamten) January 12 Announced positive topline results from the Phase 3 SCOUT-HCM trial evaluating Camzyos in adolescents with symptomatic obstructive hypertrophic "
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-25-000147",
@@ -149,17 +149,17 @@
         "quote": "ple myeloma demonstrated a statistically significant improvement in minimal residual disease (MRD) negativity rates, compared with the control arm, in a planned interim analysis of the MRD endpoint. 4 pumitamig (BNT327 &#47; BMS-986545) September 8 First disclosure of data presented with BioNTech SE"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-25-000149",
@@ -187,17 +187,17 @@
         "quote": "multiple myeloma HCC hepatocellular carcinoma RS ring sideroblast HCM hypertrophic cardiomyopathy Sanofi Sanofi S.A. HHS Health and Human Services sBLA supplemental biologics license application IND investigational new drug SEC U.S. Securities and Exchange Commission IPRD in-process research and dev"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-26-000004",
@@ -225,17 +225,17 @@
         "quote": "imated patent expiry will be 2039. (g) For Opdivo Qvantig, in the U.S. and EU, the estimated minimum market exclusivity dates are 2028 and 2030, respectively, based on the expiry of the COM patent for nivolumab and does not include any potential exclusivity resulting from pending patent applications"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-26-000020",
@@ -263,17 +263,17 @@
         "quote": "x months ended June&#160;30, 2026 and 2025 are set forth below. BioNTech In June 2025, BMS and BioNTech entered into a global strategic collaboration for the co-development and co-commercialization of pumitamig (BNT327/BMS986545), a bispecific antibody targeting PD-L1 and VEGF-A, which is currently "
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0001724521-26-000042",
@@ -301,17 +301,17 @@
         "quote": "r care. Arcus is executing on this strategy, including embedding casdatifan into the treatment paradigm in combination with the most commonly used dual-immunotherapy regimen in the first-line setting, nivolumab (an anti-PD-1) plus ipilimumab (an anti-CTLA-4) and the standard of care in the second-li"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-0000014272-26-000010",
@@ -339,17 +339,17 @@
         "quote": "tive interim top&#8209;line results from a Phase III trial conducted in China for iza-bren in previously treated unresectable locally advanced or metastatic TNBC, and (v) FDA acceptance of our NDA for iberdomide in combination with standard therapy for patients with RRMM. Additionally, Sotyktu was a"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-25-043290",
@@ -377,17 +377,17 @@
         "quote": "lity of any such information. Item 8.01 Other Events. On October 1, 2025, the Company announced that it had entered into the Agreement with Pfizer. Under the terms of the Agreement, Pfizer will supply elranatamab (ELREXFIO &#174; ), a B-cell maturation antigen CD3 targeted bispecific antibody (BCMAx"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-033861",
@@ -415,17 +415,17 @@
         "quote": "ghlights Progressed Plans to Establish Cemsidomide as a Potentially Foundational Treatment for Multiple Myeloma&#59; Enrollment Ongoing in Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination with Elranatamab Additional Phase 1b Trial Evaluating Cemsidomide in Combination with Approved Multiple "
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-042365",
@@ -453,17 +453,17 @@
         "quote": "ation agreement on April 9, 2026 (https://ir.c4therapeutics.com/news-releases/news-release-details/c4- therapeutics-expands-long-term-partnership-roche-through-new) Dexamethasone (dex); Inflammation, Investigational new drug (IND); New Drug Application (NDA); Overall response rate (ORR); Inflammatio"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-25-049850",
@@ -491,17 +491,17 @@
         "quote": "ghest Dose Level (100 &#181;g) and Differentiated Safety and Tolerability Profile Entered Into Clinical Trial Collaboration and Supply Agreement With Pfizer to Evaluate Cemsidomide in Combination With Elranatamab On Track to Initiate Next Phase of Cemsidomide Multiple Myeloma Development Including R"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-024336",
@@ -538,8 +538,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "public_record",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-25-045157",
@@ -567,17 +567,17 @@
         "quote": "on antigen CD3 targeted bispecific antibody, to C4T for its upcoming Phase 1b trial 2 Collaboration with Merck will conclude in late November 2025 Overall Response Rate (ORR); Proof of Concept (POC); Investigational New Drug (IND); Accelerated approval (AA) 33 &nbsp;"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-002010",
@@ -605,17 +605,17 @@
         "quote": "-China clinical development. Early Portfolio&#58; Internal Discovery Projects Focused on Inflammation, Neuro-inflammation and Neuro-degenerative Diseases &#8226; By year-end 2028, deliver up to three investigational new drug applications. Early Portfolio&#58; Discovery Collaborations &#8226; Earn ad"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-011971",
@@ -643,17 +643,17 @@
         "quote": "opment with Potential for Accelerated Approval&#59; First Patient Dosed in the Phase 2 MOMENTUM Trial for Multiple Myeloma in the Fourth Line or Later Phase 1b Trial of Cemsidomide in Combination with Elranatamab on Track to Initiate in Q2 2026 to Support Use in Earlier Lines of Multiple Myeloma The"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001628280-26-055490",
@@ -681,17 +681,17 @@
         "quote": "ment Exhibit 99.1 C4 Therapeutics Reports Second Quarter 2026 Financial Results and Recent Business Highlights Cemsidomide&#8217;s Ongoing Phase 2 MOMENTUM Trial and Phase 1b Trial in Combination With Elranatamab Remain on Track to Deliver Clinical Data Readouts in 2027 Phase 1 Data Presented at Eur"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06121843",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2023-11-08",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001493152-26-033357",
@@ -719,17 +719,17 @@
         "quote": "proved therapy that inhibits all class I PI3K isoforms (&alpha;, &beta;, &delta;, &gamma;) and mTOR complexes mTORC1 and mTORC2 &nbsp; &nbsp; - In the Phase 3 VIKTORIA-1 trial, REVTORPYK combined with palbociclib and fulvestrant and REVTORPYK combined with fulvestrant reduced the risk of disease pro"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT02693535",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2016-02-26",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-pfizer-0001104659-25-055709",
@@ -757,17 +757,17 @@
         "quote": "ped due to expression of these proteins &#8226; Differentiation vs. other CDK4/6s: Goes beyond cell cycle inhibition to address resistance escape mechanisms not covered by current therapies, active in palbociclib resistant cell lines Narazaciclib: Advancing Beyond Existing CDK4/6 to Overcome Resista"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT02693535",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2016-02-26",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-180830",
@@ -795,17 +795,17 @@
         "quote": "#8217;s (known as MSD outside of the United States and Canada) anti-PD-1 therapy KEYTRUDA &reg; (pembrolizumab) for the treatment of advanced melanoma. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable o"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-177471",
@@ -833,17 +833,17 @@
         "quote": "noma Cylembio | 1L Lung (NSCLC) Cylembio | Head &amp; Neck (SCCHN) IO112 | Solid Tumors (pre-clinical) IO170 | Solid Tumors (pre-clinical) Final data from Ph2 BLA, biologics license application; IND, investigational new drug; NSCLC, non-small cell lung cancer; SCCHN, squamous cell carcinoma of the h"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-281657",
@@ -871,17 +871,17 @@
         "quote": "&reg; (pembrolizumab) for the treatment of advanced melanoma in an oral presentation at the 2025 European Society for Medical Oncology (ESMO) congress. The trial evaluated Cylembio in combination with pembrolizumab vs. pembrolizumab alone as a first-line treatment in 407 patients with unresectable o"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001140361-26-006410",
@@ -909,17 +909,17 @@
         "quote": "tiple Indications Validated by World-Class Partners &#160;&#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101+ pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001140361-25-023644",
@@ -947,17 +947,17 @@
         "quote": "conducted between checkpoint inhibitors and Versamune&#174; HPV or between EGFR inhibitors and Versamune&#174; HPV.&#160; &#160; &#160;VERSATILE-002: A Global Phase 2 Study of Versamune&#174; HPV and Pembrolizumab in Subjects with HPV16-positive R/M HNSCC&#160;&#160;Partner&#160;&#160;StudyDesign&#1"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-323704",
@@ -985,17 +985,17 @@
         "quote": "One patient confirmed response after November 3, 2025 data cutoff. &#160; Combination Therapy &#160; The ongoing MICVO Phase 1/2 study evaluating MICVO in combination with KEYTRUDA&#174; is part of a Clinical Trial Collaboration Agreement with Merck (known as MSD outside the US and Canada) and is cu"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001140361-26-016684",
@@ -1023,17 +1023,17 @@
         "quote": "infiltrate tumor &#160;&#160;2&#160;&#160;1&#160; &#160; &#160;Therapy / Treatment&#160;&#160; Indication&#160;&#160;P2&#160;&#160;P3&#160;&#160;Partner&#160;&#160;Versamune&#174;&#160;&#160;PDS0101 + pembrolizumab vs. pembrolizumab (VERSATILE-003)&#160;&#160;HPV16-positive recurrent/metastatic head"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-221704",
@@ -1061,17 +1061,17 @@
         "quote": "y announced that the FDA has recommended that the Company not submit a BLA based on the data from the IOB-013 clinical trial. As previously announced, in the IOB-013 trial treatment with Cylembio plus pembrolizumab improved progression free survival, but the results narrowly missed statistical signi"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-25-243046",
@@ -1099,17 +1099,17 @@
         "quote": "Exchange Act. &#9744; &#160; Item 7.01 Regulation FD Disclosure. On October 18, 2025, Corbus Pharmaceuticals Holdings, Inc. (the &#8220;Company&#8221;) issued a press release announcing data from its Phase 1/2 clinical study of CRB-701 (SYS6002) that was presented at the 2025 European Society for Me"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-merck-0001193125-26-222818",
@@ -1137,17 +1137,17 @@
         "quote": "target enrollment in Phase 1 monotherapy dose expansion study of MICVO in 2L+ R/M HNSCC in the first quarter of 2026 &#160; Updated data from MICVO Phase 1/2 dose escalation study in combination with pembrolizumab in 1L R/M HNSCC on track for the second half of 2026 &#160; Presented new preclinical "
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0001193125-25-271189",
@@ -1175,17 +1175,17 @@
         "quote": "(the &#8220;Company&#8221;) issued a press release announcing new data related to high plasma tumor mutational burden from its ongoing Phase 2 clinical trial evaluating vilastobart in combination with atezolizumab in patients with microsatellite stable metastatic colorectal cancer, a copy of which i"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712355",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0001193125-25-132710",
@@ -1213,17 +1213,17 @@
         "quote": "mitation, general market conditions; risks and uncertainties related to ongoing and planned research and development activities, including initiating, conducting or completing preclinical studies and clinical trials and the timing and results of such preclinical studies or clinical trials; the delay"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0001129928-26-000035",
@@ -1260,8 +1260,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "public_record",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0001641172-25-015524",
@@ -1298,84 +1298,122 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "public_record",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
-      "id": "sig-roche-0001645113-26-000023",
-      "eventType": "topline_results",
+      "id": "sig-roche-0001129928-26-000011",
+      "eventType": "trial_planned",
       "eventDate": {
-        "reported": "2026-03-26",
+        "reported": "2026-03-19",
         "precision": "day",
-        "sortDate": "2026-03-26"
+        "sortDate": "2026-03-19"
       },
       "company": "Roche / Genentech",
       "asset": {
-        "name": "atezolizumab",
+        "name": "unnamed asset",
         "aliases": []
       },
-      "indication": "pancreatic cancer",
-      "phase": "2",
-      "headline": "Roche / Genentech 8-K filed 2026-03-26",
-      "summary": "Regulation FD Disclosure. On March 26, 2026, the Company issued a press release announcing positive results from the Phase 2 PANOVA-4 trial of Tumor Treating Fields (TTFields) therapy concomitant with atezolizumab (Tecentriq&#174;)*, gemcitabine and nab-paclitaxel (gem/nab-pac) as a first-line treatment for metastatic pancreatic ductal adenocarcinoma (mPDAC). PANOVA-4 met its pre-specified primary",
+      "indication": "breast cancer",
+      "phase": null,
+      "headline": "Roche / Genentech 8-K filed 2026-03-19",
+      "summary": "oncy-20260319 FALSE 0001129928 A0 0001129928 2026-01-08 2026-01-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________ FORM 8-K ___________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): March 19, 2026 ____________________________",
       "source": {
         "publisher": "sec.gov",
         "type": "sec_filing",
-        "url": "https://www.sec.gov/Archives/edgar/data/0001645113/000164511326000023/index.json",
-        "title": "Roche / Genentech 8-K filed 2026-03-26",
-        "publishedAt": "2026-03-26",
-        "quote": "Regulation FD Disclosure. On March 26, 2026, the Company issued a press release announcing positive results from the Phase 2 PANOVA-4 trial of Tumor Treating Fields (TTFields) therapy concomitant with atezolizumab (Tecentriq&#174;)*, gemcitabine and nab-paclitaxel (gem/nab-pac) as a first-line treat"
+        "url": "https://www.sec.gov/Archives/edgar/data/0001129928/000112992826000011/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-03-19",
+        "publishedAt": "2026-03-19",
+        "quote": "oncy-20260319 FALSE 0001129928 A0 0001129928 2026-01-08 2026-01-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________ FORM 8-K ___________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of"
       },
       "registryMatch": {
-        "status": "exact",
-        "nctId": "NCT06712355",
+        "status": "no_match_as_of",
+        "nctId": null,
         "checkedAt": "2026-08-13",
         "currentStatus": null,
-        "firstPosted": "2024-12-02",
+        "firstPosted": null,
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "no monitored trial studies this drug"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
-      "id": "sig-roche-0001193125-26-045543",
+      "id": "sig-roche-0000939767-26-000003",
       "eventType": "regulatory_submitted",
       "eventDate": {
-        "reported": "2026-02-11",
+        "reported": "2026-01-12",
         "precision": "day",
-        "sortDate": "2026-02-11"
+        "sortDate": "2026-01-12"
+      },
+      "company": "Bristol Myers Squibb",
+      "asset": {
+        "name": "nivolumab",
+        "aliases": []
+      },
+      "indication": "lung cancer (NSCLC)",
+      "phase": "3",
+      "headline": "Roche / Genentech 8-K filed 2026-01-12",
+      "summary": ", which is expected in mid-2026, based on current event rates. Topline Results for STELLAR-304 Anticipated Mid-2026. STELLAR-304 is a phase 3 pivotal trial evaluating zanzalintinib in combination with nivolumab versus sunitinib in previously untreated patients with advanced non-clear cell RCC. The primary endpoints in the trial are progression-free survival (PFS) and objective response rate (ORR).",
+      "source": {
+        "publisher": "sec.gov",
+        "type": "sec_filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/0000939767/000093976726000003/index.json",
+        "title": "Roche / Genentech 8-K filed 2026-01-12",
+        "publishedAt": "2026-01-12",
+        "quote": ", which is expected in mid-2026, based on current event rates. Topline Results for STELLAR-304 Anticipated Mid-2026. STELLAR-304 is a phase 3 pivotal trial evaluating zanzalintinib in combination with nivolumab versus sunitinib in previously untreated patients with advanced non-clear cell RCC. The p"
+      },
+      "registryMatch": {
+        "status": "probable",
+        "nctId": "NCT07221149",
+        "checkedAt": "2026-08-13",
+        "currentStatus": "RECRUITING",
+        "firstPosted": "2025-10-27",
+        "reasons": [
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
+        ]
+      },
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
+    },
+    {
+      "id": "sig-roche-0000939767-25-000127",
+      "eventType": "regulatory_submitted",
+      "eventDate": {
+        "reported": "2025-11-04",
+        "precision": "day",
+        "sortDate": "2025-11-04"
       },
       "company": "Roche / Genentech",
       "asset": {
         "name": "atezolizumab",
         "aliases": []
       },
-      "indication": "multiple myeloma",
+      "indication": "renal cell carcinoma",
       "phase": "1",
-      "headline": "Roche / Genentech 8-K filed 2026-02-11",
-      "summary": "ine NLR is predictive of ORR and/or OS in HCC with atezo + bev regimen . 25 subjects PD-L1 e evaluable; 39 subjects PD-L1 evaluable 1 Cheng AL, et al. Updated efficacy and safety data from IMbrave150: Atezolizumab plus bevacizumab vs. sorafenib for unresectable hepatocellular carcinoma. Journal of Hepatology 2022 vol. 76 862&#8211;873; Espinoza M, et al. Disease Etiology and Outcomes After Atezoli",
+      "headline": "Roche / Genentech 8-K filed 2025-11-04",
+      "summary": "ust, Exelixis initiated the phase 1 study of XB371, the company&#8217;s next-generation tissue factor-targeting antibody-drug conjugate (TF-targeting ADC) program, following U.S. FDA clearance of its Investigational New Drug application in July. Exelixis now has four ongoing phase 1 trials for its pipeline programs XL309, XB010, XB628 and XB371. Stock Repurchase Program. In August 2024, Exelixis&#",
       "source": {
         "publisher": "sec.gov",
         "type": "sec_filing",
-        "url": "https://www.sec.gov/Archives/edgar/data/0001544227/000119312526045543/index.json",
-        "title": "Roche / Genentech 8-K filed 2026-02-11",
-        "publishedAt": "2026-02-11",
-        "quote": "ine NLR is predictive of ORR and/or OS in HCC with atezo + bev regimen . 25 subjects PD-L1 e evaluable; 39 subjects PD-L1 evaluable 1 Cheng AL, et al. Updated efficacy and safety data from IMbrave150: Atezolizumab plus bevacizumab vs. sorafenib for unresectable hepatocellular carcinoma. Journal of H"
+        "url": "https://www.sec.gov/Archives/edgar/data/0000939767/000093976725000127/index.json",
+        "title": "Roche / Genentech 8-K filed 2025-11-04",
+        "publishedAt": "2025-11-04",
+        "quote": "ust, Exelixis initiated the phase 1 study of XB371, the company&#8217;s next-generation tissue factor-targeting antibody-drug conjugate (TF-targeting ADC) program, following U.S. FDA clearance of its Investigational New Drug application in July. Exelixis now has four ongoing phase 1 trials for its p"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712355",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0001193125-25-278835",
@@ -1403,17 +1441,17 @@
         "quote": "erapy activity (including in settings insensitive to PD-1) and tumor-selective pharmacodynamics consistent with its intended mechanism of action. &#160; &#x2022; XTX501 is currently advancing through investigational new drug (IND)-enabling studies, and Xilio plans to submit an IND application for XT"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712355",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-0000939767-26-000096",
@@ -1441,17 +1479,17 @@
         "quote": "the company expects topline results from the STELLAR-304 trial in the second half of 2026, depending on event rates. STELLAR-304 is a phase 3 pivotal trial evaluating zanzalintinib in combination with nivolumab versus sunitinib in previously untreated patients with advanced non-clear cell renal cell"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001493152-25-011441",
@@ -1479,17 +1517,17 @@
         "quote": "&#160; &#160; &#160; &#160; &#160; &#160; Item 8.01 Other Events &#160; On July 28, 2025, AIM ImmunoTech Inc. (the &#8220;Company&#8221;) reported positive data in a mid-year update from the ongoing Phase 2 clinical study evaluating its drug Ampligen&#174; (rintatolimod) combined with AstraZeneca&#8"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07361497",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2026-01-23",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001493152-26-005208",
@@ -1517,17 +1555,17 @@
         "quote": "extent such subsequent filing specifically references the information herein as being incorporated by reference in such filing. &#160; Item 8.01. Other Events. &#160; A Phase I/II Open Label Study of Durvalumab (Imfinzi) and Rintatolimod (Ampligen) in pancreatic cancer patients with stable disease P"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07361497",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2026-01-23",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001370053-25-000103",
@@ -1555,17 +1593,17 @@
         "quote": "btain the &#8220;optimum&#8221; commercial return for dostarlimab in all major markets of the world. 5. In 2020, after GSK acquired Tesaro, Tesaro and GSK decided to ignore these duties and conduct a clinical trial with their product Zejula&reg; (niraparib) in combination with Merck Sharp &amp; Dohm"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001599298-26-000014",
@@ -1593,17 +1631,17 @@
         "quote": "4 ILLUMINE (NCT07264075). This study will evaluate ivonescimab monotherapy and ivonescimab in combination with ligufalimab, Akeso&#8217;s proprietary anti-CD47 monoclonal antibody, against monotherapy pembrolizumab in a randomized three-arm study. The study is intended to be conducted in multiple co"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001599298-26-000004",
@@ -1640,8 +1678,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "public_record",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001193125-26-148777",
@@ -1669,17 +1707,17 @@
         "quote": "small cell lung cancer (&#8220;SCLC&#8221;). The Company will sponsor the clinical combination study and AstraZeneca will supply Imfinzi &#174; . The Company is advancing a multi-site global Phase 1 clinical trial for IDE849 in DLL3 upregulated solid tumor indications, including SCLC, neuroendocrine"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07361497",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2026-01-23",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001104659-26-002750",
@@ -1707,17 +1745,17 @@
         "quote": "anced solid tumors: a meta - analysis. Front Pharmacol 14:1228225 Replimune : RP1,RP2 ( vusolimogene oderparepvec ) https://replimune.com Chmielowski et al. (2023) Initial efficacy and safety of RP1 + nivolumab in patients with anti &#8211; PD1 &#8211; failed melanoma from the ongo ing phase 1/2 IGN"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07221149",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2025-10-27",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-0001193125-26-204944",
@@ -1745,17 +1783,17 @@
         "quote": "(R&amp;D) expenses for the three months ended March 31, 2026 totaled $95.7 million compared to $86.6 million for the three months ended December 31, 2025. The increase was primarily driven by higher clinical trial and personnel-related expenses to support our programs. General and administrative (G&"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT07361497",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2026-01-23",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-gdelt-67",
@@ -1783,17 +1821,17 @@
         "quote": "Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial | Company Announcement"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-gdelt-68",
@@ -1821,17 +1859,17 @@
         "quote": "BioNTech SE : Global Data for BioNTech and Bristol Myers Squibb PD - L1xVEGF - A Bispecific Pumitamig Shows Encouraging Efficacy in Patients with Non - Small Cell Lung Cancer in ROSETTA Lung - 02 Trial"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT06712316",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2024-12-02",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-gdelt-69",
@@ -1868,8 +1906,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-bms-gdelt-70",
@@ -1906,8 +1944,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-roche-gdelt-72",
@@ -1944,8 +1982,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-76",
@@ -1982,8 +2020,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-77",
@@ -2020,8 +2058,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-78",
@@ -2058,8 +2096,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-79",
@@ -2096,8 +2134,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-80",
@@ -2134,8 +2172,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-81",
@@ -2163,17 +2201,17 @@
         "quote": "Alembic Pharmaceuticals Limited Partner NATCO Pharma Limited receives USFDA Tentative Approval for Olaparib Tablets , 100 mg and 150 mg"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT02693535",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2016-02-26",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-82",
@@ -2201,17 +2239,17 @@
         "quote": "NATCO receives Tentative Approval for Olaparib Tablets from the U . S . FDA"
       },
       "registryMatch": {
-        "status": "exact",
+        "status": "probable",
         "nctId": "NCT02693535",
         "checkedAt": "2026-08-13",
-        "currentStatus": null,
+        "currentStatus": "RECRUITING",
         "firstPosted": "2016-02-26",
         "reasons": [
-          "drug matched to trial interventions in the monitored portfolio"
+          "asset name matched a trial intervention; indication, phase, and sponsor still require review"
         ]
       },
-      "evidence": "corroborated",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     },
     {
       "id": "sig-astrazeneca-gdelt-83",
@@ -2248,8 +2286,8 @@
           "no monitored trial studies this drug"
         ]
       },
-      "evidence": "company_asserted",
-      "reviewNote": "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential."
+      "evidence": "discovery_only",
+      "reviewNote": "Automated discovery candidate. The source quote and proposed registry link require human review before product use."
     }
   ]
 }

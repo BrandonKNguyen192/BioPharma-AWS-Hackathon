@@ -293,7 +293,7 @@ const TRIALS = JSON.parse(
 const ids = TRIALS.map((t) => t.nctId);
 const regParams = new URLSearchParams();
 regParams.set("query.id", ids.join(","));
-regParams.set("fields", "NCTId,StudyFirstPostDate,LeadSponsorName,OrgStudyIdInfo");
+regParams.set("fields", "NCTId,StudyFirstPostDate,LeadSponsorName,OrgStudyIdInfo,OverallStatus");
 regParams.set("pageSize", "100");
 const regUrl = `${CTG}?${regParams.toString()}`;
 let registryMeta = {};
@@ -457,9 +457,8 @@ await writeFile(join(OUT_DATA, "pipeline-signals.json"), JSON.stringify(final, n
 console.log(`\n✓ ${usable.length} signals (${withDrug.length} with a resolvable drug) → src/data/pipeline-signals.json`);
 
 /* ------------------------------------------------------------------ *
- * 4. Emit src/data/pipeline-radar.json in the dashboard's schema
- *    (src/lib/pipeline-radar.ts). Same real signals, joined to the
- *    registry — this is the file the Pipeline Radar UI renders.
+ * 4. Emit src/data/pipeline-radar.json as an unreviewed candidate queue in the
+ *    radar schema. Product code imports pipeline-radar-reviewed.json instead.
  * ------------------------------------------------------------------ */
 
 const REG = JSON.parse(
@@ -511,22 +510,18 @@ for (const s of usable) {
       quote: s.evidence.slice(0, 300),
     },
     registryMatch: {
-      status: joinedNct ? "exact" : "no_match_as_of",
+      status: joinedNct ? "probable" : "no_match_as_of",
       nctId: joinedNct,
       checkedAt: new Date().toISOString().slice(0, 10),
       currentStatus: meta?.status ?? null,
       firstPosted: joinedFirstPosted,
       reasons: joinedNct
-        ? ["drug matched to trial interventions in the monitored portfolio"]
+        ? ["asset name matched a trial intervention; indication, phase, and sponsor still require review"]
         : ["no monitored trial studies this drug"],
     },
-    evidence: joinedNct
-      ? "corroborated"
-      : s.sourceType === "sec_filing"
-        ? "public_record"
-        : "company_asserted",
+    evidence: "discovery_only",
     reviewNote:
-      "Regulatory/registry review: matched deterministically against the committed trial portfolio at build time. IND numbers are never published — FDA 21 CFR 312.130 keeps IND submissions confidential.",
+      "Automated discovery candidate. The source quote and proposed registry link require human review before product use.",
   });
 }
 
@@ -534,11 +529,11 @@ const radarFile = {
   schemaVersion: "1.1.0",
   generatedAt: new Date().toISOString(),
   checkedAt: new Date().toISOString().slice(0, 10),
-  scope: "Oncology pipeline announcements for sponsors in the monitored trial portfolio",
+  scope: "Unreviewed discovery candidates for assets in the monitored trial portfolio",
   sources: [
     "SEC EDGAR full-text search (8-K/10-K/10-Q)",
-    "GDELT DOC API (press-wire coverage)",
-    "ClinicalTrials.gov API v2 (registry join)",
+    "GDELT DOC API (news and press-wire index)",
+    "ClinicalTrials.gov API v2 (candidate registry join)",
   ],
   signals: radarSignals,
 };

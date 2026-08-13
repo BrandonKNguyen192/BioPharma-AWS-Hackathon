@@ -1,367 +1,367 @@
 {
   "schemaVersion": "1.0.0",
   "source": "ClinicalTrials.gov API v2",
-  "fetchedAt": "2026-08-13T21:26:31.061Z",
+  "fetchedAt": "2026-08-13T21:41:06.639Z",
   "trials": {
     "NCT07223047": {
       "firstPosted": "2025-10-31",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA256-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT03026140": {
       "firstPosted": "2017-01-20",
       "leadSponsor": "The Netherlands Cancer Institute",
       "internalId": "N16NCI",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT05048212": {
       "firstPosted": "2021-09-17",
       "leadSponsor": "M.D. Anderson Cancer Center",
       "internalId": "2021-0520",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07106762": {
       "firstPosted": "2025-08-06",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA244-0012",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06297226": {
       "firstPosted": "2024-03-07",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "CA088-1000",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07481110": {
       "firstPosted": "2026-03-18",
       "leadSponsor": "Société Algérienne de Formation et Recherche en Oncologie",
       "internalId": "SAFRO 02.001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07100080": {
       "firstPosted": "2025-08-03",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA244-0010",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07325136": {
       "firstPosted": "2026-01-08",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA258-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06615479": {
       "firstPosted": "2024-09-26",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "CA088-1007",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07361510": {
       "firstPosted": "2026-01-23",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0002",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06476808": {
       "firstPosted": "2024-06-26",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA231-0000",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT03681561": {
       "firstPosted": "2018-09-24",
       "leadSponsor": "Veronika Bachanova",
       "internalId": "BTCRC-HEM15-027",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06646276": {
       "firstPosted": "2024-10-17",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA245-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06288191": {
       "firstPosted": "2024-03-01",
       "leadSponsor": "Melanoma Institute Australia",
       "internalId": "MIA2023/490",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06756308": {
       "firstPosted": "2025-01-02",
       "leadSponsor": "Memorial Sloan Kettering Cancer Center",
       "internalId": "23-269",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT03848052": {
       "firstPosted": "2019-02-20",
       "leadSponsor": "UNICANCER",
       "internalId": "ESME LC",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06730750": {
       "firstPosted": "2024-12-12",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA238-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06712316": {
       "firstPosted": "2024-12-02",
       "leadSponsor": "BioNTech SE",
       "internalId": "BNT327-06",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06215118": {
       "firstPosted": "2024-01-22",
       "leadSponsor": "Pfizer",
       "internalId": "C1071030",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06855771": {
       "firstPosted": "2025-03-04",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA240-0009",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06561386": {
       "firstPosted": "2024-08-20",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA224-1093",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06773910": {
       "firstPosted": "2025-01-14",
       "leadSponsor": "SCRI Development Innovations, LLC",
       "internalId": "LUN 567",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06419634": {
       "firstPosted": "2024-05-17",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA235-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT03297606": {
       "firstPosted": "2017-09-29",
       "leadSponsor": "Canadian Cancer Trials Group",
       "internalId": "PM1",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06295159": {
       "firstPosted": "2024-03-06",
       "leadSponsor": "H. Lee Moffitt Cancer Center and Research Institute",
       "internalId": "MCC-22574",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06624475": {
       "firstPosted": "2024-10-03",
       "leadSponsor": "University of California, San Diego",
       "internalId": "CA209-1451",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07291076": {
       "firstPosted": "2025-12-18",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0006",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06764771": {
       "firstPosted": "2025-01-08",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA234-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07293351": {
       "firstPosted": "2025-12-19",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0008",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07221149": {
       "firstPosted": "2025-10-27",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0004",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06090539": {
       "firstPosted": "2023-10-19",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA123-1000",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07544589": {
       "firstPosted": "2026-04-22",
       "leadSponsor": "Dispatch Biotherapeutics",
       "internalId": "DISP-10-101",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT05896228": {
       "firstPosted": "2023-06-09",
       "leadSponsor": "Benjamin T Diamond, MD",
       "internalId": "20230227",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07680764": {
       "firstPosted": "2026-07-02",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA052-1000",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06712355": {
       "firstPosted": "2024-12-02",
       "leadSponsor": "BioNTech SE",
       "internalId": "BNT327-03",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT05651932": {
       "firstPosted": "2022-12-15",
       "leadSponsor": "K36 Therapeutics, Inc.",
       "internalId": "KTX-MMSET-001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT02693535": {
       "firstPosted": "2016-02-26",
       "leadSponsor": "American Society of Clinical Oncology",
       "internalId": "Pro00014171",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT04895709": {
       "firstPosted": "2021-05-20",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA052-002",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07339254": {
       "firstPosted": "2026-01-14",
       "leadSponsor": "University of Southern California",
       "internalId": "2N-25-8",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06153251": {
       "firstPosted": "2023-12-01",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "CA119-0002",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT02343042": {
       "firstPosted": "2015-01-21",
       "leadSponsor": "Karyopharm Therapeutics Inc",
       "internalId": "KCP-330-017",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07063745": {
       "firstPosted": "2025-07-14",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA240-0029",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT04912765": {
       "firstPosted": "2021-06-03",
       "leadSponsor": "National Cancer Centre, Singapore",
       "internalId": "CA209-7R9",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07492680": {
       "firstPosted": "2026-03-25",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA240-0005",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT04933903": {
       "firstPosted": "2021-06-22",
       "leadSponsor": "Brown University",
       "internalId": "BrUOG 397",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06708949": {
       "firstPosted": "2024-11-29",
       "leadSponsor": "M.D. Anderson Cancer Center",
       "internalId": "2024-1337",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07679061": {
       "firstPosted": "2026-07-01",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA209-1554",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT05558319": {
       "firstPosted": "2022-09-28",
       "leadSponsor": "PETHEMA Foundation",
       "internalId": "GEM21menos65",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07532902": {
       "firstPosted": "2026-04-16",
       "leadSponsor": "Memorial Sloan Kettering Cancer Center",
       "internalId": "26-037",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07195682": {
       "firstPosted": "2025-09-29",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA242-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT03521830": {
       "firstPosted": "2018-05-11",
       "leadSponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins",
       "internalId": "J1866",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07015242": {
       "firstPosted": "2025-06-11",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "CA082-1215",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07169708": {
       "firstPosted": "2025-09-12",
       "leadSponsor": "Ono Pharmaceutical Co., Ltd.",
       "internalId": "R1132-NIV-24",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06107738": {
       "firstPosted": "2023-10-30",
       "leadSponsor": "Barbara Ann Karmanos Cancer Institute",
       "internalId": "2022-082",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07361497": {
       "firstPosted": "2026-01-23",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06121843": {
       "firstPosted": "2023-11-08",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "CA088-1005",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT06618287": {
       "firstPosted": "2024-10-01",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA244-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07115745": {
       "firstPosted": "2025-08-11",
       "leadSponsor": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",
       "internalId": "IM060-0001",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT07221357": {
       "firstPosted": "2025-10-27",
       "leadSponsor": "Bristol-Myers Squibb",
       "internalId": "CA266-0003",
-      "status": null
+      "status": "RECRUITING"
     },
     "NCT04776395": {
       "firstPosted": "2021-03-01",
       "leadSponsor": "Emory University",
       "internalId": "STUDY00001731",
-      "status": null
+      "status": "RECRUITING"
     }
   }
 }

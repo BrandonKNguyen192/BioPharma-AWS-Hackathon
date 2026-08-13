@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const radar = JSON.parse(await readFile(new URL("../src/data/pipeline-radar-reviewed.json", import.meta.url), "utf8"));
+const discovery = JSON.parse(await readFile(new URL("../src/data/pipeline-radar.json", import.meta.url), "utf8"));
 const trials = JSON.parse(await readFile(new URL("../src/data/trials.json", import.meta.url), "utf8"));
 
 assert.equal(radar.schemaVersion, "1.0.0");
@@ -22,4 +23,11 @@ for (const signal of radar.signals) {
   }
 }
 
-console.log(`all radar checks pass (${radar.signals.length} reviewed signals)`);
+assert.match(discovery.scope, /unreviewed discovery/i);
+assert.equal(new Set(discovery.signals.map((signal) => signal.id)).size, discovery.signals.length, "discovery ids must be unique");
+for (const signal of discovery.signals) {
+  assert.equal(signal.evidence, "discovery_only", `${signal.id}: automatic candidates cannot claim reviewed evidence`);
+  assert.notEqual(signal.registryMatch.status, "exact", `${signal.id}: asset-only joins cannot be exact`);
+}
+
+console.log(`all radar checks pass (${radar.signals.length} reviewed, ${discovery.signals.length} discovery candidates)`);

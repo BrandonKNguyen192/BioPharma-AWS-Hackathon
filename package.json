@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "radar:collect": "node scripts/collect-announcements.mjs",
+    "radar:collect-reviewed": "node scripts/collect-reviewed-sources.mjs",
+    "radar:build": "node scripts/build-pipeline-signals.mjs",
     "test:radar": "node scripts/test-radar.mjs",
     "test:matcher": "tsx scripts/test-condition-gate.mts && tsx scripts/test-matcher.mts"
   },
