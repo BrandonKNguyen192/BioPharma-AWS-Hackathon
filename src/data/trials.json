@@ -1,0 +1,2195 @@
+{
+  "source": "ClinicalTrials.gov API v2",
+  "sponsor": "Bristol-Myers Squibb",
+  "fetchedAt": "2026-08-13T18:21:45.813Z",
+  "count": 60,
+  "trials": [
+    {
+      "nctId": "NCT06712316",
+      "title": "Safety, Efficacy, and Pharmacokinetics of BNT327 in Combination With Chemotherapy and Other Investigational Agents for Lung Cancer",
+      "officialTitle": "A Phase II/III, Multisite, Randomized Master Protocol for a Global Trial of BNT327 in Combination With Chemotherapy and Other Investigational Agents in First-line Non-small Cell Lung Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Non-small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Pembrolizumab",
+        "Carboplatin",
+        "Pemetrexed",
+        "Paclitaxel"
+      ],
+      "inclusion": [
+        "Have systemic treatment naive, histologically or cytologically confirmed diagnosis of Stage IIIB or IIIC (who are not amenable to curative surgery or radiotherapy) or Stage IV NSCLC per the Union Internationale contre le Cancer/American Joint Committee on Cancer staging system, 9th edition.",
+        "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1. Lesions treated after prior local treatment (radiotherapy, ablation, interventional procedures, etc.) are generally not considered as target lesions. If the lesion with prior local treatment is the only targeted lesion, evidence-based radiology must be provided to demonstrate disease progression (the single bone metastasis or the single central nervous system metastasis should not be considered as a measurable lesion).",
+        "Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "Adequate organ function as defined in the protocol. Key"
+      ],
+      "exclusion": [
+        "Have histologically or cytologically confirmed NSCLC with small-cell lung cancer or neuroendocrine histologic component.",
+        "Have received any of the following therapies or drugs within the noted time intervals prior to study treatment:",
+        "Previous chemotherapy (platinum-based) or PD(L)-1 for treating NSCLC in either neoadjuvant/adjuvant or locally advanced/metastatic setting.",
+        "Participants who received prior treatment with anti-VEGF monoclonal antibody, or PD(L)-1/VEGF bispecific antibody.",
+        "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment. Note: local, intranasal, intraocular, intra-articular or inhaled corticosteroids, short-term use (\\<=7 days) of corticosteroids for prophylaxis (e.g., prevention of contrast agent allergy) or treatment of non-autoimmune conditions (e.g., delayed hypersensitivity reactions caused by exposure to allergens) are allowed.",
+        "Have uncontrolled hypertension or poorly controlled diabetic conditions prior to study treatment.",
+        "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history (within 6 months prior to study entry) or risk of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra-abdominal abscess or esophageal and gastric varices. In addition, the participant must have undergone correction (or spontaneous healing) of the perforation/fistula and/or the underlying process causing fistula/perforation.",
+        "Participants with significant risk of hemorrhage (per investigator clinical judgment).",
+        "Participants have superior vena cava syndrome or symptoms of spinal cord compression. NOTE: Other protocol defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06712316"
+    },
+    {
+      "nctId": "NCT07221149",
+      "title": "A Study to Evaluate the Safety and Efficacy of Pumitamig in Combination With Chemotherapy Versus Nivolumab in Combination With Chemotherapy in Participants With Previously Untreated Advanced or Metastatic Gastric, Gastroesophageal Junction, or Esophageal Adenocarcinoma (ROSETTA Gastric-204)",
+      "officialTitle": "ROSETTA Gastric-204: A Blinded, Randomized, Phase 2/3 Study of Pumitamig in Combination With Chemotherapy Versus Nivolumab in Combination With Chemotherapy in Participants With Previously Untreated Advanced or Metastatic Gastric, Gastroesophageal Junction, or Esophageal Adenocarcinoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Untreated Advanced or Metastatic Gastric, Gastroesophageal Junction, or Esophageal Adenocarcinoma"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Folfox",
+        "Capox",
+        "Nivolumab"
+      ],
+      "inclusion": [
+        "* Participants must be previously untreated with systemic treatment for advanced/metastatic disease, histologically or cytologically confirmed advanced or metastatic gastric cancer (GC), gastroesophageal junction adenocarcinoma (GEJC) or distal esophageal adenocarcinoma (EAC). GEJ involvement can be confirmed via biopsy, endoscopy, or imaging.",
+        "Participants must have a documented programmed cell death-(ligand)1 (PD-L1) ≥ 1 or \\< 1 status for Phase 2, and document PD-L1 ≥ 1 status for the Phase 3 part of the study.",
+        "Participants must have documented human epidermal growth factor receptor 2 (HER2)-negative cancer, as determined according to local guidelines.",
+        "Participants must have measurable disease as defined by RECIST v1.1."
+      ],
+      "exclusion": [
+        "* Participants must not have untreated known central nervous system (CNS) metastases.",
+        "Participants must not have significant cardiovascular disease, such as myocardial infarction, unstable angina, arterial thrombosis, cerebrovascular accident within 6 months prior to randomization, uncontrolled hypertension (≥ 160 systolic, ≥ 100 diastolic mm Hg) despite optimal medical management, or congenital long QT syndrome.",
+        "Participants must not have evidence of major coagulation disorders (eg, hemophilia).",
+        "Participants must not have a history of deep vein thrombosis, pulmonary embolism, or any other significant thromboembolism within 3 months prior to randomization, unless the participant has been fully treated (eg, inferior vena cava filter placed) and/or adequately anticoagulated on a stable dose.",
+        "Participants must not have a history of abdominal fistula or gastrointestinal (GI) perforation within 6 months of randomization.",
+        "Participants must not have had major surgery, open biopsy, or significant traumatic injury within 28 days prior to randomization, or anticipation of the need for major surgery during the course of study intervention.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07221149"
+    },
+    {
+      "nctId": "NCT07195682",
+      "title": "A First-in-Human Study of BMS-986506 in Participants With Advanced Clear Cell Renal Cell Carcinoma (ccRCC)",
+      "officialTitle": "A Phase 1/1b Open-label, Multi-center Study of BMS-986506 in Participants With Advanced Clear Cell Renal Cell Carcinoma (ccRCC)",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Renal Cell Carcinoma"
+      ],
+      "interventions": [
+        "BMS-986506",
+        "Pumitamig",
+        "Ipilimumab"
+      ],
+      "inclusion": [
+        "* Participants must have histologically confirmed diagnosis of locally advanced or metastatic ccRCC.",
+        "For part 1: Participants must have already had at least two different treatment plans in the past, including immunotherapy and a targeted therapy.",
+        "For part 2: Participants must have had at least one standard treatment plan that included both a PD-1/L1 inhibitor and a VEGF-TKI (either together or one after the other).",
+        "Part 3: Participants must have had at least 1 standard treatment regimen (including a PD-1/L1 checkpoint inhibitor and/or a VEGF-TKI).",
+        "Part 4: Participants must not have received prior systemic therapy for metastatic RCC, but may have received prior adjuvant therapy for completely resected RCC with PD-1 inhibitor if recurrence occurred at least 6 months after the last dose of adjuvant or neoadjuvant therapy.",
+        "Eastern Cooperative Oncology Group performance status of 0 to 1."
+      ],
+      "exclusion": [
+        "* Inability to administer and/or tolerate oral medication without chewing, breaking, crushing, or otherwise altering the product dosage form.",
+        "Part 2A: Participants who have received more than 3 prior systemic regimens for locally advanced or metastatic ccRCC including prior treatment with HIF2a inhibitors.",
+        "Part 2A and Part 4: Participants who have received prior treatment with belzutifan (or another HIF2a inhibitor).",
+        "Part 3B and Part 4B: Participants who have received prior ipilimumab (or another anti-CTLA-4 containing antibody).",
+        "Participants who have hypoxia as defined by a pulse oximeter reading \\< 92% at rest or requires intermittent or chronic supplemental oxygen.",
+        "Participants who have received colony-stimulating factors (eg, G-CSF, GM-CSF or recombinant EPO) within 28 days prior to the first dose of study intervention.",
+        "Part 3 and Part 4: Participants with a history of Grade ≥3 immune-mediated AEs leading to discontinuation of prior immunotherapy.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07195682"
+    },
+    {
+      "nctId": "NCT07361510",
+      "title": "A Study to Evaluate the Efficacy of Pumitamig Versus Pembrolizumab in Participants With Previously Untreated Advanced Non-Small Cell Lung Cancer and PD-L1 ≥ 50%. (ROSETTA Lung-202)",
+      "officialTitle": "ROSETTA Lung-202: A Randomized, Double-Blind, Phase 3 Study of Pumitamig Monotherapy Compared to Pembrolizumab as First-line Treatment in Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer With PD-L1 ≥ 50%.",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Non-Small Cell Lung Cancer (NSCLC)"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Pembrolizumab"
+      ],
+      "inclusion": [
+        "* Participants must have a histologically or cytologically confirmed diagnosis of Non-Small Cell Lung Cancer (NSCLC) (squamous and nonsquamous) with Stage IIIB/IIIC or Stage IV disease.",
+        "Participants must have a programmed death ligand-1 (PD-L1) expression ≥ 50%.",
+        "Participants must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1.",
+        "Participants must have no prior systemic anti-tumor therapy for locally advanced or metastatic NSCLC.",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1."
+      ],
+      "exclusion": [
+        "* Participants must not have any documented actionable genomic alteration (AGA) for which first-line (1L) approved therapies are indicated.",
+        "Participants must not have any symptomatic untreated central nervous system (CNS) metastases, leptomeningeal metastases (carcinomatous meningitis) or spinal cord compression.",
+        "Participants must not have any significant cardiovascular impairment as evidenced by uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, or major thrombotic or embolic events or major hemorrhagic events (within 6 months prior to randomization), or significant risk of pulmonary hemorrhage.",
+        "Participants must not an active autoimmune disease.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07361510"
+    },
+    {
+      "nctId": "NCT07063745",
+      "title": "A Study to Compare the Combination of Navlimetostat (BMS-986504) With Pembrolizumab and Chemotherapy Versus Placebo Plus Pembrolizumab and Chemotherapy in First-line Metastatic Non-small Cell Lung Cancer Participants With Homozygous MTAP Deletion",
+      "officialTitle": "A Randomized Phase 2/3 Study of Navlimetostat (BMS-986504) in Combination With Pembrolizumab and Chemotherapy Versus Placebo Plus Pembrolizumab and Chemotherapy in First-line Metastatic Non-small Cell Lung Cancer Participants With Homozygous MTAP Deletion",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Metastatic Non-small Cell Lung Cancer With MTAP Deletion"
+      ],
+      "interventions": [
+        "BMS-986504",
+        "Pembrolizumab",
+        "Placebo",
+        "Cisplatin",
+        "Carboplatin",
+        "Pemetrexed",
+        "Paclitaxel",
+        "Nab-paclitaxel"
+      ],
+      "inclusion": [
+        "* Participants must have Metastatic (Stage IV or recurrent) non-small cell lung cancer (NSCLC) (as defined by the American Joint Committee on Cancer, Ninth Edition) with no prior systemic anti-cancer therapy for metastatic disease.",
+        "Participants must have histologically confirmed diagnosis of NSCLC and homozygous methylthioadenosine phosphorylase (MTAP) deletion or MTAP loss.",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "Participants must have at least 1 measurable lesion as per RECIST v1.1."
+      ],
+      "exclusion": [
+        "* Nonsquamous participants must not have documented targetable oncogenic mutation or actionable genetic alterations (AGAs) for which there is a standard of care (SoC) available as first-line (1L) therapy.",
+        "Participants must not have symptomatic brain metastases or spinal cord compression.",
+        "Participants must not have any prior systemic therapy (chemotherapy, immunotherapy, targeted therapy, or biological therapy) for metastatic non-small cell lung cancer (mNSCLC). Note: One cycle of SoC treatment prior to randomization will be allowed for participants who require immediate treatment if clinically indicated.",
+        "Participants must not have any known or suspected impairment of gastrointestinal function that may prohibit the ability to absorb or swallow an oral medication without chewing or crushing.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07063745"
+    },
+    {
+      "nctId": "NCT07361497",
+      "title": "A Study to Evaluate Pumitamig Versus Durvalumab Following Concurrent Chemoradiation Therapy in Participants With Unresectable Stage III Non-small Cell Lung Cancer (NSCLC) (ROSETTA Lung-201)",
+      "officialTitle": "ROSETTA Lung-201: A Randomized, Multicenter, Open-label Phase 3 Study of Pumitamig Monotherapy Compared to Durvalumab in Participants With Unresectable Stage III NSCLC Without Progression After Platinum-based Concurrent Chemoradiation Therapy.",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Non-small Cell Lung Cancer (NSCLC)"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Durvalumab"
+      ],
+      "inclusion": [
+        "* Participants must have a histologically- or cytologically-confirmed diagnoses of non-small cell lung cancer (NSCLC) with unresectable Stage III disease.",
+        "Participants must have received at least 2 cycles of platinum-based concurrent chemoradiotherapy (a total dose of radiation of at least 54 Gy).",
+        "Participants must have no progressive disease (PD) following treatment with concurrent chemoradiotherapy (CCRT).",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status (PS) score of 0 or 1."
+      ],
+      "exclusion": [
+        "* Participants with non-squamous histology must not have documented Epidermal Growth Factor Receptor (EGFR) and anaplastic lymphoma kinase (ALK) rearrangements.",
+        "Participants must not have an active autoimmune disease.",
+        "Participants must not have significant cardiovascular impairment such as uncontrolled hypertension (despite optimal medical treatment), congestive heart failure, active coronary disease (within 6 months prior to randomization), ventricular arrhythmias, major thrombotic or embolic events or major hemorrhagic events within 6 months prior to randomization, or significant risk of pulmonary hemorrhage.",
+        "Participants must not have advanced/clinically significant lung disease (within 6 months prior to randomization) or history of interstitial lung disease (ILD) or pneumonitis requiring treatment with systemic steroids (≥ Grade 2), or current or suspected ILD or pneumonitis.",
+        "Participants must not have any prior anticancer therapy (outside of CCRT) for locally advanced Stage III disease.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07361497"
+    },
+    {
+      "nctId": "NCT06756308",
+      "title": "A Study of Enasidenib in People With T-Cell Lymphoma",
+      "officialTitle": "A Phase 2 Study of Enasidenib in IDH2-Mutant Angioimmunoblastic T-Cell Lymphoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "T-cell Lymphoma"
+      ],
+      "interventions": [
+        "Enasidenib",
+        "Rituximab"
+      ],
+      "inclusion": [
+        "Screening Cohort (non-MSK patients only)",
+        "Age ≥18 years at time of consent",
+        "Has freely given written informed consent to participate in the study Treatment Cohort:",
+        "Pathologically-confirmed AITL at the enrolling institution, with confirmed IDH2 mutation (by MSK ddPCR). For R/R patients, disease must have relapsed or progressed after at least one systemic therapy, diagnostic tumor samples have at least 5% tumor.",
+        "Age ≥18 years at time of enrollment",
+        "Previous systemic anti-cancer therapy for AITL must have been discontinued at least 2 weeks or 5 half-lives (whichever is longer) prior to treatment. i) See section 6.2 Subject"
+      ],
+      "exclusion": [
+        "for guidelines regarding adjuvant and maintenance therapy for prior malignancy. ii) Patients who have received localized RT as part of their immediate prior therapy may be allowed to enroll with shorter washout period after discussion with the MSKCC Principal Investigator iii) Systemic corticosteroids must be tapered to 25 mg/day prednisone (or equivalent) upon start of investigational treatment iv) Topical steroids for treating cutaneous involvement of AITL is permitted",
+        "Performance status, as assessed in the ECOG grading system, ≤2",
+        "Laboratory criteria (use of GCSF and/or blood product transfusions to reach eligibility criteria must be discussed with the MSK PI on a case-by-case basis): i) Absolute neutrophil count ≥1.0 K/μL or ≥0.5 K/μL if due to lymphoma ii) Platelet count ≥80 K/μl or ≥50 K/μl if due to lymphoma iii) Calculated creatinine clearance ≥30 mL/min by the Modification of Diet in Renal Disease (MDRD) glomerular filtration rate iv) Total bilirubin ≤1.5x upper limit of normal (ULN) or ≤3x ULN if documented hepatic involvement with lymphoma, or ≤5x ULN if history of Gilbert's syndrome; AST and ALT ≤ 3x ULN; ≤ 5x ULN if due to lymphoma involvement",
+        "Measurable disease, defined by either of:",
+        "Revised International Working Group Classification for systemic lymphoma(13)",
+        "Atypical T lymphocytes quantifiable by flow cytometry or morphology in the peripheral blood or bone marrow",
+        "Women of reproductive potential\\* must have a negative serum or urine β human chorionic gonadotropin (β-hCG) pregnancy test. All women of reproductive potential must agree to use adequate methods of birth control throughout the study and for 30 days after the last dose of study drug. \\*A woman of reproductive potential is a sexually mature woman who: has not undergone a hysterectomy or bilateral oophorectomy; or has not been naturally postmenopausal for at least 24 consecutive months (i.e., has had menses at any time in the preceding 24 consecutive months)",
+        "Women must agree to not breastfeed during the study period",
+        "Male subjects must agree to practice true abstinence from sexual intercourse or to the use of highly effective contraceptive methods with non-pregnant female partners of childbearing potential at screening and throughout the course of the study, and should avoid conception with their partners during the course of the study and for 4 months following the last study treatment",
+        "Subject is willing and able to adhere to the study visit schedule and other protocol requirements Exclusion Criteria:",
+        "Any serious medical condition, laboratory abnormality, or psychiatric illness that would prevent the subject from signing the informed consent form.",
+        "On immunosuppressive therapy post-allogeneic stem cell transplantation at the time of screening, or with clinically significant graft-versus-host disease (GVHD). The use of a stable dose of oral steroid post-HSCT and/or topical steroids for ongoing skin GVHD is permitted after discussion with the study PI"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06756308"
+    },
+    {
+      "nctId": "NCT04912765",
+      "title": "Neoantigen Dendritic Cell Vaccine and Nivolumab in HCC and Liver Metastases From CRC",
+      "officialTitle": "An Open Label, Single-arm, Phase II Neoantigen (NA) Dendritic Cell (DC) Vaccine and Anti-PD1 (Nivolumab) as Adjuvant Treatment in Resected Hepatocellular Carcinoma (HCC) (Group A) and Liver Metastases From Colorectal Cancer (CRLM) (Group B)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Hepatocellular Carcinoma",
+        "Hepatocellular Cancer",
+        "Colorectal Cancer",
+        "Colorectal Carcinoma",
+        "Liver Metastases"
+      ],
+      "interventions": [
+        "Neoantigen Dendritic Cell Vaccine",
+        "Nivolumab"
+      ],
+      "inclusion": [
+        "HCC specific criteria (Group A):",
+        "Participants must have either newly diagnosed or recurrent HCC, confirmed by histology/cytology or clinically by AASLD criteria in cirrhotic subjects amenable for management with curative intent by resection (with or without the addition of local ablation), if they fulfil the following radiological criteria.",
+        "Up to three tumours, at least one with a diameter \\> 3cm",
+        "More than three tumours, none with a diameter \\> 5 cm",
+        "Recurrent HCCs are permitted if they were previously treated with curative intent (e.g. by surgery or ablative methods) and with liver-limited recurrence fulfilling criteria (a) and (b)",
+        "Child-Pugh Score 5 or 6",
+        "All participants are required to have imaging studies (CT chest, tri-phasic CT/MRI of the liver, contrast-enhanced CT/MRI of abdomen and pelvis and other suspected/known sites of disease, and bone scans if indicated) confirming no-extra-hepatic metastatic disease within 12 weeks prior to study enrolment. CRLM specific criteria (Group B):",
+        "Patients with histologically- or cytologically-diagnosed colorectal cancer with liver-limited metastases are eligible to enrol if:",
+        "There are no other sites of metastases aside from the liver confirmed by imaging studies (contrast-enhanced CT chest, abdomen and pelvis or contrast-enhanced CT chest and MRI abdomen and pelvis and other suspected sites of disease, and bone scans if indicated) at least 12 weeks prior to study enrolment AND",
+        "The liver metastases are amenable and planned for curative surgical resection with or without the addition of local ablation AND",
+        "The primary colorectal tumour had previously been resected or is amendable and planned for surgical resection.",
+        "Participants must have received peri-operative chemotherapy or are being planned for adjuvant chemotherapy after curative surgical resection"
+      ],
+      "exclusion": [
+        "HCC specific criteria (Group A):",
+        "Target Disease Exceptions",
+        "Known fibrolamellar HCC, sarcomatoid HCC, or mixed cholangiocarcinoma and HCC.",
+        "Any evidence of tumour metastasis or co-existing malignant disease.",
+        "Participants showing evidence of macrovascular invasion on imaging tests.",
+        "Participants who have undergone a liver transplant or those who are in the waiting list for liver transplantation.",
+        "Participants previously receiving any prior systemic therapy, trans-arterial embolization or chemoembolisation (TAE/TACE), selective internal radiation therapy (SIRT) and stereotactic radiation therapy (SBRT) for HCC. CRLM specific criteria (Group B)",
+        "Target Disease Exceptions a) Patients with extra-hepatic colorectal metastases. General",
+        "Medical Conditions",
+        "Active co-infection with:",
+        "Both hepatitis B and C as evidenced by detectable HBV surface antigen (HBs Ag) or HBV DNA and HCV RNA, OR",
+        "Hepatitis D infection in participants with hepatitis B"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT04912765"
+    },
+    {
+      "nctId": "NCT07293351",
+      "title": "A Study to Evaluate the Safety, Tolerability, and Efficacy of Pumitamig Alone or in Combination With Ipilimumab or Cabozantinib in Participants With Advanced Renal Cell Carcinoma (RCC) (ROSETTA RCC-208)",
+      "officialTitle": "ROSETTA RCC-208: A Phase 1/2 Open-label, Multi-center, Randomized Study of Pumitamig Alone or in Combination With Ipilimumab or Cabozantinib in Participants With Advanced Renal Cell Carcinoma (RCC)",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Advanced Renal Cell Carcinoma (RCC)"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Ipilimumab",
+        "Cabozantinib"
+      ],
+      "inclusion": [
+        "* Participants must have a histologically confirmed diagnosis of locally advanced, unresectable (not amenable to curative surgery or radiation therapy) or metastatic Renal Cell Carcinoma (RCC).",
+        "Participants must have clear cell RCC (ccRCC) or non-clear cell RCC (nccRCC) may be enrolled in Part 1. Note: Part 2 may only enroll participants with ccRCC.",
+        "Participants may have favorable, intermediate or poor risk disease categories.",
+        "Participants must not have received prior systemic therapy for metastatic RCC, with the following exceptions: i) One prior adjuvant or neoadjuvant therapy for completely resectable RCC is allowed if such therapy did not include an agent that targets vascular endothelial growth factor (VEGF) or VEGF receptors and if recurrence occurred at least 6 months after the last dose of adjuvant or neoadjuvant therapy. ii) For Part 1A participants: Prior systemic therapy in the metastatic setting is allowed if the participant has not received any therapy targeting cytotoxic T-lymphocyte antigen 4 (CTLA-4) (e.g., ipilimumab). iii) For Part 1B participants: Prior systemic therapy in the metastatic setting is allowed if the participant has not received prior treatment with cabozantinib. \\- Participants must have measurable disease as per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1."
+      ],
+      "exclusion": [
+        "* Participants must not have any untreated known CNS metastases.",
+        "Participants must not have a condition requiring systemic treatment with either corticosteroids (\\> 10 mg daily prednisone equivalent) or other immunosuppressive medications within 14 days of Cycle 1 Day1 (C1D1).",
+        "Participants must not have a history of interstitial lung disease or pneumonitis.",
+        "Participants must not have an uncontrolled pleural or pericardial effusion requiring recurrent therapeutic drainage procedures.",
+        "Participants must not have significant cardiovascular disease, such as myocardial infarction, unstable angina, arterial thrombosis, cerebrovascular accident within 6 months prior to C1D1, uncontrolled hypertension (≥ 150 systolic, ≥ 90 diastolic mm Hg) despite optimal medical management, or congenital long QT syndrome.",
+        "Participants must not have a urine protein ≥ 2+ and 24 hour urine protein ≥ 1 g at baseline.",
+        "Participants must not have evidence of major coagulation disorders.",
+        "Participants must not have a history of deep vein thrombosis, pulmonary embolism, or any other significant thromboembolism within 6 months prior to C1D1.",
+        "Participants must not have a history of abdominal fistula or gastrointestinal (GI) perforation within 6 months.",
+        "Participants must not have had a major surgery or trauma within 28 days prior to C1D1.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07293351"
+    },
+    {
+      "nctId": "NCT07492680",
+      "title": "A Study of BMS-986504 Monotherapy and in Combination With Other Agents in Participants With Advanced and/or Metastatic Solid Tumors With Homozygous MTAP Deletion (MountainTAP-5)",
+      "officialTitle": "A Phase 2 Open-Label, Multi-Center Study of BMS-986504 as Monotherapy and in Combination With Other Agents in Participants With Advanced and/or Metastatic Solid Tumors With Homozygous MTAP Deletion",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Solid Tumors"
+      ],
+      "interventions": [
+        "BMS-986504",
+        "Daraxonrasib",
+        "Nivolumab + Relatlimab FDC",
+        "Temozolomide",
+        "Pumitamig",
+        "Pemetrexed",
+        "Carboplatin",
+        "Nab-paclitaxel",
+        "Gemcitabine",
+        "Paclitaxel"
+      ],
+      "inclusion": [
+        "Participant must have histologically confirmed diagnosis of advanced and/or metastatic solid tumor malignancy with homozygous deletion of the MTAP gene detected in tumor tissue.",
+        "Depending on the cohort enrolled, participants must have received standard therapies appropriate for their tumor type and stage with disease progression on or after the most recent treatment (there must be no available treatment with curative intent or participant is ineligible or declines treatment) or be treatment-naïve with no prior systemic anticancer therapy for their unresectable or metastatic disease.",
+        "Participant must have presence of at least one measurable tumor lesion per RECIST v1.1 or mRECIST at baseline.",
+        "Coagulation function: International normalized ratio (INR) and activated partial thromboplastin time (APTT) must be ≤ 1.5 × ULN; subjects with liver metastasis or liver cancer must be ≤ 2 × ULN.",
+        "Participant must have Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+      ],
+      "exclusion": [
+        "Participants must not have prior treatment with a PRMT5 or Methionine adenosyl transferase 2A (MAT2A) inhibitor.",
+        "Participants must not have active brain metastases or carcinomatous meningitis. Participants are eligible if brain metastases are adequately treated, and participants are neurologically stable for at least 2 weeks prior to enrollment without the use of corticosteroids or are on a stable or decreasing dose of ≤ 10 mg daily prednisone (or equivalent).",
+        "Participants must not have history of gastrointestinal disease or other gastrointestinal conditions within 6 months prior to enrollment (including uncontrolled nausea, vomiting, malabsorption syndrome or non-gastrointestinal fistula, gastrointestinal perforation, or intra-abdominal abscess) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+        "Participants must not have inadequate organ function, as determined by laboratory testing within the screening period.",
+        "Participants must not have active viral HBV or HCV hepatitis.",
+        "Other protocol defined inclusion/exclusion criteria applies."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07492680"
+    },
+    {
+      "nctId": "NCT07106762",
+      "title": "Phase 2/3 Trial of Izalontamab Brengitecan vs Platinum-based Chemotherapy for Metastatic Urothelial Cancer With Disease Progression on or After Immunotherapy",
+      "officialTitle": "IZABRIGHT-Bladder01: A Randomized, Open-label, Phase 2/3 Trial of Izalontamab Brengitecan Versus Platinum-based Chemotherapy for Metastatic Urothelial Cancer in Participants With Disease Progression on or After an Immunotherapy-based Treatment",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Urothelial Cancer"
+      ],
+      "interventions": [
+        "Iza-bren",
+        "Cisplatin",
+        "Gemcitabine",
+        "Carboplatin"
+      ],
+      "inclusion": [
+        "Participants must have histologically confirmed advanced urothelial carcinoma.",
+        "Participants must be eligible to receive platinum-based chemotherapy.",
+        "Participants must be Anti-PD-(L)1-experienced (in locally advanced or metastatic setting), either in combination with or sequential to another systemic therapy.",
+        "Participants treated only in the peri-operative setting must have relapsed within 12 months of the last dose of the treatment.",
+        "Participants must have ≥ 1 measurable lesion per RECIST v1.1.",
+        "Participants must have Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1."
+      ],
+      "exclusion": [
+        "Participants must not have platinum-based chemotherapy exposure within 12 months.",
+        "Participants must not have received \\>2 prior regimens irrespective of the setting.",
+        "Participants must not have prior ADC therapy targeting EGFR or HER3.",
+        "Participants must not have prior therapy with topoisomerase 1 inhibitor.",
+        "Participants must not have active, untreated brain metastases.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07106762"
+    },
+    {
+      "nctId": "NCT07100080",
+      "title": "Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)",
+      "officialTitle": "IZABRIGHT-Lung01: A Randomized, Open-label, Phase 2/3 Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy in Patients With EGFR-mutated Non-small Cell Lung Cancer and Disease Progression on EGFR Tyrosine Kinase Inhibitor Therapy",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Non-Small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "Iza-bren",
+        "Carboplatin",
+        "Cisplatin",
+        "Pemetrexed"
+      ],
+      "inclusion": [
+        "Non-squamous NSCLC, not amenable to treatment in curative intent.",
+        "Documented evidence of EGFR mutation (exon 19 deletion, L858R mutation).",
+        "Progressive disease on a 3rd-generation (such as osimertinib, furmonertinib, lazertinib,...) EGFR-TKI-based mono- or combination therapy regimen as the most recent line of therapy in an adjuvant, locally advanced, or metastatic treatment setting.",
+        "Eligible to receive a platinum-based doublet chemotherapy regimen (either cisplatin or carboplatin in combination with pemetrexed)."
+      ],
+      "exclusion": [
+        "Inadequate organ function and/or bone marrow reserve.",
+        "Leptomeningeal metastases or spinal cord compression.",
+        "Poorly controlled systemic medical conditions.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07100080"
+    },
+    {
+      "nctId": "NCT06764771",
+      "title": "A Study of BMS-986488 as Monotherapy and Combination Therapy in Participants With Advanced Malignant Tumors",
+      "officialTitle": "A Phase 1/1b Open-label Study of BMS-986488 as Monotherapy and Combination Therapy in Participants With Advanced Malignant Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Advanced Malignant Tumors"
+      ],
+      "interventions": [
+        "BMS-986488",
+        "Adagrasib",
+        "Cetuximab",
+        "Nivolumab"
+      ],
+      "inclusion": [
+        "Participant must be ≥ 18 years of age.",
+        "Histologically confirmed diagnosis of a locally advanced and unresectable or metastatic solid tumor malignancy with any of the following tumor types:.",
+        "Part 1A: clear-cell renal cell carcinoma (ccRCC), clear-cell ovarian cancer (ccOC), non-small cell lung cancer (NSCLC), colorectal cancer (CRC), and pancreatic ductal adenocarcinoma (PDAC).",
+        "Parts 2A, 1D, 2D: ccRCC. i) Part 1B: solid tumors with KRAS G12C mutation. ii) Part 2B: NSCLC with KRAS G12C mutation. iii) Parts 1C, 2C: colorectal cancer (CRC) with KRAS G12C mutation.",
+        "Participants must have an Eastern Cooperative Oncology Groups (ECOG) Performance Status of 0 or 1.",
+        "Participants must have measurable disease per RECIST v1.1."
+      ],
+      "exclusion": [
+        "Untreated central nervous system (CNS) metastases.",
+        "Leptomeningeal metastasis (carcinomatous meningitis).",
+        "Impaired cardiac function or clinically significant cardiac disease.",
+        "For Parts 1B, 1C, 2B, 2C only (combination with adagrasib):. i) History of pneumonitis or interstitial lung disease (ILD). ii) History of prior severe cutaneous adverse reactions (SCARs), including Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN). \\- Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06764771"
+    },
+    {
+      "nctId": "NCT07015242",
+      "title": "A Study of the Efficacy and Safety of Lisocabtagene Maraleucel (Liso-cel) as First-Line Therapy in Adults With Transplant-Ineligible Primary Central Nervous System Lymphoma",
+      "officialTitle": "The CAROLYN Trial: Lisocabtagene Maraleucel as First-Line Therapy for Primary Central Nervous System Lymphoma (PCNSL) in Transplant-Ineligible Patients",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Lymphoma"
+      ],
+      "interventions": [
+        "Rituximab",
+        "Methotrexate",
+        "Procarbazine",
+        "Temozolomide",
+        "Liso-cel",
+        "Fludarabine",
+        "Cyclophosphamide",
+        "Calcium folinate"
+      ],
+      "inclusion": [
+        "* Participant must be 18 years or older at the time of signing the informed consent form (ICF).",
+        "Histologically confirmed primary central nervous system (CNS) lymphoma (PCNSL) prior to screening, as assessed by local pathology.",
+        "Transplant-ineligible based on physician's assessment and meeting at least one of the following criteria: age ≥65 years or HCT-CI (Hematopoietic Cell Transplantation-specific Comorbidity Index) score ≥3.",
+        "Participant must be suitable, per investigator, to receive a high dose methotrexate (HD-MTX) based treatment regimen.",
+        "Prior to signing ICF, anti-cancer therapy for the treatment of PCNSL must be limited to HD-MTX based standard of care regimens with a minimum of 4 and maximum of 6 doses of MTX. Corticosteroids used as part of standard-of-care management for PCNSL symptom control are permitted prior to ICF signature but must be discontinued at the time of ICF signature. For medical conditions other than PCNSL, non-therapeutic corticosteroids use may be permitted on study.",
+        "Prior to ICF enrollment, participant's disease must be sensitive to prior high-dose methotrexate-based (HD-MTX) regimens, as demonstrated by a complete response (CR, no remaining signs of PCNSL) or a partial response (PR, signs of PNCSL mostly gone) per Investigator's assessment, based on the International Primary CNS Lymphoma Collaborative Group (IPCG) criteria.",
+        "Eastern Cooperative Oncology Group (ECOG) performance status of 0, 1, or 2.",
+        "Individuals of childbearing potential (IOCBP) must have a negative highly sensitive pregnancy test within 24 hours prior to the start of study intervention."
+      ],
+      "exclusion": [
+        "* Participant has a diagnosis of secondary CNS lymphoma due to systemic disease.",
+        "Primary intraocular lymphoma (PIOL)/ Primary vitreoretinal lymphoma (PVRL), isolated cerebrospinal fluid (CSF) disease, or a relapsed or refractory PCNSL.",
+        "Any significant medical condition including the presence of laboratory abnormalities, which places the participant at unacceptable risk if he/she was to participate in the study based on investigator's judgement.",
+        "History of another primary malignancy that has not been in remission for ≥2 years.",
+        "Prior treatment with CAR T-cell or any other gene therapy product that utilizes human genome-editing technology.",
+        "History of or active human immunodeficiency virus (HIV).",
+        "Active hepatitis B or active hepatitis C.",
+        "Active autoimmune disease requiring immunosuppressive therapy.",
+        "History of prior allogeneic transplant, or solid organ transplant requiring immunosuppressive therapy.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07015242"
+    },
+    {
+      "nctId": "NCT06624475",
+      "title": "Neoadjuvant Nivolumab + Relatlimab (Opdualag) Versus Nivolumab for Resectable High-Risk Basal Cell Carcinoma",
+      "officialTitle": "Randomized Phase II Trial Neoadjuvant Nivolumab + Relatlimab (Opdualag) Versus Nivolumab for Resectable High-Risk Basal Cell Carcinoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Basal Cell Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Relatlimab plus Nivolumab"
+      ],
+      "inclusion": [
+        "Ability to understand and the willingness to sign a written informed consent document.",
+        "Participants must have histologically or cytologically confirmed basal cell carcinoma.",
+        "Participants must have high risk BCC as defined by size 20 mm or greater in the head and neck region or 40 mm or greater for the trunk/extremities.",
+        "Participants must have surgically resectable BCC that is at increased risk for cosmetic disfigurement, functional defects, poor oncologic control, or anticipated to require skin grafting or free flap reconstruction per investigator assessment.",
+        "Participants must have treatment naive BCC.",
+        "Aged 18 years or older.",
+        "Eastern Cooperative Oncology Group Performance Status 0 or 1",
+        "Demonstrates adequate organ function as defined below: Adequate bone marrow function",
+        "Absolute neutrophil count ≥ 1,500/microliter",
+        "Platelets ≥ 100,000/microliter Adequate hepatic function",
+        "Total bilirubin \\>1.5 x institutional upper limit of normal (except participants with Glibert Syndrome who must have a total bilirubin level of \\<3.0xULN)",
+        "Aspartate aminotransferase (AST or SGOT) ≤ 3 x institutional upper limit of normal"
+      ],
+      "exclusion": [
+        "Is currently receiving any other investigational agents.",
+        "Has participated in a study of an investigational product and received study treatment or used an investigational device within 4 weeks of the first dose of study treatment.",
+        "Hypersensitivity to Opdualag, nivolumab, or any of their excipients.",
+        "Presence of untreated (symptomatic) central nervous system metastases.",
+        "Presence of leptomeningeal metastatic disease.",
+        "Treatment with any live / attenuated vaccine within 30 days of first study treatment.",
+        "Radiation therapy within 2 weeks prior to first study treatment. Participants must have recovered (i.e., Grade ≤1 or at baseline) from radiation related toxicities prior to first study treatment.",
+        "Participants with a condition requiring systemic treatment with either corticosteroids (\\> 10 mg daily prednisone equivalent) within 14 days or other immunosuppressive medications within 30 days of randomization. Note: Inhaled or topical steroids, and adrenal replacement steroid doses \\> 10 mg daily prednisone equivalent, are permitted in the absence of active autoimmune disease.",
+        "Participants with an active, known, or suspected autoimmune disease. Note: Participants with type I diabetes mellitus, hypothyroidism only requiring hormone replacement, skin disorders (such as vitiligo, psoriasis, or alopecia) not requiring systemic treatment, or conditions not expected to recur in the absence of an external trigger are permitted to enroll.",
+        "Prior allogeneic tissue/solid organ transplant.",
+        "Severe uncontrolled cardiac disease within 6 months of screening, including but not limited to poorly controlled hypertension , unstable angina, myocardial infarction, congestive heart failure (New York Heart Association Class II or greater), pericarditis within the previous 6 months, cerebrovascular accident, or clinically significant uncontrolled cardiac arrhythmias.",
+        "Any prior history of myocarditis and/or current diagnosis of myocarditis, regardless of etiology."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06624475"
+    },
+    {
+      "nctId": "NCT07680764",
+      "title": "A Study To Assess the Safety, Tolerability, and Efficacy of Imzokitug in Combination With Pumitamig and Platinum-Doublet Chemotherapy (PDCT) Versus Pumitamig and PDCT as First-line Treatment for Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+      "officialTitle": "A Phase 2, Randomized, Open-label, Study Assessing the Safety, Tolerability and Efficacy of Imzokitug in Combination With Pumitamig and Platinum-Doublet Chemotherapy (PDCT) Versus Pumitamig and PDCT as First-line Treatment for Participants With Locally Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Locally Advanced Non-Small Cell Lung Cancer (NSCLC)",
+        "Metastatic Non-Small Cell Lung Cancer (NSCLC)"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Imzokitug"
+      ],
+      "inclusion": [
+        "* Participants must have histologically confirmed diagnosis of stage IV non-small cell lung cancer (NSCLC) (squamous or non-squamous) or recurrent unresectable disease per the American joint committee on cancer (AJCC) Staging System 9th edition.",
+        "Participants must have no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "Tumor tissue (fresh or archival) obtained within 5 months of enrollment (signing of informed consent) for each participant must be submitted by the site.",
+        "Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "Participants must have measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1."
+      ],
+      "exclusion": [
+        "* Participants must not have any documented actionable genomic alterations (AGAs) for which first line approved targeted therapies are indicated.",
+        "Participants must not have prior treatment with immuno-oncology therapies.",
+        "Participants must not have untreated central nervous system (CNS) metastases.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07680764"
+    },
+    {
+      "nctId": "NCT06712355",
+      "title": "Safety and Efficacy of BNT327, an Investigational Therapy in Combination With Chemotherapy for Patients With Untreated Small-cell Lung Cancer",
+      "officialTitle": "A Phase III, Multisite, Double-blinded Randomized Trial of BNT327 in Combination With Chemotherapy (Etoposide/Carboplatin) Compared to Atezolizumab in Combination With Chemotherapy (Etoposide/Carboplatin) in Participants With First-line Extensive-stage Small-cell Lung Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Extensive-stage Small-cell Lung Cancer"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Atezolizumab",
+        "Etoposide",
+        "Carboplatin (or cisplatin if carboplatin is not tolerated)"
+      ],
+      "inclusion": [
+        "Have histologically or cytologically confirmed ES-SCLC (using the AJCC \\[American Joint Committee on Cancer\\] tumor node metastasis staging system combined with Veterans Administration Lung Study Group \\[VALG\\]'s two stage classification scheme). For AJCC tumor node metastasis staging system: AJCC 8th edition stage IV (T any, N any, M1a/b/c), or T3\\~4 for multiple lung nodules or tumor/nodule volume that cannot be encompassed in a tolerable radiotherapy plan.",
+        "Have not had prior systemic therapy for ES-SCLC. However, participants with prior chemoradiotherapy for limited-stage-SCLC must have been treated with curative intent and had a treatment-free interval of at least 6 months after the last chemotherapy, radiotherapy, or chemoradiotherapy before diagnosis of ES-SCLC to be eligible.",
+        "Have at least one measurable lesion as the targeted lesion based on RECIST v1.1. Lesions treated after prior local treatment (radiotherapy, ablation, interventional procedures, etc.) are generally not considered as target lesions. If the lesion with prior local treatment is the only targeted lesion, evidence-based radiology must be provided to demonstrate disease progression (the single bone metastasis or the single central nervous system metastasis should not be considered as a measurable lesion).",
+        "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "Adequate hematologic and organ function as defined in the protocol."
+      ],
+      "exclusion": [
+        "Have histologically or cytologically confirmed SCLC with combined histologies.",
+        "Have received any of the following therapies or drugs within the noted time intervals prior to study treatment:",
+        "Within 2 weeks: small molecule agents with half-life of \\<7 days; radiation outside the thoracic cavity including whole brain radiation. Of note, other local radiation for brain lesions (not whole brain) is allowed; local radiation for bone lesions is allowed. Palliative bone radiation or brain stereotactic radiosurgery would not require a washout period, but participants should recover from radiotherapy-related toxicity.",
+        "Within 4 weeks: radiation involving the thoracic cavity; small molecule targeted agents with half-life of ≥7 days; monoclonal antibodies, antibody-drug conjugates, radioimmunoconjugates, or T-cell or other cell-based therapies.",
+        "Have received prior treatment with anti-vascular endothelial growth factor (VEGF) monoclonal antibody, or programmed death (ligand)-1 (PD\\[L\\]-1)/VEGF bispecific antibody.",
+        "Have received systemic corticosteroids (at a dosage greater than 10 mg/day of prednisone or an equivalent dose of other corticosteroids) within 7 days prior to the initiation of study treatment. Note: local, intranasal, intraocular, intra-articular or inhaled corticosteroids, short-term use (≤7 days) of corticosteroids for prophylaxis (e.g., prevention of contrast agent allergy) or treatment of non-autoimmune conditions (e.g., delayed hypersensitivity reactions caused by exposure to allergens) are allowed.",
+        "Have the following central nervous system metastases:",
+        "Participants with untreated brain metastases that are symptomatic or large (e.g., greater than 2 cm).",
+        "Participants with treated central nervous system (CNS) metastases who are not neurologically stable or on steroids (at a dosage greater than 10 mg/Day of prednisone or an equivalent dose of other corticosteroid) within 7 days before initiating study treatment of this study.",
+        "Participants with known leptomeningeal metastases.",
+        "Have uncontrolled hypertension or poorly controlled diabetes prior to study treatment.",
+        "Have a serious or non-healing wound, or (incompletely healed) bone fracture. This includes history of abdominal fistula, tracheoesophageal fistula, gastrointestinal perforation, or intra-abdominal abscess for which an interval of 6 months must pass before study entry. In addition, the participant must have undergone correction (or spontaneous healing) of the perforation/fistula and/or the underlying process causing the fistula/perforation."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06712355"
+    },
+    {
+      "nctId": "NCT06615479",
+      "title": "A Study to Compare the Efficacy and Safety of BMS-986393 Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma (QUINTESSENTIAL-2)",
+      "officialTitle": "A Phase 3, Randomized, Open-Label, Multicenter Study to Compare the Efficacy and Safety of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR-T Cell Therapy, Versus Standard Regimens in Adult Participants With Relapsed or Refractory and Lenalidomide-exposed Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Relapsed or Refractory Multiple Myeloma (RRMM)"
+      ],
+      "interventions": [
+        "BMS-986393",
+        "Cyclophosphamide",
+        "Fludarabine",
+        "Daratumumab",
+        "Pomalidomide",
+        "Dexamethasone",
+        "Carfilzomib"
+      ],
+      "inclusion": [
+        "* Participants must have relapsed or refractory multiple myeloma (RRMM).",
+        "Participants must have received at least 1 but no greater than 3 prior multiple myeloma (MM) regimens which may include a proteasome inhibitor (PI), an immunomodulatory drug (IMiD), and an anti-CD38 monoclonal antibody and have prior exposure to lenalidomide.",
+        "Participants must have a documented diagnosis of MM as per International Myeloma Working Group Criteria.",
+        "Participants must have measurable disease during screening.",
+        "Participants must have adequate organ function.",
+        "Participants must have an Eastern Cooperative Oncology group performance status 0 or 1."
+      ],
+      "exclusion": [
+        "* Participants must not have known active or history of central nervous system (CNS) involvement of Multiple Myeloma (MM).",
+        "Participants must not have solitary plasmacytomas or non-secretory myeloma without other evidence of measurable disease.",
+        "Participants must not need urgent treatment due to rapidly progressing MM.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06615479"
+    },
+    {
+      "nctId": "NCT07291076",
+      "title": "A Study to Evaluate the Safety and Tolerability of Pumitamig Alone or In Combination With Ipilimumab in Participants With First-Line Advanced or Unresectable Hepatocellular Carcinoma (HCC) (ROSETTA HCC-206)",
+      "officialTitle": "ROSETTA HCC-206: An Open-Label, Multi-Center, Randomized Phase 1/2 Study of Pumitamig Alone or In Combination With Ipilimumab in Participants With First-Line Advanced or Unresectable Hepatocellular Carcinoma (HCC)",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Hepatocellular Carcinoma (HCC)"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "Ipilimumab"
+      ],
+      "inclusion": [
+        "* Participants must have a histologically confirmed diagnosis of locally advanced or unresectable Hepatocellular Carcinoma (HCC).",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "Participants must have no prior systemic therapy for advanced/ unresectable HCC.",
+        "Participants must have measurable disease as per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1."
+      ],
+      "exclusion": [
+        "* Participants must not have significant bleeding or coagulation disorders or other obvious bleeding risk evidence.",
+        "Participants must not have an organ transplant or autoimmune disease.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07291076"
+    },
+    {
+      "nctId": "NCT06618287",
+      "title": "A Study to Evaluate the Safety, Tolerability, Drug Levels, and Preliminary Efficacy of BMS-986507 Combinations in Adult Participants With Advanced Solid Tumors",
+      "officialTitle": "A Phase 1/2a, Open-label, Dose-finding Study to Evaluate the Safety, Tolerability, Pharmacokinetics and Preliminary Efficacy of BMS-986507 (BL-B01D1) Combinations in Adult Participants With Advanced Solid Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Lung Cancer",
+        "Breast Cancer"
+      ],
+      "interventions": [
+        "BMS-986507",
+        "Osimertinib",
+        "Pembrolizumab",
+        "Nivolumab",
+        "Pumitamig"
+      ],
+      "inclusion": [
+        "* Participants must have at least one measurable lesion per response evaluation criteria in solid tumors.",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1.",
+        "Participants must have a life expectancy of at least 3 months at the time of the first dose.",
+        "Group A: Participants must have pathologically confirmed locally advanced or metastatic NSCLC with an EGFR exon 19 deletion or L858R mutation in exon 21, either alone or in combination with other EGFR mutations, which may include T790M in exon 20. Participants with other EGFR mutations (including but not limited to, exon 21 L861Q, exon 18 G719X, and exon 20 S768I mutations, etc.) will also be allowed",
+        "Group B: Participants must have pathologically confirmed locally advanced or metastatic NSCLC.",
+        "Group C: Participants must have pathologically confirmed locally-advanced, recurrent inoperable, or metastatic TNBC or ER-low, HER2-negative BC.",
+        "Group D: Participants must have pathologically confirmed locally-advanced, recurrent inoperable, or metastatic TNBC per ASCO/CAP criteria, based on the most recently analyzed biopsy or another pathology specimen.",
+        "Group E: Participants must have pathologically confirmed locally advanced or metastatic NSCLC, not amenable to treatment in curative intent."
+      ],
+      "exclusion": [
+        "* Participants must not have any mixed Small Cell Lung Cancer (SCLC) and Non-Small Cell Lung Cancer (NSCLC) histology.",
+        "Participants with known mutations in EGFR will be excluded (Group A,B and E).",
+        "Participants must not have a history of serious recurrent infections.",
+        "Participants must not have a history of severe heart disease.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06618287"
+    },
+    {
+      "nctId": "NCT07221357",
+      "title": "A Study to Evaluate the Safety and Efficacy of Pumitamig in Combination With Chemotherapy Versus Bevacizumab in Combination With Chemotherapy in Participants With Previously Untreated, Unresectable, or Metastatic Colorectal Cancer",
+      "officialTitle": "ROSETTA CRC-203: A Blinded, Randomized Phase 2/3 Study of Pumitamig in Combination With Chemotherapy Versus Bevacizumab in Combination With Chemotherapy in Participants With Previously Untreated, Unresectable, or Metastatic Colorectal Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE2/PHASE3",
+      "conditions": [
+        "Untreated, Unresectable, or Metastatic Colorectal Cancer"
+      ],
+      "interventions": [
+        "Pumitamig",
+        "FOLFOX",
+        "FOLFIRI",
+        "Bevacizumab",
+        "CAPOX"
+      ],
+      "inclusion": [
+        "* Participant must previously untreated, histologically confirmed recurrent or metastatic colorectal adenocarcinoma, not amenable to curative surgery.",
+        "Participant must have no known presence of mismatch repair deficient (dMMR) or microsatellite instability-high (MSI-H) colorectal cancer (CRC) per historical results (a validated test should be used).",
+        "Participant must have no known presence of the gene that encodes the protein B-Raf (BRAF) V600E mutation per local testing.",
+        "Participant must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) v1.1."
+      ],
+      "exclusion": [
+        "* Participant must not have any untreated known central nervous system (CNS) metastases including brain, leptomeningeal and/or spinal cord compression.",
+        "Participant must not have any prior malignancy active within the previous 2 years, except for locally curable cancers that have been apparently cured and considered to be of low risk of recurrence.",
+        "Participant must not have significant cardiovascular disease, such as myocardial infarction, unstable angina, arterial thrombosis or cerebrovascular accident within 6 months prior to randomization, uncontrolled hypertension (≥ 160 systolic, and/or ≥ 100 diastolic mm Hg) despite optimal medical management, or congenital long QT syndrome.",
+        "Participant must not have prior systemic treatment with an anti-PD-1, anti-programmed death (ligand)-1 (PD-L1), anti-PD-L2, CD137 agonists, or anti-cytotoxic T-lymphocyte associated protein 4 (CTLA-4) antibody, or any other antibody or drug specifically targeting T cell co-stimulation or checkpoint pathways or chemotherapy.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07221357"
+    },
+    {
+      "nctId": "NCT06476808",
+      "title": "A Study to Evaluate the Safety, Tolerability, and Efficacy of Escalating Doses of BMS-986463 in Participants With Select Advanced Malignant Tumors.",
+      "officialTitle": "A Phase 1/1b First-in-human Study of BMS-986463 in Advanced Malignant Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "High-grade Serous Ovarian Carcinoma (HGSOC)",
+        "Uterine Serous Carcinoma (USC)",
+        "Non-small Cell Lung Cancer (NSCLC)"
+      ],
+      "interventions": [
+        "BMS-986463"
+      ],
+      "inclusion": [
+        "* Participants must have an Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "Participants must have at least 1 lesion accessible for biopsy in addition to the target lesion, from which a fresh pre treatment biopsy must be obtained.",
+        "Participants must have an unresectable/metastatic carcinoma."
+      ],
+      "exclusion": [
+        "* Participants must not have Leptomeningeal metastases.",
+        "Participants must not have concurrent malignancy (present during screening) requiring treatment or history of prior malignancy active within 2 years prior to treatment.",
+        "Participants must not have had any prior radiation therapy within 2 weeks prior to start of study treatment.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06476808"
+    },
+    {
+      "nctId": "NCT06646276",
+      "title": "A Study to Compare the Efficacy and Safety of BMS-986489 (BMS-986012+ Nivolumab Fixed Dose Combination) in Combination With Carboplatin Plus Etoposide to That of Atezolizumab With Carboplatin Plus Etoposide as First-Line Therapy in Participants With Extensive-Stage Small Cell Lung Cancer (TIGOS).",
+      "officialTitle": "A Randomized, Double Blind, Multicenter Phase 3 Trial of BMS-986489 (BMS-986012+Nivolumab Fixed Dose Combination) in Combination With Carboplatin Plus Etoposide vs Atezolizumab in Combination With Carboplatin Plus Etoposide as First-Line Therapy in Participants With Extensive-Stage Small Cell Lung Cancer (TIGOS).",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Extensive-Stage Small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "BMS-986489 (BMS-986012+Nivolumab)",
+        "Atezolizumab",
+        "Carboplatin",
+        "Etoposide"
+      ],
+      "inclusion": [
+        "* Participants must have diagnosis of Extensive-Stage Small Cell Lung Cancer (ES-SCLC).",
+        "Participants must be Healthy enough to do their normal activities with little or no help based on the ECOG performance scale.",
+        "Participants must have at least one tumor that can be measured using special imaging techniques like a CT scan or MRI at a site other than the brain and nervous system"
+      ],
+      "exclusion": [
+        "* Participants have already received certain types of treatment for extensive stage small cell lung cancer",
+        "Participants have certain health conditions, like spread of small cell lung cancer to the brain that are causing symptoms, certain lung diseases, heart diseases, infections, autoimmune diseases, other cancers, or a type of nerve damage called peripheral sensory neuropathy",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06646276"
+    },
+    {
+      "nctId": "NCT06561386",
+      "title": "A Study to Compare the Efficacy of Nivolumab and Relatlimab Plus Chemotherapy vs Pembrolizumab Plus Chemotherapy for Stage IV/Recurrent Non-squamous Non-small Cell Lung Cancer With PD-L1 Expression ≥ 1%",
+      "officialTitle": "A Phase 3, Randomized, Open-label Study of Nivolumab + Relatlimab Fixed-dose Combination With Chemotherapy Versus Pembrolizumab With Chemotherapy as First-line Treatment for Participants With Non-squamous (NSQ), Stage IV or Recurrent Non-small Cell Lung Cancer and With Tumor Cell PD-L1 Expression ≥ 1%",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Non-small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Relatlimab",
+        "Pembrolizumab",
+        "Carboplatin",
+        "Pemetrexed",
+        "Cisplatin"
+      ],
+      "inclusion": [
+        "* Participants must have histologically confirmed Stage IV or recurrent Non-small Cell Lung Cancer (NSCLC) of non-squamous (NSQ) histology with no prior systemic anti-cancer therapy given as primary therapy for advanced or metastatic disease.",
+        "Participants must have measurable PD-L1 ≥ 1% Tumor Cell (TC) score by the investigational PD-L1 immunohistochemistry (IHC) assay VENTANA PD-L1 (SP263) CDx Assay conducted by central laboratory during the screening period prior to randomization.",
+        "Participants must have measurable disease by computed tomography (CT) or magnetic resonance imaging (MRI) per RECIST v1.1 criteria.",
+        "Participants must have an Easter Cooperative Oncology Group (ECOG) performance status of ≤ 1 at screening.",
+        "Participants must have a life expectancy of at least 3 months at the time of randomization."
+      ],
+      "exclusion": [
+        "* Participants must not be pregnant and/or breastfeeding.",
+        "Participants with epidermal growth factor receptor (EGFR), anaplastic lymphoma kinase (ALK), or ROS-1 mutations that are sensitive to available targeted inhibitor therapy. Participants with unknown EGFR, ALK, or ROS-1 status are excluded.",
+        "Participants with known BRAFV600E mutations, that are sensitive to available targeted inhibitor therapy; participants with known activating rearranged during transfection (RET) mutations or neurotrophic tyrosine receptor kinase (NTRK) fusion gene alterations are excluded. Participants with unknown or indeterminate BRAF mutation, activating RET mutations or NTRK fusion gene alterations are eligible.",
+        "Participants must not have untreated central nervous system (CNS) metastases.",
+        "Participants must not have leptomeningeal metastases (carcinomatous meningitis).",
+        "Participants must not have concurrent malignancy requiring treatment.",
+        "Participants must not have an active autoimmune disease.",
+        "Participants must not have history of interstitial lung disease or pneumonitis that required oral or intravenous (IV) glucocorticoids to assist with management.",
+        "Participants must not have a history of myocarditis.",
+        "Participants must not have had prior treatment with an anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody, or other antibody or drug targeting T-cell co-stimulation or checkpoint pathways.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06561386"
+    },
+    {
+      "nctId": "NCT07325136",
+      "title": "A Study to Assess the Safety and Tolerability of BMS-986525 Alone and in Combination Therapy in Participants With Relapsed/Refractory Small Cell Lung Cancer",
+      "officialTitle": "A Phase 1/2 Study of BMS-986525 as Monotherapy and in Combination Therapy in Participants With Relapsed/Refractory Small Cell Lung Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Relapsed/Refractory Small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "BMS-986525",
+        "Pumitamig"
+      ],
+      "inclusion": [
+        "* Participants must have histologically or cytologically documented relapsed/refractory small cell lung cancer (R/R-SCLC).",
+        "Participants must have received at least 1 platinum-based chemotherapy regimen as per locally approved drug labels and institutional guidelines.",
+        "In countries where standard of care first line systemic treatment includes platinum containing chemotherapy in combination with anti-PD-(L)1 therapy, it is required that participants have progressed on, are ineligible for or not have access to an anti-PD- (L)1 therapy."
+      ],
+      "exclusion": [
+        "* Participants must not have any untreated CNS metastases.",
+        "Participants must not have an active, known or suspected autoimmune disease.",
+        "Participants must not have had a prior organ or tissue allograft.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07325136"
+    },
+    {
+      "nctId": "NCT06121843",
+      "title": "A Study to Evaluate the Safety, Effectiveness and Tolerable Dose of Arlocabtagene Autoleucel (BMS-986393) in Novel Combinations in Participants With Relapsed and/or Refractory Multiple Myeloma",
+      "officialTitle": "A Phase 1, Multicenter, Open-label Study to Evaluate the Safety and Preliminary Efficacy of Arlocabtagene Autoleucel (BMS-986393) in Novel Combinations in Participants With Relapsed and/or Refractory Multiple Myeloma and Determine the Recommended Dose for Each Add-on Investigational Component",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Multiple Myeloma"
+      ],
+      "interventions": [
+        "BMS-986393",
+        "Alnuctamab",
+        "Mezigdomide",
+        "Iberdomide",
+        "Elranatamab",
+        "Dexamethasone"
+      ],
+      "inclusion": [
+        "History of relapsed and/or refractory multiple myeloma (RRMM) treated with at least 3 (Part 1), history of RRMM or at least 1 but not greater than 3 prior anti-myeloma treatment (PAMT) regimens (Part 2, Arms A, B, C, and D); history of quadruple class exposed RRMM having received BCMA TCE as the most recent line of therapy (Part 2, Arm E).",
+        "Measurable multiple myeloma (MM) as per International Myeloma Working Group (IMWG).",
+        "Eastern Cooperative Oncology Group performance status of 0-1.",
+        "Adherence to contraception requirements."
+      ],
+      "exclusion": [
+        "Prior treatment with alnuctamab (Arm A), mezigdomide (Arms B and E), iberdomide (Arm C), elranatamab (Arm D) or BCMA-targeting therapy (Part 2 Arms A and D).",
+        "Prior treatment with GPRC5D-targeting therapies as of Protocol Amendment 02 (Part 1 and Part 2).",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06121843"
+    },
+    {
+      "nctId": "NCT02343042",
+      "title": "Selinexor and Backbone Treatments of Multiple Myeloma Patients",
+      "officialTitle": "A Phase 1b/2 Study of Selinexor (KPT-330) in Combination With Backbone Treatments for Relapsed/Refractory Multiple Myeloma and Newly Diagnosed Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Multiple Myeloma"
+      ],
+      "interventions": [
+        "Selinexor",
+        "Dexamethasone",
+        "Lenalidomide",
+        "Pomalidomide",
+        "Bortezomib",
+        "Daratumumab",
+        "Carfilzomib",
+        "Ixazomib",
+        "Elotuzumab",
+        "Clarithromycin",
+        "Belantamab Mafodotin",
+        "Mezigdomide"
+      ],
+      "inclusion": [
+        "Written informed consent signed in accordance with federal, local, and institutional guidelines.",
+        "Age greater than or equal to (≥) 18 years at the time of informed consent.",
+        "Histologically confirmed diagnosis with measurable disease for relapsed/refractory myeloma.",
+        "Symptomatic MM, based on IMWG guidelines.",
+        "Patients must have measurable disease as defined by at least one of the following:",
+        "Serum M-protein ≥ 0.5 gram per deciliter (g/dL) by serum protein electrophoresis (SPEP) or, for immunoglobulin A (IgA) myeloma, by quantitative IgA",
+        "Urinary M-protein excretion at least 200 mg/24 hours",
+        "Serum free light chain (FLC) ≥ 100 milligram per liter (mg/L), provided that FLC ratio is abnormal",
+        "If SPEP is felt to be unreliable for routine M-protein measurement (example, for IgA MM), then quantitative immunoglobulin (Ig) levels by nephelometry or turbidometry are acceptable",
+        "Any non-hematological toxicities (except for peripheral neuropathy as described in exclusion criterion #22) that patients had from treatments in previous clinical studies must have resolved to less than or equal (≤) Grade 2 by C1D1.",
+        "Eastern Cooperative Oncology Group (ECOG) Performance Status of ≤ 2.",
+        "Adequate hepatic function within 28 days prior to C1D1:"
+      ],
+      "exclusion": [
+        "Patients meeting any of the following exclusion criteria are not eligible to enroll in this study:",
+        "Smoldering MM.",
+        "MM that does not express M-protein or FLC (i.e., non-secretory MM is excluded), and quantitative immunoglobulin levels cannot be used instead.",
+        "Documented active systemic amyloid light chain amyloidosis.",
+        "Active plasma cell leukemia.",
+        "Red Blood Cell (RBC) and platelet transfusions and blood growth factors within 14 days of C1D1 (Arms 1-11 only). Red blood cells and platelet transfusions and blood growth factors within 7 days of C1D1 (Arm 12).",
+        "Platelet transfusion or G-CSF within 7 days or pegfilgastrim within 14 days prior to the complete blood count (CBC) used to determine eligibility.",
+        "Radiation, chemotherapy, or immunotherapy or any other tumor-directed therapy ≤ 2 weeks prior to C1D1, and radio-immunotherapy within 6 weeks prior to C1D1. Patients on long-term glucocorticoids during Screening do not require a washout period. Spot radiation is permitted at any time for treatment of fractures or to prevent fractures as well as for pain management.",
+        "Patients with history of spinal cord compression with residual paraplegia (Dose Escalation Phase only).",
+        "Treatment with an investigational anti-cancer therapy within 3 weeks prior to C1D1.",
+        "Prior autologous stem cell transplantation \\< 1 month, or allogeneic stem cell transplantation \\< 3 months prior to C1D1.",
+        "Active graft versus host disease after allogeneic stem cell transplantation."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT02343042"
+    },
+    {
+      "nctId": "NCT07115745",
+      "title": "A Study of Healthy Donor CD19-targeted Allogeneic CAR T Cells in Participants With Severe, Refractory Autoimmune Diseases",
+      "officialTitle": "A Phase 1, Multicenter, Open-label Study of BMS-986515, Healthy Donor Allogeneic CD19-targeted Chimeric Antigen Receptor (CAR) T Cells, in Participants With Severe, Refractory Autoimmune Diseases",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Refractory Autoimmune Diseases"
+      ],
+      "interventions": [
+        "BMS-986515",
+        "Fludarabine",
+        "Cyclophosphamide",
+        "Tocilizumab"
+      ],
+      "inclusion": [
+        "\\- Systemic lupus erythematosus (SLE) population:. i) Diagnosis of SLE based on the 2019 American College of Rheumatology (ACR)/European League Against Rheumatism (EULAR). ii) Participant must be positive for at least one of the following antibodies at screening: anti-nuclear antibody, anti-dsDNA, anti-histone, anti-chromatin or anti-Sm antibody. iii) Inadequate response or intolerance to steroids and immunosuppressive therapies. iv) Participants must have active disease at screening. \\- Inflammatory myopathy (IIM) population:. i) Participants meeting the 2017 American College of Rheumatology (ACR) / European League Against Rheumatism (EULAR) classification criteria. ii) Participants must meet criteria for with severe, refractory IIM. iii) Participants who had inadequate response to steroids and prior immunosuppressive therapies. iv) Evidence of active disease. \\- Systemic sclerosis (SSc) population:. i) Participant must fulfill the 2013 American College of Rheumatology (ACR)/ European League Against Rheumatism (EULAR) classification criteria for systemic sclerosis. ii) Inadequate disease response or intolerance to prior therapies. iii) Participants diagnosed with progressive systemic sclerosis including skin disease and/or interstitial lung disease. \\- Rheumatoid arthritis (RA) population:. i) Participants with difficult to treat RA. ii) Participants with a diagnosis of RA meeting 2010 ACR/EULAR criteria. iii) Rheumatoid arthritis disease activity at screening and baseline visit. iv) Inadequate disease response or intolerance to standard of care therapy."
+      ],
+      "exclusion": [
+        "\\- All participants:. i) Any other systemic autoimmune disease. ii) Pregnant or nursing women. iii) Active hepatitis B, C or HIV. iv) Prior history of malignancies. v) Uncontrolled or active infection. vi) History of certain cardiovascular conditions within 6 months prior to screening. vii) Previous CAR-T cell therapy. viii) Significant lung impairment. ix) Inadequate organ function. x) Active, clinically significant, central nervous system (CNS) disorders.",
+        "SLE population:. i) Participants who have SLE because of drugs or have other autoimmune diseases along with SLE.",
+        "IIM population:. i) Participants who have other forms of myopathies other than IIM. ii) Severe muscle damage.",
+        "SSc population:. i) People who have high blood pressure in the arteries of the lungs caused by SSc, which needs regular treatment to keep it under control. ii) Rapidly deteriorating SSc, or history of severe kidney disease.",
+        "RA population:. i) People who have additional autoimmune diseases along with RA.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07115745"
+    },
+    {
+      "nctId": "NCT06288191",
+      "title": "Neoadjuvant Nivolumab and Relatlimab in Cutaneous Squamous Cell Carcinoma",
+      "officialTitle": "A Phase 2, Open Label, Single Arm, Clinical Trial of Neoadjuvant Nivolumab and Relatlimab in Stage II To IV (M0) Resectable Cutaneous Squamous Cell Carcinoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Cutaneous Squamous Cell Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab 240 mg / Relatlimab 80 mg in a fixed dose combination"
+      ],
+      "inclusion": [
+        "≥ 18 years of age",
+        "Written informed consent",
+        "Histologically confirmed, resectable stage II to IV cutaneous squamous cell carcinoma defined as: Non-head and neck cuSCC:",
+        "stage II (T2, N0, M0)",
+        "stage III (T3, N0, M0; or T1-3, N1, M0)",
+        "stage IV (T1-3, N2 or N3, M0; or T4a or T4b, any N, M0) Cutaneous head and neck CC:",
+        "stage II (T2, N0, M0)",
+        "stage III (T3, N0, M0)",
+        "stage IV (T4a or T4b, any N, M0)",
+        "In-transit metastases (ITM) are permitted if they are completely resectable. ITM defined as skin or subcutaneous metastases that are \\> 20 mm from the primary lesion but not beyond the regional nodal basin.",
+        "Measurable disease according to RECIST version 1.1 criteria (≥10 mm longest diameter for primary lesions and / or ≥10 mm in shortest diameter for lymph nodes as determined by CT imaging) within 2 weeks of the start of study treatment.",
+        "Tumour amenable to a newly obtained core biopsy of a lesion which has not been previously irradiated. Archival tissue from a past primary or nodal cuSCC lesion (if applicable) or tissue taken for current diagnosis will also be collected."
+      ],
+      "exclusion": [
+        "Clinical or radiographic evidence of distant metastasis",
+        "SCC of the eyelid, vulva, penis and perianus",
+        "Any contraindication to the administration of nivolumab and / or relatlimab",
+        "Prior anti-PD-1, CTLA-4 (Cytotoxic T-lymphocyte associated protein 4), PDL-1 (Programmed death-ligand 1) or LAG 3 (Lymphocyte-Activation Gene 3) antibody exposure, or an agent directed to another stimulatory or co-inhibitory T-cell receptor for any disease or any chemotherapy or experimental local or systemic drug treatment",
+        "Active autoimmune disease or a requirement for chronic steroid therapy other than hormone replacement therapy The following are permitted:",
+        "Type I diabetes mellitus on stable insulin therapy",
+        "Residual autoimmune hypothyroidism on stable hormone replacement",
+        "Resolved childhood asthma or atopy",
+        "Psoriasis not requiring systemic treatment",
+        "Autoimmune conditions which are not expected to recur in the absence of an external trigger.",
+        "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in doses exceeding 10 mg daily of prednisone or equivalent) or any other form of immunosuppressive therapy within 14 days prior to the first dose of study treatment. The following are permitted:",
+        "Replacement therapy (e.g. thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency, etc.)"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06288191"
+    },
+    {
+      "nctId": "NCT06730750",
+      "title": "A Study of BMS-986490 With or Without Bevacizumab in Advanced Solid Tumors",
+      "officialTitle": "A Phase 1/2a, Multicenter, Open-label, First in Human Study of BMS-986490 With or Without Bevacizumab in Advanced Solid Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Advanced Solid Tumors"
+      ],
+      "interventions": [
+        "BMS-986490",
+        "Bevacizumab"
+      ],
+      "inclusion": [
+        "Documented histologically or cytologically confirmed, advanced, unresectable/metastatic solid tumor measurable by RECIST v1.1.",
+        "CRC: Part 1A, Part 2A-CRC, Part 1B, and Part 2B: i) Locally advanced/metastatic, recurrent, or unresectable CRC with adenocarcinoma histology and whose disease has progressed after systemic cancer therapy in the metastatic or adjuvant setting including 5-FU, irinotecan, and/or oxaliplatin (if available and not contraindicated).",
+        "NSCLC: Part 2A-NSCLC/GC, 2L+ NSCLC: i) Histologically confirmed NSCLC meeting stage criteria for Stage IIIB, Stage IV, or recurrent disease. ii) Participants must have received and progressed on or after anti-PD-(L)1 therapy, if available. \\- GC: Part 2A-NSCLC/GC, 2L+ GC: i) Participants must have received and then progressed or been intolerant to at least 1 standard treatment regimen in the advanced or metastatic setting (or have progressed within 6 months of adjuvant therapy). ii) ECOG performance status of 0 or 1."
+      ],
+      "exclusion": [
+        "History of anaphylactic reactions to irinotecan and/or bevacizumab.",
+        "Previously received therapy targeting CEACAM5.",
+        "Grade ≥3 ILD/pneumonitis.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06730750"
+    },
+    {
+      "nctId": "NCT07679061",
+      "title": "First-Line Nivolumab Plus Ipilimumab in Unresectable Hepatocellular Carcinoma (J-PROMISE)",
+      "officialTitle": "Prospective Observational Study of First-Line Nivolumab Plus Ipilimumab in Patients With Unresectable Hepatocellular Carcinoma in Japan (J-PROMISE)",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "conditions": [
+        "Unresectable Hepatocellular Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab plus ipilimumab"
+      ],
+      "inclusion": [
+        "Participants aged ≥ 18 years at the time of consent",
+        "Participants with unresectable hepatocellular carcinoma (uHCC), defined as disease not eligible for curative surgical and/or locoregional therapies, or progressive disease after surgical and/or locoregional therapies",
+        "Child-Pugh class A (total score 5-6)",
+        "Participants who have not received prior systemic drug therapy for uHCC",
+        "Participants who relapsed more than 6 months after completion of postoperative adjuvant therapy are eligible",
+        "Participants who received lenvatinib in combination with transarterial chemoembolization (TACE) are eligible if the treating physician determined they were eligible for TACE; participants are excluded if TACE eligibility at the time of lenvatinib initiation is unclear",
+        "Participants scheduled to initiate nivolumab plus ipilimumab combination therapy between March 1, 2026 and February 28, 2027",
+        "Nivolumab plus ipilimumab combination therapy is defined as nivolumab 80 mg and ipilimumab 3 mg/kg administered intravenously every 3 weeks for 4 cycles, followed by nivolumab monotherapy at 240 mg every 2 weeks or 480 mg every 4 weeks",
+        "Participants who provide written informed consent prior to initiation of nivolumab plus ipilimumab therapy"
+      ],
+      "exclusion": [
+        "Known fibrolamellar hepatocellular carcinoma, sarcomatoid hepatocellular carcinoma, or mixed cholangiocarcinoma",
+        "Prior liver transplant",
+        "ECOG performance status ≥ 3",
+        "Uncontrolled comorbidities despite treatment",
+        "Other advanced cancers requiring systemic therapy",
+        "Prior immuno-oncology treatment",
+        "Participation in interventional clinical trials at enrollment",
+        "Deemed unsuitable by investigator"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07679061"
+    },
+    {
+      "nctId": "NCT04895709",
+      "title": "A Study of BMS-986340 as Monotherapy and as Combination Therapy in Participants With Advanced Solid Tumors",
+      "officialTitle": "A Phase 1/2 Study of BMS-986340 as Monotherapy and as Combination Therapy in Participants With Advanced Solid Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Cervical Cancer",
+        "Gastric/Gastroesophageal Junction Adenocarcinoma",
+        "Microsatellite Stable Colorectal Cancer",
+        "Non-Small-Cell Lung Cancer",
+        "Squamous Cell Carcinoma of Head and Neck",
+        "Carcinoma, Renal Cell",
+        "Urothelial Carcinoma",
+        "Pancreatic Adenocarcinoma",
+        "Melanoma",
+        "Ovarian Neoplasms",
+        "Triple Negative Breast Neoplasms"
+      ],
+      "interventions": [
+        "BMS-986340",
+        "BMS-936558-01",
+        "Docetaxel",
+        "Pumitamig"
+      ],
+      "inclusion": [
+        "* Fresh pre-treatment and on-treatment tumor biopsy must be provided for biomarker analysis.",
+        "Measurable disease per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 and at least 1 lesion accessible for biopsy. Fine needle biopsy, cytology, and bone lesion biopsies are not acceptable.",
+        "Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+        "Radiographically documented progressive disease on or after the most recent therapy.",
+        "Received standard-of-care therapies, (except for Part 1C, 2C and 2D, where participants with prior docetaxel use for the advanced/metastatic setting will be excluded), including an available programmed death (ligand)-1 inhibitor known to be effective in the tumor type for which they are being evaluated.",
+        "Advanced or metastatic disease and have received, be refractory to, not be a candidate for, or be intolerant of existing therapies known to provide clinical benefit for the condition of the participant."
+      ],
+      "exclusion": [
+        "* Women who are pregnant or breastfeeding.",
+        "Primary central nervous system (CNS) malignancy.",
+        "Untreated CNS metastases.",
+        "Leptomeningeal metastases.",
+        "Concurrent malignancy requiring treatment or history of prior malignancy active within 2 years prior to the first dose of study treatment.",
+        "Active, known, or suspected autoimmune disease.",
+        "Condition requiring systemic treatment with either corticosteroids within 14 days or other immunosuppressive medications within 30 days of the first dose of study treatment.",
+        "Prior organ or tissue allograft.",
+        "Uncontrolled or significant cardiovascular disease.",
+        "Major surgery within 4 weeks of study drug administration.",
+        "History of or with active interstitial lung disease or pulmonary fibrosis.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT04895709"
+    },
+    {
+      "nctId": "NCT07532902",
+      "title": "A Study of BMS-986504 With Standard-of-Care Therapy for People With Solid Tumor Cancer",
+      "officialTitle": "A Phase 1a/1b Basket Trial of BMS-986504 With Standard-of-Care Therapy For Patients With Select Metastatic MTAP-deleted Solid Tumors",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Diffuse Pleural Mesothelioma",
+        "Gastroesophageal Carcinoma",
+        "Urothelial Carcinoma"
+      ],
+      "interventions": [
+        "BMS-986504",
+        "Ipilimumab",
+        "Nivolumab",
+        "5-FU",
+        "Leucovorin",
+        "Oxaliplatin",
+        "Gemcitabine",
+        "Platinum"
+      ],
+      "inclusion": [
+        "Documentation of Disease:",
+        "Patients must have pathologic confirmation of one of three diseases:",
+        "Diffuse pleural mesothelioma (DPM)",
+        "Gastroesophageal carcinoma (GEC) including adenocarcinoma or squamous cell carcinoma of the esophagus, gastroesophageal junction, or stomach.",
+        "PD-L1 CPS ≥1 (using clone 73-10, DAKO)",
+        "HER2 overexpression negative (using clone 4B5, Ventana): HER2 IHC 0-1+, or HER2 2+ with ISH showing HER2:CEP17 ratio \\<2 and average HER2 copy number \\<6.0 signals/cell",
+        "Urothelial carcinoma (UC)",
+        "Archival tissue is acceptable",
+        "Metastatic or advanced/unresectable disease:",
+        "For Diffuse Pleural Mesothelioma (DPM) and Gastroesophageal Carcinoma (GEC )cohorts: no prior systemic treatment for metastatic disease",
+        "Patients with metastatic disease after treatment for localized GEC may have received prior systemic therapy (chemotherapy and/or chemoradiation) if \\>6 months have elapsed between the end of therapy and registration.",
+        "One prior cycle of standard-of-care therapy alone without BMS-986504 or other MTAP inhibitors (ipi/nivo for DPM, FOLFOX + nivo for GEC) is acceptable with PI approval."
+      ],
+      "exclusion": [
+        "Prior treatment with PRMT5i or MAT2Ai",
+        "Symptomatic CNS metastases",
+        "Patients with treated brain metastases are eligible if follow up brain imaging after CNS directed therapy shows no evidence of progression and the patient is on a stable dose of corticosteroids",
+        "Received palliative radiation therapy within 3 days prior to initiation of study treatment or definitive SRS including CNS SRS within 14 days prior to initiation of study treatment",
+        "Patients who have had major surgery within 3 weeks of start of study drug o Note: procedures such as biopsy, pleural catheter insertion, central venous catheter or other minor procedures are permitted",
+        "Any of the following cardiac abnormalities:",
+        "Unstable angina pectoris or myocardial infarction within 6 months prior to enrollment",
+        "Congestive heart failure ≥ NYHA Class 3 within 6 months prior to enrollment",
+        "Prolonged QTc \\> 500 milliseconds or history of Long QT Syndrome",
+        "Child-Pugh class C liver cirrhosis",
+        "Ongoing medical illness not otherwise listed which would preclude study at the discretion of the PI",
+        "Inability to take medications PO (BMS-986504 cannot be taken via gastrostomy tube), refractory nausea and vomiting, malabsorption, biliary shunt, significant bowel resection, or any other condition that significantly affects gut motility or absorption and would preclude adequate absorption of BMS-986504 in the opinion of the treating physician and/or PI"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07532902"
+    },
+    {
+      "nctId": "NCT06107738",
+      "title": "Iberdomide and Daratumumab as Maintenance Therapy After an Autologous Stem Cell Transplant for Multiple Myeloma",
+      "officialTitle": "IBEX: Phase 2 Trial of Iberdomide + SQ Daratumumab as Post-Autologous Stem Cell Transplant Maintenance Therapy in Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Multiple Myeloma"
+      ],
+      "interventions": [
+        "Iberdomide",
+        "Daratumumab/rHuPH20 Co-formulation"
+      ],
+      "inclusion": [
+        "Multiple Myeloma patients who have received prior DARA-containing induction therapy and have attained at least a partial response.",
+        "Patients who have completed Autologous Stem Cell Transplant (ASCT) 90-150 days prior to registration, without any post-ASCT therapy and without post-ASCT disease progression (according to IMWG criteria)",
+        "Patients who are Minimal Residual Disease positive (MRD (+)) as measured by the ClonoSEQ assay using a sensitivity of 10-5, measured 90-150 days following ASCT.",
+        "Prior DARA-containing induction therapy (at least 3 cycles), attaining at least a partial response.",
+        "Completed ASCT within 90-150 days prior to registration, without any post-ASCT therapy and without evidence of post-ASCT disease progression (according to IMWG criteria)",
+        "MRD (+) at the time of study enrollment using the clonoSEQ NGS (next-generation sequencing) assay. Patients with an M-spike of ≥ 0.5 g/dL and/or an abnormal free light chain ratio (with an involved serum free light chain of ≥ 10 mg/dL) at enrollment are considered MRD (+) and do not require baseline MRD testing if they have previously had this testing done with successful clonality assessment.",
+        "ECOG (Eastern Cooperative Oncology Group) Performance Status \\</= 2",
+        "Adequate bone marrow function as evidenced by platelets \\>/= 75,000/mm3, hemoglobin \\>/= 8 g/dL, and ANC (absolute neutrophil count) \\>/= 1,000/mm3 within 28 days prior to registration. NOTE: transfusion to achieve the hemoglobin threshold IS permissible.",
+        "Adequate hepatic function defined by the following within 28 days prior to registration: total bilirubin \\</=1.5 x IULN (institutional upper limit of the norm, except in case of Gilbert's syndrome) AND AST (aspartate aminotransferase and ALT (aspartate transaminase) \\</=3.0 x IULN",
+        "Adequate renal function, as defined by creatinine clearance (CrCl) \\>/= 30 mL/min., as measured by a 24-hour urine collection or estimated by the Cockcroft and Gault formula within 28 days prior to registration.",
+        "All ASCT-related toxicities must have recovered to \\</=Grade 1 (except for alopecia, fatigue and amenorrhea) prior to registration",
+        "Females of childbearing potential (FCBP) must have a negative serum or urine pregnancy test with a sensitivity of at least 25 mIU (milli-International unit)/mL within 10-14 days prior to registration. FCBP must agree to have a second pregnancy test within 24 hours prior to starting Cycle 1. Further, FCBP must either commit to continued abstinence from heterosexual intercourse or begin TWO acceptable methods of birth control: one highly effective method and one additional effective method AT THE SAME TIME, at least 7 days before starting IBER, during therapy, during dose interruptions and continuing for 28 days following discontinuation of Iberdomide and for 90 days following the discontinuation of daratumumab. FCBP must also agree not to donate eggs (ova, oocytes) for the purposes of assisted reproduction during the study and for 28 days after the last dose of iberdomide and for 90 days after the last dose of daratumumab. Reliable contraception is indicated even where there has been a history of infertility, unless due to hysterectomy. Females of reproductive potential should be referred to a qualified provider of contraceptive methods, if needed."
+      ],
+      "exclusion": [
+        "Active HIV, or HCV (defined as detectable viremia for any of these conditions).",
+        "Seropositive for hepatitis B (defined by a positive test for hepatitis B surface antigen\\[HBsAg\\]). Patients with resolved infection (i.e., patients who are HBsAg negative but positive for antibodies to hepatitis B core antigen \\[anti-HBc\\] and/or antibodies to hepatitis B surface antigen \\[anti-HBs\\]) must be screened using real-time PCR (polymerase chain reaction) measurement of hepatitis B virus (HBV) DNA levels. Those who are PCR positive will be excluded. EXCEPTION: Patients with serologic findings suggestive of HBV vaccination (anti-HBs positivity as the only serologic marker) AND a known history of prior HBV vaccination, do not need to be tested for HBV DNA by PCR",
+        "Unable to assess MRD status at entry or is MRD(-) at 10-5 threshold at entry",
+        "Heart attack or stroke within 90 days of study enrollment",
+        "Unable to tolerate required anti-thrombotic or anti-viral prophylaxis",
+        "Major surgery within 28 days of enrollment",
+        "Medical, neurologic, or psychiatric condition which renders patient unable to safely comply with study therapy and schedule requirements (including, but not limited to, unstable angina, New York Heart Association Class III-IV congestive heart failure, or uncontrolled cardiac arrhythmia)",
+        "Intolerance of prior DARA therapy (requiring discontinuation of DARA previously due to toxicity)",
+        "A history of malignancy (other than multiple myeloma) unless all treatment of that malignancy was completed at least 2 years before consent and the patient has no evidence of disease before the date of enrollment. Exceptions are squamous and basal cell carcinomas of the skin, carcinoma in situ of the cervix or breast, or other non-invasive lesion that in the opinion of the investigator, with concurrence with the sponsor's medical monitor, is considered cured with minimal risk of recurrence within 3 years.",
+        "Be exhibiting clinical signs of meningeal or central nervous system involvement due to multiple myeloma.",
+        "Have known chronic obstructive pulmonary disease (COPD) with a forced expiratory volume in 1 second (FEV1) \\<50% of predicted normal.",
+        "Have known moderate or severe persistent asthma within the past 2 years (see Section 9.2.4), or current uncontrolled asthma of any classification. Note that patients who currently have controlled intermittent asthma or controlled mild persistent asthma are allowed in the study, provided that FEV1 is ≥50% of predicted normal. Note: pursuant to exclusion criteria (k) and (l), FEV1 testing is required for patients with suspected COPD or asthma. Patients with FEV1 \\<50% of predicted normal (or for patients ≥65 years of age, old FEV1 \\<50% or diffusing capacity of the lung \\[DLCO\\] \\<50%) on screening assessment must be excluded."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06107738"
+    },
+    {
+      "nctId": "NCT05558319",
+      "title": "NDMM Patients Candidates for ASCT Comparing Extended VRD Plus vs. Isa-VRD vs. Isa-V-Iberdomide",
+      "officialTitle": "GEM21menos65. A Phase III Trial for NDMM Patients Who Are Candidates for ASCT Comparing Extended VRD Plus Early Rescue Intervention vs Isatuximab-VRD vs Isatuximab-V-Iberdomide-D",
+      "status": "RECRUITING",
+      "phase": "PHASE3",
+      "conditions": [
+        "Newly Diagnosed Multiple Myeloma"
+      ],
+      "interventions": [
+        "Bortezomib",
+        "Isatuximab",
+        "Iberdomide",
+        "Lenalidomide",
+        "Dexamethasone"
+      ],
+      "inclusion": [
+        "Patient is, in the investigator's opinion, willing and able to comply with the protocol requirements.",
+        "Patient must be able to understand the study procedures.",
+        "Patient has given voluntary written informed consent before performance of any studyrelated procedure non part of normal medical care, with the understanding that consent may be withdrawn by the patient at any time without prejudice to their future medical care.",
+        "Newly diagnosed multiple myeloma patient who requires start active treatment according to the 2014 IMWG criteria, namely clonal bone marrow plasma cells ≥10% or biopsy-proven bony or extramedullary plasmacytoma and any one or more of the following myeloma defining events: evidence of end organ damage that can be attributed to the underlying plasma cell proliferative disorder, specifically: Hypercalcaemia, Anaemia, Renal Insufficiency, or Bone lesions (one or more osteolytic lesions on skeletal radiography, CT, or PET-CT), and any one or more of the following biomarkers: clonal BMPC% ≥60%, i/u free light ratio ≥100 or \\> 1 focal lesions on MRI or PET/CT) \\[Lancet Oncol. 2014;15(12): e538-e548\\].",
+        "Patient must have a measurable secretory disease defined as either serum monoclonal protein of ≥ 0,5 g/dl or urine monoclonal (light chain) protein ≥ 200 mg/24 h. For patients whose disease is only measurable by serum FLC, the involved FLC should be ≥ 10mg/dL (100 mg/L), with an abnormal serum FLC ratio.",
+        "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status of ≤ 2.",
+        "Patient must be ≤ 65 years of age.",
+        "Patient must have adequate organ function, defined as follows:",
+        "Absolute neutrophil count (ANC) ≥1.0 X 109/L without G-CSF use in the prior 7 days",
+        "Hemoglobin ≥8.0 g/dL (prior red blood cell (RBC) transfusion or recombinant human erythropoietin use is permitted)",
+        "Platelets ≥ 75 x 109/L in participants in whom \\<50% of bone marrow nucleated cells are plasma cells and ≥ 50×109/L in participants in whom ≥50% of bone marrow nucleated cells are plasma cells (without transfusion support or thrombopoietin receptor agonist within 7 days before the laboratory test).",
+        "Calcium Corrected serum calcium ≤13.5 mg/dL (≤3.4 mmol/L); or free ionized calcium ≤6.5 mg/dL (≤1.6 mmol/L)."
+      ],
+      "exclusion": [
+        "Patient has a diagnosis of primary amyloidosis, monoclonal gammopathy of undetermined significance (MGUS), smoldering multiple myeloma (SMM), plasma cell leukemia or active POEMS syndrome at the time of screening.",
+        "Patient has had clinical evidence of central nervous system (CNS) or pulmonary leukostasis, disseminated intravascular coagulation, or CNS multiple myeloma.",
+        "Prior history of malignancies, other than multiple myeloma (except for basal or squamous cell carcinoma of the skin, carcinoma in situ of the cervix or the breast), unless the patient has been free of the disease for ≥ 5 years.",
+        "Any serious medical condition that places the subject at an unacceptable risk if he or she participates in this study; subjects with conditions requiring chronic steroid or immunosuppressive treatment, such as rheumatoid arthritis, multiple sclerosis and/or lupus, that likely need additional steroid or immunosuppressive treatments in addition to the study treatment.",
+        "Pregnant or breastfeeding females.",
+        "Men and women of reproductive potential who are not using effective contraceptive methods (double barrier method, intrauterine device, oral contraception).",
+        "Patient is simultaneously enrolled in other interventional clinical trial.",
+        "Patient has used an investigational drug within 28 days or five half-lives, whichever is longer, preceding the first dose of study drug.",
+        "Patient must not have received prior radiotherapy (except localized palliative radiotherapy for pain, palliation or fracture) within 2 weeks of start of study therapy. Participants must have recovered from all radiation-related toxicities, not require corticosteroids, and not have had radiation pneumonitis.",
+        "Major surgery (except kyphoplasty) ≤ 4 weeks prior to initiating protocol therapy.",
+        "Patient has peripheral neuropathy or neuropathic pain grade 1 with pain or ≥2, as defined by the National Cancer Institute Terminology Criteria for Adverse Events (NCI CTCAE) Version 5.0.",
+        "Patient evidence of cardiovascular risk including any of the following:"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT05558319"
+    },
+    {
+      "nctId": "NCT06090539",
+      "title": "A Study to Assess BMS-986458 Alone and in Combination With Anti-lymphoma Agents in Relapsed/Refractory Non-Hodgkin Lymphomas",
+      "officialTitle": "A Phase 1/2, Multi-Center, Open-Label, Dose-Finding Study to Evaluate the Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Preliminary Efficacy of BMS-986458, Alone and in Combination With Anti-lymphoma Agents in Participants With Relapsed/Refractory Non-Hodgkin Lymphomas (R/R NHL)",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Relapsed/Refractory Non-Hodgkin Lymphoma"
+      ],
+      "interventions": [
+        "BMS-986458",
+        "Rituximab",
+        "Glofitamab/Obinutuzumab",
+        "Mosunetuzumab",
+        "Epcoritamab",
+        "Golcadomide"
+      ],
+      "inclusion": [
+        "Participants ≥ 18 years of age with frontline or R/R NHL.",
+        "Participant must have measurable disease (defined by at least one FDG-avid lesion for FDG-avid disease and one bi-dimensionally measurable disease on cross sectional imaging by computed tomography or magnetic resonance imaging with at least one lesion \\> 1.5 cm in the transverse diameter).",
+        "Participants must accept and follow pregnancy prevention plan."
+      ],
+      "exclusion": [
+        "Participants must not have an Eastern Cooperative Oncology Group (ECOG) performance status ≥ 2.",
+        "Participants with an inability to comply with listed restrictions, precautions and prohibited treatments.",
+        "Participants must not have prior CAR-T, or radiotherapy ≤ 4 weeks, systemic anticancer treatment ≤ 5 half-lives or 4 weeks, allogeneic SCT ≤ 6 months (only applicable to BMS-986458 single agent or rituximab combination cohorts), or autologous SCT ≤ 3 months prior to study intervention initiation.",
+        "In BMS-986458 + T-cell engager combination cohorts: Participants must not have prior alloSCT or solid organ transplantation, history of confirmed progressive multifocal leukoencephalopathy (PML); known or suspected history of hemophagocytic lymphohistiocytosis (HLH); known or suspected chronic active Epstein-Barr (EBV) infection.",
+        "Participants must not have any condition, including significant acute or chronic medical illness, active or uncontrolled infection, or the presence of laboratory abnormalities, that places participants at unacceptable risk if participating in this study.",
+        "Participants must not have known or suspected central nervous system involvement.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06090539"
+    },
+    {
+      "nctId": "NCT03681561",
+      "title": "Nivolumab With Ruxolitinib in Relapsed or Refractory Classical Hodgkin Lymphoma",
+      "officialTitle": "Phase I/II Study of Nivolumab in Combination With Ruxolitinib in Relapsed or Refractory Classical Hodgkin Lymphoma",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Hodgkin Lymphoma"
+      ],
+      "interventions": [
+        "Ruxolitinib",
+        "Nivolumab"
+      ],
+      "inclusion": [
+        "Written informed consent and HIPAA authorization for release of personal health information. NOTE: HIPAA authorization may be included in the informed consent or obtained separately.",
+        "Age ≥ 18 years at the time of consent.",
+        "ECOG Performance Status of 0, 1 or 2.",
+        "Histologically confirmed diagnosis of classical Hodgkin lymphoma that is relapsed or refractory - historical biopsy at last relapse is acceptable. NOTE: a repeat biopsy is not required for Phase I if the historical biopsy was performed at the most recent relapse, without remission in between. A fresh biopsy is not required for Phase II.",
+        "Presence of radiographically measurable disease (defined as the presence one or more ≥ 1.5 cm lesions, as measured in the longest dimension by PET/CT) within 4 weeks of study registration.",
+        "Prior therapy with check-point inhibitors (nivolumab, pembrolizumab, others) and subsequent progressive disease, stable disease, mixed response, or relapse",
+        "Failed at least one prior therapy",
+        "Prior cancer treatment must be completed at least 14 days prior to registration and the patient must have recovered from all reversible acute toxic effects of the regimen (other than alopecia) to ≤Grade 1 or baseline. Radiation therapy must be completed at least 7 days prior to registration.",
+        "Absolute Neutrophil Count ≥ 1000/μL",
+        "Platelets ≥ 75,000/μL (or ≥50,000/mm3 if known BM involvement)",
+        "Calculated creatinine clearance ≥ 40 cc/min using the Cockcroft-Gault formula",
+        "Bilirubin ≤ 1.5 x upper limit of normal (ULN)"
+      ],
+      "exclusion": [
+        "Pregnant or breastfeeding (NOTE: breast milk cannot be stored for future use while the mother is being treated on study).",
+        "Inability or unwillingness to swallow oral medication or any condition that precludes the administration and/or absorption of oral medications",
+        "A life-threatening illness, medical condition or organ system dysfunction, which in the investigator's opinion, could compromise the patient's safety, interfere with the metabolism of study drugs, or put the study outcomes at undue risk",
+        "Active central nervous system (CNS) involvement by lymphoma",
+        "Uncontrolled cardiovascular disease such as uncontrolled or symptomatic arrhythmias, congestive heart failure, or myocardial infarction or any class 3 or 4 cardiac disease as defined by the New York Heart Association Functional Classification",
+        "Concomitant therapy with immunosuppressive agents, including systemic corticosteroids (doses ≤ 10 mg/day prednisone or equivalent are permitted).",
+        "Has a history of autoimmune disease now or in past 3 years such as hepatitis, nephritis, hyperthyroidism, interstitial lung disease or colitis except vitiligo or alopecia, hypothyroidism (eg, following Hashimoto syndrome) stable on hormone replacement or psoriasis not requiring systemic treatment",
+        "HIV-infected patients on effective anti-retroviral therapy with undetectable viral load within 6 months of registration are eligible for this trial.",
+        "Active Hepatitis B or C infection (defined as a positive Hepatitis B surface antigen (Ag) or detectable viral load by PCR). NOTES: Hepatitis B and C testing is required. Patients with positive Hepatitis B Ag may enroll if PCR is negative. Suppressive antiviral therapy should be considered for these patients as clinically indicated.",
+        "Currently active, clinically significant hepatic impairment Child-Pugh class B or C",
+        "Currently receiving a strong CYP3A4 Inhibitor (such as but not limited to boceprevir clarithromycin, conivaptan, grapefruit juice, indinavir, itraconazole, ketoconazole, lopinavir/ritonavir, mibefradil, nefazodone, nelfinavir, posaconazole, ritonavir, saquinavir, telaprevir, telithromycin, voriconazole) or Fluconazole \\>200 mg/day. Washout period of 1 week is required.",
+        "History of stroke or intracranial hemorrhage within 6 months of study registration"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT03681561"
+    },
+    {
+      "nctId": "NCT06215118",
+      "title": "A Study to Learn About the Effects of the Combination of Elranatamab (PF-06863135) and Iberdomide in Patients With Relapsed or Refractory Multiple Myeloma (MagnetisMM-30)",
+      "officialTitle": "A PHASE 1B, OPEN-LABEL STUDY OF ELRANATAMAB IN COMBINATION WITH IBERDOMIDE IN PARTICIPANTS WITH RELAPSED REFRACTORY MULTIPLE MYELOMA",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Multiple Myeloma"
+      ],
+      "interventions": [
+        "Elranatamab",
+        "Iberdomide"
+      ],
+      "inclusion": [
+        "Prior diagnosis of multiple myeloma as defined by IMWG criteria",
+        "Measurable disease based on IMWG criteria as defined by at least 1 of the following:",
+        "Serum M-protein ≥0.5 g/dL by SPEP",
+        "Urinary M-protein excretion ≥200 mg/24 hour by UPEP",
+        "Serum immunoglobulin FLC ≥10 mg/dL (≥100 mg/L) AND abnormal serum immunoglobulin kappa to lambda FL ratio (\\<0.26 or \\>1.65)",
+        "Part 1: Received 2-4 prior lines of therapy for multiple myeloma, consisting of at least 1 immunomodulatory drug and 1 proteasome inhibitor.",
+        "Part 2: Received 1-3 prior lines of therapy for multiple myeloma, consisting of at least 1 immunomodulatory drug and 1 proteasome inhibitor.",
+        "ECOG performance status 0-1",
+        "Resolved acute effects of any prior therapy to baseline severity or CTCAE Grade ≤1"
+      ],
+      "exclusion": [
+        "Plasma cell leukemia, Smoldering multiple myeloma, Waldenström's macroglobulinemia, Amyloidosis, POEMS Syndrome",
+        "Impaired cardiovascular function or clinically significant cardiovascular diseases",
+        "Stem cell transplant within 12 weeks prior to enrollment or active graft vs host disease",
+        "Participants with any active, uncontrolled bacterial, fungal, or viral infection",
+        "Any other active malignancy within 3 years prior to enrollment, except for adequately treated basal cell or squamous cell skin cancer, or carcinoma in situ",
+        "Previous treatment with:",
+        "BCMA-directed or CD3 redirecting therapy",
+        "Iberdomide (CC-220) or Mezigdomide",
+        "Administration of strong inhibitor or inducer of CYP3A4/5 within 2 weeks prior to dosing and during the study",
+        "Administration with an investigational product within 30 days preceding the first dose of study intervention",
+        "Participant is unable or unwilling to undergo protocol required thromboembolism prophylaxis"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06215118"
+    },
+    {
+      "nctId": "NCT06855771",
+      "title": "A Study of Navlimetostat (BMS-986504) in Participants With Pre-treated Advanced or Metastatic Non-small Cell Lung Cancer (NSCLC) With Homozygous MTAP Deletion (MountainTAP-9)",
+      "officialTitle": "A Multicenter, Randomized, Open-label, Phase 2 Study Evaluating the Safety and Efficacy of Navlimetostat (BMS-986504) Monotherapy in Participants With Advanced or Metastatic Non-small Cell Lung Cancer (NSCLC) With Homozygous MTAP Deletion After Progression on Prior Therapies",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Carcinoma, Non-Small-Cell Lung"
+      ],
+      "interventions": [
+        "BMS-986504"
+      ],
+      "inclusion": [
+        "* Histologically confirmed diagnosis of NSCLC and homozygous MTAP deletion detected in tumor tissue and willingness to provide archival/fresh samples at screening for central MTAP status confirmation.",
+        "Advanced or metastatic NSCLC not amenable to curative therapies after progression on prior therapies at the time of enrollment (based on the American Joint Committee on Cancer, Ninth Edition).",
+        "At least 1 measurable lesion as per RECIST v1.1.",
+        "Documented radiographic disease progression on or after the most recent line of treatment.",
+        "Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.",
+        "Participant must be ≥ 18 years of age (or the legal age of consent in the jurisdiction in which the study is taking place) at the time of signing the ICF.",
+        "Capability to swallow tablets intact (without chewing or crushing)."
+      ],
+      "exclusion": [
+        "* Active brain metastases or carcinomatous meningitis.",
+        "History of gastrointestinal disease or other gastrointestinal conditions (eg, uncontrolled nausea, vomiting, malabsorption syndrome) likely to alter absorption of study treatment or result in inability to swallow oral medications.",
+        "Prior treatment with a PRMT5 or MAT2A inhibitor.",
+        "Known severe hypersensitivity to study treatment and/or any of its excipients.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06855771"
+    },
+    {
+      "nctId": "NCT05651932",
+      "title": "A Study of an MMSET Inhibitor in Patients With Relapsed and Refractory Multiple Myeloma",
+      "officialTitle": "A Phase 1 Study of KTX-1001, an Oral, First-In-Class, Selective, and Potent MMSET Catalytic Inhibitor That Suppresses H3K36me2 in Patients With Relapsed and Refractory Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Multiple Myeloma",
+        "Myeloma",
+        "Myeloma Multiple"
+      ],
+      "interventions": [
+        "Cohort A1 & A2: KTX-1001",
+        "Cohort B1 & B2: KTX-1001+Mezigdomide",
+        "Cohort C1 & C2: KTX-1001 + Carfilzomib (KYPROLIS®)",
+        "Cohort D: KTX-1001+ pomalidomide (Pomalyst, Imnovid)"
+      ],
+      "inclusion": [
+        "Key for Dose-Expansion:",
+        "≥ 18 years of age",
+        "ECOG score ≤ 1",
+        "Multiple myeloma (as per IMWG)",
+        "Prior therapy for MM: Participants must have received at least 1 and up to 3 prior lines of therapy as defined by IMWG, and the following drug classes: PI, IMiD, and anti-CD38 antibody. For mezigdomide combination Cohorts B1 and B2, participants must have received at least 2 prior lines of therapy",
+        "Participants must have a confirmed diagnosis of progressive MM (per IMWG), t(4;14) confirmed by fluorescence in situ hybridization (FISH) testing performed in a centralized Clinical Laboratory Improvement Amendments (CLIA) accredited laboratory via fresh tumor biopsy.",
+        "Measurable disease, including at least 1 of the following criteria:",
+        "Serum M protein ≥ 0.50 g/dL (by SPEP)",
+        "Serum IgA ≥ 0.50 g/dL (IgA myeloma patients)",
+        "Urine M protein ≥ 200 mg/24 h (by UPEP)",
+        "sFLC involved light chain ≥ 10 mg/dL (100 mg/L) (patients with abnormal sFLC ratio)",
+        "Bone marrow plasma cells ≥ 30% (if only criterion for measurability)"
+      ],
+      "exclusion": [
+        "for Dose-Expansion:",
+        "Treatment with the following therapies in the specified time period prior to first dose:",
+        "Patients in Cohorts B1 and B2 must not have received prior mezigdomide treatment",
+        "Carfilzomib in the immediate last prior line of therapy for patients enrolled in Cohorts C1 and C2",
+        "Pomalidomide in the immediate last prior line of therapy for patients enrolled in cohort D",
+        "Radiation, chemotherapy, immunotherapy, or any other anticancer therapy ≤ 2 weeks",
+        "Cellular therapies ≤ 8 weeks",
+        "Autologous transplant \\< 100 days",
+        "Allogenic transplant ≤ 6 months, or \\> 6 months with active GVHD",
+        "Major surgery ≤ 4 weeks",
+        "Current plasma cell leukemia, POEMS (polyneuropathy, organomegaly, endocrinopathy, and skin changes) syndrome, solitary bone lesion or bone lesions as the only evidence for plasma cell dyscrasia, myelodysplastic syndrome or a myeloproliferative neoplasm or light chain amyloidosis",
+        "Active CNS disease: participants with previously treated stable CNS disease are eligible, except for Cohorts B1 and B2 for which known CNS myeloma involvement is completely excluded."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT05651932"
+    },
+    {
+      "nctId": "NCT04776395",
+      "title": "Iberdomide Alone or in Combination With Dexamethasone for the Treatment of Intermediate- or High-Risk Smoldering Multiple Myeloma",
+      "officialTitle": "Iberdomide in Intermediate- and High-Risk Smoldering Myeloma (SMM) Patients: A Phase 2 Study With a Safety Run-in",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Smoldering Plasma Cell Myeloma"
+      ],
+      "interventions": [
+        "Dexamethasone",
+        "Iberdomide Hydrochloride",
+        "Quality-of-Life Assessment"
+      ],
+      "inclusion": [
+        "Subject must have intermediate- or high risk smoldering multiple myeloma (SMM) as confirmed by at least one of the following factors either at screening or within 28 days of screening:",
+        "Bone marrow clonal plasma cells \\>= 20% confirmed on either screening bone marrow biopsy or by outside pathology ≤5 years from initiation of study drug.",
+        "Abnormal serum free light chain ratio \\> 20 by serum free light chain (FLC) assay",
+        "Serum monoclonal protein \\>= 2 g/dL",
+        "Subject must have been diagnosed with SMM =\\< 5 years from initiation of study drug",
+        "Both men and women of all races and ethnic groups are eligible for this study",
+        "Eastern Cooperative Oncology Group (ECOG) performance status 0-2 (Karnofsky \\>= 60%) is required for eligibility",
+        "Absolute neutrophil count (ANC) \\>= 1500/uL",
+        "Hemoglobin (Hgb) \\> 11 g/dL",
+        "Platelet count \\>= 100,000 cells/mm\\^3 and must be platelet and packed red blood cells (PRBC) transfusion independent with no granulocyte colony-stimulating factor (G-CSF) to ensure eligibility within 8 weeks of screening",
+        "Estimated creatinine clearance \\>= 30 mL/min as defined by Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) or Cockcroft-Gault",
+        "Total bilirubin \\< 2 mg/dL except in subjects with congenital bilirubinemia such as Gilbert syndrome, in which case direct bilirubin =\\< 2 times the institutional upper limit of normal is required"
+      ],
+      "exclusion": [
+        "Multiple myeloma requiring treatment as defined by SLiM-CRAB criteria",
+        "Monoclonal gammopathy of undetermined significance (MGUS), polyneuropathy, organomegaly, endocrinopathy, monoclonal gammopathy, and skin changes (POEMS syndrome), plasma cell leukemia, primary systemic light chain (AL) amyloidosis, or Waldenstroms macroglobulinemia",
+        "Concurrent intravenous bisphosphonate use more often than once a year",
+        "Prior or ongoing treatment for plasma cell disorder",
+        "Active hepatitis B or C due to risk of infection made worse by study drug",
+        "If subject has human immunodeficiency virus (HIV), they must have a CD4 count \\>= 350, no history of acquired immune deficiency syndrome-related illness, and not currently prescribed zidovudine or stavudine",
+        "Subjects may be receiving concomitant low dose corticosteroids (e.g., prednisone up to but no more than 10 mg by mouth daily or its equivalent) for symptom management and comorbid conditions",
+        "Uncontrolled illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure (New York Heart Association \\[NYHA\\] class III or IV), unstable angina pectoris, cardiac arrhythmia, myocardial infarction in the preceding 6 months, or psychiatric illness/social situations that would limit compliance with study requirements",
+        "Subjects with gastrointestinal disease that may significantly alter the absorption of iberdomide",
+        "Pregnant women are excluded from this study because protocol therapy has the potential for teratogenic or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to protocol treatment of the mother, breastfeeding should be discontinued",
+        "Current or prior use of immunosuppressive medication within 14 days prior to the first dose of iberdomide. The following are exceptions to this criterion: intranasal, inhaled, topical or local steroid injections (e.g., intra-articular injection); systemic corticosteroids at physiologic doses that do not exceed 10 mg/day of prednisone or equivalent steroids as premedication for hypersensitivity reactions (e.g, computed tomography \\[CT\\] scan pre-medications)"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT04776395"
+    },
+    {
+      "nctId": "NCT07544589",
+      "title": "A Phase 1 Study Evaluating DISP-10 in Participants With Advanced Gastrointestinal Cancers",
+      "officialTitle": "A Phase 1 Study to Evaluate the Safety and Efficacy of DISP-10 in Participants With Advanced Gastrointestinal Cancers",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Colorectal Cancer",
+        "Gastric Adenocarcinoma",
+        "Esophageal Adenocarcinoma",
+        "Gastroesophageal Adenocarcinoma"
+      ],
+      "interventions": [
+        "DISP-10"
+      ],
+      "inclusion": [
+        "Histologically confirmed advanced or metastatic esophageal, gastroesophageal junction, gastric adenocarcinoma, or colorectal adenocarcinoma",
+        "Measurable disease according to RECIST v1.1 and at least 1 additional site of disease amenable to biopsy",
+        "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "Aged ≥18 years at time of signing informed consent",
+        "Adequate organ function Key"
+      ],
+      "exclusion": [
+        "Previous solid organ or hematopoietic cell transplant",
+        "Evidence of rapid disease progression, defined as radiographic or clinical progression within 3 months of the most recent prior line of therapy",
+        "Known history of hepatitis B or HIV infection",
+        "Previous or concurrent malignancy except if curatively treated more than 3 years prior to enrollment",
+        "Known active central nervous system (CNS) metastases",
+        "Clinically significant pleural or pericardial effusion or peritoneal carcinomatosis",
+        "Active treatment with antiviral agents",
+        "History of severe hypersensitivity to fludarabine or cyclophosphamide",
+        "Prior therapies/treatments with oncolytic viruses or T cell derived cellular therapy"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07544589"
+    },
+    {
+      "nctId": "NCT02693535",
+      "title": "TAPUR: Testing the Use of Food and Drug Administration (FDA) Approved Drugs That Target a Specific Abnormality in a Tumor Gene in People With Advanced Stage Cancer",
+      "officialTitle": "Targeted Agent and Profiling Utilization Registry (TAPUR) Study",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Lymphoma, Non-Hodgkin",
+        "Multiple Myeloma",
+        "Advanced Solid Tumors"
+      ],
+      "interventions": [
+        "Palbociclib",
+        "Sunitinib",
+        "Temsirolimus",
+        "Trastuzumab and Pertuzumab",
+        "Vemurafenib and Cobimetinib",
+        "Regorafenib",
+        "Olaparib",
+        "Nivolumab and Ipilimumab",
+        "Abemaciclib",
+        "Talazoparib",
+        "Atezolizumab and Talazoparib",
+        "Tucatinib plus Trastuzumab Subcutaneous (SC)",
+        "Futibatinib",
+        "Dabrafenib plus Trametinib",
+        "Fam-Trastuzumab Deruxtecan-Nxki (TDxD)"
+      ],
+      "inclusion": [
+        "12 years of age or older (\\*Restrictions apply. Not all therapies are available for patients \\<18)",
+        "Histologically-proven locally advanced or metastatic solid tumor, multiple myeloma or B cell non-Hodgkin lymphoma who is no longer benefiting from standard anti-cancer treatment or for whom, in the opinion of the treating physician, no such treatment is available or indicated",
+        "Performance status 0-2 (Per Eastern Cooperative Oncology Group (ECOG) criteria)",
+        "Patients must have acceptable organ function as defined below. However, as noted above, drug-specific inclusion/"
+      ],
+      "exclusion": [
+        "specified in the protocol appendix for each agent will take precedence for this and all",
+        "Absolute neutrophil count ≥ 1.5 x 106/µl",
+        "Hemoglobin \\> 9.0 g/dl",
+        "Platelets \\> 75,000/µl",
+        "Total bilirubin \\< 2.0 mg/ dl, except in patients with Gilbert's Syndrome",
+        "Aspartate aminotransferase (AST) serum glutamic-oxaloacetic transaminase (SGOT) and alanine aminotransferase (ALT) serum glutamic-pyruvic transaminase (SGPT) \\< 2.5 x institutional upper limit of normal (ULN) (or \\< 5 x ULN in patients with known hepatic metastases)",
+        "Serum creatinine ≤ 1.5 × ULN or calculated or measured creatinine clearance ≥ 50 mL/min/1.73 m2",
+        "Patients must have disease that can be objectively measured by physical or radiographic exam (per RECIST v1.1 for solid tumor, Lugano criteria for non-Hodgkin lymphoma or International Myeloma Working Group criteria for multiple myeloma), defined as at least one lesion that can be accurately measured in at least one dimension (longest diameter to be recorded for non-nodal lesions and short axis for nodal lesions) as ≥20 mm with conventional techniques or as ≥10 mm with spiral CT scan, MRI, or a subcutaneous or superficial lesion that can be measured with calipers by clinical exam. For lymph nodes, the short axis must be ≥15 mm. Patient's whose disease cannot be objectively measured by physical or radiographic examination (e.g., elevated serum tumor marker only, bone-only disease without an identifiable soft tissue component, or patients with only assessable non-measurable disease) are NOT eligible.",
+        "Results must be available from a genomic test or immunohistochemistry (IHC) test for protein expression performed in a Clinical Laboratory Improvement Amendments (CLIA)-certified and College of American Pathologists (CAP)-accredited or New York State accredited (for labs offering services to residents of NY) laboratory. Labs that have registered the test with the NIH Genetic Testing Registry or that provide a report that has been designated as optimized for TAPUR participation are preferred, but not required. The genomic or IHC test used to qualify a patient for participation in TAPUR may have been performed on any specimen of the patient's tumor obtained at any point during the patient's care at the discretion of the patient's treating physician. Genomic assays performed on cell-free DNA in plasma (\"liquid biopsies\") will also be acceptable if the genomic analysis is performed in a laboratory that meets the criteria described above.",
+        "Ability to understand and the willingness to sign a written informed consent/assent document.",
+        "Have a tumor genomic profile for which single agent treatment with one of the FDA approved targeted anti-cancer drugs included in this study has potential clinical benefit based on the criteria described in protocol.",
+        "For orally administered drugs, the patient must be able to swallow and tolerate oral medication and must have no known malabsorption syndrome."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT02693535"
+    },
+    {
+      "nctId": "NCT07223047",
+      "title": "A Study to Evaluate the Safety, Tolerability, and Efficacy of BMS-986523 Alone and in Combination With Anti-Cancer Agents in Participants With Advanced Solid Malignancies",
+      "officialTitle": "A Phase 1/2a, Open-Label, Multicenter Study to Assess the Safety, Tolerability, Pharmacokinetics, Pharmacodynamics and Preliminary Efficacy of BMS-986523 As Monotherapy and in Combination With Anti-Cancer Agents in Participants With Advanced Solid Malignancies",
+      "status": "RECRUITING",
+      "phase": "PHASE1/PHASE2",
+      "conditions": [
+        "Advanced Solid Malignancies",
+        "Non-small Cell Lung Cancer (NSCLC)",
+        "Colorectal Cancer (CRC)",
+        "Pancreatic Ductal Adenocarcinoma (PDAC)"
+      ],
+      "interventions": [
+        "BMS-986523",
+        "Gemcitabine",
+        "Nab-Paclitaxel",
+        "Cetuximab",
+        "Pembrolizumab"
+      ],
+      "inclusion": [
+        "* Participants must have a histologically confirmed diagnosis of a locally advanced and unresectable or metastatic solid tumor malignancy with a known Kirsten rat sarcoma viral oncogene homolog (KRAS) alteration (mutation or amplification).",
+        "Participants must, for Arm D, have a PD-L1 expression (≥50%).",
+        "Participants must have previously received, be ineligible for, or decline (after having been provided adequate information to make an informed decision) the protocol defined standard of care (SoC) treatments."
+      ],
+      "exclusion": [
+        "* Participants must not have untreated central nervous system (CNS) metastases.",
+        "Participants must not have concurrent malignancy (present during screening) requiring treatment or history of prior malignancy active within 2 years prior to treatment.",
+        "Participants must not have a history of, or any evidence of, interstitial lung disease or active, non-infectious pneumonitis. A history of radiation pneumonitis in the radiation field is permitted.",
+        "Participants must not have a history of prior severe cutaneous adverse reactions (SCARs), including Stevens-Johnson Syndrome (SJS) and toxic epidermal necrolysis (TEN).",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07223047"
+    },
+    {
+      "nctId": "NCT06297226",
+      "title": "Study of Arlocabtagene Autoleucel (BMS-986393) a GPRC5D-directed CAR T Cell Therapy in Adult Participants With Relapsed or Refractory Multiple Myeloma",
+      "officialTitle": "A Phase 2, Open-Label, Multicenter Study of Arlocabtagene Autoleucel (BMS-986393), a GPRC5D-directed CAR T Cell Therapy in Adult Participants With Relapsed or Refractory Multiple Myeloma (QUINTESSENTIAL)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Multiple Myeloma"
+      ],
+      "interventions": [
+        "Arlocabtagene Autoleucel"
+      ],
+      "inclusion": [
+        "* Documented diagnosis of multiple myeloma (MM) as per International Myeloma Working Group (IMWG) criteria.",
+        "Received at least 4 classes of MM treatment \\[including immunomodulatory drug (IMiD), proteasome inhibitor (PI), anti CD38 mAb, anti-BCMA therapy, and at least 3 prior lines of therapy (LOT).",
+        "Documented disease progression during or after their last anti-myeloma regimen as per IMWG 2016 criteria.",
+        "Participants must have measurable disease during screening.",
+        "Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1."
+      ],
+      "exclusion": [
+        "* Active or history of central nervous system involvement with MM.",
+        "Active systemic fungal, bacterial, viral, or other infection despite appropriate anti-infective treatment at the time of leukapheresis. Participants with severe infection, severe sepsis or bacteremia in the last 28 days prior to leukapheresis are excluded.",
+        "Received any prior therapy directed at G protein-coupled receptor class C, group 5, member D (GPRC5D) or has received other prior treatment for MM without the required washout prior to leukapheresis.",
+        "Other protocol-defined Inclusion/Exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06297226"
+    },
+    {
+      "nctId": "NCT03848052",
+      "title": "Evolution of the Therapeutic Care in Lung Cancer in France Since 2015 (ESME LC)",
+      "officialTitle": "Epidemiological Strategy and Medical Economic (ESME) Research Program / Academic Real World Data Platform: Evolution of the Therapeutic Care in Lung Cancer in France Since 2015",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "conditions": [
+        "Lung Cancer"
+      ],
+      "interventions": [],
+      "inclusion": [
+        "Adult (over 18)",
+        "Treated (with radiotherapy or systemic anti-cancer treatment) for a lung cancer or diagnosed with metastatic lung cancer over the selection period at one of the participating site"
+      ],
+      "exclusion": [],
+      "url": "https://clinicaltrials.gov/study/NCT03848052"
+    },
+    {
+      "nctId": "NCT07169708",
+      "title": "A Retrospective Observational Study of Nivolumab in Combination With Chemotherapy as Neoadjuvant Therapy for Resectable NSCLC Patients: Real-World Experience in Taiwan (NEOREAL)",
+      "officialTitle": "A Retrospective Observational Study of Nivolumab in Combination With Chemotherapy as Neoadjuvant Therapy for Resectable NSCLC Patients: Real-World Experience in Taiwan",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "conditions": [
+        "Non Small Cell Lung Cancer NSCLC"
+      ],
+      "interventions": [],
+      "inclusion": [
+        "Aged 18 years and older",
+        "Patients who are diagnosed with pathologically confirmed, non-metastatic, resectable NSCLC",
+        "Patients who have received at least one cycle of neoadjuvant nivolumab combined with chemotherapy since the approval of the regimen in February 2023, and who have at least one imaging assessment of EFS and surgical status recorded. For patients who underwent surgery, at least one pathological report is required.",
+        "Patients who have been followed up for at least 12 months (from first dose of neoadjuvant therapy to last medical record date at study site), exceptional case as follows:",
+        "Patients who expired within 12 months of follow-up",
+        "Patients who experience disease progression or recurrence but continue to follow-up",
+        "Participants with histologically confirmed Stage II-III NSCLC (per the 8th International Association for the Study of Lung Cancer) who are considered resectable."
+      ],
+      "exclusion": [
+        "Patients with distant metastasis (M1 disease according to the eighth edition of the American Joint Committee on Cancer \\[AJCC\\] cancer staging manual) prior to neoadjuvant therapy",
+        "Patients with N3 disease per AJCC 8th edition",
+        "Patients with known EGFR mutations or ALK translocation",
+        "Patients who have received any prior systemic therapy for NSCLC",
+        "Patients with a history of previous cancers or other concurrent malignancies within 10 years before the first dose of nivolumab"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07169708"
+    },
+    {
+      "nctId": "NCT06708949",
+      "title": "A Randomized Phase 2 Trial of Nivolumab, Relatlimab Plus Ipilimumab vs. Nivolumab Plus Ipilimumab in First-line Advanced Renal Cell Carcinoma (RCC)",
+      "officialTitle": "A Randomized Phase 2 Trial of Nivolumab, Relatlimab Plus Ipilimumab vs. Nivolumab Plus Ipilimumab in First-line Advanced Renal Cell Carcinoma (RCC)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Renal Cell Carcinoma, Clear Cell"
+      ],
+      "interventions": [
+        "Drugs Nivolumab",
+        "Ipilimumab",
+        "BMS-986213 (Relatlimab-Nivolumab FDC)"
+      ],
+      "inclusion": [
+        "Willing and able to provide a signed and dated written informed consent.",
+        "≥ 18 years of age",
+        "Confirmed diagnosis of RCC with a clear cell component",
+        "Stage IV metastatic renal cell carcinoma per American Joint Committee on Cancer",
+        "No prior systemic therapy for RCC. Prior neo/adjuvant systemic therapy is not allowed.",
+        "Karnofsky performance status ≥ 70%.",
+        "At least one measurable lesion as defined by RECIST 1.1 (Appendix 3)",
+        "A tumor lesion situated in a previously irradiated area is considered a measurable/target lesion only if subsequent disease progression has been documented in the lesion",
+        "Adequate organ function within 28 days prior to first dose of protocol-indicated treatment, including:",
+        "White blood cell (WBC) ≥ 2,000 /µL",
+        "Absolute neutrophil count (ANC) ≥ 1,500/µL",
+        "Platelets ≥ 100,000/µL"
+      ],
+      "exclusion": [
+        "Prior systemic treatment for RCC of any type including neoadjuvant or adjuvant therapy is not allowed.",
+        "≤ 28 days before first dose of protocol-indicated treatment:",
+        "Major surgery requiring general anesthesia.",
+        "≤ 14 days before first dose of protocol-indicated treatment:",
+        "Radiosurgery or radiotherapy",
+        "Minor surgery. (Note: Placement of a vascular access device is not considered minor or major surgery)",
+        "Active infection requiring infusion treatment.",
+        "Any history of or current CNS metastases",
+        "Any condition requiring systemic treatment with either corticosteroids (\\> 10 mg/day prednisone or equivalent daily) or other immunosuppressive medications within 14 days prior to initiating protocol-indicated treatment.",
+        "In the absence of active autoimmune disease, subjects are permitted the use of corticosteroids with minimal systemic absorption (e.g. topical, ocular, intra-articular, intranasal, and inhalational) ≤ 10 mg/day prednisone or equivalent daily; and physiologic replacement doses of systemic corticosteroids ≤ 10 mg/day prednisone or equivalent daily (e.g. hormone replacement therapy needed in patients with hypophysitis)",
+        "Active, known or suspected autoimmune disease (see Appendix 1 for a comprehensive list of autoimmune diseases and immune deficiencies).",
+        "Subjects with type I diabetes mellitus; endocrine organ dysfunction (e.g., hypothyroidism) that are controlled and only requiring only hormone replacement; skin disorders such as vitiligo, psoriasis or alopecia not requiring systemic treatment; or conditions not expected by the investigator to recur in the absence of an external trigger are permitted to enroll."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06708949"
+    },
+    {
+      "nctId": "NCT03521830",
+      "title": "Nivolumab Alone or Plus Relatlimab or Ipilimumab for Patients With Locally-Advanced Unresectable or Metastatic Basal Cell Carcinoma",
+      "officialTitle": "Nivolumab Alone or Plus Relatlimab or Ipilimumab for Patients With Locally-Advanced Unresectable or Metastatic Basal Cell Carcinoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Basal Cell Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Ipilimumab",
+        "Relatlimab"
+      ],
+      "inclusion": [
+        "Signed Written Informed Consent",
+        "Subjects must have signed and dated an Institutional Review Board (IRB)-approved written informed consent form in accordance with regulatory and institutional guidelines. This must be obtained before the performance of any protocol related procedures that are not part of normal subject care.",
+        "Subjects must be willing and able to comply with scheduled visits, treatment schedule, laboratory tests, and other requirements of the study.",
+        "Type of Participant and Target Disease Characteristics",
+        "Eastern Cooperative Oncology Group (ECOG) Performance Status 0-1.",
+        "Participants with histologically confirmed Basal Cell Carcinoma with disease that is considered by the investigator to be unresectable or metastatic. i) COHORT A: Patients with advanced BCC who are treatment-naïve (i.e., no prior hedgehog pathway inhibitors and T cell modulating agents) will receive anti-PD-1 (nivolumab) alone. ii) COHORT B: • Patients with advanced BCC who experience disease progression on anti-PD-1 (nivolumab) + anti-LAG-3 (relatlimab) will receive anti-PD-1 (nivolumab) + anti-CTLA-4 (ipilimumab). iii) COHORT C: • Patients with advanced BCC who experience disease progression on anti-PD-1 (on or off trial) will receive anti-PD-1 (nivolumab) + anti-LAG-3 (relatlimab). c. At least one measurable lesion by the RECIST 1.1 Criteria. d. Participants with Gorlin syndrome will be permitted to enroll in the study. e. Male or female, aged 18 years or older. f. Patients may not have received prior T cell modulating agents for BCC (e.g., anti-CTLA-4, anti-PD-L1, anti-LAG-3, anti-KIR, etc.)",
+        "Laboratory Testing Requirements Screening laboratory values obtained within -28 +/- 3 days of first dose must meet the following criteria:",
+        "White Blood Cells greater than or equal to 2000/μL",
+        "Neutrophils greater than or equal to 1500/μL",
+        "Platelets greater than or equal to 100 x 10³/μL",
+        "Hemoglobin greater than or equal to 9.0 g/dL",
+        "Serum creatinine less than or equal to 1.5 x Upper Limit of Normal (ULN)or creatinine clearance (CrCl) greater than or equal to 40 mL/minute (using Cockcroft/Gault formula)"
+      ],
+      "exclusion": [
+        "Medical Conditions",
+        "Pregnant or nursing women",
+        "Central nervous system metastases, unless stable for at least 4 weeks and no longer requiring steroid therapy.",
+        "Patients with an autoimmune disease or with a condition requiring systemic treatment with either corticosteroids (\\> 10 mg daily prednisone equivalent) or other immunosuppressive medications may be permitted to enroll only after discussion with the study P.I.",
+        "Participants with human immunodeficiency virus (HIV) or acquired immunodeficiency syndrome (AIDS).",
+        "Viral hepatitis. i. Participants with active hepatitis B (positive hepatitis B surface antigen \\[HBsAg\\] or hepatitis C virus (HCV) (positive HCV RNA) are excluded. ii. Patients with past Hepatitis B virus (HBV) infection or resolved HBV infection (defined as the presence of hepatitis B core antibody \\[HBcAb\\] and the absence of HBsAg) are not ineligible, but HBV DNA quantification must be performed and results discussed with the P.I. iii. HBV carriers or those participants requiring antiviral therapy are not eligible to participate. iv. Patients positive for HCV antibody are eligible only if polymerase chain reaction (PCR) is negative for HCV RNA after discussion with the study P.I. f. Participants with a prior malignancy active within the previous 2 years may be permitted to enroll only after discussion with the study P.I. Examples might include locally curable cancers that have been apparently cured, such as squamous cell skin cancer, superficial bladder cancer, or carcinoma in situ of the prostate, cervix, or breast. g. Organ transplant recipients with a functioning allograft will be excluded from this study. h. For Cohorts B and C, patients may be excluded from the study if they previously experienced a toxicity to immunotherapy that, in the opinion of the investigator, would make it unsafe to restart therapy. Examples may include a Grade 3 or greater immune mediated adverse event that was considered related to previous immunotherapy and required immunosuppressive therapy, or an immune mediated adverse event that was considered related to previous immunotherapy and is still \\> grade 1 despite administration of immunosuppressive therapy. Exceptions may include Grade 3 ophthalmologic immune-mediated events that improved to Grade 1 within 2 weeks after topical therapy only, or Grade 3 endocrine immune-mediated events that did not result in symptoms lasting \\>6 weeks and are not requiring \\>7.5mg prednisone or equivalent per day. i) For Cohort C, Troponin T (TnT) or I (TnI) \\> 2 × institutional ULN. Participants with TnT or TnI levels between \\> 1 to 2 × ULN will be permitted if a repeat levels within 24 hours are ≤ 1 ULN. If TnT or TnI levels are between \\>1 to 2 × ULN within 24 hours, the participant may undergo a cardiac consultation and be considered for treatment, following cardiologist recommendation. When repeat levels within 24 hours are not available, a repeat test will be conducted as soon as possible. If TnT or TnI repeat levels beyond 24 hours are \\< 2 × ULN, the participant may undergo a cardiac consultation and be considered for treatment, following cardiologist recommendation.",
+        "Allergies and Adverse Drug Reaction",
+        "History of severe allergy or hypersensitivity to study drug components.",
+        "Patients with a history of a severe toxicity to an immune checkpoint blocking drug may be permitted to enroll only after discussion with the study P.I.",
+        "Other Exclusion Criteria",
+        "Prisoners or participants who are incarcerated may be permitted to enroll only after discussion with the study P.I.",
+        "Participants who are detained for treatment of either a psychiatric or physical (e.g., infectious disease) illness."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT03521830"
+    },
+    {
+      "nctId": "NCT06773910",
+      "title": "BMS-986489 (Atigotatug + Nivolumab) vs Durvalumab in Limited-stage Small-cell Lung Cancer (TIGOS-LS)",
+      "officialTitle": "An Open-label, Randomized Study of BMS-986489 (Atigotatug + Nivolumab Fixed-dose Combination) vs Durvalumab as Consolidation Therapy Following Chemoradiotherapy in Limited-stage Small-cell Lung Cancer (TIGOS-LS)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Limited Stage Small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "BMS-986489",
+        "Durvalumab"
+      ],
+      "inclusion": [
+        "At least 18 years-of-age at the time of signature of the Informed Consent Form (ICF)",
+        "Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1 (Appendix A)",
+        "Histologically or cytologically confirmed pulmonary SCLC, evaluable by RECIST v1.1",
+        "Limited-stage (LS) disease as determined by positron emission tomography (PET) scan prior to initiation of chemotherapy and radiation therapy",
+        "Completed concurrent chemotherapy and radiotherapy for LS-SCLC without progression per Response Evaluation Criteria in Solid Tumors (RECIST) v1.1 (computed tomography \\[CT\\] scan chest/abdomen/pelvis; Appendix B) within 42 days before date of randomization and first dose of study treatment",
+        "Chemotherapy should consist of a platinum and IV etoposide. Participants who received at least 3 cycles of chemotherapy will be eligible to participate.",
+        "Radiotherapy should be administered per institutional guidelines",
+        "Prophylactic cranial irradiation (PCI) may be delivered at the discretion of the Investigator and institutional guidelines. PCI, if applicable, must be conducted after the end of chemoradiotherapy and completed between 14 and 42 days before date of randomization and first dose of study treatment.",
+        "Adequate hematologic and organ function",
+        "Willingness to abide by protocol defined contraceptive requirements for the duration of the study."
+      ],
+      "exclusion": [
+        "Small-cell cancer not pulmonary in origin",
+        "Large cell neuroendocrine carcinoma",
+        "Mixed SCLC and NSCLC histologic features; diagnosis of NSCLC; or EGFR-activating, mutation-positive NSCLC that has transformed to SCLC",
+        "History of severe hypersensitivity reaction to monoclonal antibodies",
+        "Known hypersensitivity to any excipients of atigotatug, nivolumab, or durvalumab",
+        "Grade ≥2 peripheral neuropathy by the National Cancer Institute (NCI) Common Terminology Criteria for Adverse Events (CTCAE) v5.0",
+        "Active, prior, or suspected autoimmune disease, including autoimmune neurologic disorders such as paraneoplastic syndrome involving the CNS, peripheral sensory/motor nerves, or neuromuscular junction. Exceptions to this criterion include:",
+        "Type 1 diabetes mellitus",
+        "Hypothyroidism requiring only hormone replacement",
+        "Skin disorders not requiring systemic treatment",
+        "Autoimmune conditions not expected to recur during the study",
+        "Diseases or conditions requiring chronic systemic corticosteroids (\\>10 mg daily prednisone or equivalent) or other immunosuppressive therapy within 14 days of starting study treatment. Limited-course (\\<2 weeks' duration) oral steroids (10 mg prednisone or equivalent) are permitted. Bronchodilators, inhaled or topical steroids, and adrenal replacement steroid doses \\>10 mg daily prednisone equivalent are permitted in the absence of active autoimmune disease."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06773910"
+    },
+    {
+      "nctId": "NCT05048212",
+      "title": "A Phase II Study of Nivolumab With Ipilimumab and Cabozantinib in Patients With Untreated Renal Cell Carcinoma Brain Metastases",
+      "officialTitle": "A Phase II Study of Nivolumab With Ipilimumab and Cabozantinib in Patients With Untreated Renal Cell Carcinoma Brain Metastases",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Brain Metastases",
+        "Renal Cell Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Ipilimumab",
+        "Cabozantinib"
+      ],
+      "inclusion": [
+        "1. Signed Informed Consent Form (ICF)",
+        "Ability and willingness to comply with the requirements of the study protocol",
+        "Age ≥18 years",
+        "Life expectancy \\>12 weeks",
+        "Asymptomatic and off steroids for at least 10 days except patients: who have mild symptoms from intracranial disease that do not affect their performance status",
+        "Prior therapies for extracranial metastatic renal cell carcinoma as long as it did not include anti- CTLA-4 or cabozantinib or MET inhibitors",
+        "Patients with histologically confirmed metastatic renal cell carcinoma and at least one measurable intracranial target lesion for which all of the following criteria are met: \\- Previously untreated or progressive after previous local therapy(limited to SRS and surgery)",
+        "Immediate local therapy clinically not indicated or patient is not a suitable candidate to receive immediate local therapy.",
+        "5mm to 30mm, as determined by MRI with contrast.",
+        "Adequate hematologic and essential organ function, defined by the following laboratory results obtained within 14 days prior to the first study treatment (C1D1)",
+        "Absolute neutrophil count (ANC) ≥1500 cells/µL",
+        "White blood cell (WBC) counts \\>2500/µ -- Lymphocyte count ≥500/µL"
+      ],
+      "exclusion": [
+        "1. Symptomatic brain metastases requiring immediate local interventions such as craniotomy or SRS or whole brain radiation.",
+        "Patients who require immediate surgical or radiotherapy interventions for extra-cranial lesions.",
+        "Radiation therapy for bone metastasis within 2 weeks or any other radiation therapy within 4 weeks before first dose of study treatment. Systemic treatment with radionuclides within 6 weeks before first dose of study treatment. Subjects with clinically relevant ongoing complications from prior radiation therapy are not eligible.",
+        "Requiring corticosteroid dose in 10 days prior to administration of first dose of study drug with following exceptions \\- Symptomatic patients who have stable or decreasing corticosteroid use in the past 10 days may be included",
+        "Patients with Leptomeningeal disease.",
+        "Any approved anticancer therapy, including chemotherapy and hormonal therapy within 4 weeks prior to initiation of study treatment; however, the following are allowed:",
+        "Hormone-replacement therapy or oral contraceptives",
+        "Herbal therapy \\>1 week prior to Cycle 1, Day 1 (herbal therapy intended as anticancer therapy must be discontinued at least 1 week prior to Cycle 1,Day 1)",
+        "Current, recent (within 3 weeks of the first infusion of this study), or planned participation in an experimental drug study.",
+        "AEs from prior anticancer therapy that have not resolved to Grade ≤1 except for alopecia.",
+        "Known clinically significant liver disease, including active viral, alcoholic, or other hepatitis; \\>Childes A cirrhosis; fatty liver; and inherited liver disease.",
+        "Patients with acute leukemias, accelerated/blast-phase chronic myelogenous leukemia, chronic lymphocytic leukemia, Burkitt lymphoma, plasma cell leukemia, or non-secretory myeloma."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT05048212"
+    },
+    {
+      "nctId": "NCT06419634",
+      "title": "Study of BMS-986497 (ORM-6151) as a Monotherapy, in Double and Triple Combination With Azacitidine and Venetoclax in Participants With Relapsed or Refractory Acute Myeloid Leukemia or Myelodysplastic Syndrome",
+      "officialTitle": "Phase I Multicenter, Open-Label, First-in-Human Study of BMS-986497 (ORM-6151) as a Monotherapy, in Double Combination With Azacitidine and in Triple Combination With Azacitidine and Venetoclax in Subjects With Relapsed or Refractory Acute Myeloid Leukemia or Myelodysplastic Syndrome",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Acute Myeloid Leukemia",
+        "Myelodysplastic Syndrome"
+      ],
+      "interventions": [
+        "BMS-986497",
+        "Azacitidine",
+        "Venetoclax"
+      ],
+      "inclusion": [
+        "Adults with primary or secondary relapsed and/or refractory acute myeloid leukemia (AML) or myelodysplastic syndrome (MDS).",
+        "Detectable levels of cluster of differentiation 33 (CD33) expression.",
+        "Failed alternative therapies with established benefit.",
+        "Eastern Cooperative Oncology Group (ECOG) performance status ≤2 and adequate organ function."
+      ],
+      "exclusion": [
+        "Acute Promyelocytic Leukemia.",
+        "Clinically active central nervous system leukemia.",
+        "Active malignant solid tumor.",
+        "Pregnant or breastfeeding.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06419634"
+    },
+    {
+      "nctId": "NCT06295159",
+      "title": "Neoadjuvant and Adjuvant Anti-PD1 or Combinations for Locoregionally Advanced Melanoma",
+      "officialTitle": "Neoadjuvant and Adjuvant Anti-PD1 or Combinations for Locoregionally Advanced Melanoma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Melanoma Stage III",
+        "Melanoma Stage IV",
+        "Advanced Melanoma",
+        "Melanoma"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Nivolumab + Relatlimab",
+        "Ipilimumab"
+      ],
+      "inclusion": [
+        "This study is divided into 2 sub-studies/parts designated Part 1 and Part 2 that will enroll in sequence starting with Part 1 followed by Part 2. In Part 2, Part 2 Cohort A and Part 2 Cohort B will enroll simultaneously. Inclusion criteria apply to Part 1 and Part 2 unless otherwise specified.",
+        "Voluntarily agree to participate by giving signed, dated, and written informed consent prior to any study-specific procedures.",
+        "18 years of age or older",
+        "Histologic diagnosis of melanoma (cutaneous, acral, mucosal or unknown primary) belonging to the following American Joint Committee on Cancer (AJCC) 8th edition TNM stages (Tx or T1-4) and (N1b, N1c, N2b, N2c, N3b or N3c) and/or (M1a).",
+        "Requirements for prior systemic therapy for melanoma are as follows:",
+        "Sub-study Part 1: No prior systemic therapy for melanoma (N=30).",
+        "Sub-study Part 2 Cohort A: No prior systemic therapy for melanoma (N=20)",
+        "Sub-study Part 2 Cohort B: Locoregionally advanced melanoma that is refractory to systemic adjuvant therapy (anti-PD1-based or BRAF-MEK inhibitors) (N=40). This excludes patients who previously received adjuvant or neoadjuvant anti-PD1 plus anti-LAG3 or anti-PD1 plus anti-CTLA4. Participants who experienced progression or recurrence after anti-PD1 as monotherapy or other combinations or after BRAF-MEK inhibition would be eligible. Participants who have previously experienced prior high-grade (grade 3 or 4 by CTCAE criteria) immune related adverse events with immune checkpoint inhibitors are not eligible.",
+        "Must be considered surgically operable and may present as any of the following groups:",
+        "Primary melanoma with clinically apparent regional lymph node metastases, confirmed by pathological diagnosis.",
+        "Clinically detected recurrence of melanoma at regional lymph node basin(s), confirmed by pathological diagnosis.",
+        "Clinically or histologically detected primary melanoma involving multiple regional nodal groups, confirmed by pathological diagnosis."
+      ],
+      "exclusion": [
+        "Pregnancy or lactation.",
+        "Treatment with another investigational drug or other systemic intervention for melanoma within 4 weeks of initiation of study drugs. Patients must not have radiotherapy within the preceding 2 weeks. Patients must have recovered from adverse events due to agents administered more than 4 weeks earlier.",
+        "Participants must be at least 4 weeks from major surgery and have fully recovered from any effects of surgery and be free of significant detectable infection.",
+        "Ocular or uveal melanoma.",
+        "Bowel obstruction or impending bowel obstruction within the past 3 months.",
+        "Clinically significant (i.e., active) cardiovascular disease: cerebral vascular accident/stroke or myocardial infarction within 6 months of enrollment, unstable angina, congestive heart failure or serious uncontrolled cardiac arrhythmia requiring medication.",
+        "Active or history of brain metastases or leptomeningeal metastases.",
+        "Concurrent malignancy (present during screening) requiring treatment or history of prior malignancy active within 2 years prior to the first dose of study treatment, i.e., patients with a history of prior malignancy are eligible if treatment was completed at least 2 years before the first dose of study treatment and the patient has no evidence of disease. Participants with history of prior early-stage basal/squamous cell skin cancer, low-risk prostate cancer eligible for active surveillance or noninvasive or in situ cancers who have undergone definitive treatment at any time are also eligible.",
+        "Treatment with one of the following classes of drugs within the delineated time window prior to C1D1:",
+        "Cytotoxic, targeted therapy or other investigational therapy within 3 weeks.",
+        "mAbs, antibody-drug conjugates, radioimmunoconjugates, or similar therapy, within 4 weeks, or 5 half-lives, whichever is shorter.",
+        "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) vaccine or booster \\< 7 days before C1D1. For vaccines requiring more than 1 dose, the full series should be completed prior to C1D1, when feasible. Booster shot not required but also must be administered \\> 7 days from C1D1 or \\> 7 days from future cycle on study."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06295159"
+    },
+    {
+      "nctId": "NCT04933903",
+      "title": "BrUOG 397: NEO Rad (LOW): Neoadjuvant Low Dose Stereotactic Body Radiotherapy, Ipilimumab and Nivolumab",
+      "officialTitle": "BrUOG 397: NEO Rad (LOW): Neoadjuvant Low Dose Stereotactic Body Radiotherapy, Ipilimumab and Nivolumab for Patients With Resectable Stage IB - III Non-Small Cell Lung Cancer",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Non Small Cell Lung Cancer"
+      ],
+      "interventions": [
+        "Ipilimumab",
+        "Nivolumab",
+        "SBRT"
+      ],
+      "inclusion": [
+        "Pathologically confirmed NSCLC",
+        "ECOG Performance Status 0-1.",
+        "Pulmonary function capacity capable of tolerating the proposed lung resection. FEV1 at least 2 L. If less than 2 L, the predicted postoperative forced expiratory volume in 1 second (FEV1) must be \\> 0.8 L or be \\> 35% of the predicted value. Postoperative predicted DLCO ≥ 35% is required.",
+        "Resectable stage IB-IIIB (T2-3N0, T1-T3N1-2) NSCLC (per the 8th Edition American Joint Committee on Cancer (AJCC) classification) who are candidates for surgery with intent of R0 resection. Invasive T3 disease (eg, phrenic nerve, pericardium, chest wall other than Pancoast superior sulcus) may be included if the surgeon and study team deem it to be resectable.",
+        "N2 nodes must be discrete (ie, not invading surrounding structures). If patients have N2 disease, as suspected by CT or PET, histologic proof of N2 status is recommended.",
+        "Patients must be evaluated by a Thoracic Surgeon prior to registration. Operability is defined as having adequate pulmonary, cardiac, renal, nutritional, musculoskeletal, neurologic, and cognitive capacity to undergo major pulmonary resection with acceptable morbidity and mortality. Absence of major associated comorbidities that increase the surgery risk to an unacceptable level.",
+        "No prior history of thoracic radiation.",
+        "Adequate Organ and marrow function as defined below",
+        "leukocytes ≥2,000/mcL,",
+        "absolute neutrophil count ≥1,000/mcL,",
+        "platelets ≥100,000/mcL,",
+        "Hemoglobin \\>8.0 g/dL"
+      ],
+      "exclusion": [
+        "Pathologically confirmed NSCLC \\*",
+        "ECOG Performance Status 0-1.",
+        "Pulmonary function capacity capable of tolerating the proposed lung resection. FEV1 at least 2 L. If less than 2 L, the predicted postoperative forced expiratory volume in 1 second (FEV1) must be \\> 0.8 L or be \\> 35% of the predicted value. Postoperative predicted DLCO ≥ 35% is required.",
+        "Resectable stage IB-IIIB (T2-3N0, T1-T3N1-2) NSCLC (per the 8th Edition American Joint Committee on Cancer (AJCC) classification) who are candidates for surgery with intent of R0 resection. Invasive T3 disease (eg, phrenic nerve, pericardium, chest wall other than Pancoast superior sulcus) may be included if the surgeon and study team deem it to be resectable.",
+        "N2 nodes must be discrete (ie, not invading surrounding structures). If patients have N2 disease, as suspected by CT or PET, histologic proof of N2 status is recommended.",
+        "Patients must be evaluated by a Thoracic Surgeon prior to registration. Operability is defined as having adequate pulmonary, cardiac, renal, nutritional, musculoskeletal, neurologic, and cognitive capacity to undergo major pulmonary resection with acceptable morbidity and mortality. Absence of major associated comorbidities that increase the surgery risk to an unacceptable level. \\*",
+        "No prior history of thoracic radiation.",
+        "Adequate Organ and marrow function as defined below",
+        "leukocytes ≥2,000/mcL,",
+        "absolute neutrophil count ≥1,000/mcL,",
+        "platelets ≥100,000/mcL,",
+        "Hemoglobin \\>8.0 g/dL"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT04933903"
+    },
+    {
+      "nctId": "NCT07481110",
+      "title": "Study of the Epidemiological, Clinical, Diagnostic, and Therapeutic Characteristics of Gastric Cancers in Algeria",
+      "officialTitle": "Study of the Epidemiological, Clinical, Diagnostic, and Therapeutic Characteristics of Gastric Cancers in Algeria",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "conditions": [
+        "Gastric Cancer",
+        "Gastric (Stomach) Cancer",
+        "Gastric Cancer (Diagnosis)"
+      ],
+      "interventions": [],
+      "inclusion": [
+        "Patients aged 19 years and older",
+        "Histologically confirmed diagnosis of gastric cancer",
+        "Patients followed in the participating oncology departments",
+        "Informed consent obtained Non Inclusion Criteria:",
+        "Histological types other than carcinoma (e.g., GIST, lymphoma, sarcoma, etc.).",
+        "Secondary gastric tumors",
+        "Participation in an interventional study"
+      ],
+      "exclusion": [],
+      "url": "https://clinicaltrials.gov/study/NCT07481110"
+    },
+    {
+      "nctId": "NCT03297606",
+      "title": "Canadian Profiling and Targeted Agent Utilization Trial (CAPTUR)",
+      "officialTitle": "Canadian Profiling and Targeted Agent Utilization Trial (CAPTUR): A Phase II Basket Trial",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Lymphoma, Non-Hodgkin",
+        "Multiple Myeloma",
+        "Advanced Solid Tumors"
+      ],
+      "interventions": [
+        "Olaparib",
+        "Dasatinib",
+        "Nivolumab plus Ipilimumab",
+        "Axitinib",
+        "Bosutinib",
+        "Crizotinib",
+        "Palbociclib",
+        "Sunitinib",
+        "Temsirolimus",
+        "Erlotinib",
+        "Trastuzumab plus Pertuzumab",
+        "Vemurafenib plus Cobimetinib",
+        "Vismodegib",
+        "Tucatinib"
+      ],
+      "inclusion": [
+        "(screening step - non-drug specific)",
+        "Adult (≥ 18 yrs) patient with a histologically-proven incurable metastatic solid tumour (excluding primary brain tumours), multiple myeloma or B cell non-Hodgkin lymphoma (excluding CLL, SLL and HCL), for whom there is no standard treatment known to prolong life, or who has refused such treatment.",
+        "ECOG performance status 0-2.",
+        "Patients must have normal organ function as follows:",
+        "Absolute neutrophil count: ≥ 1.5 x 10\\^9/L for solid tumours; ≥ 1.0 x 10\\^9/L for neurologic malignancies",
+        "Platelets ≥ 75 x 10\\^9/L (or ≥ 50 x 10\\^9/L if bone marrow involvement by myeloma or lymphoma).",
+        "Total bilirubin ≤ 1.5 x UNL.",
+        "AST (SGOT)/ALT (SGPT) ≤ 2.5 x institutional upper limit of normal value unless liver metastases are present in which case they must be \\< 5 x ULN;",
+        "Serum creatinine ≤ 1.5 x UNL or calculated or measured creatinine clearance ≥ 50mg/min/1.73µ\\^2",
+        "Patients must have measurable disease",
+        "Results must be available from tumour genomic or protein expression testing (if used to identify genetic variants), from one of the initiatives / groups listed in protocol Appendix VII. The test may have been performed on the primary tumour or a metastatic deposit (including bone marrow), or blood, in a diagnostic or research laboratory and must reveal a potentially actionable variant.",
+        "Patient consent (Main Study Consent for the screening step) must be appropriately obtained in accordance with applicable local and regulatory requirements. Each patient must sign a consent form prior to the screening step to document their willingness to participate"
+      ],
+      "exclusion": [
+        "(screening step - non-drug specific)",
+        "Patients with prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the investigational regimen.",
+        "Patients with ongoing toxicity ≥ CTCAE grade 2, other than peripheral neuropathy or asymptomatic, corrected biochemical toxicities (e.g. hypothyroidism corrected by thyroid replacement), related to prior anti-tumour treatment. Patients with ongoing peripheral neuropathy of ≥ CTCAE grade 3 will be excluded.",
+        "Patients concurrently receiving any other anti-cancer therapy (cytotoxic, biologic, radiation, or hormonal other than for replacement) except for medications that are prescribed for supportive care but may potentially have an anti-cancer effect (e.g. megestrol acetate, bisphosphonates) or ongoing castration-intent therapy for prostate cancer. These medications must have been started ≥ one month prior to enrollment on this study. Patients may be on warfarin, low molecular weight heparin or direct factor Xa inhibitors, unless such therapies are prohibited by drug-specific ineligibility criteria.",
+        "Patients with known active progressive brain metastases. Patients with previously treated brain metastases are eligible, provided that the patient has not experienced a seizure or had a clinically significant change in neurological status within one month prior to screening. All patients with previously treated brain metastases must be stable (clinically and radiologically) for at least one month after completion of treatment and either off steroid treatment or only taking physiological doses of steroids prior to the screening step.",
+        "Patients with clinically significant pre-existing cardiac conditions, including uncontrolled or symptomatic angina, uncontrolled atrial or ventricular arrhythmias, or symptomatic congestive heart failure.",
+        "Patients with known left ventricular ejection fraction (LVEF) \\< 40%.",
+        "Patients with stroke (including TIA) or acute myocardial infarction within three months prior to the screening step.",
+        "Patients with acute gastrointestinal bleeding within one month prior to the screening step.",
+        "Patients with any other clinically significant medical condition which, in the opinion of the treating physician, makes it undesirable for the patient to participate in the study or which could jeopardize compliance with study requirements including, but not limited to: ongoing or active infection, significant uncontrolled hypertension, or severe psychiatric illness/social situations.",
+        "Lactating and nursing women",
+        "Patients who do not meet drug-specific eligibility requirements for the drug selected by the treating physician."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT03297606"
+    },
+    {
+      "nctId": "NCT06153251",
+      "title": "A Study to Assess BMS-986453 in Participants With Relapsed and/or Refractory Multiple Myeloma",
+      "officialTitle": "A Phase 1, Open-Label, Dose-Finding Study of BMS-986453, Dual Targeting BCMAxGPRC5D Chimeric Antigen Receptor T Cells, in Participants With Relapsed and/or Refractory Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE1",
+      "conditions": [
+        "Relapsed and/or Refractory Multiple Myeloma"
+      ],
+      "interventions": [
+        "BMS-986453",
+        "Fludarabine",
+        "Cyclophosphamide"
+      ],
+      "inclusion": [
+        "Participants must have a diagnosis of multiple myeloma with relapsed and/or refractory disease.",
+        "Participants must have confirmed progressive disease on or within 12 months (measured from the last dose) of completing treatment with the last anti-myeloma treatment regimen before study entry.",
+        "Participants in Part A and Part B Cohort 1 and in Part B Cohort 2 must have relapsed/refractory multiple myeloma and received previous antimyeloma therapy, including a proteasome inhibitor and an immunomodulatory agent.",
+        "Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+        "Participants must have adequate organ function."
+      ],
+      "exclusion": [
+        "Participants must not have any known active or history of central nervous system (CNS) involvement of multiple myeloma.",
+        "Participants must not have active or history of plasma cell leukemia, Waldenstrom's macroglobulinemia, POEMS (polyneuropathy, organomegaly, endocrinopathy, monoclonal protein, skin changes) syndrome, or clinically significant amyloidosis.",
+        "Participants must not have a history or presence of clinically significant CNS pathology such as seizure disorder, aphasia, stroke, severe brain injury, dementia, Parkinson's disease, or cerebellar disease, or presence of clinically active psychosis.",
+        "Other protocol-defined inclusion/exclusion criteria apply."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT06153251"
+    },
+    {
+      "nctId": "NCT07339254",
+      "title": "Experiences w/ & Attitudes Towards Immune Chckpt Inhibitors in NSCLC Patients Single Center Survey Based Study",
+      "officialTitle": "Experiences With and Attitudes Towards Immune Checkpoint Inhibitors in Patients With Non-Small Cell Lung Cancer (NSCLC) - A Single Center, Survey-Based Study",
+      "status": "RECRUITING",
+      "phase": "N/A",
+      "conditions": [
+        "Lung Non-Small Cell Carcinoma"
+      ],
+      "interventions": [
+        "Non-Interventional Study"
+      ],
+      "inclusion": [
+        "\\* Age ≥ 18 years.",
+        "\\* Patients must have histopathologically/cytologically confirmed non-small cell lung cancer, currently receiving Atezolizumab, Cemiplimab, Durvalumab, Nivolumab, Pembrolizumab (i.e. the patient has already received at least one cycle of therapy)",
+        "\\* Previous chemotherapy/radiotherapy/targeted/immunotherapy is allowed at any prior timepoint.",
+        "\\* Ability to understand and the willingness to sign a written informed consent or presence of a surrogate decision maker who can give consent."
+      ],
+      "exclusion": [
+        "\\* Patients is unable to consent for themselves",
+        "\\* Patient has not yet completed the 1st cycle of ICI-based therapy"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT07339254"
+    },
+    {
+      "nctId": "NCT05896228",
+      "title": "Iberdomide, Daratumumab, Carfilzomib, and Dexamethasone (Iber-KDd) in Patients With Relapsed/Refractory Multiple Myeloma",
+      "officialTitle": "Phase 2, Single-Arm Study of Iberdomide, Daratumumab, Carfilzomib, and Dexamethasone (Iber-KDd) in Patients With Relapsed/Refractory Multiple Myeloma",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Refractory Multiple Myeloma",
+        "Relapsed Multiple Myeloma"
+      ],
+      "interventions": [
+        "Iberdomide",
+        "Carfilzomib",
+        "Daratumumab",
+        "Dexamethasone",
+        "Acetaminophen",
+        "Diphenhydramine",
+        "Montelukast"
+      ],
+      "inclusion": [
+        "Patients with histologically confirmed MM with progressive disease according to the IMWG criteria 47 during or within 60 days of their last regimen who have received 1-3 lines of prior therapy (inclusive of a lenalidomide-containing regimen) and have measurable disease within 4 weeks of enrollment based on one of the following:",
+        "Serum monoclonal protein ≥ 1.0 g/dL",
+        "Urine monoclonal protein ≥ 200 mg/24 hour",
+        "Involved serum immunoglobulin free light chains (FLC) ≥ 10 mg/dL AND abnormal kappa/lambda ratio. Note: Because the primary endpoint is MRD-negativity rate, per the discretion of the Principal Investigator (PI), patients without measurable disease (e.g., M-spike \\< 1.0 g/dL) may also be enrolled in line with the IMWG MM response criteria 47.",
+        "Prior treatment with cluster of differentiation 38 (CD38) -directed therapy is permitted only if all the following are fulfilled:",
+        "Best response achieved during CD38-directed therapy was ≥ PR.",
+        "Patient did not progress while receiving CD38-directed therapy or within 60 days of last dose of therapy.",
+        "Patient did not discontinue CD38-directed therapy due to a related AE.",
+        "Prior treatment with carfilzomib is permitted only if all the following are fulfilled:",
+        "Best response achieved during carfilzomib-based therapy was ≥ PR.",
+        "Patient did not progress while receiving carfilzomib-based therapy or within 60 days of last dose of therapy.",
+        "Patient did not discontinue carfilzomib due to a related AE."
+      ],
+      "exclusion": [
+        "Patients receiving concurrent systemic treatment for MM with the following exceptions:",
+        "Treatment of hypercalcemia or spinal cord compression or aggressively progressing myeloma with current or prior corticosteroids is permitted.",
+        "Patients may receive kyphoplasty/vertebroplasty for symptomatic vertebral compression fractures.",
+        "Bone targeting agents are permitted.",
+        "Concurrent or prior treatment with corticosteroids for indications other than MM is permitted.",
+        "Focal radiation therapy within 14 days prior to randomization with the exception of palliative radiotherapy for symptomatic management but not on measurable extramedullary plasmacytoma.",
+        "Prior MM treatments must be concluded with a washout period of 2 weeks from last dose.",
+        "Patients who are refractory to an anti-CD38-directed regimen:",
+        "Prior anti-CD38-directed therapy and carfilzomib are permitted as long as above are met.",
+        "Patients with plasma cell leukemia.",
+        "Patients with Polyneuropathy, Organomegaly, Endocrinopathy, Monoclonal protein, Skin changes syndrome (POEMS syndrome).",
+        "Patients with amyloidosis."
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT05896228"
+    },
+    {
+      "nctId": "NCT03026140",
+      "title": "Neoadjuvant Immune Checkpoint Inhibition and Novel IO Combinations in Early-stage Colon Cancer",
+      "officialTitle": "Neoadjuvant Immune Checkpoint Inhibition and Novel IO Combinations in Early-stage Colon Cancer (Amended Protocol of: Nivolumab, Ipilimumab and COX2-inhibition in Early Stage Colon Cancer: an Unbiased Approach for Signals of Sensitivity: The NICHE TRIAL)",
+      "status": "RECRUITING",
+      "phase": "PHASE2",
+      "conditions": [
+        "Colon Carcinoma"
+      ],
+      "interventions": [
+        "Nivolumab",
+        "Ipilimumab",
+        "Celecoxib 200mg",
+        "BMS-986253",
+        "BMS-986016"
+      ],
+      "inclusion": [
+        "Signed written informed consent",
+        "Patients at least 18 years of age",
+        "Non-metastatic adenocarcinoma of the colon (and rectosigmoid considered as nonrectal and not undergoing neoadjuvant treatment)",
+        "No signs of distant metastases on CT-scan and physical examination;",
+        "dMMR cohorts 3+6: \\>cT3 and/or N+"
+      ],
+      "exclusion": [
+        "No signs of distant metastases",
+        "No signs of obstruction or macroscopic bleeding or suspicion of perforation",
+        "Colonoscopy must be performed after registration to obtain study-specific biopsies. If biopsies are not possible, patients cannot be included in the study",
+        "WHO performance status of 0 or 1",
+        "No previous treatment with immune checkpoint inhibitors targeting CTLA-4, PD-1 or PD-L1",
+        "For patients with MSS tumors: no current use of NSAIDs or COX2-inhibitors at registration and no active peptic ulcer, gastrointestinal bleeding, unstable ischemic heart disease of thrombus etiology or significant established ischemic heart disease, peripheral arterial disease and/or cerebrovascular disease",
+        "No radiotherapy prior to or planned post-surgery radiotherapy",
+        "No history of allergy to study drug components, severe hypersensitivity reaction to any monoclonal antibody, allergy or severe hypersensitivity to NSAIDs or COX2-I (MSS tumors)",
+        "No intercurrent illnesses, including but not limited to infections, unstable angina pectoris",
+        "No positive test for hepatitis B virus surface antigen (HBsAg) or hepatitis C virus ribonucleic acid (HCV antibody) indicating acute or chronic infection",
+        "No autoimmune disease",
+        "No conditions requiring systemic treatment with either corticosteroids (10 mg daily prednisone or more and equivalents) or other immunosuppressive medications within 14 days of study drug administration"
+      ],
+      "url": "https://clinicaltrials.gov/study/NCT03026140"
+    }
+  ]
+}
