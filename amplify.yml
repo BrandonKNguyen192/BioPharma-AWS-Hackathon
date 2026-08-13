@@ -3,10 +3,13 @@
 # Amplify auto-detects Next.js SSR. The /api/match route and /dashboard are
 # server-rendered, so this deploys as a compute (SSR) app, not a static export.
 #
-# Required environment variable in the Amplify console:
-#   OPENAI_API_KEY
-# Optional:
-#   BRIGHTDATA_API_KEY, BRIGHTDATA_ZONE
+# Secrets are configured in the Amplify console (App settings > Environment
+# variables) and are never committed to this file, because this repo is
+# public. Set these values there:
+#   OPENAI_API_KEY      required for live OpenAI extraction; without it the
+#                       app runs in offline fallback mode
+#   BRIGHTDATA_API_KEY  optional; enables Web Unlocker for trial ingestion
+#   BRIGHTDATA_ZONE     optional; defaults to web_unlocker1 in the script
 #
 # Trial data is committed at src/data/trials.json, so no network fetch runs
 # during the build.
@@ -19,6 +22,8 @@ frontend:
         - corepack enable
         - corepack prepare pnpm@10.6.2 --activate
         - pnpm install --frozen-lockfile
+        - test -n "$OPENAI_API_KEY" && echo "env OPENAI_API_KEY: set" || echo "env OPENAI_API_KEY: missing (offline fallback mode)"
+        - test -n "$BRIGHTDATA_API_KEY" && echo "env BRIGHTDATA_API_KEY: set" || echo "env BRIGHTDATA_API_KEY: not set (direct ClinicalTrials.gov fallback)"
     build:
       commands:
         - pnpm build
