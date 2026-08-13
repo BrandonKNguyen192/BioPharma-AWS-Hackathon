@@ -19,11 +19,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - corepack enable
-        - corepack prepare pnpm@10.6.2 --activate
-        - pnpm install --frozen-lockfile
-        - test -n "$OPENAI_API_KEY" && echo "env OPENAI_API_KEY: set" || echo "env OPENAI_API_KEY: missing (offline fallback mode)"
-        - test -n "$BRIGHTDATA_API_KEY" && echo "env BRIGHTDATA_API_KEY: set" || echo "env BRIGHTDATA_API_KEY: not set (direct ClinicalTrials.gov fallback)"
+        - 'corepack enable'
+        - 'corepack prepare pnpm@10.6.2 --activate'
+        - 'pnpm install --frozen-lockfile'
+        - 'test -n "$OPENAI_API_KEY" && echo "env OPENAI_API_KEY: set" || echo "env OPENAI_API_KEY: missing (offline fallback mode)"'
+        - 'test -n "$BRIGHTDATA_API_KEY" && echo "env BRIGHTDATA_API_KEY: set" || echo "env BRIGHTDATA_API_KEY: not set (direct ClinicalTrials.gov fallback)"'
     build:
       commands:
         - pnpm build
