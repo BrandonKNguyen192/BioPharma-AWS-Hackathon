@@ -219,10 +219,10 @@ Why these roles, per the literature:
 | **OpenAI Agents SDK** | Handoffs, guardrails, tracing (openai.github.io/openai-agents-python) | Optional; good if roles become true sub-agents |
 | **LangGraph** | Graph/state orchestration, durable state | Overkill for a serverless demo; state model is close to B.3 though |
 | **CrewAI** | Role-based "crews" | Closest conceptual match to roles; adds dependency weight |
-| **AWS Bedrock AgentCore** | Managed agent runtime on AWS | The AWS/BMS story if you demo on Bedrock; not needed for the app itself |
+| **AWS Bedrock AgentCore** | Managed agent runtime on AWS | The AWS/sponsor story if you demo on Bedrock; not needed for the app itself |
 | **Strands Agents SDK** | TypeScript agent SDK (npm 1.13.0, Apache-2.0) — **already integrated** | Keep for the Signal Analyst |
 | **DSPy** | Declarative LM programming / prompt optimization | Great for hardening the Extractor (evals + automatic prompt tuning) |
-| NVIDIA NeMo Agent Toolkit (ex-AgentIQ) | Agent framework on NVIDIA stack | BMS AI-factory storyline only; no code impact |
+| NVIDIA NeMo Agent Toolkit (ex-AgentIQ) | Agent framework on NVIDIA stack | the sponsor AI-factory storyline only; no code impact |
 
 **Recommendation:** do not adopt a heavyweight framework. The current codebase
 (Next.js serverless route + zod 4.4.3 + Strands) already implements the pattern;

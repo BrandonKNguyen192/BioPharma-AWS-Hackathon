@@ -22,7 +22,7 @@ patient-demand side (seeded cohorts, dashboard aggregates, edge-case tests).
 |---|---|---|
 | Purpose | Why this product exists and what claim is defensible | How to keep the LLM from ever deciding eligibility |
 | Core question | Business, market, regulatory, data substrate | Engineering, safety, agent architecture |
-| Load-bearing facts | ~3% adult cancer trial enrollment; 23% coverage floor and ~50% EHR-predictable ceiling; FDA CDS guidance Jan 29 2026; TrialGPT 87.3% accuracy and 42.6% screening-time reduction; BMS NVIDIA AI factory | Right-prediction-wrong-reasoning; systematic review of hallucination, leakage, bias; alphaNeSy-CTM up to +30% vs pure LLM; MSK-MATCH 98.6% accuracy at 43s and $0.96 per patient-trial pair |
+| Load-bearing facts | ~3% adult cancer trial enrollment; 23% coverage floor and ~50% EHR-predictable ceiling; FDA CDS guidance Jan 29 2026; TrialGPT 87.3% accuracy and 42.6% screening-time reduction; the sponsor NVIDIA AI factory | Right-prediction-wrong-reasoning; systematic review of hallucination, leakage, bias; alphaNeSy-CTM up to +30% vs pure LLM; MSK-MATCH 98.6% accuracy at 43s and $0.96 per patient-trial pair |
 | Output | Section 11 Now / Next / Later repo backlog | Part B phased agent plan (Phase 0-3) |
 
 The reports agree on the load-bearing architecture: RESEARCH.md says verdicts
@@ -39,7 +39,7 @@ literature. They also line up operationally:
 ## 3. Deep-research additions (live-verified Aug 13, 2026)
 
 - **ClinicalTrials.gov is still the right substrate, and the demo number is
-  defensible.** The exact demo query (sponsor = Bristol-Myers Squibb, recruiting,
+  defensible.** The exact demo query (sponsor = the sponsor, recruiting,
   oncology conditions) currently returns **92 studies**. The committed 60 in
   `src/data/trials.json` is a stable, offline, dependency-free subset. Demo
   phrasing: "60 committed real trials, sourced from a current universe of 92."
@@ -49,7 +49,7 @@ literature. They also line up operationally:
   Reasoning-Enabled System for Patient-Clinical Trial Matching" (2512.08026),
   TrialMatchAI (2505.08508), and MatchMiner-AI (2412.17228). None overturn the
   design; they reinforce criterion-level, evidence-grounded matching.
-- **SEC EDGAR is a concrete pipeline-visibility source.** BMS (CIK 0000014272)
+- **SEC EDGAR is a concrete pipeline-visibility source.** the sponsor (CIK 0000014272)
   filed a 10-Q and an 8-K on 2026-07-30, both machine-readable and public. This
   is exactly the "financial reports" channel the AstraZeneca-style feedback
   described. The pipeline layer should combine SEC filings, company IR and
@@ -144,7 +144,7 @@ verdicts. Agents write typed zod artifacts; disagreements become `null` or
 
 ## 7. Pitch-ready lines
 
-- "We match real BMS trials from ClinicalTrials.gov, and every verdict is a
+- "We match real the sponsor trials from ClinicalTrials.gov, and every verdict is a
   deterministic rule you can diff and sign off."
 - "The model never decides eligibility; it reads messy patient language and
   explains a decision path the code made."

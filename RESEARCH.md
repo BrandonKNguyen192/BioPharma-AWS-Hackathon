@@ -49,7 +49,7 @@ lose for the same reason — eligibility written for regulators, not people.
   project's `scripts/fetch-trials.mjs` uses exactly this path (Bright Data Web
   Unlocker optional when keyed).
 - Registry scale: 500,000+ registered studies in 220+ countries (ClinicalTrials.gov
-  official figure). The demo dataset is 60 recruiting BMS oncology trials — a deliberate
+  official figure). The demo dataset is 60 recruiting oncology trials — a deliberate
   subset so the demo never depends on live network.
 - **The core engineering fact:** eligibility is stored as one free-text blob (the
   `eligibility` module). Splitting it into discrete inclusion/exclusion bullets (what
@@ -59,9 +59,9 @@ lose for the same reason — eligibility written for regulators, not people.
 - 60 trials, source ClinicalTrials.gov API v2, fetched 2026-08-13T18:35:12Z.
 - Top conditions: multiple myeloma (8), NSCLC (7 total incl. variants), advanced solid
   tumors (3), RCC (2), CRC (2), BCC (2), urothelial (2), melanoma (2), NHL (2).
-- Top interventions: pumitamig (14) — BMS's BCMA×CD3 bispecific; nivolumab/Opdivo (13);
-  ipilimumab/Yervoy (10); iberdomide (5); BMS-986504 (4). This is a genuinely
-  BMS-centric, modern oncology pipeline (myeloma + IO backbone).
+- Top interventions span a modern oncology pipeline: a BCMA×CD3 bispecific (14),
+  nivolumab (13), ipilimumab (10), iberdomide (5), and coded investigational
+  compounds (myeloma + IO backbone).
 - Phases: Phase 2 (21), Phase 1 (11), Phase 1/2 (10), Phase 3 (7), Phase 2/3 (6), N/A (5).
 
 ---
@@ -120,7 +120,7 @@ retrieval → criterion-level eligibility prediction → ranking. Published resu
    criterion-level evaluation (not trial-level black-box verdicts) is the consensus
    design. ClearTrial's deterministic engine is the safe, auditable embodiment.
 2. Differentiators vs TrialGPT: (a) plain-English patient input with zero EHR access,
-   (b) BMS-specific protocol text with verbatim citation, (c) deterministic verdicts a
+   (b) sponsor-specific protocol text with verbatim citation, (c) deterministic verdicts a
    clinical team can version-control and sign off, (d) the rejection-signal dashboard —
    TrialGPT has no equivalent; no one is feeding exclusions back into trial design.
 3. Numeric ammunition for the pitch: cite TrialGPT's 42.6% screening-time reduction as
@@ -201,9 +201,9 @@ and Criterion 3's affirmative example:
      construction: every verdict cites the verbatim protocol sentence, the evaluated
      patient value, and the rule. "You cannot do that with a chatbot transcript" is
      precisely the guidance's own logic.
-  3. **Enterprise context:** in production this runs under BMS's compliance umbrella
+  3. **Enterprise context:** in production this runs under the sponsor's compliance umbrella
      (their legal/regulatory team, their VPC, their enterprise agreement) as a patient-
-     engagement surface for BMS's own trials — analogous to the "used by the sponsor
+     engagement surface for the sponsor's own trials — analogous to the "used by the sponsor
      for its own research operations" posture, which is not how consumer CDS is
      assessed.
 - Recommended stance for judges: "We designed it so a clinical team can review the
@@ -215,26 +215,26 @@ and Criterion 3's affirmative example:
 **HIPAA/privacy posture (unchanged and strong):** patient text never written to disk,
 never logged, lives for the request duration; only concept-level telemetry retained
 ("lung-cancer search blocked by criterion X"); no identifiers; outbound contact is a
-patient-sent draft. In production: BMS enterprise agreement, VPC, no third-party data
+patient-sent draft. In production: a sponsor enterprise agreement, VPC, no third-party data
 storage.
 
 ---
 
-## 7. Strategy: the BMS "AI factory" is real and current
+## 7. Strategy: the sponsor "AI factory" is real and current
 
-**Verified announcement (July 20, 2026):** BMS is building the life-science industry's
+**Verified announcement (July 20, 2026):** the sponsor is building the life-science industry's
 "most advanced AI factory" on **NVIDIA Vera Rubin NVL72** — a DGX SuperPOD, eight
 rack-scale systems with Vera CPUs and Rubin GPUs, ~10x performance per megawatt vs
-the infrastructure it replaces. Sources: NVIDIA blog ("Bristol Myers Squibb Building
+the infrastructure it replaces. Sources: NVIDIA blog ("the sponsor Building
 Life Science Industry's Most Advanced AI Factory on NVIDIA Vera Rubin", Jul 20 2026),
 pharmaphorum, Fierce Biotech coverage.
 
 Key facts to use in the pitch close:
-- BMS calls it a "hybrid intelligence" vision: AI scientists working alongside
+- the sponsor calls it a "hybrid intelligence" vision: AI scientists working alongside
   researchers; "predict first" — AI already informs the design of every small-molecule
-  program at BMS and most large-molecule programs, before lab work.
+  program at the sponsor and most large-molecule programs, before lab work.
 - Platform includes **NVIDIA BioNeMo Agent Toolkit** (agentic AI for drug discovery);
-  BMS has used AI to expand its **CELMoD** compound library (protein-degrading
+  the sponsor has used AI to expand its **CELMoD** compound library (protein-degrading
   medicines for blood cancers).
 - The stated goal: truncate drug-discovery timelines, scale proprietary models,
   "no one is told they have a limit" on compute.
@@ -242,9 +242,9 @@ Key facts to use in the pitch close:
 **The strategic synthesis for ClearTrial (the close of the pitch):**
 - ClearTrial's real-world demand signal (matched AND unmatched searches) is exactly the
   class of data an AI factory consumes — and it is generated by the patient
-  relationship, which is BMS's to own only if BMS owns the compliant surface. The
+  relationship, which is the sponsor's to own only if the sponsor owns the compliant surface. The
   BRIEF.md thesis ("prevent third-party LLMs from owning the patient relationship")
-  is validated by the trajectory: BMS is betting the company's R&D on AI, so the
+  is validated by the trajectory: the sponsor is betting its R&D on AI, so the
   patient-side data moat matters more, not less.
 - The demo insight is real: in the project's own dataset, checkpoint-inhibitor prior
   therapy (prior PD-1/PD-L1) blocks a large share of interested patients against a
@@ -290,7 +290,7 @@ Key facts to use in the pitch close:
   Models.* arXiv 2307.15051 (2023).
 - *Recommending Clinical Trials for Online Patient Cases using AI.* arXiv 2504.20059.
 - *LLM-Match.* arXiv 2503.13281. / *SatIR.* arXiv 2604.08849.
-- NVIDIA Blog: *Bristol Myers Squibb Building Life Science Industry's Most Advanced AI
+- NVIDIA Blog: *the sponsor Building Life Science Industry's Most Advanced AI
   Factory on NVIDIA Vera Rubin* (Jul 20, 2026); pharmaphorum coverage (Jul 20, 2026).
 - ClinicalTrials.gov API v2 — live-verified 2026-08-13 (apiVersion 2.0.5).
 - Competitor sites live-verified 2026-08-13: lealhealth.com (ex-Trialjectory),
@@ -301,7 +301,7 @@ Key facts to use in the pitch close:
 ## 10. Actions implied by this research
 
 1. **Refresh PITCH.md Q&A** — replace the "decision-support exemption" claim with the
-   three-leg framing in §6 (retrieval-not-CDS / Criterion-4-by-construction / BMS
+   three-leg framing in §6 (retrieval-not-CDS / Criterion-4-by-construction / the sponsor
    enterprise posture). Cite the Jan 29, 2026 guidance date; it is an asset, not a
    liability.
 2. **Upgrade the coverage claim** — "23% today, ceiling ~50% per the AMIA 2026 NSCLC
@@ -311,7 +311,7 @@ Key facts to use in the pitch close:
    criterion accuracy validate the category; ClearTrial adds what TrialGPT lacks
    (plain-English input, no EHR, deterministic auditable verdicts, rejection→design
    feedback).
-4. **Use the BMS AI factory close** — the July 20, 2026 NVIDIA announcement is this
+4. **Use the sponsor AI factory close** — the July 20, 2026 NVIDIA announcement is this
    week's news; ClearTrial is the patient-side data moat for it.
 5. **Operational flag (separate from research):** the project's `.env.local` still
    holds the old key (models gpt-5.6-sol/gpt-5.5). The new group key only serves
@@ -427,7 +427,7 @@ architecture.
      - `PITCH.md`
    - Change:
      - Broaden wording carefully where appropriate while keeping "current dataset:
-       active BMS oncology trials" explicit.
+       active oncology trials" explicit.
 
 ### Later
 
@@ -461,7 +461,7 @@ as a tweak to the current patient-matching path.
 
 3. **Broader disease-area support**
    - Why: The product framing may eventually extend beyond oncology, but the current
-     trial corpus, heuristics, and seeded analytics are BMS oncology-specific.
+     trial corpus, heuristics, and seeded analytics are oncology-specific.
    - Files:
      - `scripts/fetch-trials.mjs`
      - `src/lib/extract.ts`
