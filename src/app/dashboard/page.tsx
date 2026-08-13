@@ -9,6 +9,12 @@ import {
   TriangleAlert,
 } from "lucide-react";
 import { getDashboardData } from "@/lib/signal-store";
+import { coverageStats, RULE_LABELS } from "@/lib/coverage";
+import {
+  Derivation,
+  MetricDrilldown,
+  SourceRow,
+} from "@/app/components/MetricDrilldown";
 import { TRIALS_META } from "@/lib/trials";
 import { AppShell } from "@/app/components/AppShell";
 import { ConvokeExport } from "@/app/components/ConvokeExport";
@@ -27,7 +33,21 @@ export const dynamic = "force-dynamic";
 
 export default function DashboardPage() {
   const data = getDashboardData();
-  const ringValue = Math.max(0, Math.min(100, data.topBlockerPct));
+  const coverage = coverageStats();
+  // The ring lives in the "Evidence coverage" card, so it shows coverage.
+  // It previously rendered topBlockerPct — the neighbouring card's statistic
+  // under a name it did not mean.
+  const ringValue = Math.max(0, Math.min(100, coverage.pct));
+  // Real bar heights, scaled to the largest signal. The previous cluster was
+  // eight hardcoded numbers labelled as a chart, which is exactly the claim
+  // this product exists to disprove.
+  const maxBlocked = data.rows[0]?.patientsBlocked ?? 1;
+  const bars = data.rows.slice(0, 8).map((row) => ({
+    kind: row.kind,
+    label: row.label,
+    blocked: row.patientsBlocked,
+    height: Math.max(10, Math.round((row.patientsBlocked / maxBlocked) * 82)),
+  }));
   const programs = portfolioProgramSummary();
   const exportContext = exportContextForTrials(
     data.rows.map((r) => r.exampleTrial),
@@ -83,16 +103,45 @@ export default function DashboardPage() {
               <p className="mt-4 max-w-[250px] text-sm leading-6 text-[var(--ct-text-muted)]">
                 of searches were blocked by the portfolio&apos;s leading exclusion criterion.
               </p>
+              <MetricDrilldown label="Where this comes from">
+                <Derivation
+                  formula={`${data.rows[0]?.patientsBlocked ?? 0} searches blocked ÷ ${data.totalSearches} pre-screens`}
+                  result={`${data.topBlockerPct}%`}
+                />
+                <div className="space-y-2">
+                  {data.rows.map((row) => (
+                    <SourceRow
+                      key={row.kind}
+                      count={row.patientsBlocked}
+                      name={row.label}
+                      detail={row.exampleCriterion}
+                      source={row.exampleTrial}
+                    />
+                  ))}
+                </div>
+                <p className="text-[var(--ct-text-soft)]">
+                  Each row counts distinct searches a rule blocked at least once.
+                  Criteria text is quoted verbatim from ClinicalTrials.gov.
+                </p>
+              </MetricDrilldown>
             </div>
             <div>
-              <div className="ct-bar-cluster" aria-label="Relative exclusion pressure chart">
-                {[28, 52, 82, 70, 46, 34, 25, 18].map((height, index) => (
-                  <span key={height} className={index < 4 ? "is-filled" : ""} style={{ height }} />
+              <div
+                className="ct-bar-cluster"
+                aria-label={`Searches blocked per exclusion criterion, highest ${maxBlocked}`}
+              >
+                {bars.map((bar, index) => (
+                  <span
+                    key={bar.kind}
+                    className={index === 0 ? "is-filled" : ""}
+                    style={{ height: bar.height }}
+                    title={`${bar.label}: ${bar.blocked} searches`}
+                  />
                 ))}
               </div>
               <div className="mt-5 flex items-center gap-5 text-xs text-[var(--ct-text-muted)]">
-                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-mint-strong)]" />Blocked</span>
-                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-surface-soft)]" />Other</span>
+                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-mint-strong)]" />Leading criterion</span>
+                <span className="flex items-center gap-2"><i className="h-3 w-3 rounded-full bg-[var(--ct-surface-soft)]" />Other signals</span>
               </div>
             </div>
           </div>
@@ -104,8 +153,35 @@ export default function DashboardPage() {
               <p className="text-base font-medium text-[var(--ct-text)]">Evidence coverage</p>
               <p className="mt-5 text-6xl font-medium tabular-nums text-[var(--ct-text)] sm:text-7xl">{TRIALS_META.count}</p>
               <p className="mt-4 max-w-[250px] text-sm leading-6 text-[var(--ct-text-muted)]">
-                active oncology studies monitored from ClinicalTrials.gov.
+                active oncology studies monitored from ClinicalTrials.gov. The ring
+                is the share of published criteria the engine can evaluate.
               </p>
+              <MetricDrilldown label="What we can and cannot read">
+                <Derivation
+                  formula={`${coverage.machineEvaluable} evaluable ÷ ${coverage.totalCriteria} published criteria across ${coverage.trials} studies`}
+                  result={`${coverage.pct}%`}
+                />
+                <p className="text-[var(--ct-text-soft)]">
+                  Portfolio-wide. Coverage is higher in the indications with the
+                  most rules written — lung studies sit around 27%.
+                </p>
+                <p>
+                  {coverage.unreadable} of {coverage.totalCriteria} lines fall through
+                  to &ldquo;a clinician must read this&rdquo; rather than being counted
+                  as satisfied. Median {coverage.medianPerTrial} evaluable criteria per
+                  trial.
+                </p>
+                <div className="space-y-2">
+                  {coverage.byKind.map((k) => (
+                    <SourceRow
+                      key={k.kind}
+                      count={k.count}
+                      name={RULE_LABELS[k.kind] ?? k.kind}
+                      source={`rule: ${k.kind}`}
+                    />
+                  ))}
+                </div>
+              </MetricDrilldown>
             </div>
             <div className="ct-ring" style={{ "--ring-value": `${ringValue}%` } as CSSProperties} aria-label={`${ringValue}% top exclusion share`}>
               <span className="absolute inset-0 z-10 flex items-center justify-center text-sm font-semibold text-[var(--ct-text)]">{ringValue}%</span>
@@ -117,12 +193,35 @@ export default function DashboardPage() {
           <SearchCheck className="h-5 w-5 text-[var(--ct-text-soft)]" />
           <p className="mt-6 text-4xl font-semibold tabular-nums text-[var(--ct-text)]">{data.totalSearches}</p>
           <p className="mt-1 text-sm text-[var(--ct-text-muted)]">Patient pre-screens</p>
+          <MetricDrilldown label="Simulated vs live">
+            <Derivation
+              formula={`${data.seededSearches} seeded + ${data.liveSearches} live`}
+              result={String(data.totalSearches)}
+            />
+            <p>
+              The seeded cohort exists so the dashboard has a story before any
+              search has run. Searches made in this session are added to it.
+              Counts reset when the server restarts — the store is process memory.
+            </p>
+          </MetricDrilldown>
         </article>
 
         <article className="ct-metric-small bg-[var(--ct-lilac)]">
           <FlaskConical className="h-5 w-5 text-[var(--ct-violet-text)]" />
           <p className="mt-6 text-4xl font-semibold tabular-nums text-[var(--ct-text)]">{data.rows.length}</p>
           <p className="mt-1 text-sm text-[var(--ct-text-muted)]">Exclusion signals</p>
+          <MetricDrilldown label="Which rules fired">
+            <p>
+              Distinct deterministic rules that ruled at least one patient out.
+              Each is a pure function in <span className="font-mono">match.ts</span>{" "}
+              with regression tests.
+            </p>
+            <div className="space-y-2">
+              {data.rows.map((row) => (
+                <SourceRow key={row.kind} count={row.patientsBlocked} name={row.label} source={`rule: ${row.kind}`} />
+              ))}
+            </div>
+          </MetricDrilldown>
         </article>
 
         <article className="ct-metric-small bg-[var(--ct-mint)]">

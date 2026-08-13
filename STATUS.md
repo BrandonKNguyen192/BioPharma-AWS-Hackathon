@@ -39,8 +39,10 @@ through Amplify's Next.js adapter, which was the deployment's main risk.
 
 ## 3. Engine state
 
-- **Coverage: 27%** of published criteria are machine-evaluable (62 of 229
-  across 20 lung trials), median 3 per trial, min 0, max 6.
+- **Coverage:** 27% of published criteria are machine-evaluable on the 20 lung
+  trials the demo uses (62 of 229), median 3 per trial. Portfolio-wide across
+  all 60 studies it is 19% — the dashboard ring shows the portfolio figure, the
+  pitch quotes the lung figure. State the scope when quoting either.
 - **Dataset:** 60 real recruiting oncology trials in `src/data/trials.json`,
   committed so the demo never makes a network call for trial data. Sponsor
   filtering is a fetch-time choice via `TRIAL_SPONSOR`; the committed file

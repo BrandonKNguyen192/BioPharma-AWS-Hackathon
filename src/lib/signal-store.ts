@@ -23,6 +23,8 @@ export interface AggregateRow {
 
 interface Store {
   searches: number;
+  /** How many of `searches` came from the seed rather than a real search. */
+  seeded: number;
   byCancer: Map<string, number>;
   rows: Map<RuleKind, AggregateRow>;
 }
@@ -32,7 +34,7 @@ const g = globalThis as unknown as { __clearTrialStore?: Store };
 
 function store(): Store {
   if (!g.__clearTrialStore) {
-    g.__clearTrialStore = { searches: 0, byCancer: new Map(), rows: new Map() };
+    g.__clearTrialStore = { searches: 0, seeded: 0, byCancer: new Map(), rows: new Map() };
     seed(g.__clearTrialStore);
   }
   return g.__clearTrialStore;
@@ -51,6 +53,9 @@ function store(): Store {
  */
 function seed(s: Store) {
   s.searches = 47;
+  // Recorded separately so the dashboard can state the simulated/live split
+  // rather than presenting a seeded cohort as though it were all real traffic.
+  s.seeded = 47;
   s.byCancer.set("non-small cell lung cancer", 31);
   s.byCancer.set("melanoma", 9);
   s.byCancer.set("renal cell carcinoma", 7);
@@ -129,6 +134,9 @@ export function recordSignals(cancerType: string | null, signals: UnmatchedSigna
 
 export interface DashboardData {
   totalSearches: number;
+  /** Of totalSearches, how many are seeded vs run in this process. */
+  seededSearches: number;
+  liveSearches: number;
   topCancer: { name: string; count: number } | null;
   rows: AggregateRow[];
   /** Share of searches blocked by the single most common criterion, 0-100. */
@@ -147,6 +155,8 @@ export function getDashboardData(): DashboardData {
 
   return {
     totalSearches: s.searches,
+    seededSearches: s.seeded,
+    liveSearches: Math.max(0, s.searches - s.seeded),
     topCancer: topCancerEntry ? { name: topCancerEntry[0], count: topCancerEntry[1] } : null,
     rows,
     topBlockerPct,
