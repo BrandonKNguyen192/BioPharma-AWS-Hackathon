@@ -3,7 +3,7 @@
  *
  * Privacy: this store never sees patient text. It receives only rule kinds
  * (e.g. "prior_checkpoint_inhibitor") and counts. That is the whole point —
- * BMS learns which protocol criteria are costing them recruitment without
+ * sponsors learn which protocol criteria cost them recruitment without
  * ever holding identifiable patient data.
  *
  * Hackathon scope: process memory. A production build would be a real store
@@ -41,7 +41,7 @@ function store(): Store {
 /**
  * Seeded cohort representing searches already run through ClearTrial.
  * Counts are illustrative of a pilot cohort; every criterion quoted is real
- * text from the BMS trials in src/data/trials.json.
+ * text from the trials in src/data/trials.json.
  */
 function seed(s: Store) {
   s.searches = 47;
@@ -54,33 +54,32 @@ function seed(s: Store) {
       kind: "prior_checkpoint_inhibitor",
       label: "Prior PD-1/PD-L1 immunotherapy",
       patientsBlocked: 28,
-      exampleTrial: "NCT06712316",
+      exampleTrial: "NCT06692738",
       exampleCriterion:
-        "Previous chemotherapy (platinum-based) or PD(L)-1 for treating NSCLC in either neoadjuvant/adjuvant or locally advanced/metastatic setting.",
+        "Any prior treatment with an anti-PD-1 or anti-PD-L1 agent.",
     },
     {
       kind: "prior_platinum",
       label: "Prior platinum chemotherapy",
       patientsBlocked: 24,
-      exampleTrial: "NCT06712316",
+      exampleTrial: "NCT06694454",
       exampleCriterion:
-        "Have systemic treatment naive, histologically or cytologically confirmed diagnosis of Stage IIIB or IIIC.",
+        "Willingness to undergo tumor resection surgery per standard of care guidelines following induction therapy (platinum chemotherapy).",
     },
     {
       kind: "ecog",
       label: "ECOG performance status ceiling",
       patientsBlocked: 11,
-      exampleTrial: "NCT06712316",
-      exampleCriterion:
-        "Eastern Cooperative Oncology Group Performance Status of 0 or 1.",
+      exampleTrial: "NCT06694454",
+      exampleCriterion: "ECOG Performance Status <= 1",
     },
     {
       kind: "brain_mets",
       label: "Brain / CNS metastases",
       patientsBlocked: 6,
-      exampleTrial: "NCT07223047",
+      exampleTrial: "NCT05276726",
       exampleCriterion:
-        "Participants must not have untreated central nervous system metastases.",
+        "Has CNS metastases or carcinomatous meningitis, except treated CNS metastases with no evidence of radiographic progression.",
     },
   ];
   for (const r of seeded) s.rows.set(r.kind, r);

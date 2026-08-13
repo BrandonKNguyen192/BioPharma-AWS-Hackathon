@@ -31,7 +31,7 @@ export const BRIEF_MODEL = "gpt-5.4";
 const getExclusionSignals = tool({
   name: "get_exclusion_signals",
   description:
-    "Return the aggregated, de-identified reasons interested patients failed to match BMS oncology trials, ranked by how many pre-screens each reason blocked.",
+    "Return the aggregated, de-identified reasons interested patients failed to match the monitored oncology trials, ranked by how many pre-screens each reason blocked.",
   inputSchema: z.object({}),
   callback: () => {
     const d = getDashboardData();
@@ -101,7 +101,7 @@ const BriefSchema = z.object({
 export type ProtocolBrief = z.infer<typeof BriefSchema>;
 
 const SYSTEM = `
-You are a clinical trial operations analyst writing for a Bristol Myers Squibb
+You are a clinical trial operations analyst writing for a
 protocol design team.
 
 You are given aggregate, de-identified pre-screen data showing which eligibility

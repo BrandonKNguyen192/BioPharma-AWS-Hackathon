@@ -1,8 +1,11 @@
 /**
  * ClearTrial — trial data pipeline.
  *
- * Pulls REAL Bristol-Myers Squibb oncology trials from ClinicalTrials.gov and
- * writes them to src/data/trials.json, which the app reads at build time.
+ * Pulls REAL recruiting oncology trials from ClinicalTrials.gov and writes them
+ * to src/data/trials.json, which the app reads at build time.
+ *
+ * Sponsor-agnostic by default. Set TRIAL_SPONSOR to narrow to one sponsor,
+ * e.g. TRIAL_SPONSOR="<sponsor name>" node scripts/fetch-trials.mjs
  *
  * This runs ONCE, offline, and commits its output. The demo never makes a
  * network call for trial data — a podium wifi failure cannot break it.
@@ -27,7 +30,10 @@ const OUT = join(HERE, "..", "src", "data", "trials.json");
 
 const CTG = "https://clinicaltrials.gov/api/v2/studies";
 
-/** Oncology conditions where BMS has an active pipeline. */
+/** Optional sponsor filter. Empty = every sponsor. */
+const SPONSOR = (process.env.TRIAL_SPONSOR ?? "").trim();
+
+/** Broad oncology coverage. */
 const CONDITION_QUERY =
   "carcinoma OR melanoma OR lymphoma OR myeloma OR leukemia OR " +
   "lung cancer OR bladder cancer OR renal cell OR hepatocellular OR " +
@@ -35,7 +41,7 @@ const CONDITION_QUERY =
 
 function buildUrl() {
   const p = new URLSearchParams();
-  p.set("query.spons", "Bristol-Myers Squibb");
+  if (SPONSOR) p.set("query.spons", SPONSOR);
   p.set("query.cond", CONDITION_QUERY);
   p.set("filter.overallStatus", "RECRUITING");
   p.set("pageSize", "60");
@@ -174,7 +180,7 @@ async function main() {
     JSON.stringify(
       {
         source: "ClinicalTrials.gov API v2",
-        sponsor: "Bristol-Myers Squibb",
+        sponsor: SPONSOR || "All sponsors",
         fetchedAt: new Date().toISOString(),
         count: trials.length,
         trials,
@@ -184,7 +190,9 @@ async function main() {
     ),
   );
 
-  console.log(`✓ ${trials.length} real BMS trials → src/data/trials.json`);
+  console.log(
+    `✓ ${trials.length} real trials (${SPONSOR || "all sponsors"}) → src/data/trials.json`,
+  );
   for (const t of trials.slice(0, 5)) {
     console.log(`   ${t.nctId}  ${t.phase.padEnd(14)} ${t.title.slice(0, 62)}`);
   }

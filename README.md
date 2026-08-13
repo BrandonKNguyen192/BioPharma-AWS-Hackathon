@@ -17,7 +17,8 @@ research teams see which protocol criteria are blocking recruitment.
 - **Frontend:** Next.js 16, React 19, TypeScript, Tailwind CSS v4
 - **Extraction:** OpenAI structured output
 - **Decision engine:** deterministic TypeScript matcher
-- **Trial data:** ClinicalTrials.gov recruiting studies, currently centered on oncology
+- **Trial data:** ClinicalTrials.gov recruiting oncology studies, sponsor-agnostic
+  (set `TRIAL_SPONSOR` to narrow to one sponsor)
 - **Research workflow:** AWS Strands agent for protocol summaries
 - **Optional ingestion transport:** Bright Data Web Unlocker
 

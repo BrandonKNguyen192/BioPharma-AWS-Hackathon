@@ -61,8 +61,8 @@ export default function PatientPortal() {
               explain exactly why.
             </p>
             <p className="mt-2 text-xs text-slate-600">
-              Searching {TRIAL_COUNT} active Bristol Myers Squibb oncology
-              trials from ClinicalTrials.gov
+              Searching {TRIAL_COUNT} active oncology trials from
+              ClinicalTrials.gov
             </p>
           </div>
           <a

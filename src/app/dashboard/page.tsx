@@ -18,7 +18,7 @@ export default function DashboardPage() {
               Protocol Intelligence
             </h1>
             <p className="text-sm text-slate-400">
-              Bristol Myers Squibb — Oncology Portfolio
+              Oncology Trial Portfolio
             </p>
             {/*
               The trials and criteria below are real. Patient demand is not:
@@ -64,7 +64,7 @@ export default function DashboardPage() {
             <p className="text-3xl font-semibold text-white">
               {TRIALS_META.count}
             </p>
-            <p className="text-xs text-slate-500">active BMS oncology</p>
+            <p className="text-xs text-slate-500">active oncology</p>
           </div>
           <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
             <p className="text-[11px] uppercase tracking-wide text-slate-500">

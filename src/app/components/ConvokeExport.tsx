@@ -31,7 +31,6 @@ export function ConvokeExport({
       artifact: "cleartrial.protocol_optimization_signal",
       schemaVersion: "1.0.0",
       generatedAt: new Date().toISOString(),
-      sponsor: "Bristol-Myers Squibb",
       provenance: {
         trialSource: "ClinicalTrials.gov API v2",
         trialsMonitored: trialCount,
