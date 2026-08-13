@@ -6,7 +6,7 @@ research teams see which protocol criteria are blocking recruitment.
 
 ## What it does
 
-- Accepts a plain-English patient cancer history
+- Accepts a plain-English patient cancer or illness history
 - Extracts structured clinical facts with OpenAI
 - Matches the extracted profile against real published trial criteria
 - Explains why each trial matched, failed, or needs clinician review
@@ -17,7 +17,7 @@ research teams see which protocol criteria are blocking recruitment.
 - **Frontend:** Next.js 16, React 19, TypeScript, Tailwind CSS v4
 - **Extraction:** OpenAI structured output
 - **Decision engine:** deterministic TypeScript matcher
-- **Trial data:** ClinicalTrials.gov recruiting oncology studies
+- **Trial data:** ClinicalTrials.gov recruiting studies, currently centered on oncology
 - **Research workflow:** AWS Strands agent for protocol summaries
 - **Optional ingestion transport:** Bright Data Web Unlocker
 
@@ -60,7 +60,9 @@ BRIGHTDATA_ZONE=web_unlocker1
 ```
 
 Bright Data is optional. If it is not configured, the trial ingestion script
-falls back to the public ClinicalTrials.gov API.
+falls back to the public ClinicalTrials.gov API. It can also be used later to
+collect publicly available sponsor press releases and reports for clinical trial
+announcements and possible IND-related signals.
 
 ## Data refresh
 
