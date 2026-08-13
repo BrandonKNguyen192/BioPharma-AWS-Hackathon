@@ -16,11 +16,13 @@
  * Usage: node scripts/fetch-trials.mjs
  */
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(HERE, "..");
+const ENV_LOCAL = join(ROOT, ".env.local");
 const OUT = join(HERE, "..", "src", "data", "trials.json");
 
 const CTG = "https://clinicaltrials.gov/api/v2/studies";
@@ -39,6 +41,35 @@ function buildUrl() {
   p.set("pageSize", "60");
   p.set("sort", "LastUpdatePostDate:desc");
   return `${CTG}?${p.toString()}`;
+}
+
+/**
+ * For local hackathon use, load `.env.local` when present so this script can
+ * be run directly with `node scripts/fetch-trials.mjs` without requiring the
+ * caller to export Bright Data credentials into the shell first.
+ */
+async function loadEnvLocal() {
+  try {
+    const raw = await readFile(ENV_LOCAL, "utf8");
+    for (const line of raw.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+      const eq = trimmed.indexOf("=");
+      if (eq === -1) continue;
+      const key = trimmed.slice(0, eq).trim();
+      let value = trimmed.slice(eq + 1).trim();
+      if (!key || process.env[key]) continue;
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+      process.env[key] = value;
+    }
+  } catch {
+    // No local env file is fine; the script falls back to direct public fetch.
+  }
 }
 
 /** Fetch through Bright Data when credentials exist, else fetch directly. */
@@ -127,6 +158,7 @@ function normalize(study) {
 }
 
 async function main() {
+  await loadEnvLocal();
   const url = buildUrl();
   const data = await fetchStudies(url);
   const studies = data.studies ?? [];
