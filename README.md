@@ -4,6 +4,8 @@ ClearTrial is a hackathon-built clinical trial intelligence app for oncology.
 It helps patients understand which active trials may fit their case and helps
 research teams see which protocol criteria are blocking recruitment.
 
+Current state and open items: **[STATUS.md](STATUS.md)**.
+
 See **[OVERVIEW.md](OVERVIEW.md)** for the full write-up: what it does, how
 it works, and the commercial case.
 
